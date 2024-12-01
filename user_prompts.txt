@@ -1,0 +1,7 @@
+Our research project aims to determine precise orbital trajectories of asteroids in our solar system. We're developing advanced computational methods and algorithms to improve asteroid tracking and prediction. Our sophisticated system processes astronomical observations from various sources to calculate accurate orbital parameters, accounting for subtle forces like solar radiation pressure and the Yarkovsky effect. Key challenges include developing robust statistical methods, implementing advanced orbit determination algorithms, and creating a comprehensive database. We're combining classical orbital mechanics with modern computational techniques, including machine learning. The project will deliver practical tools for the astronomical community and has significant implications for planetary defense and solar system dynamics understanding.
+
+
+I have an idea for a research project involving AI Agents to control spacecraft operations. Currently. spacecraft operations is a very critical process in space missions and continous human monitoring 
+of the spacecraft telemetry data is needed to ensure mission safety. This continous human presence and control is expensive and restricts the operations from scaling. With the introduction of autonomous AI agents with human in the loop, can exponentially reduce the time and resources needed to operate the same number of satellites.
+
+

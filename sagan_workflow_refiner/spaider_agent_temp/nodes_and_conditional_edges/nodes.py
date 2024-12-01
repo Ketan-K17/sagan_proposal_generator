@@ -1,0 +1,746 @@
+import json
+import logging
+from typing import List, Dict,Optional
+from langgraph.prebuilt import ToolNode
+from langchain_core.messages import SystemMessage, AnyMessage, HumanMessage
+from dotenv import load_dotenv
+from pydantic import BaseModel, Field
+from colorama import init, Fore, Back, Style
+from fastapi import WebSocket,WebSocketDisconnect,HTTPException
+import asyncio
+
+'''LOCAL IMPORTS'''
+from schemas import State
+from prompts.prompts import *
+from models.chatgroq import BuildChatGroq, BuildChatOpenAI
+
+'''IMPORT ALL TOOLS HERE AND CREATE LIST OF TOOLS TO BE PASSED TO THE AGENT.'''
+from tools.script_executor import run_script
+from tools.file_tree import get_file_tree
+# from tools.web_tool import web_search_tool
+from tools.query_chromadb import query_chromadb
+# from utils.mdtopdf import convert_md_to_pdf
+from utils.latextopdf import LaTeXPipeline
+from pathlib import Path
+
+load_dotenv()
+init()
+
+terminal_tools = [run_script, get_file_tree]
+research_tools = [query_chromadb]
+
+'''LLM TO USE'''
+# MODEL = "llama-3.1-70b-versatile"
+# MODEL = "llama-3.1-8b-instant"
+# MODEL = "gemma2-9b-it"
+# MODEL = "llama3-groq-70b-8192-tool-use-preview"
+# MODEL = "mixtral-8x7b-32768"
+MODEL = "gpt-4o"
+# llm = BuildChatGroq(model=MODEL, temperature=0)
+llm = BuildChatOpenAI(model=MODEL, temperature=0)
+
+llm_with_terminal_tools = llm.bind_tools(terminal_tools)
+llm_with_research_tools = llm.bind_tools(research_tools)
+
+
+research_tools_node = ToolNode(research_tools)
+
+
+
+# class WebSocketManager:
+#     def __init__(self):
+#         self.active_connections: Dict[str, WebSocket] = {}
+#         self.pending_responses: Dict[str, asyncio.Event] = {}
+#         self.user_responses: Dict[str, str] = {}
+#         self.response_queues = {}
+
+#     async def connect(self, websocket: WebSocket, session_id: str):
+#         await websocket.accept()
+#         self.active_connections[session_id] = websocket
+#         self.pending_responses[session_id] = asyncio.Event()
+
+#     def disconnect(self, session_id: str):
+#         if session_id in self.active_connections:
+#             del self.active_connections[session_id]
+#         if session_id in self.pending_responses:
+#             del self.pending_responses[session_id]
+#         if session_id in self.user_responses:
+#             del self.user_responses[session_id]
+
+#     async def send_message(self, session_id: str, message: dict):
+#         print("hi")
+#         if session_id in self.active_connections:
+#             await self.active_connections[session_id].send_json(message)
+
+#     def set_user_response(self, session_id: str, response: str):
+#         print("73",response)
+#         self.user_responses[session_id] = response
+#         if session_id in self.pending_responses:
+#             self.pending_responses[session_id].set()
+
+#     async def wait_for_response(self, session_id: str, timeout: int = 3000) -> Optional[str]:
+#         # if session_id not in self.pending_responses:
+#         #     return None
+#         # try:
+#         #     await asyncio.wait_for(self.pending_responses[session_id].wait(), timeout)
+#         #     return self.user_responses.get(session_id)
+#         # except asyncio.TimeoutError:
+#         #     return None
+#         # print("87")
+#         # if session_id not in self.response_queues:
+#         #     print("89")
+
+#         #     self.response_queues[session_id] = asyncio.Queue()
+#         # print("92",self,self.response_queues,self.response_queues[session_id])
+
+
+#         # response = await self.response_queues[session_id].get()  # Wait for response
+#         # return response
+#         websocket = self.active_connections.get(session_id)
+#         message = await websocket.receive_text(session_id)
+#         print('custom 1',message)
+    
+#     async def query_user(self, session_id: str, question: str, timeout: int = 300) -> Optional[str]:
+#         """
+#         Ask a question via WebSocket and wait for the user's response.
+#         """
+#         if session_id not in self.active_connections:
+#             raise ValueError(f"No active WebSocket connection for session ID: {session_id}")
+
+#         # Send the question
+#         await self.send_message(session_id, {"type": "question", "data": question})
+        
+#         # Wait for the response
+#         try:
+#             response = await self.wait_for_response(session_id, timeout=timeout)
+#             return response
+#         except asyncio.TimeoutError:
+#             return None
+# ws_manager = WebSocketManager()
+
+
+message_queues = {}
+
+class WebSocketManager:
+    def __init__(self):
+        self.active_connections = {}
+        self.lock = asyncio.Lock()
+
+    async def connect(self, websocket: WebSocket, session_id: str):
+        """Accept and track a WebSocket connection."""
+        # async with self.lock:
+        await websocket.accept()
+        self.active_connections[session_id] = websocket
+        message_queues[session_id] = asyncio.Queue()
+        print(f"Connected: {session_id}")
+
+    async def disconnect(self, session_id: str):
+        """Remove a disconnected WebSocket."""
+        async with self.lock:
+            if session_id in self.active_connections:
+                self.active_connections.pop(session_id)
+                del message_queues[session_id]
+                print(f"Disconnected: {session_id}")
+
+    # async def send_message(self, session_id: str, message: str):
+    #     """Send a message to a specific client."""
+    #     async with self.lock:
+    #         websocket = self.active_connections.get(session_id)
+    #         if websocket:
+    #             try:
+    #                 await websocket.send_text(message)
+    #                 print(f"Sent to {session_id}: {message}")
+    #             except Exception as e:
+    #                 print(f"Error sending to {session_id}: {e}")
+    #         else:
+    #             print(f"Session {session_id} not connected.")
+    async def send_message(self, session_id: str, message: str):
+        """Send a message to a specific client."""
+        # async with self.lock:
+        websocket = self.active_connections.get(session_id)
+        if websocket:
+            try:
+                json_message = json.dumps(message)
+                await websocket.send_text(json_message)
+                print(f"Sent to {session_id}: {json_message}")
+            except Exception as e:
+                print(f"Error sending to {session_id}: {e}")
+        else:
+            print(f"Session {session_id} not connected.")
+
+    async def receive_message(self, session_id: str):
+        """Receive a message from a specific client."""
+        async with self.lock:
+            websocket = self.active_connections.get(session_id)
+            if websocket:
+                try:
+                    message = await websocket.receive_text()
+                    message_data = json.loads(message)
+                    key = message_data.get("key")
+                    value = message_data.get("value")
+                    print("Received key:", key, "Received value:", value)
+                    await message_queues[session_id].put((key, value))
+                    print(f"Received from {session_id}: {message_data}")
+                    return message_data
+                except WebSocketDisconnect:
+                  print(f"Error receiving from {session_id}: WebSocket disconnected")
+                  await self.disconnect(session_id)  # Clean up
+                  return None
+                except Exception as e:
+                    print(f"Error receiving from {session_id}: {e}")
+                    return None
+            else:
+              print(f"Session {session_id} not connected.")
+              await ws_manager.active_connections.clear()
+              await websocket.active_connections.clear()
+              return None
+            
+    async def get_message(self, session_id: str, key: str, timeout: int = 500):
+        queue = message_queues.get(session_id)
+        if not queue:
+            raise HTTPException(status_code=404, detail="Session not found.")
+        
+        try:
+            # Wait for a message with a timeout
+            while True:
+                key_value = await asyncio.wait_for(queue.get(), timeout=timeout)
+                if key_value[0] == key:
+                    return key_value[1]
+                # Put back unmatched keys
+                await queue.put(key_value)
+        except asyncio.TimeoutError:
+            raise HTTPException(status_code=408, detail=f"No message received within {timeout} seconds.")
+ws_manager = WebSocketManager()
+
+
+# original working code below 
+# async def research_query_generator(state: State) -> State:
+#     """
+#     Given a user prompt, this node determines if research is needed and generates appropriate queries.
+#     """
+#     print(f"{Fore.YELLOW}################ RESEARCH QUERY GENERATOR BEGIN #################")
+#     state["user_prompt"] = state["messages"][1].content
+#     try:
+#         # Add the query generator prompt to messages
+#         # research_query_generator_prompt = SystemMessage(
+#         #     content=RESEARCH_QUERY_GENERATOR_PROMPT.format(
+#         #         section_title=state.get("section_title"),
+#         #         section_text=state.get("section_text")
+#         #     )
+#         # )
+       
+       
+     
+#         response = llm.invoke(state["messages"])
+
+#         if not response or not hasattr(response, 'content'):
+#             raise ValueError("Invalid response from LLM.")
+
+#         # Extract research queries from the response content
+#         response_content = json.loads(response.content)
+#         research_queries = response_content.get('research_queries', [])
+
+#         # Show the list of queries to the user
+#         print("Generated Research Queries:")
+#         for i, query in enumerate(research_queries, start=1):
+#             print(f"{i}. {query}")
+
+      
+
+#         user_input = input("Would you like to modify or add queries? (yes/no): ").strip().lower()
+#         if user_input == 'yes':
+#             modified_queries = []
+#             # First, handle existing queries
+#             for i, query in enumerate(research_queries, start=1):
+#                 new_query = input(f"Modify query {i} (or press Enter to keep it unchanged): ").strip()
+#                 if new_query:
+#                     modified_queries.append(new_query)
+#                 else:
+#                     modified_queries.append(query)
+            
+#             # Allow adding new queries
+#             while True:
+#                 add_more = input("\nWould you like to add a new query? (yes/no): ").strip().lower()
+#                 if add_more != 'yes':
+#                     break
+#                 new_query = input(f"Enter new query {len(modified_queries) + 1}: ").strip()
+#                 if new_query:
+#                     modified_queries.append(new_query)
+            
+#             research_queries = modified_queries
+
+#         # do we need to query the db?
+#         research_needed = len(research_queries) > 0
+#         state["research_needed"] = research_needed
+#         state["research_queries"] = research_queries
+
+#         if not research_needed:
+#             print("\n\nNo research needed.\n\n")
+
+#         print(f"\n\n\n\nstate at the end of research query generator: \n")
+#         ## printing messages
+#         print("Messages: ")
+#         messages = state["messages"]
+#         if len(messages) >= 3:
+#             for message in messages[-3:]:
+#                 print(f"{message.type}: {message.content}")
+#         else:
+#             for message in messages:
+#                 print(f"{message.type}: {message.content}")
+
+#         ## printing fields other than messages.
+#         for field_name, field_value in state.items():
+#             if field_name != "messages":
+#                 print(f"- {field_name.capitalize()}: {field_value}")
+#         print(f"################ RESEARCH QUERY GENERATOR END #################{Style.RESET_ALL}")
+#         return state
+
+#     except Exception as e:
+#         print(f"Error occurred: {e}")
+#         print(f"################ RESEARCH QUERY GENERATOR END #################{Style.RESET_ALL}")
+#         state["messages"] = [str(e)]
+#         state["section_title"] = None
+#         state["section_text"] = None
+#         state["rough_draft"] = None
+#         state["research_queries"] = None
+#         state["context"] = None
+#         return state
+    
+
+
+
+    # trying code belowe 
+
+# async def research_query_generator(state: State,session_id: str) -> State:
+#     """
+#     Given a user prompt, this node determines if research is needed and generates appropriate queries.
+#     """
+#     print(f"{Fore.YELLOW}################ RESEARCH QUERY GENERATOR BEGIN #################")
+#     state["user_prompt"] = state["messages"][1].content
+#     try:
+        
+     
+#         response = llm.invoke(state["messages"])
+
+#         if not response or not hasattr(response, 'content'):
+#             raise ValueError("Invalid response from LLM.")
+
+#         # Extract research queries from the response content
+#         response_content = json.loads(response.content)
+#         research_queries = response_content.get('research_queries', [])
+
+#         # Show the list of queries to the user
+#         print("Generated Research Queries:")
+
+
+
+
+
+#         for i, query in enumerate(research_queries, start=1):
+#             print(f"{i}. {query}")
+
+      
+
+#         user_input = input("Would you like to modify or add queries? (yes/no): ").strip().lower()
+#         if user_input == 'yes':
+#             modified_queries = []
+#             # First, handle existing queries
+#             for i, query in enumerate(research_queries, start=1):
+#                 new_query = input(f"Modify query {i} (or press Enter to keep it unchanged): ").strip()
+#                 if new_query:
+#                     modified_queries.append(new_query)
+#                 else:
+#                     modified_queries.append(query)
+            
+#             # Allow adding new queries
+#             while True:
+#                 add_more = input("\nWould you like to add a new query? (yes/no): ").strip().lower()
+#                 if add_more != 'yes':
+#                     break
+#                 new_query = input(f"Enter new query {len(modified_queries) + 1}: ").strip()
+#                 if new_query:
+#                     modified_queries.append(new_query)
+            
+#             research_queries = modified_queries
+
+#         # do we need to query the db?
+#         research_needed = len(research_queries) > 0
+#         state["research_needed"] = research_needed
+#         state["research_queries"] = research_queries
+
+#         if not research_needed:
+#             print("\n\nNo research needed.\n\n")
+
+#         print(f"\n\n\n\nstate at the end of research query generator: \n")
+#         ## printing messages
+#         print("Messages: ")
+#         messages = state["messages"]
+#         if len(messages) >= 3:
+#             for message in messages[-3:]:
+#                 print(f"{message.type}: {message.content}")
+#         else:
+#             for message in messages:
+#                 print(f"{message.type}: {message.content}")
+
+#         ## printing fields other than messages.
+#         for field_name, field_value in state.items():
+#             if field_name != "messages":
+#                 print(f"- {field_name.capitalize()}: {field_value}")
+#         print(f"################ RESEARCH QUERY GENERATOR END #################{Style.RESET_ALL}")
+#         return state
+
+#     except Exception as e:
+#         print(f"Error occurred: {e}")
+#         print(f"################ RESEARCH QUERY GENERATOR END #################{Style.RESET_ALL}")
+#         state["messages"] = [str(e)]
+#         state["section_title"] = None
+#         state["section_text"] = None
+#         state["rough_draft"] = None
+#         state["research_queries"] = None
+#         state["context"] = None
+#         return state
+
+
+# complete new code for textting 
+
+
+async def research_query_generator(state: State) -> State:
+    """
+    Node to generate research queries and allow user modification via WebSocket.
+    """
+    session_id = "1234"
+    print(f"{Fore.YELLOW}################ RESEARCH QUERY GENERATOR BEGIN #################")
+    state["user_prompt"] = state["messages"][1].content
+    try:
+        # Generate queries with LLM
+        response = llm.invoke(state["messages"])
+        if not response or not hasattr(response, 'content'):
+            raise ValueError("Invalid response from LLM.")
+
+        # Extract research queries
+        response_content = json.loads(response.content)
+        research_queries = response_content.get('research_queries', [])
+        print("Generated Research Queries:", research_queries)
+
+        # Ask the user via WebSocket if they want to modify queries
+        print("323")
+        await ws_manager.send_message("1234",{
+            "type":"question1",
+            "data":"Would you like to modify or add queries? (yes/no)"
+        })
+        # user_input = await ws_manager.wait_for_response(
+        #     "1234"
+        # )
+        # print("327",user_input)
+        user_input_str = await ws_manager.get_message(session_id, 'question1')
+        print(user_input_str,"user_input_str 434")
+        # user_input = json.loads(user_input_str)
+                   
+        # user_input_value = user_input.get("value")
+        # print( user_input_value,"user input 434", user_input_value and  user_input_value.lower() == 'yes')
+        print(f"------------------------Received message: {user_input_str}")
+        if  user_input_str and  user_input_str.lower() == 'yes':
+            modified_queries = []
+            
+            # Modify existing queries
+            for i, query in enumerate(research_queries, start=1):
+                print('do this later')
+                # await ws_manager.send_message("1234",{
+                #     "type":"question",
+                #     "data":f"Modify query {i} (or leave blank to keep it unchanged):"
+                # })
+                # new_query = await ws_manager.wait_for_response(
+                #     "1234"
+                # )
+                # modified_queries.append(new_query or query)
+            
+            # Add new queries
+            while True:
+               
+                await ws_manager.send_message("1234",{
+                    "type":"question2",
+                    "data":"Would you like to add a new query? (yes/no)"
+                })
+                add_more= await ws_manager.get_message(session_id, 'question2')
+                # add_more = await ws_manager.wait_for_response(
+                #     "1234"
+                # )
+
+                print("351",add_more)
+                # add_more = await ws_manager.query_user(
+                #     session_id, "Would you like to add a new query? (yes/no)"
+                # )
+                if add_more and add_more.lower() != 'yes':
+                    break
+                await ws_manager.send_message(session_id,{
+                    "type":"question3",
+                    "data":f"Enter new query {len(modified_queries) + 1}:"
+                })
+
+                new_query = await ws_manager.get_message(session_id,"question3")
+                print(new_query,"new_query")
+                # new_query = await ws_manager.query_user(
+                #     session_id, f"Enter new query {len(modified_queries) + 1}:"
+                # )
+
+                if new_query:
+                    modified_queries.append(new_query)
+
+            research_queries = modified_queries
+
+        # Update state
+        state["research_needed"] = bool(research_queries)
+        state["research_queries"] = research_queries
+        print(f"Final Research Queries: {research_queries}")
+
+        return state
+
+    except Exception as e:
+        print(f"Error in research_query_generator: {str(e)}")
+        state["messages"] = [str(e)]
+        return state
+
+
+# new code below be aware llm code ahead
+
+# def research_query_generator(state: dict, research_queries: List[str]) -> dict:
+#     """
+#     Process the state and research queries synchronously.
+#     This function assumes that all necessary inputs have been provided beforehand.
+#     """
+#     try:
+#         # Update the state with the finalized research queries
+#         state["research_needed"] = len(research_queries) > 0
+#         state["research_queries"] = research_queries
+
+#         # Log the updated state
+#         print("\nFinal research queries:")
+#         for i, query in enumerate(research_queries, start=1):
+#             print(f"{i}. {query}")
+
+#         return state
+
+#     except Exception as e:
+#         print(f"Error in research_query_generator: {str(e)}")
+#         state["messages"] = [str(e)]
+#         state["research_needed"] = False
+#         state["research_queries"] = []
+#         return state
+
+# my code ahead
+def research_query_answerer(state: State) -> State:
+    """
+    Takes the generated queries and executes them against the vector database.
+    Only runs if research_needed is True.
+    """
+    print(f"{Fore.BLUE}################ RESEARCH QUERY ANSWERER BEGIN #################")
+
+    try:
+        if not state.get("research_needed"):
+            state["context"] = []
+            return state
+
+        # Add the query answerer prompt to messages
+        research_query_answerer_prompt = SystemMessage(
+            content=RESEARCH_QUERY_ANSWERER_PROMPT.format(
+                section_title=state.get("section_title"),
+                section_text=state.get("section_text"),
+                research_queries=state.get("research_queries")
+            )
+        )
+        state["messages"].append(research_query_answerer_prompt)
+
+        context = []
+        for query in state["research_queries"]:
+            result = query_chromadb(
+                "C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroaidb",
+                "sentence-transformers/all-MiniLM-L6-v2",
+                query
+            )
+            context.extend(result)
+
+        state["context"] = context
+
+        print(f"\n\n\n\nstate at the end of query answerer: \n")
+        ## printing messages
+        print("Messages: ")
+        messages = state["messages"]
+        if len(messages) >= 3:
+            for message in messages[-3:]:
+                print(f"{message.type}: {message.content}")
+        else:
+            for message in messages:
+                print(f"{message.type}: {message.content}")
+
+        ## printing fields other than messages.
+        for field_name, field_value in state.items():
+            if field_name != "messages":
+                print(f"- {field_name.capitalize()}: {field_value}")
+        print(f"################ QUERY ANSWERER END #################{Style.RESET_ALL}")
+        return state
+
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        print(f"################ QUERY ANSWERER END #################{Style.RESET_ALL}")
+        state["messages"] = [str(e)]
+        state["section_title"] = None
+        state["section_text"] = None
+        state["rough_draft"] = None
+        state["research_queries"] = None
+        state["context"] = None
+        return state
+
+
+def formatter(state: State):
+    print(f"{Fore.LIGHTGREEN_EX}################ FORMATTING NODE BEGIN #################")
+
+    # Ensure state values are not None
+    user_prompt = state.get("user_prompt", "")
+    section_text = state.get("section_text", "")
+    context = state.get("context", "")
+
+    # populating the agent prompt
+    formatter_prompt = FORMATTER_PROMPT.format(
+        user_prompt=user_prompt,
+        section_text=section_text,
+        context=context
+    )
+
+    # appending the formatter prompt to list of messages
+    state["messages"].append(SystemMessage(content=formatter_prompt))
+    
+    # invoking the llm, response in json.
+    response = llm.invoke(state["messages"])
+    raw_response = response.content
+
+    try:
+        # Parse the JSON response
+        json_str = raw_response
+        if '```json' in json_str:
+            json_str = json_str.split('```json')[1].split('```')[0].strip()
+        
+        
+        # Parse JSON
+        response_json = json.loads(json_str)
+        
+        # Extract modified_section_text
+        state["modified_section_text"] = response_json.get("modified_section_text")
+        
+        state["ai_message"] = response_json.get("ai_message")
+
+    except json.JSONDecodeError as e:
+        print(f"Error parsing JSON: {e}")
+        state["modified_section_text"] = None
+        state["ai_message"] = f"Error processing your request: {str(e)}"
+    except Exception as e:
+        print(f"Error processing response: {e}")
+        state["modified_section_text"] = None
+        state["ai_message"] = f"Error processing your request: {str(e)}"
+
+    print(f"################ FORMATTING NODE END #################{Style.RESET_ALL}")
+    return state
+
+
+# original code below 
+# def human_input_node(state: State):
+#     print(f"{Fore.LIGHTMAGENTA_EX}################ HUMAN INPUT NODE BEGIN #################")
+
+#     response = input("Saves Changes to the section text? (yes/no): ")
+#     state["user_approval"] = response
+#     print(f"################ HUMAN INPUT NODE END #################{Style.RESET_ALL}")
+#     return state
+
+# gpt code belwo 
+
+async def human_input_node(state: State):
+    print(f"{Fore.LIGHTMAGENTA_EX}################ HUMAN INPUT NODE BEGIN #################")
+    await ws_manager.send_message("1234",{
+        "type":"question4",
+        "data":"Saves Changes to the section text? (yes/no): "
+    })
+
+    response = await ws_manager.get_message("1234","question4")
+    print(response,"response 655")
+    # response = input("Saves Changes to the section text? (yes/no): ")
+
+    state["user_approval"] = response
+    print(f"################ HUMAN INPUT NODE END #################{Style.RESET_ALL}")
+    return state
+
+
+
+def save_changes(state: State):
+    print(f"{Fore.CYAN}################ SAVING CHANGES NODE BEGIN #################")
+    try:
+        # Only save if user approved
+        if state.get("user_approval") == 'yes':
+            tex_file_path = state.get("rough_draft_path")
+            if not tex_file_path:
+                raise ValueError("No LaTeX file path provided in state")
+
+            # Read the entire LaTeX file
+            with open(tex_file_path, 'r', encoding='utf-8') as file:
+                content = file.read()
+
+            # Extract the document content between \begin{document} and \end{document}
+            doc_start = content.find('\\begin{document}')
+            doc_end = content.find('\\end{document}')
+
+            if doc_start == -1 or doc_end == -1:
+                raise ValueError("Could not find document environment in LaTeX file")
+
+            preamble = content[:doc_start + len('\\begin{document}')]
+            postamble = content[doc_end:]
+            main_content = content[doc_start + len('\\begin{document}'):doc_end]
+
+            # Split the content into sections based on \section commands
+            import re
+            section_pattern = r'(\\section\{[^}]*\}[\s\S]*?)(?=\\section\{|$)'
+            sections = re.findall(section_pattern, main_content)
+
+            # Validate section number
+            section_number = state.get("section_number", 0)
+            if section_number < 1 or section_number > len(sections):
+                raise ValueError(f"Section number {section_number} is out of range. File has {len(sections)} sections.")
+
+            # Get the modified section text from state
+            modified_text = state.get("modified_section_text")
+            if not modified_text:
+                raise ValueError("No modified text provided in state")
+
+            # Replace the section content while preserving the section command
+            section_header_match = re.match(r'(\\section\{[^}]*\})', sections[section_number - 1])
+            if section_header_match:
+                section_header = section_header_match.group(1)
+                sections[section_number - 1] = f"{section_header}\n{modified_text}\n"
+            else:
+                # If the section does not have a header, replace the content directly
+                sections[section_number - 1] = modified_text
+
+            # Reconstruct the document
+            new_main_content = ''.join(sections)
+            new_content = preamble + new_main_content + postamble
+
+            # Write back to file
+            with open(tex_file_path, 'w', encoding='utf-8') as file:
+                file.write(new_content)
+
+            print("Changes saved successfully to LaTeX file!")
+            state["save_success"] = True
+        else:
+            print("User disapproved changes. No changes saved.")
+            state["save_success"] = False
+
+    except Exception as e:
+        print(f"Error saving changes to LaTeX file: {str(e)}")
+        state["save_success"] = False
+        state["save_error"] = str(e)
+
+    # Debugging: print state information
+    for field_name, field_value in state.items():
+        if field_name != "messages":
+            print(f"- {field_name.capitalize()}: {field_value}")
+
+    print(f"################ SAVING CHANGES NODE END #################{Style.RESET_ALL}")
+    return state
+
