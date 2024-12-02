@@ -1,82 +1,107 @@
-# from langchain_core.runnables.config import RunnableConfig
-# from graph import create_graph, compile_graph
-# from colorama import init, Fore, Style
-# import os
-# from config import OUTPUT_DIR, IMAGES_DIR
+from dotenv import load_dotenv
+import os
+import certifi
+import ssl
+import openai
+from openai import OpenAI
+from langchain_openai import ChatOpenAI
+from config import ENV_PATH, SSL_CERT_PATH, verify_paths
+import shutil
 
-# def initialize_directories():
-#     """Initialize necessary directories."""
-#     os.makedirs(OUTPUT_DIR, exist_ok=True)
-#     os.makedirs(IMAGES_DIR, exist_ok=True)
+# Verify paths at startup
+if not verify_paths():
+    print("Warning: Some required paths are missing. Please check config.py")
 
-# def main():
-#     # Initialize colorama for colored output
-#     init()
-    
-#     # Initialize directories
-#     initialize_directories()
-    
-#     # Create and compile graph
-#     print(f"{Fore.CYAN}Initializing workflow graph...{Style.RESET_ALL}")
-#     builder = create_graph()
-#     graph = compile_graph(builder)
-    
-#     # Print graph structure
-#     print(f"{Fore.GREEN}Workflow graph structure:{Style.RESET_ALL}")
-#     print(graph.get_graph().draw_mermaid())
-    
-#     # Configure runtime settings
-#     config = RunnableConfig(
-#         recursion_limit=50,
-#         configurable={"thread_id": "1"}
-#     )
-    
-#     # Main interaction loop
-#     while True:
-#         try:
-#             user_input = input(f"\n{Fore.YELLOW}Enter your query (or 'quit' to exit): {Style.RESET_ALL}")
-            
-#             if user_input.lower() == 'quit':
-#                 break
-                
-#             # Run the graph
-#             for event in graph.stream(
-#                 {"messages": [("user", user_input)]},
-#                 config=config,
-#                 stream_mode="values"
-#             ):
-#                 if isinstance(event, dict) and "messages" in event:
-#                     for role, content in event["messages"]:
-#                         if role not in ["system", "error"]:
-#                             print(f"\n{Fore.GREEN}{role.capitalize()}: {content}{Style.RESET_ALL}")
-                        
-#         except Exception as e:
-#             print(f"{Fore.RED}Error during execution: {str(e)}{Style.RESET_ALL}")
+# Load environment variables from .env
+load_dotenv(dotenv_path=ENV_PATH)
 
-# if __name__ == "__main__":
-#     main()
+# Set up SSL certificate
+try:
+    # Use certifi's default certificate
+    default_cert = certifi.where()
+    ssl_cert_path = str(SSL_CERT_PATH)
+    
+    # Create directory if it doesn't exist
+    os.makedirs(os.path.dirname(ssl_cert_path), exist_ok=True)
+    
+    # Copy the certificate to our location with proper permissions
+    shutil.copy2(default_cert, ssl_cert_path)
+    os.chmod(ssl_cert_path, 0o644)  # Set read permissions
+    
+    # Set environment variables
+    os.environ['SSL_CERT_FILE'] = ssl_cert_path
+    os.environ['REQUESTS_CA_BUNDLE'] = ssl_cert_path
+    os.environ['CURL_CA_BUNDLE'] = ssl_cert_path
+    
+except Exception as e:
+    print(f"Warning: Could not set up SSL certificate: {e}")
+    print("Falling back to certifi's default certificate")
+    os.environ['SSL_CERT_FILE'] = certifi.where()
+    os.environ['REQUESTS_CA_BUNDLE'] = certifi.where()
+    os.environ['CURL_CA_BUNDLE'] = certifi.where()
 
+# Configure OpenAI
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    raise ValueError("OPENAI_API_KEY not found in environment variables")
 
+# Create and configure the ChatOpenAI instance
+llm = ChatOpenAI(
+    openai_api_key=api_key,
+    model_name="gpt-4",
+    temperature=0.7,
+    request_timeout=30,
+    max_retries=3
+)
+
+# Add this to verify the configuration
+print(f"Using SSL cert path: {os.environ['SSL_CERT_FILE']}")
+print(f"API Key configured: {'Yes' if api_key else 'No'}")
+
+# Rest of your imports
 from langchain_core.runnables.config import RunnableConfig
-# LOCAL IMPORTS.
 from graph import create_graph, compile_graph, print_stream
 
-
+# Your existing configuration
 config = RunnableConfig(
     recursion_limit=50,
-    configurable={"thread_id": "1"}
+    configurable={
+        "thread_id": "1",
+        "llm": llm
+    }
 )
-print(config)
 
 if __name__ == "__main__":
-    # creating graph workflow instance and then compiling it.
-    # verbose = True
     builder = create_graph()
     graph = compile_graph(builder)
-
-    # print the mermaid diagram of the graph.
     print(graph.get_graph().draw_mermaid())
     
     while True:
         user_input = input("############# User: ")
         print_stream(graph.stream({"messages": [("user", user_input)]}, stream_mode="values", config=config))
+
+
+
+# from langchain_core.runnables.config import RunnableConfig
+# # LOCAL IMPORTS.
+# from graph import create_graph, compile_graph, print_stream
+
+
+# config = RunnableConfig(
+#     recursion_limit=50,
+#     configurable={"thread_id": "1"}
+# )
+# print(config)
+
+# if __name__ == "__main__":
+#     # creating graph workflow instance and then compiling it.
+#     # verbose = True
+#     builder = create_graph()
+#     graph = compile_graph(builder)
+
+#     # print the mermaid diagram of the graph.
+#     print(graph.get_graph().draw_mermaid())
+    
+#     while True:
+#         user_input = input("############# User: ")
+#         print_stream(graph.stream({"messages": [("user", user_input)]}, stream_mode="values", config=config))

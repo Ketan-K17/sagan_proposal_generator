@@ -2,7 +2,7 @@ import chromadb
 import os
 
 def check_db():
-    db_path = "C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroaidb2"
+    db_path = "C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroai2"
     
     print(f"Checking database at: {db_path}")
     print(f"Path exists: {os.path.exists(db_path)}")

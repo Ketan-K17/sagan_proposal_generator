@@ -698,4 +698,3 @@ def section_wise_answers_generator(state: State) -> State:
         state["messages"].append(str(e))
         state["section_answers"] = None
         return state
-

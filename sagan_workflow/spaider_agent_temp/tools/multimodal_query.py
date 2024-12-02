@@ -124,4 +124,3 @@ class NomicVisionQuerier(Embeddings):
             })
 
         return {"Results": formatted_results}
-

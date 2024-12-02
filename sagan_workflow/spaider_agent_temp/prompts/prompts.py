@@ -45,7 +45,7 @@ Questions to Answer:
 
 For each question, follow these steps:
 1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.
-    - chroma_db_path: C:/UniLu/Spaider/sagan/ketan_sagan/SAW_code_plus_db/ingest_data/astroaidb
+    - chroma_db_path: C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroaidb
     - llm_name: "sentence-transformers/all-MiniLM-L6-v2"
     - user_query: "<question>"
 2. provide a comprehensive answer to each question using the information obtained from the vector database.

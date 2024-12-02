@@ -36,7 +36,13 @@ pymupdf = "1.22.5"
 einops = "^0.8.0"
 sentence-transformers = "^3.3.1"
 pylatex = "^1.4.2"
+certifi = "^2024.8.30"
+requests = {extras = ["security"], version = "^2.32.3"}
+pyopenssl = "^24.3.0"
 
+
+[tool.poetry.group.dev.dependencies]
+python-certifi-win32 = "^1.6.1"
 
 [build-system]
 requires = ["poetry-core"]
