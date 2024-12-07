@@ -1,6 +1,6 @@
 '''WRITE YOUR PROMPTS FOR THE NODES/AGENTS HERE. REFER FOLLOWING SAMPLES FOR SYNTAX.'''
 
-PROMPT_PARSER_PROMPT = r"""
+PROMPT_PARSER_PROMPT = """
 You are a prompt parser designed to extract specific information from user prompts. Your task is to identify and extract the following two pieces of information:
 
 1. Project Title: A concise title that summarizes the project.
@@ -45,8 +45,8 @@ Questions to Answer:
 
 For each question, follow these steps:
 1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.
-    - chroma_db_path: C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroaidb
-    - llm_name: "sentence-transformers/all-MiniLM-L6-v2"
+    - chroma_db_path: {vector_store_path}
+    - llm_name: {llm_name}
     - user_query: "<question>"
 2. provide a comprehensive answer to each question using the information obtained from the vector database.
 3. Finally, create an abstract of the project based on the answers to all the questions.
@@ -55,14 +55,14 @@ Make sure to use the tool for EVERY question.
 Also, Make sure the abstract is 250-300 words long.
 """
 
-SECTION_TOPIC_EXTRACTOR_PROMPT = r"""
+SECTION_TOPIC_EXTRACTOR_PROMPT = """
 You are an intelligent assistant designed to extract section/topic names from a template response document. Your task is to query the provided vector store to identify and list the sections or topics that need to be filled in the template.
 
 Do the following steps: 
 
 1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.
-    - chroma_db_path: C:/UniLu/Spaider/sagan/ketan_sagan/SAW_code_plus_db/ingest_data/fnr_template_db
-    - llm_name: "sentence-transformers/all-MiniLM-L6-v2"
+    - chroma_db_path: {vector_store_path}
+    - llm_name: {llm_name}
     - user_query: "Give me a comprehensive list of sections/topics that are present in this template document."
 
 2. Extract the section/topic names from the response provided by the 'query_chromadb' tool.

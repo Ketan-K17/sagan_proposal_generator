@@ -133,3 +133,11 @@ poetry.lock
 
 # VS Code
 .vscode/
+
+# Ignore specific files in the output_pdf directory
+sagan_workflow/spaider_agent_temp/output_pdf/output.aux
+sagan_workflow/spaider_agent_temp/output_pdf/output.fdb_latexmk
+sagan_workflow/spaider_agent_temp/output_pdf/output.fls
+sagan_workflow/spaider_agent_temp/output_pdf/output.out
+sagan_workflow/spaider_agent_temp/output_pdf/output.synctex.gz
+sagan_workflow/spaider_agent_temp/output_pdf/output.toc

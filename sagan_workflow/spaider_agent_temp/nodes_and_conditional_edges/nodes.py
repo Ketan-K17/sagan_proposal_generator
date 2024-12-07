@@ -11,6 +11,7 @@ from colorama import init, Fore, Style
 from schemas import State
 from prompts.prompts import *
 from models.chatgroq import BuildChatGroq, BuildChatOpenAI
+from config import *
 
 '''IMPORT ALL TOOLS HERE AND CREATE LIST OF TOOLS TO BE PASSED TO THE AGENT.'''
 from tools.script_executor import run_script
@@ -33,7 +34,6 @@ from langchain_core.messages import SystemMessage, HumanMessage
 import os
 from schemas import State
 from utils.latex_utils import extract_latex_and_message, build_content_summary, latex_to_pdf, latex_to_pdf_pandoc, verify_image_paths, verify_miktex_installation
-
 
 # Initialize multimodal_vectordb_query from NomicVisionQuerier
 # multimodal_vectordb_query = NomicVisionQuerier().search_similar
@@ -134,7 +134,11 @@ def abstract_answers_generator(state: State) -> State:
     """
     print(f"{Fore.BLUE}################ ABSTRACT ANSWERS GENERATOR BEGIN #################")
     abstract_questions = state["abstract_questions"]
-    system_prompt = SystemMessage(ABSTRACT_ANSWERS_GENERATOR_PROMPT.format(questions_list=abstract_questions))
+    system_prompt = SystemMessage(ABSTRACT_ANSWERS_GENERATOR_PROMPT.format(
+        questions_list=abstract_questions, 
+        vector_store_path=str(VECTOR_DB_PATHS['astro_db']),  # Use path from config
+        llm_name=MODEL_SETTINGS['SENTENCE_TRANSFORMER']  # Use model setting from config
+    ))
     state["messages"].append(system_prompt)
 
     try:
@@ -142,8 +146,8 @@ def abstract_answers_generator(state: State) -> State:
         qa_pairs = {}
         for question in abstract_questions:
             result = query_chromadb(
-                "C:/UniLu/Spaider/sagan/ketan_sagan/SAW_code_plus_db/ingest_data/astroaidb",
-                "sentence-transformers/all-MiniLM-L6-v2",
+                str(VECTOR_DB_PATHS['astro_db']),  # Use path from config
+                MODEL_SETTINGS['SENTENCE_TRANSFORMER'],  # Use model setting from config
                 question
             )
             answer = llm.invoke((f"Frame the following texts into one cohesive answer: {result}"))
@@ -164,9 +168,6 @@ def abstract_answers_generator(state: State) -> State:
             abstract_text=abstract_text
         )
 
-        # print(f"Abstract QA pairs: {structured_response.abstract_qa_pairs}")
-        # print(f"\n\n\n\nAbstract text: {structured_response.abstract_text}")
-        
         # Updating state before end-of-node logging
         state["messages"].append(abstract_response)
         state["abstract_text"] = structured_response.abstract_text
@@ -184,7 +185,6 @@ def abstract_answers_generator(state: State) -> State:
                 print(f"- {field_name}: {field_value}")
         print(f"################ ABSTRACT ANSWERS GENERATOR END #################{Style.RESET_ALL}")
 
-
         return state
 
     except Exception as e:
@@ -200,13 +200,14 @@ def section_topic_extractor(state: State) -> State:
     This node extracts the topics for each section of the project from the template pdf given by the user.
     """
     print(f"{Fore.CYAN}################ SECTION TOPIC EXTRACTOR BEGIN #################")
-    system_prompt = SystemMessage(SECTION_TOPIC_EXTRACTOR_PROMPT)
+    system_prompt = SystemMessage(SECTION_TOPIC_EXTRACTOR_PROMPT.format(
+        vector_store_path=str(VECTOR_DB_PATHS['astro_db']),  # Use path from config
+        llm_name=MODEL_SETTINGS['SENTENCE_TRANSFORMER']  # Use model setting from config
+    ))
     state["messages"].append(system_prompt)
 
     try:
         response = llm_with_research_tools.invoke(state["messages"])
-        # print(f"Response content: {response.content}")
-        # print(f"Response type: {type(response)}")
 
         if not response or not hasattr(response, 'content'):
             raise ValueError("Invalid response from LLM.")
@@ -217,9 +218,6 @@ def section_topic_extractor(state: State) -> State:
         if not hasattr(structured_response, 'section_topics'):
             raise ValueError("Section topics not found in the structured output.")
 
-        # print(f"Response content: {response.content}")
-        # print(f"Section topics: {structured_response.section_topics}")
-        
         # Updating state before end-of-node logging
         state["messages"].append(response)
         state["section_topics"] = structured_response.section_topics
@@ -456,7 +454,8 @@ def generation_node(state: State) -> State:
     print(f"{Fore.LIGHTGREEN_EX}################ GENERATION NODE BEGIN #################")
     try:
         # Initialize output directory
-        base_output_path = Path("C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/sagan_workflow/spaider_agent_temp/output_pdf")
+        # base_output_path = Path("C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/sagan_workflow/spaider_agent_temp/output_pdf")
+        base_output_path = OUTPUT_PDF_PATH
         base_output_path.mkdir(parents=True, exist_ok=True)
         
         # Create images directory in the same directory as tex file
@@ -639,7 +638,8 @@ def section_wise_answers_generator(state: State) -> State:
                 try:
                     # Use the multimodal_vectordb_query tool with correct parameters
                     results = multimodal_tool.multimodal_vectordb_query(
-                        persist_dir="C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroai2",
+                        # persist_dir="C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroai2",
+                        persist_dir=str(VECTOR_DB_PATHS['astro_ai2']),
                         query=question,
                         k=5
                     )
