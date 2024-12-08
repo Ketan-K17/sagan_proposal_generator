@@ -201,7 +201,7 @@ def section_topic_extractor(state: State) -> State:
     """
     print(f"{Fore.CYAN}################ SECTION TOPIC EXTRACTOR BEGIN #################")
     system_prompt = SystemMessage(SECTION_TOPIC_EXTRACTOR_PROMPT.format(
-        vector_store_path=str(VECTOR_DB_PATHS['astro_db']),  # Use path from config
+        vector_store_path=str(VECTOR_DB_PATHS['fnr_template_db']),  # Use path from config
         llm_name=MODEL_SETTINGS['SENTENCE_TRANSFORMER']  # Use model setting from config
     ))
     state["messages"].append(system_prompt)
