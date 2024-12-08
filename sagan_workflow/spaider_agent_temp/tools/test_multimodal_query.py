@@ -1,11 +1,16 @@
+import json
+import sys
+import os
 from multimodal_query import NomicVisionQuerier
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config import VECTOR_DB_PATHS
 
 # Initialize the querier
 querier = NomicVisionQuerier()
 
 # Query the vector database
 results = querier.multimodal_vectordb_query(
-    persist_dir="C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroai2",
+    persist_dir=VECTOR_DB_PATHS['astro_ai2'],
     query="Show me comparison of Computational Density Per Watt of State-of-the-art Rad-Hard Processors",
     k=5,
 )
@@ -14,6 +19,5 @@ results = querier.multimodal_vectordb_query(
 print(results)
 
 # Optionally save results to a JSON file
-import json
 with open("query_results.json", "w", encoding="utf-8") as f:
     json.dump(results, f, indent=4)

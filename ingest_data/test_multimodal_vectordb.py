@@ -4,6 +4,8 @@ from rich.panel import Panel
 import json
 import os
 import shutil
+from sagan_workflow.spaider_agent_temp.config import VECTOR_DB_PATHS
+from datetime import datetime
 
 def test_multimodal_query():
     console = Console()
@@ -22,7 +24,7 @@ def test_multimodal_query():
     os.makedirs(results_dir, exist_ok=True)
     
     # Database path
-    db_path = "C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroai2"
+    db_path = VECTOR_DB_PATHS['astro_ai2']
     
     while True:
         # Get query from user

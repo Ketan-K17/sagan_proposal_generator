@@ -76,9 +76,8 @@ if __name__ == "__main__":
     graph = compile_graph(builder)
     print(graph.get_graph().draw_mermaid())
     
-    while True:
-        user_input = input("############# User: ")
-        print_stream(graph.stream({"messages": [("user", user_input)]}, stream_mode="values", config=config))
+    user_input = input("############# User: ")
+    print_stream(graph.stream({"messages": [("user", user_input)]}, stream_mode="values", config=config))
 
 
 

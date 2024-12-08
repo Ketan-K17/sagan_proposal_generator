@@ -1,0 +1,37 @@
+PROMPT PARSER OUTPUT:
+PROJECT TITLE: Autonomous AI Agents for Spacecraft Operations
+PROJECT DESCRIPTION: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful integration with existing systems. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.
+
+
+
+
+STATE AT THE END OF PROMPT_PARSER: 
+Messages: 
+human: Write a comprehensive research proposal focused on the development of autonomous AI agents for spacecraft operations in GNC and AOCS operations and also remote sensing. The proposal should outline a vision for AI-driven agents capable of not only facilitating real-time communication with spacecraft systems but also autonomously managing and controlling spacecraft functions. Emphasize how these agents will reduce human involvement in mission-critical tasks, minimize human error, and enhance overall mission efficiency and safety. Include detailed objectives, expected technical innovations, challenges to address (such as AI reliability, decision-making under uncertainty, and system integration), and potential impacts on the space exploration industry.
+system: 
+You are a prompt parser designed to extract specific information from user prompts. Your task is to identify and extract the following two pieces of information:
+
+1. Project Title: A concise title that summarizes the project.
+2. Project Description: A detailed description of the project based on the project title.
+
+>>> Instructions:
+- Read the user prompt carefully.
+- Identify the project title and description.
+
+>>> Examples:
+1. User Prompt: "Develop a website for sharing recipes using React for the frontend, Node.js with Express for the backend, and MongoDB for the database."
+   - Output: 
+   {
+     "project_title": "Recipe Sharing Website",
+     "project_description": "A website where users can share and discover recipes: 1. Frontend built with React. 2. Backend developed using Node.js with Express. 3. Database utilizes MongoDB. 4. Features include user ability to share recipes and recipe discovery functionality. 5. Purpose is to facilitate recipe sharing and exploration among users."
+   }
+
+Note that you MUST answer with a project title and description, even if the user prompt does not contain enough information.
+
+
+ai: {
+  "project_title": "Autonomous AI Agents for Spacecraft Operations",
+  "project_description": "This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful integration with existing systems. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs."
+}
+- project_title: Autonomous AI Agents for Spacecraft Operations
+- project_description: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful integration with existing systems. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.

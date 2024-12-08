@@ -89,6 +89,9 @@ VECTOR_DB_PATHS = {
     'astro_ai3': SAGAN_ROOT / "ingest_data" / "astroai3"
 }
 
+# Input paths
+INPUT_PDF_FOLDER = SAGAN_ROOT / "data"
+
 # Output paths - PROJECT_ROOT is already 'spaider_agent_temp'
 OUTPUT_BASE = PROJECT_ROOT
 OUTPUT_PDF_PATH = OUTPUT_BASE / "output_pdf"
@@ -96,6 +99,7 @@ RETRIEVED_IMAGES_PATH = OUTPUT_BASE / "retrieved_images"
 TEX_OUTPUT_PATH = OUTPUT_PDF_PATH / "output.tex"
 PDF_OUTPUT_PATH = OUTPUT_PDF_PATH / "output.pdf"
 MD_OUTPUT_PATH = OUTPUT_PDF_PATH / "output.md"
+NODEWISE_OUTPUT_PATH = OUTPUT_PDF_PATH / "nodewise_output"
 
 # Environment file
 ENV_PATH = PROJECT_ROOT / ".env"

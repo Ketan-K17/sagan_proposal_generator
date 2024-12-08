@@ -1,0 +1,109 @@
+SECTION WISE QUESTION GENERATOR OUTPUT:
+Section: Introduction: Originality of the Research Project
+  - What is the central research question or problem that this project addresses?
+  - How does this project differ from existing research in the field?
+  - What novel approaches or methodologies will be employed in this research?
+  - Why is this research important and what gap does it fill in the current body of knowledge?
+  - What are the potential implications of this research for the field or industry?
+Section: Hypothesis, Research Objectives and Envisaged Methodology
+  - What is the main hypothesis or hypotheses that this research aims to test?
+  - What are the specific objectives of this research project?
+  - What methodologies will be used to achieve the research objectives?
+  - How will data be collected and analyzed in this research?
+  - What are the key milestones and timeline for the research project?
+Section: Expected Outcomes / Impact
+  - What are the anticipated outcomes of this research project?
+  - How will the results of this research impact the field or industry?
+  - What are the potential benefits of this research for society or specific communities?
+  - How will the research findings be disseminated to stakeholders?
+  - What are the long-term impacts or applications of this research?
+Section: Explanations on the management of ethical issues and data protection
+  - What ethical considerations are relevant to this research project?
+  - How will informed consent be obtained from research participants?
+  - What measures will be taken to ensure the confidentiality and privacy of data?
+  - How will data be stored and protected during and after the research?
+  - What ethical review processes will the research undergo?
+Section: Comment on resubmission (if applicable)
+  - What changes have been made to the project since the last submission?
+  - How have previous feedback or reviews been addressed in this resubmission?
+  - What new data or findings have been incorporated into the project?
+  - What are the reasons for resubmitting this project at this time?
+  - How does this resubmission improve upon the previous version?
+Section: Bibliography (max. 15 references, not included in character limits)
+  - What are the key sources that have informed this research project?
+  - How do the selected references support the research hypothesis or objectives?
+  - What criteria were used to select the references included in the bibliography?
+  - How do the references reflect the current state of research in the field?
+  - Are there any seminal works or authors that are particularly influential in this research?
+STATE AT THE END OF SECTION_WISE_QUESTION_GENERATOR:
+Messages:
+ai: The sections/topics present in the template document are:
+
+1. Introduction: Originality of the Research Project
+2. Hypothesis, Research Objectives and Envisaged Methodology
+3. Expected Outcomes / Impact
+4. Explanations on the management of ethical issues and data protection
+5. Comment on resubmission (if applicable)
+6. Bibliography (max. 15 references, not included in character limits)
+system: 
+You are an intelligent assistant tasked with generating questions for each section/topic in the template document. Your goal is to create a list of questions for a section that will help write the most comprehensive information under that section/topic.
+
+Given the list of sections, do the following:
+1. Generate a list of questions for each section/topic, in JSON format.
+
+List of sections: ['Introduction: Originality of the Research Project', 'Hypothesis, Research Objectives and Envisaged Methodology', 'Expected Outcomes / Impact', 'Explanations on the management of ethical issues and data protection', 'Comment on resubmission (if applicable)', 'Bibliography (max. 15 references, not included in character limits)']
+
+- Ensure that the questions are open-ended and encourage detailed responses.
+- Make sure to form ATLEAST 5 questions for each section.
+- Ensure that the final output is in JSON format, WITHOUT ANY OTHER TEXT (included markdown code block markers).
+
+ai: {
+  "Introduction: Originality of the Research Project": [
+    "What is the central research question or problem that this project addresses?",
+    "How does this project differ from existing research in the field?",
+    "What novel approaches or methodologies will be employed in this research?",
+    "Why is this research important and what gap does it fill in the current body of knowledge?",
+    "What are the potential implications of this research for the field or industry?"
+  ],
+  "Hypothesis, Research Objectives and Envisaged Methodology": [
+    "What is the main hypothesis or hypotheses that this research aims to test?",
+    "What are the specific objectives of this research project?",
+    "What methodologies will be used to achieve the research objectives?",
+    "How will data be collected and analyzed in this research?",
+    "What are the key milestones and timeline for the research project?"
+  ],
+  "Expected Outcomes / Impact": [
+    "What are the anticipated outcomes of this research project?",
+    "How will the results of this research impact the field or industry?",
+    "What are the potential benefits of this research for society or specific communities?",
+    "How will the research findings be disseminated to stakeholders?",
+    "What are the long-term impacts or applications of this research?"
+  ],
+  "Explanations on the management of ethical issues and data protection": [
+    "What ethical considerations are relevant to this research project?",
+    "How will informed consent be obtained from research participants?",
+    "What measures will be taken to ensure the confidentiality and privacy of data?",
+    "How will data be stored and protected during and after the research?",
+    "What ethical review processes will the research undergo?"
+  ],
+  "Comment on resubmission (if applicable)": [
+    "What changes have been made to the project since the last submission?",
+    "How have previous feedback or reviews been addressed in this resubmission?",
+    "What new data or findings have been incorporated into the project?",
+    "What are the reasons for resubmitting this project at this time?",
+    "How does this resubmission improve upon the previous version?"
+  ],
+  "Bibliography (max. 15 references, not included in character limits)": [
+    "What are the key sources that have informed this research project?",
+    "How do the selected references support the research hypothesis or objectives?",
+    "What criteria were used to select the references included in the bibliography?",
+    "How do the references reflect the current state of research in the field?",
+    "Are there any seminal works or authors that are particularly influential in this research?"
+  ]
+}
+- project_title: Autonomous AI Agents for Spacecraft Operations
+- project_description: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful integration with existing systems. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.
+- abstract_questions: ['What are the primary objectives of integrating AI into GNC (Guidance, Navigation, and Control) and AOCS (Attitude and Orbit Control Systems) operations?', 'How do current spacecraft systems handle GNC and AOCS operations, and what limitations are present that AI could address?', 'What specific AI technologies or algorithms are being considered for real-time communication with spacecraft systems?', 'In what ways can AI improve decision-making processes in uncertain and dynamic space environments?', 'What are the existing challenges in integrating AI with spacecraft systems, and how does the project plan to overcome them?', 'How does the project plan to test and validate AI systems in simulated or real space environments?', 'What role will human operators play in monitoring and controlling AI agents during missions?', 'What are the potential failure modes of AI systems in space, and what contingency plans are in place?', 'How will the project evaluate the performance and impact of AI agents on mission outcomes?', 'What are the expected cost savings and efficiency gains from using AI in space missions, and how will these be measured?']
+- abstract_text: The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize spacecraft guidance, navigation, and control (GNC) systems by integrating advanced artificial intelligence (AI) technologies. The primary objectives include enhancing spacecraft autonomy, reducing human intervention, and enabling real-time decision-making in dynamic space environments. AI's adaptability through machine learning techniques is being tailored for complex tasks such as satellite orbital control, collision avoidance, and autonomous mission planning. The project addresses current limitations in spacecraft operations by leveraging AI for on-board data processing, mission reconfiguration, and autonomous failure detection, supported by advancements in space-compatible hardware. Testing and validation of AI systems are crucial, focusing on reliability, safety, and explainability to ensure robust performance in space's harsh conditions. Human operators will maintain a supervisory role, ensuring transparency and accountability in AI decision-making. The project anticipates significant cost savings and efficiency gains, facilitating more ambitious exploration missions and advancing our understanding of the universe. Through structured systems engineering and rigorous testing, the project seeks to overcome challenges and fully integrate AI into space operations, paving the way for future innovations in space exploration.
+- section_topics: ['Introduction: Originality of the Research Project', 'Hypothesis, Research Objectives and Envisaged Methodology', 'Expected Outcomes / Impact', 'Explanations on the management of ethical issues and data protection', 'Comment on resubmission (if applicable)', 'Bibliography (max. 15 references, not included in character limits)']
+- section_questions: {'Introduction: Originality of the Research Project': ['What is the central research question or problem that this project addresses?', 'How does this project differ from existing research in the field?', 'What novel approaches or methodologies will be employed in this research?', 'Why is this research important and what gap does it fill in the current body of knowledge?', 'What are the potential implications of this research for the field or industry?'], 'Hypothesis, Research Objectives and Envisaged Methodology': ['What is the main hypothesis or hypotheses that this research aims to test?', 'What are the specific objectives of this research project?', 'What methodologies will be used to achieve the research objectives?', 'How will data be collected and analyzed in this research?', 'What are the key milestones and timeline for the research project?'], 'Expected Outcomes / Impact': ['What are the anticipated outcomes of this research project?', 'How will the results of this research impact the field or industry?', 'What are the potential benefits of this research for society or specific communities?', 'How will the research findings be disseminated to stakeholders?', 'What are the long-term impacts or applications of this research?'], 'Explanations on the management of ethical issues and data protection': ['What ethical considerations are relevant to this research project?', 'How will informed consent be obtained from research participants?', 'What measures will be taken to ensure the confidentiality and privacy of data?', 'How will data be stored and protected during and after the research?', 'What ethical review processes will the research undergo?'], 'Comment on resubmission (if applicable)': ['What changes have been made to the project since the last submission?', 'How have previous feedback or reviews been addressed in this resubmission?', 'What new data or findings have been incorporated into the project?', 'What are the reasons for resubmitting this project at this time?', 'How does this resubmission improve upon the previous version?'], 'Bibliography (max. 15 references, not included in character limits)': ['What are the key sources that have informed this research project?', 'How do the selected references support the research hypothesis or objectives?', 'What criteria were used to select the references included in the bibliography?', 'How do the references reflect the current state of research in the field?', 'Are there any seminal works or authors that are particularly influential in this research?']}

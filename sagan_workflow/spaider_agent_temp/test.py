@@ -1,5 +1,5 @@
 from tools.multimodal_query import NomicVisionQuerier
-from config import RETRIEVED_IMAGES_PATH
+from config import RETRIEVED_IMAGES_PATH, INPUT_PDF_FOLDER
 import os
 
 def test_image_extraction():
@@ -9,20 +9,29 @@ def test_image_extraction():
     print("Initializing NomicVisionQuerier...")
     querier = NomicVisionQuerier()
     
+    # Debugging: Check if the image directory path exists
+    print(f"Checking if image directory path exists: {RETRIEVED_IMAGES_PATH}")
+    print(f"Image directory exists: {RETRIEVED_IMAGES_PATH.exists()}")
+    
     # Print image directory information
-    print(f"\nImage Directory:")
-    print(f"Path: {RETRIEVED_IMAGES_PATH}")
-    print(f"Exists: {RETRIEVED_IMAGES_PATH.exists()}")
+    if RETRIEVED_IMAGES_PATH.exists():
+        print(f"\nImage Directory:")
+        print(f"Path: {RETRIEVED_IMAGES_PATH}")
+        print(f"Exists: {RETRIEVED_IMAGES_PATH.exists()}")
+    else:
+        print("Image directory does not exist")
     
     # Test with a sample PDF
-    test_pdf = "C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/sagan_multimodal/data/exploring-the-impact-of-hybrid-and-remote-work-models-on-business-efficiency-and-employee-well-being-a-scoping-review.pdf"  # Replace with an actual PDF path
+    test_pdf = INPUT_PDF_FOLDER / "IIM_2024-15.pdf"  # Replace with an actual PDF path
     print(f"\nTesting PDF extraction:")
     print(f"PDF Path: {test_pdf}")
     
+    # Debugging: Check if the PDF path exists
+    print(f"Checking if PDF path exists: {os.path.exists(test_pdf)}")
+    
     if os.path.exists(test_pdf):
         print("PDF file exists, extracting images...")
-        # Try to extract images from first few pages
-        for page_num in range(3):  # Test first 3 pages
+        for page_num in range(1, 4):  # Test first 3 pages
             print(f"\nProcessing page {page_num}:")
             images = querier.extract_images_from_pdf(test_pdf, page_num)
             print(f"Found {len(images)} images on page {page_num}")

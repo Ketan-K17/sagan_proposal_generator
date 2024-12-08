@@ -1,8 +1,9 @@
 import chromadb
 import os
+from config import VECTOR_DB_PATHS
 
 def check_db():
-    db_path = "C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/ingest_data/astroai2"
+    db_path = VECTOR_DB_PATHS['astro_ai2']
     
     print(f"Checking database at: {db_path}")
     print(f"Path exists: {os.path.exists(db_path)}")

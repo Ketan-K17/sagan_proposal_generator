@@ -24,13 +24,13 @@ def create_graph():
     builder.add_node("abstract_answers_generator", abstract_answers_generator)
     builder.add_node("aag_toolnode", research_tools_node)  
     builder.add_node("ste_toolnode", research_tools_node)  
-    builder.add_node("sag_toolnode", research_tools_node)  
+    # builder.add_node("sag_toolnode", research_tools_node)  
 
     builder.add_node("section_topic_extractor", section_topic_extractor)
     builder.add_node("section_wise_question_generator", section_wise_question_generator)
-    builder.add_node("section_wise_answers_generator", section_wise_answers_generator)
-    builder.add_node("generation_node", generation_node)
-    builder.add_node("plan_node", plan_node)
+    # builder.add_node("section_wise_answers_generator", section_wise_answers_generator)
+    # builder.add_node("generation_node", generation_node)
+    # builder.add_node("plan_node", plan_node)
 
     # ADD EDGES/CONDITIONAL EDGES FOR THE GRAPH
     builder.add_edge(START, "prompt_parser")
@@ -55,18 +55,19 @@ def create_graph():
         }
     )    
     builder.add_edge("ste_toolnode", "section_topic_extractor")
-    builder.add_edge("section_wise_question_generator", "section_wise_answers_generator")
-    builder.add_conditional_edges(
-        "section_wise_answers_generator",
-        sag_tools_condition,
-        {
-            "sag_toolnode": "sag_toolnode",
-            "plan_node": "plan_node"
-        }
-    )   
-    builder.add_edge("sag_toolnode", "section_wise_answers_generator")
-    builder.add_edge("plan_node", "generation_node")
-    builder.add_edge("generation_node", END)
+    builder.add_edge("section_wise_question_generator", END)
+    # builder.add_edge("section_wise_question_generator", "section_wise_answers_generator")
+    # builder.add_conditional_edges(
+    #     "section_wise_answers_generator",
+    #     sag_tools_condition,
+    #     {
+    #         "sag_toolnode": "sag_toolnode",
+    #         "plan_node": "plan_node"
+    #     }
+    # )   
+    # builder.add_edge("sag_toolnode", "section_wise_answers_generator")
+    # builder.add_edge("plan_node", "generation_node")
+    # builder.add_edge("generation_node", END)
 
 
     return builder
