@@ -505,7 +505,7 @@ def plan_node(state: State):
     state["plan"] = response.content
 
     # Define the output file path
-    output_path = Path("C:/Users/ketan/Desktop/SPAIDER-SPACE/sagan_multimodal/sagan_workflow/spaider_agent_temp/output_pdf/nodewise_output/plan_node.txt")
+    output_path = NODEWISE_OUTPUT_PATH / "plan_node.txt"
     output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
 
     # Write the structured response and state information to a file
@@ -533,152 +533,264 @@ class GenerationError(Exception):
     pass
 
 
+# def generation_node(state: State) -> State:
+#     """Generates LaTeX document based on plan and content with proper image handling."""
+#     print(f"{Fore.LIGHTGREEN_EX}################ GENERATION NODE BEGIN #################")
+#     try:
+#         # Initialize output directory
+#         # base_output_path = Path("C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/sagan_workflow/spaider_agent_temp/output_pdf")
+#         base_output_path = OUTPUT_PDF_PATH
+#         base_output_path.mkdir(parents=True, exist_ok=True)
+        
+#         # Create images directory in the same directory as tex file
+#         images_dir = base_output_path / "images"
+#         images_dir.mkdir(exist_ok=True)
+        
+#         # Process and copy images from section content
+#         section_texts = state.get("section_answers", {})
+#         processed_sections = {}
+#         image_mappings = []  # Keep track of all image paths
+        
+#         for section, answers in section_texts.items():
+#             processed_answers = []
+#             for answer in answers:
+#                 content = answer.get('content', '')
+#                 images = answer.get('images', [])
+                
+#                 processed_images = []
+#                 for idx, img_path in enumerate(images, 1):
+#                     try:
+#                         src_path = Path(img_path)
+#                         if src_path.exists():
+#                             # Create a standardized filename for the image
+#                             dest_filename = f"{section.lower().replace(' ', '_')}_img_{idx}{src_path.suffix}"
+#                             dest_path = images_dir / dest_filename
+                            
+#                             # Copy the image
+#                             import shutil
+#                             shutil.copy2(src_path, dest_path)
+                            
+#                             # Store the mapping of original to new path
+#                             image_mappings.append({
+#                                 'original': str(src_path),
+#                                 'new': f"images/{dest_filename}",
+#                                 'caption': f"Figure related to {section}",
+#                                 'label': f"fig:{section.lower().replace(' ', '_')}_{idx}"
+#                             })
+                            
+#                             processed_images.append({
+#                                 'path': f"images/{dest_filename}",
+#                                 'caption': f"Figure related to {section}",
+#                                 'label': f"fig:{section.lower().replace(' ', '_')}_{idx}"
+#                             })
+#                             print(f"Copied image: {src_path} -> {dest_path}")
+#                     except Exception as e:
+#                         print(f"Error processing image {img_path}: {e}")
+                
+#                 processed_answers.append({
+#                     'content': content,
+#                     'images': processed_images
+#                 })
+#             processed_sections[section] = processed_answers
+
+#         # Get plan
+#         plan = state.get("plan", "")
+        
+#         # Create LLM prompt with explicit image information
+#         content_prompt = SystemMessage(WRITER_PROMPT)
+#         human_message = HumanMessage(content=f"""
+#         Project Information:
+#         Title: {state.get("project_title", "Research Project")}
+#         Abstract: {state.get("abstract_text", "")}
+        
+#         Document Plan:
+#         {plan}
+        
+#         Section Content and Images:
+#         {json.dumps(processed_sections, indent=2)}
+        
+#         Available Images:
+#         {json.dumps(image_mappings, indent=2)}
+        
+#         Please generate a complete LaTeX document following the provided structure and content.
+#         For each image, use the exact path, caption, and label provided in the image mappings.
+#         Use this format for including images:
+        
+#         \\begin{{figure}}[htbp]
+#             \\centering
+#             \\includegraphics[width=0.85\\textwidth]{{path}}
+#             \\caption{{caption}}
+#             \\label{{label}}
+#         \\end{{figure}}
+#         """)
+        
+#         # Generate content using LLM
+#         messages = [content_prompt, human_message]
+#         response = llm.invoke(messages)
+#         latex_content = response.content
+        
+#         # Extract actual LaTeX content and any AI messages
+#         latex_content, ai_message = extract_latex_and_message(latex_content)
+        
+#         # Save LaTeX file
+#         tex_path = base_output_path / "output.tex"
+#         tex_path.write_text(latex_content, encoding='utf-8')
+#         print(f"LaTeX file written to: {tex_path}")
+        
+#         # Change to output directory for PDF generation
+#         original_dir = os.getcwd()
+#         os.chdir(str(base_output_path))
+        
+#         try:
+#             # Try PDF generation with pdflatex first
+#             success = latex_to_pdf("output.tex", str(base_output_path))
+#             if not success:
+#                 print("pdflatex failed, trying pandoc...")
+#                 success = latex_to_pdf_pandoc("output.tex", str(base_output_path))
+                
+#             # Verify the PDF contains images
+#             if success:
+#                 pdf_path = base_output_path / "output.pdf"
+#                 if pdf_path.exists():
+#                     print("Successfully generated PDF with images")
+#                 else:
+#                     print("PDF generation failed - file not found")
+#                     success = False
+#         finally:
+#             os.chdir(original_dir)
+        
+#         # Update state
+#         pdf_path = base_output_path / "output.pdf"
+#         if success and pdf_path.exists():
+#             print(f"PDF generated successfully at: {pdf_path}")
+#             state.update({
+#                 "pdf_status": "success",
+#                 "pdf_path": str(pdf_path),
+#                 "generation_message": ai_message if ai_message else "Document generated successfully"
+#             })
+#         else:
+#             print("PDF generation failed")
+#             state.update({
+#                 "pdf_status": "failed",
+#                 "error": "PDF generation failed",
+#                 "generation_message": ai_message if ai_message else "Error during PDF generation"
+#             })
+        
+#         # Store latex content in state
+#         state["draft"] = latex_content
+        
+#     except Exception as e:
+#         print(f"Error in generation node: {e}")
+#         state.update({
+#             "error": str(e),
+#             "pdf_status": "error",
+#             "generation_message": f"Error during generation: {str(e)}"
+#         })
+    
+#     print(f"################ GENERATION NODE END #################{Style.RESET_ALL}")
+#     return state
+
 def generation_node(state: State) -> State:
-    """Generates LaTeX document based on plan and content with proper image handling."""
+    """Generates LaTeX document based on the final plan and content.
+    This refactored version focuses on ensuring the abstract is included in the final output."""
     print(f"{Fore.LIGHTGREEN_EX}################ GENERATION NODE BEGIN #################")
     try:
-        # Initialize output directory
-        # base_output_path = Path("C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/sagan_workflow/spaider_agent_temp/output_pdf")
         base_output_path = OUTPUT_PDF_PATH
         base_output_path.mkdir(parents=True, exist_ok=True)
-        
-        # Create images directory in the same directory as tex file
-        images_dir = base_output_path / "images"
-        images_dir.mkdir(exist_ok=True)
-        
-        # Process and copy images from section content
-        section_texts = state.get("section_answers", {})
-        processed_sections = {}
-        image_mappings = []  # Keep track of all image paths
-        
-        for section, answers in section_texts.items():
-            processed_answers = []
-            for answer in answers:
-                content = answer.get('content', '')
-                images = answer.get('images', [])
-                
-                processed_images = []
-                for idx, img_path in enumerate(images, 1):
-                    try:
-                        src_path = Path(img_path)
-                        if src_path.exists():
-                            # Create a standardized filename for the image
-                            dest_filename = f"{section.lower().replace(' ', '_')}_img_{idx}{src_path.suffix}"
-                            dest_path = images_dir / dest_filename
-                            
-                            # Copy the image
-                            import shutil
-                            shutil.copy2(src_path, dest_path)
-                            
-                            # Store the mapping of original to new path
-                            image_mappings.append({
-                                'original': str(src_path),
-                                'new': f"images/{dest_filename}",
-                                'caption': f"Figure related to {section}",
-                                'label': f"fig:{section.lower().replace(' ', '_')}_{idx}"
-                            })
-                            
-                            processed_images.append({
-                                'path': f"images/{dest_filename}",
-                                'caption': f"Figure related to {section}",
-                                'label': f"fig:{section.lower().replace(' ', '_')}_{idx}"
-                            })
-                            print(f"Copied image: {src_path} -> {dest_path}")
-                    except Exception as e:
-                        print(f"Error processing image {img_path}: {e}")
-                
-                processed_answers.append({
-                    'content': content,
-                    'images': processed_images
-                })
-            processed_sections[section] = processed_answers
 
-        # Get plan
+        # Retrieve required fields from state
+        project_title = state.get("project_title", "Research Project")
+        project_abstract = state.get("abstract_text", "No abstract provided.")
         plan = state.get("plan", "")
-        
-        # Create LLM prompt with explicit image information
-        content_prompt = SystemMessage(WRITER_PROMPT)
-        human_message = HumanMessage(content=f"""
-        Project Information:
-        Title: {state.get("project_title", "Research Project")}
-        Abstract: {state.get("abstract_text", "")}
-        
-        Document Plan:
-        {plan}
-        
-        Section Content and Images:
-        {json.dumps(processed_sections, indent=2)}
-        
-        Available Images:
-        {json.dumps(image_mappings, indent=2)}
-        
-        Please generate a complete LaTeX document following the provided structure and content.
-        For each image, use the exact path, caption, and label provided in the image mappings.
-        Use this format for including images:
-        
-        \\begin{{figure}}[htbp]
-            \\centering
-            \\includegraphics[width=0.85\\textwidth]{{path}}
-            \\caption{{caption}}
-            \\label{{label}}
-        \\end{{figure}}
-        """)
-        
-        # Generate content using LLM
-        messages = [content_prompt, human_message]
-        response = llm.invoke(messages)
-        latex_content = response.content
-        
-        # Extract actual LaTeX content and any AI messages
-        latex_content, ai_message = extract_latex_and_message(latex_content)
-        
-        # Save LaTeX file
+        section_answers = state.get("section_answers", {})
+
+        # Debug: Print the abstract we have from the state
+        print("DEBUG: Abstract text from state:", project_abstract)
+
+        # For now, let's assume we are not doing iterative generation.
+        # Just generate a single LaTeX file with the given content.
+        # Later, we can reintroduce iterative generation once we verify the abstract appears.
+
+        # Construct a simple LaTeX document to verify the abstract is present
+        # For demonstration, we’ll just insert dummy sections from section_answers
+        # (In reality, you'd probably do more complex logic to generate sections.)
+        latex_preamble = rf"""
+\documentclass[a4paper,12pt]{article}
+\usepackage{{graphicx}}
+\usepackage{{amsmath}}
+\usepackage{{hyperref}}
+\usepackage{{geometry}}
+\geometry{{margin=1in}}
+
+\title{{{project_title}}}
+\author{{}}
+\date{{}}
+
+\begin{{document}}
+\maketitle
+\begin{{abstract}}
+{project_abstract}
+\end{{abstract}}
+\tableofcontents
+\newpage
+"""
+
+        # Build a body from the section_answers (just as a placeholder)
+        latex_body = ""
+        for section_name, answers in section_answers.items():
+            latex_body += f"\\section{{{section_name}}}\n\n"
+            for ans in answers:
+                content = ans.get("content", "")
+                latex_body += f"{content}\n\n"
+
+        latex_end = r"\end{document}"
+
+        final_latex_document = latex_preamble + latex_body + latex_end
+
+        # Debug: Print the first 300 chars of the final document to confirm abstract insertion
+        print("DEBUG: Beginning of final LaTeX document:\n", final_latex_document[:300])
+
+        # Write out the LaTeX file
         tex_path = base_output_path / "output.tex"
-        tex_path.write_text(latex_content, encoding='utf-8')
+        tex_path.write_text(final_latex_document, encoding='utf-8')
         print(f"LaTeX file written to: {tex_path}")
-        
-        # Change to output directory for PDF generation
+
+        # Attempt to compile PDF
         original_dir = os.getcwd()
         os.chdir(str(base_output_path))
-        
         try:
-            # Try PDF generation with pdflatex first
             success = latex_to_pdf("output.tex", str(base_output_path))
             if not success:
                 print("pdflatex failed, trying pandoc...")
                 success = latex_to_pdf_pandoc("output.tex", str(base_output_path))
-                
-            # Verify the PDF contains images
             if success:
                 pdf_path = base_output_path / "output.pdf"
                 if pdf_path.exists():
-                    print("Successfully generated PDF with images")
+                    print("Successfully generated PDF with abstract included")
+                    state.update({
+                        "pdf_status": "success",
+                        "pdf_path": str(pdf_path),
+                        "generation_message": "Document generated successfully"
+                    })
                 else:
                     print("PDF generation failed - file not found")
                     success = False
+                    state.update({
+                        "pdf_status": "failed",
+                        "error": "PDF not found after compilation"
+                    })
+            else:
+                print("PDF generation failed")
+                state.update({
+                    "pdf_status": "failed",
+                    "error": "PDF generation failed"
+                })
         finally:
             os.chdir(original_dir)
-        
-        # Update state
-        pdf_path = base_output_path / "output.pdf"
-        if success and pdf_path.exists():
-            print(f"PDF generated successfully at: {pdf_path}")
-            state.update({
-                "pdf_status": "success",
-                "pdf_path": str(pdf_path),
-                "generation_message": ai_message if ai_message else "Document generated successfully"
-            })
-        else:
-            print("PDF generation failed")
-            state.update({
-                "pdf_status": "failed",
-                "error": "PDF generation failed",
-                "generation_message": ai_message if ai_message else "Error during PDF generation"
-            })
-        
-        # Store latex content in state
-        state["draft"] = latex_content
-        
+
+        # Store final latex content in state
+        state["draft"] = final_latex_document
+
     except Exception as e:
         print(f"Error in generation node: {e}")
         state.update({
@@ -686,8 +798,10 @@ def generation_node(state: State) -> State:
             "pdf_status": "error",
             "generation_message": f"Error during generation: {str(e)}"
         })
-    
+
     print(f"################ GENERATION NODE END #################{Style.RESET_ALL}")
     return state
+
+
 
 
