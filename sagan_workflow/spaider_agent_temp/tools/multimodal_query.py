@@ -1,5 +1,6 @@
 import os
 import torch
+import json
 import fitz  # PyMuPDF
 from transformers import AutoModel, AutoTokenizer
 from langchain_community.vectorstores import Chroma
@@ -7,7 +8,7 @@ from langchain.embeddings.base import Embeddings
 from typing import List, Dict, Union
 from PIL import Image
 import io
-from config import *
+from spaider_agent_temp.config import RETRIEVED_IMAGES_PATH, VECTOR_DB_PATHS, INPUT_PDF_FOLDER
 
 
 class NomicVisionQuerier(Embeddings):
@@ -35,6 +36,9 @@ class NomicVisionQuerier(Embeddings):
                 metadata = doc.metadata
                 content = doc.page_content
                 source = metadata.get("source", "Unknown source")
+                if source != "Unknown source":
+                    pdf_filename = os.path.basename(source)
+                    source = str(INPUT_PDF_FOLDER / pdf_filename)
                 page_num = metadata.get("page", 0)
                 images = self.extract_images_from_pdf(source, page_num)
                 formatted_results.append({"content": content, "images": images, "score": score})
@@ -62,7 +66,6 @@ class NomicVisionQuerier(Embeddings):
                     image_filename = f"{os.path.basename(pdf_path)}_page{page_num}_img{img_idx}.png"
                     
                     # Save to the actual path from config
-                    from config import RETRIEVED_IMAGES_PATH
                     image_path = RETRIEVED_IMAGES_PATH / image_filename
 
                     # Save image
@@ -119,6 +122,9 @@ class NomicVisionQuerier(Embeddings):
             metadata = doc.metadata
             content = doc.page_content
             source = metadata.get("source", "Unknown source")
+            if source != "Unknown source":
+                pdf_filename = os.path.basename(source)
+                source = str(INPUT_PDF_FOLDER / pdf_filename)
             page_num = metadata.get("page", 0)
 
             # Extract images
@@ -131,3 +137,22 @@ class NomicVisionQuerier(Embeddings):
             })
 
         return {"Results": formatted_results}
+    
+
+
+if __name__ == "__main__":
+    # Initialize the querier
+    querier = NomicVisionQuerier()
+
+    # Query the vector database
+    results = querier.multimodal_vectordb_query(
+        persist_dir=str(VECTOR_DB_PATHS['astro_ai2']),
+        query="Show me comparison of Computational Density Per Watt of State-of-the-art Rad-Hard Processors",
+        k=10,
+    )
+
+    # Print metadata from all documents
+    if results["Results"] and len(results["Results"]) > 0:
+        for i, result in enumerate(results["Results"]):
+            print(f"\nMetadata from document {i + 1}:")
+            print(json.dumps(result, indent=2))
