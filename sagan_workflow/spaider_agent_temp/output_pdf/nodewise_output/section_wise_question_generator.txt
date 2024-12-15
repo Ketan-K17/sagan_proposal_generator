@@ -1,40 +1,40 @@
 SECTION WISE QUESTION GENERATOR OUTPUT:
 Section: Introduction: Originality of the Research Project
-  - What is the central theme or idea of your research project?
+  - What is the central research question or problem your project addresses?
   - How does your project differ from existing research in the field?
-  - What unique contributions does your project aim to make?
-  - Why is this research project important or necessary at this time?
-  - What inspired you to pursue this particular research topic?
+  - What innovative approaches or methodologies will you employ?
+  - Why is this research important and relevant at this time?
+  - What are the potential implications of your research findings?
 Section: Hypothesis, Research Objectives and Envisaged Methodology
   - What is the main hypothesis or hypotheses of your research?
-  - What are the primary objectives you aim to achieve with this research?
-  - What methodologies will you employ to conduct your research?
+  - What are the specific objectives you aim to achieve with this project?
+  - What methodologies will you use to conduct your research?
   - How will you ensure the reliability and validity of your research methods?
-  - What challenges do you anticipate in your research methodology, and how will you address them?
+  - What are the key milestones and timelines for your research activities?
 Section: Expected Outcomes / Impact
-  - What are the expected outcomes of your research project?
+  - What are the anticipated outcomes of your research project?
   - How will your research contribute to the field or society at large?
-  - What potential applications or implications could arise from your findings?
-  - How do you plan to measure the success or impact of your research?
-  - What are the long-term benefits you foresee from your research outcomes?
+  - What are the potential applications of your research findings?
+  - How do you plan to disseminate your research results?
+  - What long-term impacts do you foresee as a result of your research?
 Section: Explanations on the management of ethical issues and data protection
   - What ethical considerations are relevant to your research project?
   - How will you ensure the protection of participants' rights and privacy?
-  - What measures will you take to secure and protect data collected during the research?
+  - What measures will you take to secure and manage research data?
   - How will you address any potential ethical dilemmas that may arise?
-  - What protocols will you follow to ensure compliance with ethical standards and regulations?
+  - What protocols will you follow to ensure compliance with ethical standards?
 Section: Comment on resubmission (if applicable)
   - What changes or improvements have been made since the last submission?
-  - How have you addressed any feedback or critiques from the previous submission?
-  - What new insights or developments have influenced the resubmission?
-  - What are the key differences between the original and resubmitted project?
-  - How do you believe the resubmission strengthens the overall proposal?
+  - How have you addressed the feedback received from previous reviews?
+  - What new evidence or data supports the revised submission?
+  - What lessons have you learned from the previous submission process?
+  - How does the current submission better align with the project goals?
 Section: Bibliography (max. 15 references, not included in character limits)
   - What are the key sources that have informed your research project?
   - How do these references support your research objectives and methodology?
-  - What criteria did you use to select the references included in your bibliography?
-  - How do the selected references contribute to the originality of your research?
-  - Are there any seminal works or authors that have significantly influenced your research?
+  - What gaps in the literature does your research aim to address?
+  - How have you ensured the credibility and relevance of your selected references?
+  - What role do these references play in framing your research context?
 STATE AT THE END OF SECTION_WISE_QUESTION_GENERATOR:
 Messages:
 ai: The sections/topics present in the template document are:
@@ -59,51 +59,51 @@ List of sections: ['Introduction: Originality of the Research Project', 'Hypothe
 
 ai: {
   "Introduction: Originality of the Research Project": [
-    "What is the central theme or idea of your research project?",
+    "What is the central research question or problem your project addresses?",
     "How does your project differ from existing research in the field?",
-    "What unique contributions does your project aim to make?",
-    "Why is this research project important or necessary at this time?",
-    "What inspired you to pursue this particular research topic?"
+    "What innovative approaches or methodologies will you employ?",
+    "Why is this research important and relevant at this time?",
+    "What are the potential implications of your research findings?"
   ],
   "Hypothesis, Research Objectives and Envisaged Methodology": [
     "What is the main hypothesis or hypotheses of your research?",
-    "What are the primary objectives you aim to achieve with this research?",
-    "What methodologies will you employ to conduct your research?",
+    "What are the specific objectives you aim to achieve with this project?",
+    "What methodologies will you use to conduct your research?",
     "How will you ensure the reliability and validity of your research methods?",
-    "What challenges do you anticipate in your research methodology, and how will you address them?"
+    "What are the key milestones and timelines for your research activities?"
   ],
   "Expected Outcomes / Impact": [
-    "What are the expected outcomes of your research project?",
+    "What are the anticipated outcomes of your research project?",
     "How will your research contribute to the field or society at large?",
-    "What potential applications or implications could arise from your findings?",
-    "How do you plan to measure the success or impact of your research?",
-    "What are the long-term benefits you foresee from your research outcomes?"
+    "What are the potential applications of your research findings?",
+    "How do you plan to disseminate your research results?",
+    "What long-term impacts do you foresee as a result of your research?"
   ],
   "Explanations on the management of ethical issues and data protection": [
     "What ethical considerations are relevant to your research project?",
     "How will you ensure the protection of participants' rights and privacy?",
-    "What measures will you take to secure and protect data collected during the research?",
+    "What measures will you take to secure and manage research data?",
     "How will you address any potential ethical dilemmas that may arise?",
-    "What protocols will you follow to ensure compliance with ethical standards and regulations?"
+    "What protocols will you follow to ensure compliance with ethical standards?"
   ],
   "Comment on resubmission (if applicable)": [
     "What changes or improvements have been made since the last submission?",
-    "How have you addressed any feedback or critiques from the previous submission?",
-    "What new insights or developments have influenced the resubmission?",
-    "What are the key differences between the original and resubmitted project?",
-    "How do you believe the resubmission strengthens the overall proposal?"
+    "How have you addressed the feedback received from previous reviews?",
+    "What new evidence or data supports the revised submission?",
+    "What lessons have you learned from the previous submission process?",
+    "How does the current submission better align with the project goals?"
   ],
   "Bibliography (max. 15 references, not included in character limits)": [
     "What are the key sources that have informed your research project?",
     "How do these references support your research objectives and methodology?",
-    "What criteria did you use to select the references included in your bibliography?",
-    "How do the selected references contribute to the originality of your research?",
-    "Are there any seminal works or authors that have significantly influenced your research?"
+    "What gaps in the literature does your research aim to address?",
+    "How have you ensured the credibility and relevance of your selected references?",
+    "What role do these references play in framing your research context?"
   ]
 }
-- project_title: AI-Driven Systems for Autonomous Spacecraft Operations
+- project_title: AI-Driven Autonomous Spacecraft Operations
 - project_description: This research proposal aims to develop AI-driven systems for autonomous spacecraft navigation, health monitoring, and mission planning. The focus will be on creating machine learning algorithms capable of real-time data analysis and decision-making, reducing reliance on ground control. The study will also address challenges such as ensuring AI reliability in unpredictable space environments and integrating these systems into existing spacecraft architectures. The expected outcome is a framework that enables spacecraft to operate more independently, improving mission success rates and expanding the possibilities for deep space exploration.
-- abstract_questions: ['What specific machine learning algorithms are being considered for real-time data analysis and decision-making in spacecraft operations?', 'How will the AI-driven systems be tested and validated to ensure reliability in unpredictable space environments?', 'What are the key challenges anticipated in integrating AI systems into existing spacecraft architectures?', 'How will the proposed AI systems reduce reliance on ground control, and what are the expected benefits of this reduction?', 'What measures will be taken to ensure the safety and security of the AI systems in space?', 'How will the success of the AI-driven systems be measured in terms of mission success rates and deep space exploration capabilities?', 'What are the potential risks associated with implementing AI-driven systems in spacecraft, and how will they be mitigated?', 'Who are the primary stakeholders or target audience for this research, and how will they benefit from the outcomes?', 'What are the expected timelines for the development and deployment of these AI-driven systems in spacecraft?', 'How will the AI systems handle unexpected events or anomalies during space missions?']
-- abstract_text: The AI-Driven Systems for Autonomous Spacecraft Operations project explores the integration of artificial intelligence (AI) and machine learning (ML) to enhance spacecraft autonomy, efficiency, and decision-making capabilities. The project addresses the challenges of deploying AI in space, such as limited computational resources and the harsh space environment, by developing specialized algorithms and a robust design, verification, and certification framework. AI systems are expected to reduce reliance on ground control, improve mission success rates, and enable sophisticated data analysis, thereby advancing space exploration. The project emphasizes the importance of rigorous testing, cybersecurity, and ethical considerations to ensure the safety and reliability of AI systems. By leveraging AI, the project aims to revolutionize space missions, enabling autonomous navigation, fault detection, and real-time decision-making, ultimately pushing the boundaries of space exploration. The research involves collaboration with stakeholders such as Khalifa University and Northrop Grumman Corporation, with a focus on realistic training and technology adaptation. The project anticipates ongoing development and deployment of AI-driven systems, with a structured approach to address technical, ethical, and legal challenges, ensuring the successful integration of AI in future space missions.
+- abstract_questions: ['What machine learning algorithms are suitable for real-time data analysis in space?', 'How can AI systems be validated for reliability in space environments?', 'What challenges exist in integrating AI into spacecraft?', 'How can AI reduce reliance on ground control in space missions?', 'What safety measures are necessary for AI systems in space?', 'How is success measured in AI-driven spacecraft operations?', 'What risks are associated with AI in space, and how can they be mitigated?', 'How do AI systems manage unexpected events in space?', 'What goals are set for AI in enhancing mission success and exploration?', 'Who benefits from AI research in spacecraft operations?']
+- abstract_text: The AI-Driven Autonomous Spacecraft Operations project explores the transformative role of artificial intelligence (AI) in enhancing the efficiency, accuracy, and autonomy of space missions. By integrating AI into satellite operations, data analysis, robotics, and autonomous spacecraft, the project aims to reduce human intervention and increase operational efficiency, enabling more ambitious exploration endeavors. The research highlights the potential of machine learning algorithms for real-time data analysis, image processing, and anomaly detection, which are crucial for space-based systems. It also addresses the challenges of ensuring AI reliability in harsh space environments, advocating for a dedicated AI design, verification, and certification framework to ensure system integrity and resilience. The project identifies key challenges in mission design, planning, and Earth observation, demonstrating AI's capability to provide robust solutions and facilitate scientific advancements. By reducing reliance on ground control, AI enhances mission success and exploration, allowing spacecraft to adapt to changing conditions and make real-time decisions. The research underscores the importance of addressing technical, ethical, and legal challenges to optimize AI benefits while mitigating risks, ultimately contributing to significant scientific advancements and discoveries in space exploration.
 - section_topics: ['Introduction: Originality of the Research Project', 'Hypothesis, Research Objectives and Envisaged Methodology', 'Expected Outcomes / Impact', 'Explanations on the management of ethical issues and data protection', 'Comment on resubmission (if applicable)', 'Bibliography (max. 15 references, not included in character limits)']
-- section_questions: {'Introduction: Originality of the Research Project': ['What is the central theme or idea of your research project?', 'How does your project differ from existing research in the field?', 'What unique contributions does your project aim to make?', 'Why is this research project important or necessary at this time?', 'What inspired you to pursue this particular research topic?'], 'Hypothesis, Research Objectives and Envisaged Methodology': ['What is the main hypothesis or hypotheses of your research?', 'What are the primary objectives you aim to achieve with this research?', 'What methodologies will you employ to conduct your research?', 'How will you ensure the reliability and validity of your research methods?', 'What challenges do you anticipate in your research methodology, and how will you address them?'], 'Expected Outcomes / Impact': ['What are the expected outcomes of your research project?', 'How will your research contribute to the field or society at large?', 'What potential applications or implications could arise from your findings?', 'How do you plan to measure the success or impact of your research?', 'What are the long-term benefits you foresee from your research outcomes?'], 'Explanations on the management of ethical issues and data protection': ['What ethical considerations are relevant to your research project?', "How will you ensure the protection of participants' rights and privacy?", 'What measures will you take to secure and protect data collected during the research?', 'How will you address any potential ethical dilemmas that may arise?', 'What protocols will you follow to ensure compliance with ethical standards and regulations?'], 'Comment on resubmission (if applicable)': ['What changes or improvements have been made since the last submission?', 'How have you addressed any feedback or critiques from the previous submission?', 'What new insights or developments have influenced the resubmission?', 'What are the key differences between the original and resubmitted project?', 'How do you believe the resubmission strengthens the overall proposal?'], 'Bibliography (max. 15 references, not included in character limits)': ['What are the key sources that have informed your research project?', 'How do these references support your research objectives and methodology?', 'What criteria did you use to select the references included in your bibliography?', 'How do the selected references contribute to the originality of your research?', 'Are there any seminal works or authors that have significantly influenced your research?']}
+- section_questions: {'Introduction: Originality of the Research Project': ['What is the central research question or problem your project addresses?', 'How does your project differ from existing research in the field?', 'What innovative approaches or methodologies will you employ?', 'Why is this research important and relevant at this time?', 'What are the potential implications of your research findings?'], 'Hypothesis, Research Objectives and Envisaged Methodology': ['What is the main hypothesis or hypotheses of your research?', 'What are the specific objectives you aim to achieve with this project?', 'What methodologies will you use to conduct your research?', 'How will you ensure the reliability and validity of your research methods?', 'What are the key milestones and timelines for your research activities?'], 'Expected Outcomes / Impact': ['What are the anticipated outcomes of your research project?', 'How will your research contribute to the field or society at large?', 'What are the potential applications of your research findings?', 'How do you plan to disseminate your research results?', 'What long-term impacts do you foresee as a result of your research?'], 'Explanations on the management of ethical issues and data protection': ['What ethical considerations are relevant to your research project?', "How will you ensure the protection of participants' rights and privacy?", 'What measures will you take to secure and manage research data?', 'How will you address any potential ethical dilemmas that may arise?', 'What protocols will you follow to ensure compliance with ethical standards?'], 'Comment on resubmission (if applicable)': ['What changes or improvements have been made since the last submission?', 'How have you addressed the feedback received from previous reviews?', 'What new evidence or data supports the revised submission?', 'What lessons have you learned from the previous submission process?', 'How does the current submission better align with the project goals?'], 'Bibliography (max. 15 references, not included in character limits)': ['What are the key sources that have informed your research project?', 'How do these references support your research objectives and methodology?', 'What gaps in the literature does your research aim to address?', 'How have you ensured the credibility and relevance of your selected references?', 'What role do these references play in framing your research context?']}

@@ -7,6 +7,7 @@ from langchain.embeddings.base import Embeddings
 from typing import List, Dict, Union
 from PIL import Image
 import io
+from config import *
 
 
 class NomicVisionQuerier(Embeddings):
@@ -18,7 +19,8 @@ class NomicVisionQuerier(Embeddings):
             self.model = self.model.to("cuda")
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         print(f"Using device: {self.device}")
-        self.images_dir = "retrieved_images"
+        # Update to use the config path
+        self.images_dir = str(RETRIEVED_IMAGES_PATH)
         os.makedirs(self.images_dir, exist_ok=True)
 
     def search_similar(self, persist_dir: str, query: str, k: int = 5) -> Dict[str, List[Dict[str, Union[str, List[str]]]]]:
@@ -58,13 +60,18 @@ class NomicVisionQuerier(Embeddings):
 
                     # Generate unique filename
                     image_filename = f"{os.path.basename(pdf_path)}_page{page_num}_img{img_idx}.png"
-                    image_path = os.path.join(self.images_dir, image_filename)
+                    
+                    # Save to the actual path from config
+                    from config import RETRIEVED_IMAGES_PATH
+                    image_path = RETRIEVED_IMAGES_PATH / image_filename
 
                     # Save image
                     with open(image_path, "wb") as img_file:
                         img_file.write(image_bytes)
 
-                    saved_images.append(image_path)
+                    # Store the absolute path
+                    saved_images.append(str(image_path))
+
                 except Exception as e:
                     print(f"Error extracting image {img_idx}: {str(e)}")
 

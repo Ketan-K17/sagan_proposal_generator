@@ -1,5 +1,5 @@
 PROMPT PARSER OUTPUT:
-PROJECT TITLE: AI-Driven Systems for Autonomous Spacecraft Operations
+PROJECT TITLE: AI-Driven Autonomous Spacecraft Operations
 PROJECT DESCRIPTION: This research proposal aims to develop AI-driven systems for autonomous spacecraft navigation, health monitoring, and mission planning. The focus will be on creating machine learning algorithms capable of real-time data analysis and decision-making, reducing reliance on ground control. The study will also address challenges such as ensuring AI reliability in unpredictable space environments and integrating these systems into existing spacecraft architectures. The expected outcome is a framework that enables spacecraft to operate more independently, improving mission success rates and expanding the possibilities for deep space exploration.
 
 
@@ -30,8 +30,8 @@ Note that you MUST answer with a project title and description, even if the user
 
 
 ai: {
-  "project_title": "AI-Driven Systems for Autonomous Spacecraft Operations",
+  "project_title": "AI-Driven Autonomous Spacecraft Operations",
   "project_description": "This research proposal aims to develop AI-driven systems for autonomous spacecraft navigation, health monitoring, and mission planning. The focus will be on creating machine learning algorithms capable of real-time data analysis and decision-making, reducing reliance on ground control. The study will also address challenges such as ensuring AI reliability in unpredictable space environments and integrating these systems into existing spacecraft architectures. The expected outcome is a framework that enables spacecraft to operate more independently, improving mission success rates and expanding the possibilities for deep space exploration."
 }
-- project_title: AI-Driven Systems for Autonomous Spacecraft Operations
+- project_title: AI-Driven Autonomous Spacecraft Operations
 - project_description: This research proposal aims to develop AI-driven systems for autonomous spacecraft navigation, health monitoring, and mission planning. The focus will be on creating machine learning algorithms capable of real-time data analysis and decision-making, reducing reliance on ground control. The study will also address challenges such as ensuring AI reliability in unpredictable space environments and integrating these systems into existing spacecraft architectures. The expected outcome is a framework that enables spacecraft to operate more independently, improving mission success rates and expanding the possibilities for deep space exploration.

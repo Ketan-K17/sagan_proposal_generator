@@ -1,4 +1,4 @@
-x
+
 \documentclass[a4paper,12pt]{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -6,122 +6,1579 @@ x
 \usepackage{geometry}
 \geometry{margin=1in}
 
-\title{Autonomous AI Agents for Spacecraft Operations}
+\title{AI-Driven Systems for Autonomous Spacecraft Operations}
 \author{}
 \date{}
 
 \begin{document}
-
 \maketitle
-
+\begin{abstract}
+The AI-Driven Systems for Autonomous Spacecraft Operations project explores the transformative role of artificial intelligence (AI) in enhancing the efficiency, autonomy, and capabilities of space missions. By leveraging machine learning algorithms for real-time data analysis, AI facilitates advancements in Earth observation, navigation, and satellite operations, reducing reliance on intensive testing and lowering costs. The project addresses the challenges of integrating AI into spacecraft, emphasizing the need for robust, fault-tolerant systems that can withstand the harsh conditions of space. A dedicated AI design, verification, and certification framework is proposed to ensure system reliability and resilience. The research highlights AI's potential in mission planning, anomaly detection, and autonomous decision-making, enabling spacecraft to adapt to unforeseen situations and operate with minimal human intervention. The project underscores the importance of human-on-the-loop control, balancing machine autonomy with human oversight to enhance mission success. As AI continues to evolve, it promises to revolutionize spacecraft design, optimize mission objectives, and facilitate ambitious exploration endeavors, while addressing technical, ethical, and legal challenges to ensure safe and secure operations.
+\end{abstract}
 \tableofcontents
-
 \newpage
-
 \section{Introduction: Originality of the Research Project}
 
-Spacecraft design is a vast and interdisciplinary effort, encompassing numerous fields of science and engineering. The proposed research aims to achieve significant advancements in the design of space missions by optimizing them beyond the constraints of traditional conservative approaches. This is achieved through innovations in three key aspects of mission design: exploring alternative concepts thoroughly and efficiently, addressing the multi-objective nature of design problems, and understanding the limitations of AI technology transfer.
+Source
+DB
+DB
+Query
+Object
+Graph
+Fig. 1
+Functional diagram of the Prepare step of the AI/ML workﬂow.
+framework. A number of FOSS and COTS solutions exist and are implemented either as tools or APIs at the project
+level (e.g., DVC∗or the tf.data.Dataset module†) or as an enterprise-level central dataset repository (e.g., Collibra‡).
+Beyond storing the data, centralized dataset repositories provide additional features that aid in the management of
 
-\subsection{Context and Background}
+work on systems capable of generating reliable responses to these parameters. Furthermore,
+it is necessary to identify tools to improve access to information in the mission-design and
+planning phases to manage the information necessary for its success. These tools are called
+design engineering assistants and can support decision-making for complex engineering
+problems such as initial input estimation, assisting experts by answering queries related to
 
-The design of spacecraft involves a complex interplay of various scientific and engineering disciplines. Traditional mission design approaches have often been conservative, leading to stagnation in innovation. By leveraging AI technologies, we can explore alternative mission concepts more thoroughly and efficiently, thus providing higher utility to stakeholders.
+trajectories. However, the true nature of most design problems is multi-objective,
+potentially also including integer decisions variables or non-linear constraints. In
+this multi-objective setting, the concept of the best design (i.e. the global optimum)
+is substituted with that of a Pareto front, a collection of non-dominated solutions
+expressing the trade-offs between different conﬂicting objectives. Consequently, a
+set of best possible solutions (Pareto-optimal front) is required to guide engineering
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{images/introduction:_originality_of_the_research_project_img_1.png}
-    \caption{The interdisciplinary nature of spacecraft design requires integration across various scientific and engineering domains.}
-    \label{fig:introduction:_originality_of_the_research_project_1}
-\end{figure}
+spacecraft design is a vast effort, branching out into many fields of science and 
+engineering. The proposed research obtains several important results towards the 
+design of space missions that provide higher utility to the stakeholders, by being 
+more optimized and not bound to the stagnancy of conservative mission design 
+approaches. These improvements are obtained through innovations in three aspects 
+of the mission design: 
+• exploring the alternative concepts thoroughly and more efficiently
 
-\subsection{Innovation in Mission Design}
+Explainable
+• Model uncertainty
+• Model architecture/complexity
+• Explainability
+• Explainable AI techniques
+• Continuous monitoring
+• Root cause analysis
+User Experience
+Rapid
+• Development time
+• Ease of update
+• Model/Data repository
+• COTS development tools/services
+High Value
+• Non-recurring cost
+• Recurring cost
+• Improvement over other methods
+• Automated pipelines
+• Reuse common solutions
+• Reduce duplication of eﬀorts
+Easy to use
+• UX/UI intuitiveness
+• Ease of integration
+• Standards conformity
 
-Mission design problems are inherently multi-objective, often involving trade-offs between conflicting objectives such as fuel consumption and travel time. The concept of a Pareto front, which represents a set of non-dominated solutions, is crucial in guiding engineering decisions. This approach allows for the identification of Pareto-optimal solutions that balance these trade-offs effectively.
+occur in any stage of the mission.
+Updates, for example,
+can come from downlink data, both at the tactical level
+(e.g. a magnetosphere model might need adjustments), or
+at the strategic level with trend and history analysis (e.g.,
+the duration of plumes at a certain location can be better
+estimated given historical data from previous ﬂybys).
+Figure 7. Variability Deﬁnition: allows scientists,
+engineers, autonomy engineers and operators to input
+uncertainty with respect to a multitude of aspects that might
 
-\subsection{Challenges in AI Technology Transfer}
+of the workﬂow. Additionally, high-quality datasets for these environments can be diﬃcult to come by and relying on
+augmentation or simulations potentially introduces unknown vulnerabilities. Questions, such as "How will the model
+respond to novel inputs?" or "Under what conditions do we expect the outputs of the model to be valid?" need to be
+addressed. The performance of an AI/ML system will naturally degrade over time whether due to data drift, changes in
 
-AI technologies often exhibit remarkable performance in specific tasks but may perform poorly when transferred to different tasks. This is due to a lack of understanding of the strengths and weaknesses of AI systems. By developing explainability and certification standards, we can ensure that AI technologies are applied effectively in space systems.
+can be determined by performance of the model and/or a schedule.
+After development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted
+before the packaged automated model pipeline is released for delivery to the target environment.
+The major steps in the Develop phase are largely the same across the three environments and the diﬀerences at
+workﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during
 
-\newpage
+across those meetings, though we also encouraged them to
+break into reﬂective discussions about the process and tools
+along the way. We also collected feedback in the form of
+survey responses in a journal they used for each day. We
+had implemented the tools as click-through prototypes only,
+and user study facilitator needed to “drive” the tools at the the
+operator’s request. This dynamic evoked dialogue about what
+information they needed to see and why.
+14
 
-\section{Hypothesis, Research Objectives, and Envisaged Methodology}
+aspects, but, among all, is mainly described by the network architecture and
+the state-action spaces; on the other side, the reward formulation embeds the
+mission objectives. Once these two, or more if needed, cases have been selected,
+the workflow proposes to train and test them with different levels of initial
+conditions. This difference can be interpreted in distinct ways: for instance, in
+Section 4.3, it concerns the randomness level of the initial conditions; while, in
 
-\subsection{Hypothesis}
+innovators. We will create opportunities to crossflow 
+high caliber personnel from industry into government 
+positions and USSF members to industry or other 
+government agencies to remain current in technology 
+and best practices.  
+ 
+REALISTIC TRAINING 
+ 
+We will make every effort to train in realistic, contested 
+conditions. Our forces are always in competition, and our 
+capabilities are likely among the first targets of an 
+aggressor’s action. In both competition and conflict
 
-The hypothesis of this research is that AI can significantly enhance spacecraft Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS) by improving autonomy and decision-making capabilities.
+other similar details;  
+• Using probabilistic, rather than deterministic, transition rules. 
+Population-based algorithms adopt a similar approach, regardless of 
+the applied paradigm and follow from the algorithm below.  
+1. Initialise the population;  
+2. Fitness is calculated for each individual in the population;  
+3. Produce a new population-based on some rules that strictly depend 
+on the fitness of each individual;  
+4. Repeat steps 2–4 until a condition is met. 
+4.1.2. Machine learning techniques
 
-\subsection{Research Objectives}
+6.1.
+Overview of the Methodology
+these four coupled models are trained with two different types of random initial
+conditions following the strategy outlined in the Fig. 6.1. In this way, it was
+possible to understand how the agent is robust and adaptable. In Section 4.4
+the same kind of analysis has been followed to increase again the complexity
+of the model, in this case in terms of state and action space.
+Figure 6.1: Schematization of the proposed workflow methodology.
+141
 
-The primary research objectives are to evaluate AI-based GNC methods through benchmark analyses and to develop explainability and certification standards for AI in space systems.
+bold, future focus informs our force design. We will 
+deliver a streamlined, agile, and innovative organization 
+that sets a new standard in the Department of Defense. 
+ 
+During this period of transformation, our forces must 
+continue to deliver the effects our Nation and Joint Force 
+count on without fail. Commanders responsible for those 
+missions will prioritize efforts to ensure they continue 
+seamlessly despite the disruptions inevitable during
 
-\subsection{Methodology}
+standing, should be investigated first. Classical and specialised methods, 
+on the other hand, are often naive, whereas heuristic and metaheuristic 
+paradigms can be utilised to various conditions. One key advantage of 
+heuristic and metaheuristic paradigms is their robustness. In this 
+context, robustness refers to an algorithm’s ability to solve a wide range 
+of problems and even multiple sorts of problems, with only slight 
+changes to account for each problem’s specific properties. A stochastic
 
-The methodology involves conducting an extensive literature review using scientific databases, implementing machine learning techniques for training AI agents, and performing rigorous testing and validation processes.
+to the reader. We decided to give importance to work published in the last few years,
+avoiding the historical perspective of older and well-established fundamental works.
+Additionally, we decided to avoid publications which are strongly speculative in
+nature: while visionary ideas are interesting to follow, an important requirement for
+this survey was a well-motivated applicability for a space-related challenge, ideally
+inspired by an already established or newly proposed mission concept. This narrow
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{images/hypothesis,_research_objectives_and_envisaged_methodology_img_1.png}
-    \caption{The methodology involves a comprehensive approach to integrating AI into spacecraft systems, focusing on training, testing, and validation.}
-    \label{fig:hypothesis,_research_objectives_and_envisaged_methodology_1}
-\end{figure}
+that the 35% of the new generation is formed by individuals picked from the old 
+generation. The selected value ensures a balance between effectiveness of the 
+search (lower elite population fractions) and survival of fit individuals (higher elite 
+population fractions). 
+8.5 Results 
+The investigation on methodologies to improve and automate the space mission and 
+spacecraft design is a vast effort, branching out into many fields of science and
 
-\newpage
+challenges and unlocking new opportunities. By 
+leveraging AI techniques, scientists and engineers 
+can enhance data analysis, enable autonomous 
+systems, improve navigation, and achieve greater 
+efficiency in space missions. 
+ 
+Methodology: 
+To conduct this research initially, an extensive 
+literature search was performed using reputable 
+scientific databases, including IEEE Xplore, ACM 
+Digital Library, and Google Scholar. The search 
+keywords included "artificial intelligence," "AI,"
+
+of the main research topic, corroborating its procedures and techniques. All
+three cases confirmed the good quality of the proposed methodology, achieving
+satisfying performance levels in each of the applications’ frameworks.
+Working for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,
+backs out and comebacks, and surely does not exhaustively explore a research
+field. But certainly, it helps pushing towards the accomplishment of evermore
+
+spacecraft design is a vast effort, branching out into many fields of science and 
+engineering. The proposed research obtains several important results towards the 
+design of space missions that provide higher utility to the stakeholders, by being 
+more optimized and not bound to the stagnancy of conservative mission design 
+approaches. These improvements are obtained through innovations in three aspects 
+of the mission design: 
+• exploring the alternative concepts thoroughly and more efficiently
+
+to the projected mission progress and performance. Itera-
+tions continue, as the team decides to make minor tweaks
+or drop problematic goals entirely.
+The team can inspect
+individual cases or “clusters” of related cases to understand
+outcomes that might happen onboard and investigate prob-
+lematic plans that approach undesired limits. Explanation of
+these problematic cases (either by manually inspecting logs,
+state history, timelines and traces or by using an automated
+
+Figure 10. Mission Impact tool: shows an overview of the
+simulations and the impact of updated or newly added goals
+to the mission progress
+actual telemetry from downlink and compare it to modeled
+predicted data (predicts) to support the analysis of onboard
+health and safety and anomaly detection[16]. The tool resem-
+bles conventional downlink analysis tools, plotting onboard
+state over time overlaid with events, and a list of EVRs. The
+predicts are clustered, since the uplink process for autonomy
+
+Progress in Aerospace Sciences 144 (2024) 100960
+27
+developed by The Aerospace Corporation (Fig. 30) looks at a system’s 
+capacity to fulfil mission objectives throughout the course of its full 
+lifecycle. Once the mission’s requirements and specific functions have 
+been determined, the possible threats that can affect the mission should 
+be identified, along with potential strategies. The threat’s goals must be 
+also identified because the strategy is a tool for attaining them [322].
+
+experienced autonomy. In particular, we chose to focus on
+how scientists would react to probabilistic resource conﬂicts,
+whether operators would trust and accept a non-deterministic
+uplink plan, and whether operators would feel conﬁdent in
+their retrospective reconstruction of onboard behavior and
+safety upon downlink.
+To study these particular facets of operations, we selected the
+previously described “Mapping Triton and Plume Detection”
+scenario (see Section 2), and elaborated preliminary tools and
+
+to 70%.
+The impacted scientist felt that the changes had
+compromised their original observation even thought it was
+still likely to occur, and, as a result, the participants discussed
+several strategies to make a compromise or otherwise relax
+the plan without using autonomy.
+The impacted scientist
+explained “I would have pushed harder if there was any
+indication that [the baseline plumes] or both were super
+important and we were not able to image them again.” At the
+
+\section{Hypothesis, Research Objectives and Envisaged Methodology}
+
+Machines, Ensemble Learning. 
+Several other methods consider prior knowledge during learning: in this case, 
+the effects of knowledge representation and learning are joined together. Current-
+best-hypothesis search and Least-commitment search are examples of these 
+algorithms. Efforts are also being spent in developing methodologies to extract 
+general knowledge from specific examples. Several different types of learning have 
+been developed, including Explanation-based learning, Relevance-based learning,
+
+paramount importance are also the 
+operation research and the Markov 
+decision 
+processes. 
+Some of the fundamental questions of 
+the 
+field, 
+related 
+to 
+AI: 
+- how should we make decisions to 
+improve 
+the 
+outcomes? 
+- how can we change these decisions 
+when the outcomes are evaluated in the 
+far future, or when boundary conditions 
+vary? 
+Neuroscience 
+Neuroscience is involved with 
+studying the brain, which is the main 
+element of the nervous systems in 
+human beings. Despite the majority of
+
+Analysis
+Once we concluded the study, we transcribed the audio from
+the sessions and compiled the survey responses. To identify
+themes, we grouped clusters of related observations into
+afﬁnity groups, focusing on topics that related to our research
+questions.
+Findings
+In this section, we describe preliminary themes that emerged
+from our analysis.
+The user study participants in general
+successfully used the tools and series of steps to complete
+their operations tasks. The operators’ participation, inquiries,
+
+version control that tracks the original source and any modiﬁcations to a dataset, ensuring traceability of the data lineage.
+The ﬁrst step in most machine learning projects, once data is in hand, is exploratory data analysis (EDA). The goals
+of EDA are to understand the contents of the dataset, identify any trends that might be exploitable via AI/ML, and begin
+to shape the hypotheses and approaches to explore. The EDA step is often dataset-speciﬁc and requires a knowledgeable
+
+of the workﬂow. Additionally, high-quality datasets for these environments can be diﬃcult to come by and relying on
+augmentation or simulations potentially introduces unknown vulnerabilities. Questions, such as "How will the model
+respond to novel inputs?" or "Under what conditions do we expect the outputs of the model to be valid?" need to be
+addressed. The performance of an AI/ML system will naturally degrade over time whether due to data drift, changes in
+
+Appl. Sci. 2022, 12, 5106
+4 of 21
+Therefore, all efforts lead to two common goals: (i) to push toward space exploration
+and scientiﬁc discoveries; (ii) to improve life on Earth. Human beings play an essential
+role in all this, such as specialists who work on the objectives of space missions, astronauts
+who experience challenging conditions in space, and ordinary citizens involved in the
+achievement of these challenges, particularly those of improving life on Earth.
+
+such observation as a goal in its corresponding campaign.
+The tool also allows the direct speciﬁcation of goals in the
+form a set of desired activities (e.g. observation, detection)
+without necessarily using the search mechanism. Figure 5
+shows an example of the creation of two goals (one con-
+ditional on execution of the other) to monitor a particular
+location on the surface of Triton, and perform a follow-on
+observation if a plume is detected. The ﬁgure also shows
+
+plan speciﬁcation, from strategic to tactical, which largely
+aligns with current mission practices of large ground planning
+teams at NASA JPL. Building on previous work at JPL [11]
+[12] [13] [14] we designed a set of UI tools to progressively
+capture and specify intent as science campaigns. In this work
+campaigns are composed by: a constrained set of goals (a de-
+sired state value or a high level activity, e.g. survey the mag-
+netosphere, or monitor for plume activity), metrics to evaluate
+
+Progress in Aerospace Sciences 144 (2024) 100960
+27
+developed by The Aerospace Corporation (Fig. 30) looks at a system’s 
+capacity to fulfil mission objectives throughout the course of its full 
+lifecycle. Once the mission’s requirements and specific functions have 
+been determined, the possible threats that can affect the mission should 
+be identified, along with potential strategies. The threat’s goals must be 
+also identified because the strategy is a tool for attaining them [322].
+
+overall public and pre-accession interest in space. We will 
+not passively wait for the best to respond to marketing, 
+but actively use merit and diversity-based criteria to seek 
+the talent we want. 
+ 
+Our efforts to manage, develop, and retain this talent 
+will be central to the long-term viability and success of 
+the Service. Our small, flat organization allows for 
+deliberate individualized development focused on 
+building 
+space 
+warfighters 
+with 
+the 
+necessary
+
+of the main research topic, corroborating its procedures and techniques. All
+three cases confirmed the good quality of the proposed methodology, achieving
+satisfying performance levels in each of the applications’ frameworks.
+Working for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,
+backs out and comebacks, and surely does not exhaustively explore a research
+field. But certainly, it helps pushing towards the accomplishment of evermore
+
+Analysis
+Once we concluded the study, we transcribed the audio from
+the sessions and compiled the survey responses. To identify
+themes, we grouped clusters of related observations into
+afﬁnity groups, focusing on topics that related to our research
+questions.
+Findings
+In this section, we describe preliminary themes that emerged
+from our analysis.
+The user study participants in general
+successfully used the tools and series of steps to complete
+their operations tasks. The operators’ participation, inquiries,
+
+challenges and unlocking new opportunities. By 
+leveraging AI techniques, scientists and engineers 
+can enhance data analysis, enable autonomous 
+systems, improve navigation, and achieve greater 
+efficiency in space missions. 
+ 
+Methodology: 
+To conduct this research initially, an extensive 
+literature search was performed using reputable 
+scientific databases, including IEEE Xplore, ACM 
+Digital Library, and Google Scholar. The search 
+keywords included "artificial intelligence," "AI,"
+
+4. Repeat steps 2–4 until a condition is met. 
+4.1.2. Machine learning techniques 
+ML approaches are a subset of AI techniques that allows for the 
+creation of analytical models to be automated. It is a branch of AI based 
+on the idea that computers can learn through data, identify patterns and 
+make judgments with small or no human intervention. A ML process is 
+shown in Fig. 20. A model that can be queried by an application is 
+trained based on a data or knowledge base. Regardless of suitable con­
+
+decision-making[31]. Sinha R., (2018), Data Mining techniques can extract valuable insights from this data, such as identifying patterns, 
+anomalies, or potential discoveries [32]. Sinha R., (2019), Data Warehousing can provide a centralized repository for storing and 
+integrating data from different sources, facilitating comprehensive analysis and knowledge discovery. By combining these technologies
+
+the training data, hoping it would accurately work for the real ones.
+Some kind of assurance is needed, that your model has got most of
+the patterns from the data correct, and its not picking up too much
+on the noise, i.e. overﬁtting the training data. The process of deciding
+whether the numerical results quantifying hypothesized relationships
+between variables are acceptable as descriptions of the data, is known
+as validation. Generally, an error estimation for the model is made af-
+
+the mission’s objectives.
+• Initial conditions robustness: where all the parameters involved in
+the random selection and their relative randomness level are defined or
+designed.
+The adopted workflow based on these three aspects is schematized in Fig. 6.1.
+This methodology is proposed as a sort of vademecum or guidelines to follow
+for the implementation and testing of a robust DRL-based path or strategy
+planning agent. Indeed, all three scenarios that will be analysed in the next
+
+and Lin [19] prove in their study how this approach generally yields
+the best performance when compared to other schemes.
+2.3
+training & validation
+A simple,
+introductory article
+on the topic can be
+found on [1]
+When building a machine learning model, it is absolutely necessary
+to assess the stability and performance of said model over unseen
+data, before releasing it as the ﬁnal product. It cannot just be ﬁt to
+the training data, hoping it would accurately work for the real ones.
+
+standing, should be investigated first. Classical and specialised methods, 
+on the other hand, are often naive, whereas heuristic and metaheuristic 
+paradigms can be utilised to various conditions. One key advantage of 
+heuristic and metaheuristic paradigms is their robustness. In this 
+context, robustness refers to an algorithm’s ability to solve a wide range 
+of problems and even multiple sorts of problems, with only slight 
+changes to account for each problem’s specific properties. A stochastic
+
+4. Repeat steps 2–4 until a condition is met. 
+4.1.2. Machine learning techniques 
+ML approaches are a subset of AI techniques that allows for the 
+creation of analytical models to be automated. It is a branch of AI based 
+on the idea that computers can learn through data, identify patterns and 
+make judgments with small or no human intervention. A ML process is 
+shown in Fig. 20. A model that can be queried by an application is 
+trained based on a data or knowledge base. Regardless of suitable con­
+
+Hubble Space Telescope and the Kepler mission. Once the schedule is defined, it is 
+uploaded to the spacecraft and executed in a time-tagged way. In general, the 
+definition of the activities is performed not only for the nominal path, but alternate 
+branches of off-nominal conditions are also foreseen and generated. Interestingly, 
+the definition of the timeline of operations is a process as time-dependent as the 
+execution of the operations itself: in certain cases, the look-ahead period can reach
+
+can be determined by performance of the model and/or a schedule.
+After development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted
+before the packaged automated model pipeline is released for delivery to the target environment.
+The major steps in the Develop phase are largely the same across the three environments and the diﬀerences at
+workﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during
+
+exploits a Deep Autoencoder to perform image compression. 
+2.3. Mission Timeline 
+The Φsat-2 spacecraft is designed for a 14-month lifetime from launch with potential extension 
+up to 2 more years. Figure 5 shows the nominal top-level timeline of the mission, and Table 4 
+Summary of Mission PhasesTable 4 provides a description of the activities undertaken during 
+each phase. 
+ 
+Figure 5  Mission Timeline 
+Phase 
+Duration 
+Activities 
+Launch and Early 
+2 weeks 
+● Launch and separation
+
+Progress in Aerospace Sciences 144 (2024) 100960
+5
+c) Life Cycle Parameters: Total time required for operation, budget, as 
+well as maximum time required for initial deployment. 
+A high-level process for calculating the decentralisation values from 
+M3 to M4 is depicted in Fig. 5. Because of the underlying network 
+structure, designers are recommended to rely on multi-agent techniques 
+that blend system dynamics and evolution with autonomous behaviour 
+[34]. 
+2.3. DSS classification
+
+to the projected mission progress and performance. Itera-
+tions continue, as the team decides to make minor tweaks
+or drop problematic goals entirely.
+The team can inspect
+individual cases or “clusters” of related cases to understand
+outcomes that might happen onboard and investigate prob-
+lematic plans that approach undesired limits. Explanation of
+these problematic cases (either by manually inspecting logs,
+state history, timelines and traces or by using an automated
 
 \section{Expected Outcomes / Impact}
 
-\subsection{Enhanced Mission Autonomy}
+changes into the main plan.
+Then the team collectively
+reviews these preliminary “low ﬁdelity” outputs, implements
+iterations as needed and approves advancing to the “high
+ﬁdelity” evaluation of possible outcomes and autonomy out-
+put.
+Such high ﬁdelity evaluation is called here outcome
+prediction phase.
+At the outcome prediction phase, simulations produce a more
+realistic and comprehensive view of the new plan’s impact
+to the projected mission progress and performance. Itera-
 
-AI agents are expected to make informed decisions using real-time data, reducing human intervention and increasing mission efficiency. This will lead to enhanced mission autonomy and the potential for more ambitious space exploration missions.
+as the metrics and variability speciﬁcations. Figure 9 shows
+the predicted outcomes (for the target tasknet) on the left-
+hand side, ordered from most likely to least likely, aiding the
+operator in more easily deciphering the expected behavior of
+the constructed plans. The green and red arrows inform the
+impact of an added goal (in this case, observing Plume X)
+on the outcome distribution. For example, the percentage of
+cases in which Observation A and B will be both performed
 
-\subsection{Long-term Benefits}
+and battery status. Since this view displays an aggregate of
+all outcomes, the charts on the timeline view showcase the
+overlaid results in a gradient-like pattern indicating all the
+possible values for the various outcomes. All in all, this view
+is crucial for the operator in examining all of the possible
+outcomes after running through the prediction engine.
+Figure 9. Mission Planning Prediction Results tool: shows
+the aggregated summary of all simulation runs for a given
+task network
 
-The integration of AI in spacecraft systems promises long-term benefits, including increased autonomy, reduced human intervention, and the potential for more ambitious space exploration missions, ultimately advancing our understanding of the universe.
+of the outcome of the plan, while higher ﬁdelity predictions,
+which we made available later in the activity, provided es-
+timations based on a Monte Carlo Simulation approach that
+modeled the outcomes across 10,000 scenarios/outcomes.
+While participants generally accepted the progression from
+low ﬁdelity to high ﬁdelity data, conversations with scientist
+participants revealed that some wanted higher ﬁdelity data
+available at the beginning of negotiations. In this particular
 
-\subsection{Compliance and Safety}
+prognostics system, enabling further predictions. This would enable operators to
+avoid problems in advance, reducing the rail delays across their network. This has
+been deployed in early stages and is showing promising results in reducing delays.
+This has enabled Deutsche Bahn to implement a prototype semi-autonomous
+FDIR system.
+3.2
+Prognostics & Prediction
+With the advent of low cost, high volume Internet of Things (IoT) devices,
+automated machine health monitoring has become more practical [14]. Machine
 
-Ensuring compliance with international space regulations is crucial. The project addresses safety, security, and legal challenges by implementing rigorous verification and acceptance tests.
+inspired by an already established or newly proposed mission concept. This narrow
+scope allows our survey to be concise while remaining relevant for the interested
+practitioner.
+Many times, results obtained by one AI technology for a speciﬁc task appear
+stunning, but perform rather poorly when transferred to a different task, which often
+happens when its strength and weaknesses are not thoroughly understood. However,
+due to the pioneering works of many researchers combined with the results of large
 
-\newpage
+paramount importance are also the 
+operation research and the Markov 
+decision 
+processes. 
+Some of the fundamental questions of 
+the 
+field, 
+related 
+to 
+AI: 
+- how should we make decisions to 
+improve 
+the 
+outcomes? 
+- how can we change these decisions 
+when the outcomes are evaluated in the 
+far future, or when boundary conditions 
+vary? 
+Neuroscience 
+Neuroscience is involved with 
+studying the brain, which is the main 
+element of the nervous systems in 
+human beings. Despite the majority of
 
-\section{Explanations on the Management of Ethical Issues and Data Protection}
+address 
+the 
+challenges 
+and 
+opportunities in integrating AI in the field of space 
+exploration. 
+Furthermore, the selected papers were scrutinized to 
+extract relevant data and insights that could 
+contribute to the research paper. This involved 
+identifying statistical information, experimental 
+results, case studies, and any other data that 
+supported the findings and conclusions of the 
+respective studies. The extracted data and insights 
+were then used to strengthen the research paper's
 
-\subsection{Ethical Considerations}
+of the main research topic, corroborating its procedures and techniques. All
+three cases confirmed the good quality of the proposed methodology, achieving
+satisfying performance levels in each of the applications’ frameworks.
+Working for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,
+backs out and comebacks, and surely does not exhaustively explore a research
+field. But certainly, it helps pushing towards the accomplishment of evermore
 
-The ethical guidelines for AI include transparency, accountability, and minimizing bias. It is essential to address potential biases and privacy concerns in AI systems.
+is more exciting because AI and space technologies offer a wide range of 
+opportunities. Nevertheless, the need to understand the ultimate 
+outcome of the technology remains unanswered. Not to mention that 
+even the scientific research community are unable to agree on a prece­
+dent arising from the use of AI. Prominent scientists and industry leaders 
+argued that AI could radically transform the way we live and work, 
+potentially threating our civilisation and even human survival [343]. A
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{images/explanations_on_the_management_of_ethical_issues_and_data_protection_img_1.png}
-    \caption{Ethical considerations in AI involve ensuring transparency, accountability, and minimizing bias in decision-making processes.}
-    \label{fig:explanations_on_the_management_of_ethical_issues_and_data_protection_1}
-\end{figure}
+address 
+the 
+challenges 
+and 
+opportunities in integrating AI in the field of space 
+exploration. 
+Furthermore, the selected papers were scrutinized to 
+extract relevant data and insights that could 
+contribute to the research paper. This involved 
+identifying statistical information, experimental 
+results, case studies, and any other data that 
+supported the findings and conclusions of the 
+respective studies. The extracted data and insights 
+were then used to strengthen the research paper's
 
-\subsection{Data Protection Strategies}
+Dynamics, DARPA). Excellent examples of applications are also to be found in 
+interplanetary robotics systems, such as NASA Mars Science Laboratory [55]. 
+Robotics – Research applications have differentiated into various fields, 
+encompassing aerial, terrestrial and underwater robots: examples are found in the 
+heavy industry, in paralyzed people aids, computer vision and so on. Other 
+applications involved are the Touring Problems, VLSI layouts, Automatic 
+Assembly Sequencing and so on.
 
-Data protection strategies include implementing data governance and version control, ensuring data security, and standardization. These strategies are crucial for maintaining the integrity and confidentiality of data in AI systems.
+challenges and unlocking new opportunities. By 
+leveraging AI techniques, scientists and engineers 
+can enhance data analysis, enable autonomous 
+systems, improve navigation, and achieve greater 
+efficiency in space missions. 
+ 
+Methodology: 
+To conduct this research initially, an extensive 
+literature search was performed using reputable 
+scientific databases, including IEEE Xplore, ACM 
+Digital Library, and Google Scholar. The search 
+keywords included "artificial intelligence," "AI,"
 
-\newpage
+showcasing 
+its 
+applications 
+and 
+benefits. 
+Researchers have explored the use of AI in satellite 
+operations, enabling efficient monitoring, control, 
+and maintenance of satellites in orbit. Moreover, AI 
+techniques have been employed for data analysis 
+from space missions, enabling the extraction of 
+valuable 
+insights 
+and 
+facilitating 
+scientific 
+discoveries. Robotics is another area where AI has 
+demonstrated its potential, with autonomous robots 
+being deployed for tasks such as planetary
 
-\section{Comment on Resubmission (if applicable)}
+inspired by an already established or newly proposed mission concept. This narrow
+scope allows our survey to be concise while remaining relevant for the interested
+practitioner.
+Many times, results obtained by one AI technology for a speciﬁc task appear
+stunning, but perform rather poorly when transferred to a different task, which often
+happens when its strength and weaknesses are not thoroughly understood. However,
+due to the pioneering works of many researchers combined with the results of large
 
-\subsection{Revision Details}
+plans to facilitate an iterative design process of science in-
+tent, including capturing intent and constructing plans with
+that intent.
+We focus on a workﬂow that includes intent
+capture/modeling, outcome/execution prediction, explanation
+of elements in the predicted outcomes (e.g.
+undesirable
+performance), as well as advisory techniques (e.g., “to ﬁx
+undesirable behavior, add/change this constraint”).
+The
+proposed workﬂow aims to facilitate the operators’ learning
 
-This section provides details on any revisions made to the project, highlighting improvements or changes based on feedback.
+of the outcome of the plan, while higher ﬁdelity predictions,
+which we made available later in the activity, provided es-
+timations based on a Monte Carlo Simulation approach that
+modeled the outcomes across 10,000 scenarios/outcomes.
+While participants generally accepted the progression from
+low ﬁdelity to high ﬁdelity data, conversations with scientist
+participants revealed that some wanted higher ﬁdelity data
+available at the beginning of negotiations. In this particular
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{images/comment_on_resubmission_(if_applicable)_img_1.png}
-    \caption{Revisions to the project have been made to address feedback and improve the overall quality of the research.}
-    \label{fig:comment_on_resubmission_(if_applicable)_1}
-\end{figure}
+plan speciﬁcation, from strategic to tactical, which largely
+aligns with current mission practices of large ground planning
+teams at NASA JPL. Building on previous work at JPL [11]
+[12] [13] [14] we designed a set of UI tools to progressively
+capture and specify intent as science campaigns. In this work
+campaigns are composed by: a constrained set of goals (a de-
+sired state value or a high level activity, e.g. survey the mag-
+netosphere, or monitor for plume activity), metrics to evaluate
 
-\newpage
+liminary design hadn’t anticipated. For example, we had de-
+signed the system to include progressive disclosure of higher
+ﬁdelity science goal prediction details.
+These predictions
+indicated the probability of each goal being successfully
+executed, given the order of operations and science targets.
+Lower-ﬁdelity predictions, which we made available to par-
+ticipants at the activity start, gave operators a rough estimate
+of the outcome of the plan, while higher ﬁdelity predictions,
 
-\section{Bibliography}
+intent, and updates that align evolving requirements.  We 
+value clear verbal and written communication oriented to 
+inform decisions and implement actions. 
+We also value design approaches to critical thinking, and 
+data-driven problem solving. Over the next year, the 
+Director of Staff will publish guidance that establishes a 
+standard 
+for 
+how 
+space 
+professionals 
+approach 
+structured data-driven decision-making. Like MTOs, a 
+standardized process is not intended to constrain thinking
 
-\begin{enumerate}
-    \item Eirates, Northrop Grumman Corporation, and the SmartSat Cooperative Research Centre for their support of this work through various grants and projects.
-    \item Analysis and findings from user study participants successfully using tools and steps to complete operations tasks.
-    \item References to various scientific papers and research articles relevant to the project.
-\end{enumerate}
+metric speciﬁcation, showing the number of plumes metric
+as an example. Progress and impact is also shown for each
+campaign, based on the inputs given in the Mission Planning
+tool.
+Metrics are key inputs to evaluate both current and
+predicted spacecraft performance.
+Note that most of the
+metrics (if not all of them) are usually captured and speciﬁed
+early in the mission, or at the strategic planning level.
+Figure 6. Metric Deﬁnition: allows scientists, engineers,
+
+of the workﬂow. Additionally, high-quality datasets for these environments can be diﬃcult to come by and relying on
+augmentation or simulations potentially introduces unknown vulnerabilities. Questions, such as "How will the model
+respond to novel inputs?" or "Under what conditions do we expect the outputs of the model to be valid?" need to be
+addressed. The performance of an AI/ML system will naturally degrade over time whether due to data drift, changes in
+
+tists, engineers and operators go through the process of intent
+capture, starting by revisiting the goals for the next ﬂyby(s)
+based on the downlink data and analysis.
+Scientists and
+engineers then have the opportunity to make changes to the
+goals/plan while getting instant feedback on the viability of
+their changes and on their impact on overall mission progress
+and performance. The viability and impact analysis here is
+based on an initial, low ﬁdelity evaluation of possible onboard
+
+the aggregated summary of all simulation runs for a given
+task network
+Mission impact tool—The mission impact UI view (shown in
+Figure 10) provides an overview of the simulations spanning
+the whole mission (that is, looking into all ﬂybys) highlight-
+ing, the impact of newly-added goals to the the progress and
+success of the campaigns and to performance trends. This
+view also shows how the plans perform with respect to key
+performance indicators, and the uncertainty associated with
+
+(e.g., time series)
+• Resize/reshape/window
+Feature Engineering
+• Custom feature generation
+• Auto feature generation
+Data Visualization
+• Spreadsheet viewer
+• Basic plotting tools & viewer
+• Scatter plot/time series
+• Histogram (1D & 2D)
+• Image viewer
+Data Exploration
+• Automatic data profiling
+• Data type, range, stats
+• Cardinality
+• Correlation matrix
+• Feature importance
+• Univariate analysis
+• Clustering
+• Bias identification
+Data Labeling
+• Ontology definition
+• Hand labeling
+• Smart labeling
+
+\section{Explanations on the management of ethical issues and data protection}
+
+potentially threating our civilisation and even human survival [343]. A 
+report on robotics and AI published by the British House of Commons 
+highlighted specific ethical and legal issues, including transparent 
+decision-making, minimising bias, accountability and privacy [325]. 
+The first draft of the “Ethics Guidelines for Trustworthy AI” was pub­
+lished by the European Commission’s High-Level Expert Group on 
+Artificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,
+
+Progress in Aerospace Sciences 144 (2024) 100960
+30
+1. Ethical purpose: AI development, deployment and use should respect 
+fundamental rights and applicable regulations as well as core prin­
+ciples and values to ensure “ethical purpose";  
+2. Technical robustness: AI should be technically robust and reliable 
+since its use can cause unintentional harm, even in the presence of 
+good intentions [344]. 
+AI systems use large amounts of data, causing increasing concerns as
+
+the smaller file sizes required for programming, which is becoming 
+compatible with the uplink bandwidth of small satellites [264]. 
+8.2. Ethical and legal challenges 
+The use of AI in space systems raises a number of ethical and legal 
+questions. Some researchers have identified the need for AI ethicists to 
+help navigate where advances in this technology could lead [328]. This 
+is more exciting because AI and space technologies offer a wide range of
+
+text=Prof%20Stephen%20Hawking%2C%20one%20of,end%20of%20the%20h 
+uman%20race.%22, 2014. 
+[344] E. Commission, Have your say: European expert group seeks feedback on draft 
+ethics guidelines for trustworthy artificial intelligence, Available at: https://ec. 
+europa.eu/digital-single-market/en/news/have-your-say-european-expert-gro 
+up-seeks-feedback-draft-ethics-guidelines-trustworthy, 2018. 
+[345] S.T. Todd, J. Burke, Emerging legal issues in an AI-driven world, Available at:
+
+[326] D. Harkut, K. Kasat, Introductory Chapter: Artificial Intelligence - Challenges and 
+Applications, 2019. 
+[327] J.B. James Manyika, The Promise and Challenge of the Age of Artificial 
+Intelligence, 2018. 
+[328] A. Pavaloiu, U. K¨ose, Ethical artificial intelligence - an open question, Journal of 
+Multidisciplinary Developments 2 (04/01 2017) 15–27. 
+[329] M.U. Scherer, Regulating artificial intelligence systems: risks, challenges, 
+competencies, and strategies, Harv. J. Law Technol. 29 (2015) 353.
+
+good intentions [344]. 
+AI systems use large amounts of data, causing increasing concerns as 
+more data is collected and used. Such high volumes and the level of 
+dependence on such data will keep privacy at the forefront as one of the 
+most significant legal issues to be addressed in the future. For instance, 
+setting ethical parameters within which AI systems operate is para­
+mount in tackling bias, considering the application of AI to data 
+generated in space and prospective on-board AI space sector
+
+potentially threating our civilisation and even human survival [343]. A 
+report on robotics and AI published by the British House of Commons 
+highlighted specific ethical and legal issues, including transparent 
+decision-making, minimising bias, accountability and privacy [325]. 
+The first draft of the “Ethics Guidelines for Trustworthy AI” was pub­
+lished by the European Commission’s High-Level Expert Group on 
+Artificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,
+
+There are times when robots are used to collect and process sensitive information, starting from personal data used in healthcare to 
+proprietary information used in industrial settings. All such information should be protected from unauthorized access and cyber attacks 
+[15]. Ensure safe communication channels between the robots and the cloud in order to protect against breaches of data or tampering.
+
+Data Security
+• Access management
+• Sensitive info labeling
+• User/group access rules
+Data Version Control
+• Original source
+• Commit history with 
+comments
+Data Standardization
+• Labeling standards
+• Column naming standards
+• Data type and unit standards
+Data Security
+• Access management
+• Sensitive info labeling
+• User/group access rules
+Data 
+Source
+DB
+DB
+Query
+Object
+Graph
+Fig. 1
+Functional diagram of the Prepare step of the AI/ML workﬂow.
+
+supporting the safety of orbiting spacecraft and debris mitigation [7].
+With an exponentially growing number of space-related practical ser-
+vices and research interests, a new focus has been appropriately made
+on the defense and protection of spacecraft to ensure the continued
+ﬂow of information (Cukurtepe and Akgun [13], Jah [20], Brown, Cot-
+ton, et al. [7], Contant-Jorgenson, Lála, Schrogl, et al. [11]). A few
+
+Data Security
+• Access management
+• Sensitive info labeling
+• User/group access rules
+Data Version Control
+• Original source
+• Commit history with 
+comments
+Data Standardization
+• Labeling standards
+• Column naming standards
+• Data type and unit standards
+Data Security
+• Access management
+• Sensitive info labeling
+• User/group access rules
+Data 
+Source
+DB
+DB
+Query
+Object
+Graph
+Fig. 1
+Functional diagram of the Prepare step of the AI/ML workﬂow.
+
+datasets via data governance. Central dataset repositories can be tied to enterprise authentication services such as Active
+Directory to provide an easy-to-use and secure way for groups to manage access and modiﬁcation permissions for their
+datasets. For unrestricted datasets, a centralized repositry makes it easier for developers to ﬁnd relevant datasets and
+oﬀers a single source of truth for datasets. Standards can also be implemented at the enterprise level to ensure data is
+
+digital 
+capabilities 
+including 
+software defined networks, data analytics, machine 
+intelligence, cloud edge computing, and modular plug-n-
+play systems.  Digital applies not only to our weapon 
+systems but to our business processes as well, and the 
+Space Force will apply similar techniques to enable a 
+Digital Headquarters. Full implementation of our digital 
+strategy will involve investments in Digital Engineering 
+data and analytics infrastructure to ensure all our data is
+
+data and analytics infrastructure to ensure all our data is 
+discoverable, accessible, understandable, linked, and 
+trusted across multiple security levels.  
+Automation 
+and 
+autonomy 
+will 
+accelerate 
+and 
+streamline our operations and provide analytics to 
+optimize mission and headquarters effectiveness. 
+Applying machine learning and trusted levels of 
+autonomy will allow our personnel to focus on data-
+driven decision-making instead of manually sorting and
+
+standards. 
+4 
+Many living beings could die or 
+could be restricted for life; the 
+environment could be damaged 
+permanently. Loss of 
+information which endangers 
+the existence of the 
+organization. Long-term 
+unavailability of critical data or 
+services without which the 
+organization cannot function. 
+The ML application is 
+developed and documented 
+with great care. Safety & 
+Security is ensured with 
+processes and techniques that 
+go beyond traditional best 
+practices and industry
+
+intent, and updates that align evolving requirements.  We 
+value clear verbal and written communication oriented to 
+inform decisions and implement actions. 
+We also value design approaches to critical thinking, and 
+data-driven problem solving. Over the next year, the 
+Director of Staff will publish guidance that establishes a 
+standard 
+for 
+how 
+space 
+professionals 
+approach 
+structured data-driven decision-making. Like MTOs, a 
+standardized process is not intended to constrain thinking
+
+potentially threating our civilisation and even human survival [343]. A 
+report on robotics and AI published by the British House of Commons 
+highlighted specific ethical and legal issues, including transparent 
+decision-making, minimising bias, accountability and privacy [325]. 
+The first draft of the “Ethics Guidelines for Trustworthy AI” was pub­
+lished by the European Commission’s High-Level Expert Group on 
+Artificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,
+
+disaggregated and desynchronized bureaucratic process 
+that increases risk for our Joint warfighters. We will 
+consolidate and coordinate disparate processes to 
+accelerate decisions and reduce that risk. 
+ 
+Reducing bureaucracy does not mean eliminating the 
+oversight required by law and policy. Rather, it emphasizes 
+empowerment through delegation of decision authority to 
+the most responsive competent authority, and a high 
+degree of accountability. Tight alignment of responsibility,
+
+post-processing, checking for violations such as data values
+going over limits (e.g. power levels are too high), invalid
+behaviors or combinations of behaviors (e.g. activity A can-
+not ever overlap activity B), and for other types of undesired
+situations. Further, ground systems often include automated
+notiﬁcations to alert operators of an issue, given there may be
+a very short turn around time for mission engineers to respond
+to that issue and possibly prevent the loss of science data or
+
+digitally supported decision-making throughout their 
+careers.  
+With digital engineering and fluency as foundational 
+elements, we will drive Digital Operations across our 
+space mission sets to increase all domain awareness and 
+close the kill chain faster with more robust, informed C2 
+decision options. In doing so, we will fully exploit modern 
+commercially-based 
+digital 
+capabilities 
+including 
+software defined networks, data analytics, machine
+
+potentially threating our civilisation and even human survival [343]. A 
+report on robotics and AI published by the British House of Commons 
+highlighted specific ethical and legal issues, including transparent 
+decision-making, minimising bias, accountability and privacy [325]. 
+The first draft of the “Ethics Guidelines for Trustworthy AI” was pub­
+lished by the European Commission’s High-Level Expert Group on 
+Artificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,
+
+the smaller file sizes required for programming, which is becoming 
+compatible with the uplink bandwidth of small satellites [264]. 
+8.2. Ethical and legal challenges 
+The use of AI in space systems raises a number of ethical and legal 
+questions. Some researchers have identified the need for AI ethicists to 
+help navigate where advances in this technology could lead [328]. This 
+is more exciting because AI and space technologies offer a wide range of
+
+Despite the numerous advantages offered by AI in 
+space exploration, there are challenges that need to 
+be addressed. One significant concern is the 
+reliability and robustness of AI systems operating in 
+the harsh conditions of space. Ensuring the 
+resilience of AI algorithms to radiation, extreme 
+temperatures, and other space-specific challenges is 
+crucial for the success of future missions. 
+Additionally, ethical considerations surrounding AI 
+decision-making in space, such as the potential for
+
+[326] D. Harkut, K. Kasat, Introductory Chapter: Artificial Intelligence - Challenges and 
+Applications, 2019. 
+[327] J.B. James Manyika, The Promise and Challenge of the Age of Artificial 
+Intelligence, 2018. 
+[328] A. Pavaloiu, U. K¨ose, Ethical artificial intelligence - an open question, Journal of 
+Multidisciplinary Developments 2 (04/01 2017) 15–27. 
+[329] M.U. Scherer, Regulating artificial intelligence systems: risks, challenges, 
+competencies, and strategies, Harv. J. Law Technol. 29 (2015) 353.
+
+highlighting the open technological, ethical and legal challenges, as well 
+as the ongoing efforts to overcome these challenges and to facilitate the 
+uptake of AI technology in next-generation satellite systems. 
+2. Spaceflight systems 
+Thousands of active satellites are currently orbiting Earth and, in 
+recent years [7], there has been an exponential growth of RSO [8], 
+especially in the LEO environment [9]. Each satellite’s size, orbital 
+parameters and configuration depend on its intended purpose. The
+
+\section{Comment on resubmission (if applicable)}
+
+changes into the main plan.
+Then the team collectively
+reviews these preliminary “low ﬁdelity” outputs, implements
+iterations as needed and approves advancing to the “high
+ﬁdelity” evaluation of possible outcomes and autonomy out-
+put.
+Such high ﬁdelity evaluation is called here outcome
+prediction phase.
+At the outcome prediction phase, simulations produce a more
+realistic and comprehensive view of the new plan’s impact
+to the projected mission progress and performance. Itera-
+
+be redirected to a previous step or workﬂow. Generally development begins with data preparation, and continues to
+model selection, training, and evaluation. In the data preparation stage the model inputs should be kept in a feature store
+that will also be accessible during the Deploy phase. A feature store is a centralized repository where you standardize
+the deﬁnition, storage, and access of features for training and serving [34]. After evaluation the model should be
+
+addition, new worlds, new science, and new phenomena to observe are appearing 
+on the horizon. The new scientific goals and objectives often require multiple 
+coordinating spacecraft to make simultaneous observations, or to detect events 
+without ground intervention. This increase in the demands for new spacecraft has 
+led to intense research and development efforts for the software applications and 
+processes that are used during a space mission, both on ground, in the Mission
+
+can be determined by performance of the model and/or a schedule.
+After development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted
+before the packaged automated model pipeline is released for delivery to the target environment.
+The major steps in the Develop phase are largely the same across the three environments and the diﬀerences at
+workﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during
+
+the ground (in this project we use the MEXEC planning and
+execution system [4]) in nominal (or most likely) scenarios
+to check for constraint violations. With respect to impact, the
+small progress bars to the right of the campaign title shows
+the impact of that goal in the overall mission compared to the
+original set of goals.
+It is important to note that these tools are domain depen-
+dent, meaning that they are designed to support science goal
+speciﬁcation for a multi-ﬂyby mission for a single spacecraft.
+
+across those meetings, though we also encouraged them to
+break into reﬂective discussions about the process and tools
+along the way. We also collected feedback in the form of
+survey responses in a journal they used for each day. We
+had implemented the tools as click-through prototypes only,
+and user study facilitator needed to “drive” the tools at the the
+operator’s request. This dynamic evoked dialogue about what
+information they needed to see and why.
+14
+
+eventually improve its decision-making capabilities. This type of feedback is 
+identified as a reward, or reinforcement, and can be given either at the end of a 
+series of actions or more frequently. Two main philosophies exist when considering 
+reinforcement learning, passive and active reinforcement: in the first, the agent’s 
+objective is to compute each states’ utility, while in the latter the agent must 
+determine which actions to take. In general, anyway, the methodology used to
+
+tists, engineers and operators go through the process of intent
+capture, starting by revisiting the goals for the next ﬂyby(s)
+based on the downlink data and analysis.
+Scientists and
+engineers then have the opportunity to make changes to the
+goals/plan while getting instant feedback on the viability of
+their changes and on their impact on overall mission progress
+and performance. The viability and impact analysis here is
+based on an initial, low ﬁdelity evaluation of possible onboard
+
+benchmark cases in a dedicated analysis.
+Benchmark.
+This paragraph reports and sums up the tests carried out to
+assess the performance of the models discussed up to now, against some simple
+benchmarks, to confirm the effectiveness of the learning step and the reward
+function design. Even if it may seem trivial, the first two comparisons are
+against no-learning models, meaning that they have not gone through the
+training procedure: the first simply propagates the free-dynamics starting from
+
+the impact gap in green). Furthermore, the operators are also
+presented with a few recommendations on how improve the
+plan to avoid conﬂicts and aid in campaign success. These
+recommendations are essential in ﬁtting in with the iterative
+workﬂow of plan development.
+Downlink analysis
+Subsystem Downlink Analysis Tool—The subsystem downlink
+analysis tool (shown in Figure 11) allows operators to review
+Figure 10. Mission Impact tool: shows an overview of the
+
+changes into the main plan.
+Then the team collectively
+reviews these preliminary “low ﬁdelity” outputs, implements
+iterations as needed and approves advancing to the “high
+ﬁdelity” evaluation of possible outcomes and autonomy out-
+put.
+Such high ﬁdelity evaluation is called here outcome
+prediction phase.
+At the outcome prediction phase, simulations produce a more
+realistic and comprehensive view of the new plan’s impact
+to the projected mission progress and performance. Itera-
+
+of the outcome of the plan, while higher ﬁdelity predictions,
+which we made available later in the activity, provided es-
+timations based on a Monte Carlo Simulation approach that
+modeled the outcomes across 10,000 scenarios/outcomes.
+While participants generally accepted the progression from
+low ﬁdelity to high ﬁdelity data, conversations with scientist
+participants revealed that some wanted higher ﬁdelity data
+available at the beginning of negotiations. In this particular
+
+that the 35% of the new generation is formed by individuals picked from the old 
+generation. The selected value ensures a balance between effectiveness of the 
+search (lower elite population fractions) and survival of fit individuals (higher elite 
+population fractions). 
+8.5 Results 
+The investigation on methodologies to improve and automate the space mission and 
+spacecraft design is a vast effort, branching out into many fields of science and
+
+The output of the factor graph is a maximum-likelihood
+estimate of the state variables considered, and the marginal
+distribution of each variable. In future work, this data will be
+displayed in the Subsystem Downlink Analysis Tool (Figure
+11), providing operators with key insight into unmeasured
+variables and, critically, with the likelihood of each consid-
+ered hypothesis - helping operators assess the state of the
+spacecraft and understand why autonomy made its decisions.
+6. USER STUDY
+Study Design
+
+Date: 07/23 
+Revision: v4 
+ 
+ 
+ 
+As Published in “Precision Medicine for Long and Safe Permanence of Humans in Space” 
+7 
+Current AI Technology in Space 
+ 
+ 
+ 
+Figure 2: Comparison of Computational Density Per Watt of State-of-the-art Rad-Hard Processors (BAE RAD750, 
+CAES Gaisler GR740, and BAE RAD5545) and Commercial Embedded Processors (Xilinx Zynq 7020 and Intel 
+Core i7-4610Y) [21] 
+Likewise, the power efficiency of rad-hard processors, which can be estimated from the
+
+be redirected to a previous step or workﬂow. Generally development begins with data preparation, and continues to
+model selection, training, and evaluation. In the data preparation stage the model inputs should be kept in a feature store
+that will also be accessible during the Deploy phase. A feature store is a centralized repository where you standardize
+the deﬁnition, storage, and access of features for training and serving [34]. After evaluation the model should be
+
+aspects, but, among all, is mainly described by the network architecture and
+the state-action spaces; on the other side, the reward formulation embeds the
+mission objectives. Once these two, or more if needed, cases have been selected,
+the workflow proposes to train and test them with different levels of initial
+conditions. This difference can be interpreted in distinct ways: for instance, in
+Section 4.3, it concerns the randomness level of the initial conditions; while, in
+
+learning algorithms and problems: there is a component of an algorithm to be 
+improved; the agent possesses prior knowledge; data is represented in a specific 
+way; a feedback action provides guidance during learning. When a specific 
+algorithm needs to learn from its surrounding world, three main learning algorithms 
+are available to the designer, and will be discussed later: reinforcement learning, 
+supervised learning, unsupervised learning. 
+Learning from examples
+
+Adapt-
+ability
+The pre-trained model may not
+adapt optimally to the specifics of
+the target task.
+Data Efficiency
+It often requires fewer samples to
+adapt to the target task due to prior
+knowledge.
+Risk of Negative
+Transfer
+In some cases, transferring knowl-
+edge may harm the performance of
+the target task if the source task is
+too dissimilar.
+Table 4.11: Advantages and disadvantages of transfer learning and fine-tuning techniques for deep reinforcement learning.
+99
+
+characteristics of this method, that distinguish it from all the others, are the
+trial-and-error search and the reward. In fact, the learning agent starts without
+any knowledge about the optimal action to take for a particular problem, and
+therefore it is forced to discover which are the ones that yield the greatest reward
+number. Each action taken may affect not only the immediate reward but
+also the future development of the problem and, then, the overall sequence of
+
+have to negotiate a future that is getting more and more crowded with 
+familiar, unfamiliar and unfriendly players all vying for technological 
+and strategic superiority. Threats to the space realm and its sustaining 
+infrastructure have escalated as a result of this change [318]. Ground 
+and aerospace system architectures must offer a high level of resilience 
+in order to ensure mission success. Resilience is therefore a crucial 
+design factor that should be traded off against cost and capabilities when
+
+disaggregated and desynchronized bureaucratic process 
+that increases risk for our Joint warfighters. We will 
+consolidate and coordinate disparate processes to 
+accelerate decisions and reduce that risk. 
+ 
+Reducing bureaucracy does not mean eliminating the 
+oversight required by law and policy. Rather, it emphasizes 
+empowerment through delegation of decision authority to 
+the most responsive competent authority, and a high 
+degree of accountability. Tight alignment of responsibility,
+
+resourcing and oversight functions. 
+ 
+To ensure our force design offers the Joint Force 
+assured effects, the SWAC will analyze opportunities 
+to enhance the resilience of legacy systems as an 
+interim step to fielding a force designed to operate in 
+a warfighting domain. The SWAC will develop future 
+force 
+structures 
+that 
+meet 
+evolving 
+mission 
+requirements, are resilient to the threat, and are cost-
+informed. The SWAC will execute Service wargaming
+
+changes into the main plan.
+Then the team collectively
+reviews these preliminary “low ﬁdelity” outputs, implements
+iterations as needed and approves advancing to the “high
+ﬁdelity” evaluation of possible outcomes and autonomy out-
+put.
+Such high ﬁdelity evaluation is called here outcome
+prediction phase.
+At the outcome prediction phase, simulations produce a more
+realistic and comprehensive view of the new plan’s impact
+to the projected mission progress and performance. Itera-
+
+array of high-ﬁdelity simulations. The collected predicted
+outcomes can then be used by the uplink team to not only
+observe the expected execution, but also attach conﬁdence
+values to the various goals and activities within the generated
+plans. As such, repeated simulation runs and collection of the
+outcomes ﬁt within the proposed iterative workﬂow of uplink
+operations, which ultimately serves the goal of increasing
+the conﬁdence of the uplink team in the expected behavior
+
+\section{Bibliography (max. 15 references, not included in character limits)}
+
+of the main research topic, corroborating its procedures and techniques. All
+three cases confirmed the good quality of the proposed methodology, achieving
+satisfying performance levels in each of the applications’ frameworks.
+Working for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,
+backs out and comebacks, and surely does not exhaustively explore a research
+field. But certainly, it helps pushing towards the accomplishment of evermore
+
+supporting the safety of orbiting spacecraft and debris mitigation [7].
+With an exponentially growing number of space-related practical ser-
+vices and research interests, a new focus has been appropriately made
+on the defense and protection of spacecraft to ensure the continued
+ﬂow of information (Cukurtepe and Akgun [13], Jah [20], Brown, Cot-
+ton, et al. [7], Contant-Jorgenson, Lála, Schrogl, et al. [11]). A few
+
+challenges and unlocking new opportunities. By 
+leveraging AI techniques, scientists and engineers 
+can enhance data analysis, enable autonomous 
+systems, improve navigation, and achieve greater 
+efficiency in space missions. 
+ 
+Methodology: 
+To conduct this research initially, an extensive 
+literature search was performed using reputable 
+scientific databases, including IEEE Xplore, ACM 
+Digital Library, and Google Scholar. The search 
+keywords included "artificial intelligence," "AI,"
+
+to the reader. We decided to give importance to work published in the last few years,
+avoiding the historical perspective of older and well-established fundamental works.
+Additionally, we decided to avoid publications which are strongly speculative in
+nature: while visionary ideas are interesting to follow, an important requirement for
+this survey was a well-motivated applicability for a space-related challenge, ideally
+inspired by an already established or newly proposed mission concept. This narrow
+
+address 
+the 
+challenges 
+and 
+opportunities in integrating AI in the field of space 
+exploration. 
+Furthermore, the selected papers were scrutinized to 
+extract relevant data and insights that could 
+contribute to the research paper. This involved 
+identifying statistical information, experimental 
+results, case studies, and any other data that 
+supported the findings and conclusions of the 
+respective studies. The extracted data and insights 
+were then used to strengthen the research paper's
+
+of the main research topic, corroborating its procedures and techniques. All
+three cases confirmed the good quality of the proposed methodology, achieving
+satisfying performance levels in each of the applications’ frameworks.
+Working for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,
+backs out and comebacks, and surely does not exhaustively explore a research
+field. But certainly, it helps pushing towards the accomplishment of evermore
+
+Source
+DB
+DB
+Query
+Object
+Graph
+Fig. 1
+Functional diagram of the Prepare step of the AI/ML workﬂow.
+framework. A number of FOSS and COTS solutions exist and are implemented either as tools or APIs at the project
+level (e.g., DVC∗or the tf.data.Dataset module†) or as an enterprise-level central dataset repository (e.g., Collibra‡).
+Beyond storing the data, centralized dataset repositories provide additional features that aid in the management of
+
+Eirates), Northrop Grumman Corporation (United States), and the 
+SmartSat Cooperative Research Centre (Australia) for their support of 
+this work through the Grant No. FSU-2022-013, the Collaborative 
+Research Project No. RE-04143, and the Doctoral Research Project No. 
+2.13s, respectively. The authors would also like to thank Dr Andoh Afful, 
+Dr Suraj Bijjahalli and Prof. Wei Xiang and Mr Thomas Fahey for their 
+insightful feedback, which helped to improve the quality of this article. 
+References
+
+Analysis
+Once we concluded the study, we transcribed the audio from
+the sessions and compiled the survey responses. To identify
+themes, we grouped clusters of related observations into
+afﬁnity groups, focusing on topics that related to our research
+questions.
+Findings
+In this section, we describe preliminary themes that emerged
+from our analysis.
+The user study participants in general
+successfully used the tools and series of steps to complete
+their operations tasks. The operators’ participation, inquiries,
+
+the mission’s objectives.
+• Initial conditions robustness: where all the parameters involved in
+the random selection and their relative randomness level are defined or
+designed.
+The adopted workflow based on these three aspects is schematized in Fig. 6.1.
+This methodology is proposed as a sort of vademecum or guidelines to follow
+for the implementation and testing of a robust DRL-based path or strategy
+planning agent. Indeed, all three scenarios that will be analysed in the next
+
+were then used to strengthen the research paper's 
+arguments and provide evidence for the benefits and 
+applications of AI in the field of space. 
+Overall, the literature search and analysis process 
+involved 
+thorough 
+exploration 
+of 
+reputable 
+scientific databases, careful selection of articles 
+based 
+on 
+specific 
+keywords, 
+review 
+of 
+methodologies employed in the selected studies, and 
+extraction of relevant data and insights. This
+
+Analysis
+Once we concluded the study, we transcribed the audio from
+the sessions and compiled the survey responses. To identify
+themes, we grouped clusters of related observations into
+afﬁnity groups, focusing on topics that related to our research
+questions.
+Findings
+In this section, we describe preliminary themes that emerged
+from our analysis.
+The user study participants in general
+successfully used the tools and series of steps to complete
+their operations tasks. The operators’ participation, inquiries,
+
+of the main research topic, corroborating its procedures and techniques. All
+three cases confirmed the good quality of the proposed methodology, achieving
+satisfying performance levels in each of the applications’ frameworks.
+Working for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,
+backs out and comebacks, and surely does not exhaustively explore a research
+field. But certainly, it helps pushing towards the accomplishment of evermore
+
+challenges and unlocking new opportunities. By 
+leveraging AI techniques, scientists and engineers 
+can enhance data analysis, enable autonomous 
+systems, improve navigation, and achieve greater 
+efficiency in space missions. 
+ 
+Methodology: 
+To conduct this research initially, an extensive 
+literature search was performed using reputable 
+scientific databases, including IEEE Xplore, ACM 
+Digital Library, and Google Scholar. The search 
+keywords included "artificial intelligence," "AI,"
+
+to the reader. We decided to give importance to work published in the last few years,
+avoiding the historical perspective of older and well-established fundamental works.
+Additionally, we decided to avoid publications which are strongly speculative in
+nature: while visionary ideas are interesting to follow, an important requirement for
+this survey was a well-motivated applicability for a space-related challenge, ideally
+inspired by an already established or newly proposed mission concept. This narrow
+
+the output of an ANN to a reference model. The algorithm iteratively compares the 
+output of the network to the model, and by applying a corrective action on the 
+network weights and biases, the output is adapted to match the desired one. The 
+training is generally based on previous experience, although methods that modify 
+the parameters of the network exist. Three types of learning algorithms have been 
+developed. 
+Supervised learning denotes a method in which some input vectors (training
+
+standing, should be investigated first. Classical and specialised methods, 
+on the other hand, are often naive, whereas heuristic and metaheuristic 
+paradigms can be utilised to various conditions. One key advantage of 
+heuristic and metaheuristic paradigms is their robustness. In this 
+context, robustness refers to an algorithm’s ability to solve a wide range 
+of problems and even multiple sorts of problems, with only slight 
+changes to account for each problem’s specific properties. A stochastic
+
+4.6.
+Closing Remarks
+extensively tested to assess the model robustness and sensitivity, aimed at
+specifically analysing the case of uncertainty in the state and how it affects the
+performance of the algorithm. The first results showed how the main models are
+not robust to the noisy input state. Therefore, to overcome this problem, two
+different methods have been proposed and analysed: a re-training procedure
+and a transfer-learning procedure. Both of them improve the capabilities of
+
+go in and outputs come out and there is little insight into how the model is making its determination. The seemingly
+non-deterministic nature of AI/ML systems may cause some end users to be hesitant to trust AI/ML systems. AI/ML
+systems will also need to meet more standard software metrics for reliability and security as they suﬀer many of the
+same vulnerabilities that standard software systems do. There needs to be procedures in place to mitigate radiation
+
+prone to bias and can be exploited to generate damaging or misleading 
+resources. It is critical to be aware of these hazards and to take pre­
+cautions to mitigate them. ANN is a type of AI that tries to replicate the 
+way the human brain works. The processing units are ANN that are 
+composed of inputs and outputs. ANN are a kind of ML technology that is 
+inspired by biology and is supposed to work in way similar to the brain 
+(loosely). Fig. 21 depicts the main types of NN types [3,81].
+
+of the main research topic, corroborating its procedures and techniques. All
+three cases confirmed the good quality of the proposed methodology, achieving
+satisfying performance levels in each of the applications’ frameworks.
+Working for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,
+backs out and comebacks, and surely does not exhaustively explore a research
+field. But certainly, it helps pushing towards the accomplishment of evermore
+
+defined as Target (TRG). In this thesis, the chaser represents the inspecting
+spacecraft and the target is the unknown and uncooperative object. During
+the work, the following four reference frames will be used as defined in [27]:
+• ECI-reference frame. This is the system which has the origin in the
+centre of the Earth and the plane as the Earth’s equator (Earth-centerd
+Inertial (ECI)). The ˆI is directed along the vernal equinox, and the ˆK
+
+Eirates), Northrop Grumman Corporation (United States), and the 
+SmartSat Cooperative Research Centre (Australia) for their support of 
+this work through the Grant No. FSU-2022-013, the Collaborative 
+Research Project No. RE-04143, and the Doctoral Research Project No. 
+2.13s, respectively. The authors would also like to thank Dr Andoh Afful, 
+Dr Suraj Bijjahalli and Prof. Wei Xiang and Mr Thomas Fahey for their 
+insightful feedback, which helped to improve the quality of this article. 
+References
+
+Chapter 2.
+Background & State-of-the-Art
+ˆi = r
+r, ˆk = h
+h, ˆj = ˆk ×ˆi
+where h is the angular momentum. In this way, it is possible to declare the
+chaser-target relative position both in ECI:
+δr = rTRG −rCHS
+(2.4)
+and in LVLH reference frames:
+ρ = xˆi + yˆj + zˆk
+(2.5)
+Then, subtracting Eq. 2.3 to Eq. 2.2, and substituting Eq. 2.4, the following
+relative acceleration can be retrieved in ECI reference frame:
+δ¨r = −µ(rCHS + ρ)
+∥rCHS + ρ∥3 + µrCHS
+r3
+CHS
+(2.6)
+
+Analysis
+Once we concluded the study, we transcribed the audio from
+the sessions and compiled the survey responses. To identify
+themes, we grouped clusters of related observations into
+afﬁnity groups, focusing on topics that related to our research
+questions.
+Findings
+In this section, we describe preliminary themes that emerged
+from our analysis.
+The user study participants in general
+successfully used the tools and series of steps to complete
+their operations tasks. The operators’ participation, inquiries,
 
 \end{document}

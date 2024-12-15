@@ -118,179 +118,86 @@ PLAN_PROMPT = """You are an expert writer tasked with writing a high level outli
 The project abstract and section-wise texts have been provided in the following message."""
 
 
-# # # Updated Writer Prompt
-WRITER_PROMPT = r"""You are a skilled content writer tasked with creating a comprehensive LaTeX document with professional academic formatting. Your goal is to ensure detailed content coverage with proper formatting and layout.
+WRITER_PROMPT = '''You are an expert LaTeX writer tasked with generating a self-contained section of a technical document. 
+Your goal is to use the provided project information and section-specific data to produce clear, structured, and valid LaTeX content.
 
-Begin your document with:
+Project Information:
+- Title: {project_title}
+- Description: {project_description}
+- Abstract: {abstract}
 
-\documentclass[12pt]{article}
+Section to Write:
+- Title: {section_title}
 
-% Essential packages
-\usepackage{fontspec}
-\usepackage{xunicode}
-\usepackage{xltxtra}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{geometry}
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{titlesec}
-\usepackage{parskip}
-\usepackage{microtype}
+Data for Section:
+{section_data_formatted}
 
-% Page layout and spacing
-\geometry{
-    a4paper,
-    margin=1in,
-    top=1.2in,
-    bottom=1.2in
-}
+Guidelines:
+1. Structure and Organization:
+   - Begin with a \\section{{}} command using the provided section title
+   - Include an introduction paragraph providing context
+   - Use \\subsection{{}} and \\subsubsection{{}} for logical organization
+   - Ensure smooth transitions between topics
 
-% Improved spacing
-\setstretch{1.3}
-\setlength{\parskip}{1.2ex plus 0.5ex minus 0.2ex}
+2. Content Integration:
+   - Incorporate the provided section data appropriately
+   - Support claims with data or references when available
+   - Maintain academic tone and technical accuracy
 
-% Section formatting
-\titleformat{\section}
-    {\Large\bfseries}
-    {\thesection.}{0.5em}{}[\vspace{0.5em}]
-\titleformat{\subsection}
-    {\large\bfseries}
-    {\thesubsection.}{0.5em}{}[\vspace{0.3em}]
+3. LaTeX Formatting Guidelines:
+   a) For Lists:
+      - Unordered lists: \\begin{{itemize}} ... \\end{{itemize}}
+      - Ordered lists: \\begin{{enumerate}} ... \\end{{enumerate}}
+      - Description lists: \\begin{{description}} ... \\end{{description}}
 
-% Section spacing
-\titlespacing{\section}
-    {0pt}{2.5ex plus 1ex minus .2ex}{1.3ex plus .2ex}
-\titlespacing{\subsection}
-    {0pt}{2.25ex plus 1ex minus .2ex}{1ex plus .2ex}
+   b) For Tables:
+      - Use \\begin{{table}}[htbp] environment
+      - Include \\centering
+      - Add \\caption{{}} before the table
+      - Use \\label{{tab:descriptive-label}} for referencing
+      - Format with \\begin{{tabular}} ... \\end{{tabular}}
+      - Add \\hline for horizontal lines
+      Example:
+      \\begin{{table}}[htbp]
+          \\centering
+          \\caption{{Your Caption Here}}
+          \\label{{tab:your-label}}
+          \\begin{{tabular}}{{|c|c|}}
+              \\hline
+              Header 1 & Header 2 \\\\
+              \\hline
+              Data 1 & Data 2 \\\\
+              \\hline
+          \\end{{tabular}}
+      \\end{{table}}
 
-% Figure settings
-\captionsetup{
-    font=small,
-    labelfont=bf,
-    width=0.8\textwidth,
-    justification=justified,
-    singlelinecheck=false
-}
+   c) For Images/Figures:
+      - Use \\begin{{figure}}[htbp] environment
+      - Include \\centering
+      - Use \\includegraphics[width=\\textwidth]{{path/to/image}}
+      - Add \\caption{{}} and \\label{{fig:descriptive-label}}
+      Example:
+      \\begin{{figure}}[htbp]
+          \\centering
+          \\includegraphics[width=0.8\\textwidth]{{path/to/image}}
+          \\caption{{Your Caption Here}}
+          \\label{{fig:your-label}}
+      \\end{{figure}}
 
-% Paragraph settings
-\setlength{\parindent}{0pt}
-\setlength{\emergencystretch}{3em}
+   d) For Mathematical Content:
+      - Inline math: $...$ or \\(...\\)
+      - Display math: $$...$$ or \\[...\\]
+      - Equation environment: \\begin{{equation}} ... \\end{{equation}}
 
-\begin{document}
+4. Cross-References:
+   - Use \\ref{{}} for referencing figures, tables, equations
+   - Use \\cite{{}} for citations
 
-Content Requirements:
-1. Each section should have at least 300 words
-2. Total document length: 1500-2000 words
-3. Each section must be thoroughly addressed
-4. Include proper transitions between sections
-5. Maintain academic writing style
+5. Style Requirements:
+   - Maintain consistent formatting throughout
+   - Use proper indentation and spacing
+   - Include appropriate whitespace between environments
+   - Ensure all environments are properly closed
 
-Add figures using:
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{path_to_image}
-    \caption{Detailed caption describing the figure}
-    \label{fig:unique_label}
-\end{figure}
+Return only the LaTeX content without any additional text or explanations. The content should be self-contained and ready to be compiled as part of a larger document.'''
 
-Remember to:
-- Maintain consistent formatting
-- Use proper paragraph spacing
-- Include clear section transitions
-- Properly integrate images with captions
-- End document with \end{document}
-
-The content and section details will be provided in the following message."""
-
-
-WRITER_PROMPT = r"""You are an expert technical writer specializing in academic and research proposals. Your task is to generate a comprehensive, detailed academic document based on the provided plan and content. Follow these guidelines:
-
-1. Document Requirements:
-   - Each section should be substantial (800-1000 words)
-   - Maintain technical depth appropriate to the field
-   - Include quantitative data and specifications where relevant
-   - Provide thorough analysis and discussion
-   - Follow the exact section structure provided in the plan
-
-2. Writing Style:
-   - Formal academic tone
-   - Precise technical terminology
-   - Well-supported claims with references
-   - Clear transitions between sections
-   - Logical flow of information
-
-3. Content Guidelines for Each Section:
-   - Begin with a clear introduction of the section's focus
-   - Provide comprehensive coverage of the topic
-   - Include technical details and specifications
-   - Support arguments with evidence and references
-   - Connect to overall proposal objectives
-   - Consider implications and future directions
-   - End with clear conclusions or next steps
-
-4. Technical Elements:
-   - Include mathematical formulations where appropriate
-   - Add system diagrams and flowcharts when relevant
-   - Provide performance metrics and benchmarks
-   - Include example scenarios and applications
-   - Use proper cross-referencing
-
-5. Figure Integration:
-   \begin{figure}[htbp]
-       \centering
-       \includegraphics[width=0.85\textwidth]{path}
-       \caption{Detailed caption explaining significance and key insights}
-       \label{fig:label}
-   \end{figure}
-
-Remember to:
-- Follow the section structure exactly as provided
-- Maintain consistent depth across sections
-- Use available content to inform each section
-- Include proper transitions between sections
-- Integrate figures and technical content naturally
-
-You will be provided with:
-1. Project title and abstract
-2. Section structure from the plan
-3. Content for each section
-4. Any specific guidelines or requirements
-
-Generate a document that thoroughly covers the provided sections while maintaining academic rigor and technical depth."""
-
-# WRITER_PROMPT = r"""You are an expert technical writer for spacecraft and AI systems. Generate a technical proposal following these requirements:
-
-# 1. Technical Integration:
-#    - Include equations for key algorithms and systems
-#    - Provide specific implementation details
-#    - Define quantitative metrics and benchmarks
-#    - Build technical concepts progressively
-
-# 2. Image Usage:
-#    - Each image must explain a specific technical concept
-#    - Write detailed captions explaining technical significance
-#    - Reference images explicitly when discussing related concepts
-#    - Use images to support technical explanations
-#    - No images in Bibliography
-
-# 3. Narrative Flow:
-#    - Connect each section to previous content
-#    - Build complexity progressively
-#    - Reference earlier concepts when introducing new ones
-#    - Maintain clear technical thread throughout
-
-# 4. Section Requirements:
-#    - Introduction: Context and technical background
-#    - Methodology: Specific algorithms and approaches
-#    - Expected Outcomes: Quantifiable metrics
-#    - Each major section minimum 1500 words
-
-# Remember:
-# - Use mathematics and algorithms to explain concepts
-# - Make images integral to technical discussions
-# - Build a single coherent technical narrative
-# - Each section should advance technical understanding"""
