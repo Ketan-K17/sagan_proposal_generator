@@ -24,6 +24,7 @@ TEX_OUTPUT_PATH = OUTPUT_PDF_PATH / "output.tex"
 PDF_OUTPUT_PATH = OUTPUT_PDF_PATH / "output.pdf"
 MD_OUTPUT_PATH = OUTPUT_PDF_PATH / "output.md"
 NODEWISE_OUTPUT_PATH = OUTPUT_PDF_PATH / "nodewise_output"
+CONSOLIDATED_TEMPLATE_PATH = OUTPUT_BASE / "utils" / "consolidated_template"
 
 # Environment file
 ENV_PATH = PROJECT_ROOT / ".env"

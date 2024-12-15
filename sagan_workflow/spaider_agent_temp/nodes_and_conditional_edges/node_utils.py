@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 import os
 import sys
+import shutil
 
 # Get the path to the spaider_agent_temp directory
 CURRENT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
@@ -163,3 +164,11 @@ def load_state_for_testing(node_name: str, output_dir: Path = NODEWISE_OUTPUT_PA
     
     # Create and return State object with all fields from the original state
     return State(**state_dict)
+
+
+# Helper function to copy figures
+def copy_figures(source_dir: Path, dest_dir: Path):
+    """Copy all figures from the source directory to the destination directory."""
+    for item in source_dir.glob("figures/*"):
+        if item.is_file():
+            shutil.copy(item, dest_dir / item.name)
