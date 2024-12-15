@@ -12,6 +12,7 @@ from schemas import State
 from prompts.prompts import *
 from models.chatgroq import BuildChatGroq, BuildChatOpenAI
 from config import *
+from .node_utils import save_state_for_testing
 
 '''IMPORT ALL TOOLS HERE AND CREATE LIST OF TOOLS TO BE PASSED TO THE AGENT.'''
 from tools.script_executor import run_script
@@ -106,28 +107,8 @@ def prompt_parser(state: State) -> State:
         state["project_title"] = structured_response.project_title
         state["project_description"] = structured_response.project_description
 
-        # Write the structured response to a file instead of printing
-        output_path = NODEWISE_OUTPUT_PATH / "prompt_parser.txt"
-        output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
-        with output_path.open("w", encoding="utf-8") as file:
-            # write the prompt parser's response.
-            file.write("PROMPT PARSER OUTPUT:\n")
-            file.write(f"PROJECT TITLE: {structured_response.project_title}\n")
-            file.write(f"PROJECT DESCRIPTION: {structured_response.project_description}\n")
-
-            # write the state at the end of prompt_parser.
-            file.write(f"\n\n\n\nSTATE AT THE END OF PROMPT_PARSER: \n")
-            file.write("Messages: \n")
-            messages = state["messages"]
-            if len(messages) >= 3:
-                for message in messages[-3:]:
-                    file.write(f"{message.type}: {message.content}\n")
-            else:
-                for message in messages:
-                    file.write(f"{message.type}: {message.content}\n")
-            for field_name, field_value in state.items():
-                if field_name != "messages":
-                    file.write(f"- {field_name}: {field_value}\n")
+        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+        save_state_for_testing(state, "prompt_parser")
 
         print(f"################ PROMPT PARSER END #################{Style.RESET_ALL}")
         return state
@@ -166,29 +147,9 @@ def abstract_questions_generator(state: State) -> State:
         state["messages"].append(response)
         state["abstract_questions"] = structured_response.abstract_questions
 
-        # Write the structured response to a file instead of printing
-        output_path = NODEWISE_OUTPUT_PATH / "abstract_questions_generator.txt"
-        output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
-        with output_path.open("w", encoding="utf-8") as file:
-            # write the prompt parser's response.
-            file.write("ABSTRACT QUESTIONS GENERATOR OUTPUT:\n")
-            file.write("ABSTRACT QUESTIONS:\n")
-            for question in structured_response.abstract_questions:
-                file.write(f"- {question}\n")
+        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+        save_state_for_testing(state, "abstract_questions_generator")
 
-            # write the state at the end of prompt_parser.
-            file.write(f"\n\n\n\nSTATE AT THE END OF ABSTRACT_QUESTIONS_GENERATOR: \n")
-            file.write("Messages: \n")
-            messages = state["messages"]
-            if len(messages) >= 3:
-                for message in messages[-3:]:
-                    file.write(f"{message.type}: {message.content}\n")
-            else:
-                for message in messages:
-                    file.write(f"{message.type}: {message.content}\n")
-            for field_name, field_value in state.items():
-                if field_name != "messages":
-                    file.write(f"- {field_name}: {field_value}\n")
         print(f"################ ABSTRACT QUESTIONS GENERATOR END #################{Style.RESET_ALL}")
         return state
 
@@ -243,31 +204,8 @@ def abstract_answers_generator(state: State) -> State:
         state["messages"].append(abstract_response)
         state["abstract_text"] = structured_response.abstract_text
 
-        # Define the output file path
-        output_path = NODEWISE_OUTPUT_PATH / "abstract_answers_generator.txt"
-        output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
-
-        # Write the structured response and state information to a file
-        with output_path.open("w", encoding="utf-8") as file:
-            file.write("ABSTRACT ANSWERS GENERATOR OUTPUT:\n")
-            file.write("Abstract QA Pairs:\n")
-            for question, answer in structured_response.abstract_qa_pairs.items():
-                file.write(f"Q: {question}\nA: {answer}\n\n")
-            file.write(f"Abstract Text:\n{structured_response.abstract_text}\n")
-            
-            # Write the state information
-            file.write("STATE AT THE END OF ABSTRACT_ANSWERS_GENERATOR:\n")
-            file.write("Messages:\n")
-            messages = state["messages"]
-            if len(messages) >= 3:
-                for message in messages[-3:]:
-                    file.write(f"{message.type}: {message.content}\n")
-            else:
-                for message in messages:
-                    file.write(f"{message.type}: {message.content}\n")
-            for field_name, field_value in state.items():
-                if field_name != "messages":
-                    file.write(f"- {field_name}: {field_value}\n")
+        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+        save_state_for_testing(state, "abstract_answers_generator")
 
         print(f"################ ABSTRACT ANSWERS GENERATOR END #################{Style.RESET_ALL}")
 
@@ -308,28 +246,9 @@ def section_topic_extractor(state: State) -> State:
         state["messages"].append(response)
         state["section_topics"] = structured_response.section_topics
 
-        # Define the output file path
-        output_path = NODEWISE_OUTPUT_PATH / "section_topic_extractor.txt"
-        output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
+        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+        save_state_for_testing(state, "section_topic_extractor")
 
-        # Write the structured response and state information to a file
-        with output_path.open("w", encoding="utf-8") as file:
-            file.write("SECTION TOPIC EXTRACTOR OUTPUT:\n")
-            for topic in structured_response.section_topics:
-                file.write(f"- {topic}\n")
-
-            file.write("STATE AT THE END OF SECTION_TOPIC_EXTRACTOR:\n")
-            file.write("Messages:\n")
-            messages = state["messages"]
-            if len(messages) >= 3:
-                for message in messages[-3:]:
-                    file.write(f"{message.type}: {message.content}\n")
-            else:
-                for message in messages:
-                    file.write(f"{message.type}: {message.content}\n")
-            for field_name, field_value in state.items():
-                if field_name != "messages":
-                    file.write(f"- {field_name}: {field_value}\n")
         print(f"################ SECTION TOPIC EXTRACTOR END #################{Style.RESET_ALL}")
 
 
@@ -361,29 +280,9 @@ def section_wise_question_generator(state: State) -> State:
         state["messages"].append(response)
         state["section_questions"] = section_questions
         
-        # Define the output file path
-        output_path = NODEWISE_OUTPUT_PATH / "section_wise_question_generator.txt"
-        output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
+        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+        save_state_for_testing(state, "section_wise_question_generator")
 
-        # Write the structured response and state information to a file
-        with output_path.open("w", encoding="utf-8") as file:
-            file.write("SECTION WISE QUESTION GENERATOR OUTPUT:\n")
-            for section, questions in section_questions.items():
-                file.write(f"Section: {section}\n")
-                for question in questions:
-                    file.write(f"  - {question}\n")
-            file.write("STATE AT THE END OF SECTION_WISE_QUESTION_GENERATOR:\n")
-            file.write("Messages:\n")
-            messages = state["messages"]
-            if len(messages) >= 3:
-                for message in messages[-3:]:
-                    file.write(f"{message.type}: {message.content}\n")
-            else:
-                for message in messages:
-                    file.write(f"{message.type}: {message.content}\n")
-            for field_name, field_value in state.items():
-                if field_name != "messages":
-                    file.write(f"- {field_name}: {field_value}\n")
         print(f"################ SECTION WISE QUESTION GENERATOR END #################{Style.RESET_ALL}")
 
 
@@ -417,7 +316,7 @@ def section_wise_answers_generator(state: State) -> State:
         section_answers = {}
 
         # Define the output file path
-        output_path = NODEWISE_OUTPUT_PATH / "section_wise_answers_generator.txt"
+        output_path = NODEWISE_OUTPUT_PATH / "section_wise_answers_generator_logging.txt"
         output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
 
         with output_path.open("w", encoding="utf-8") as file:
@@ -482,6 +381,9 @@ def section_wise_answers_generator(state: State) -> State:
                     file.write(f"Answer {idx + 1} - Content length: {len(answer['content'])}\n")
                     file.write(f"Number of images: {len(answer['images'])}\n")
 
+        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+        save_state_for_testing(state, "section_wise_answers_generator")
+
         print(f"################ SECTION WISE ANSWERS GENERATOR END #################{Style.RESET_ALL}")
         return state
 
@@ -504,25 +406,9 @@ def plan_node(state: State):
     state["messages"].append(response)
     state["plan"] = response.content
 
-    # Define the output file path
-    output_path = NODEWISE_OUTPUT_PATH / "plan_node.txt"
-    output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
+    # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+    save_state_for_testing(state, "plan_node")
 
-    # Write the structured response and state information to a file
-    with output_path.open("w", encoding="utf-8") as file:
-        file.write(f"PLAN NODE OUTPUT: {response.content}\n")
-        file.write("state at the end of plan_node:\n")
-        file.write("Messages:\n")
-        messages = state["messages"]
-        if len(messages) >= 3:
-            for message in messages[-3:]:
-                file.write(f"{message.type}: {message.content}\n")
-        else:
-            for message in messages:
-                file.write(f"{message.type}: {message.content}\n")
-        for field_name, field_value in state.items():
-            if field_name != "messages":
-                file.write(f"- {field_name}: {field_value}\n")
     print(f"################ PLAN NODE END #################{Style.RESET_ALL}")
 
 
@@ -539,7 +425,7 @@ def generation_node(state: dict) -> dict:
     Generates LaTeX sections iteratively for each section in the document.
     Args:
         state (dict): The current state containing all necessary information
-    Returns:
+    Returns:    
         dict: Updated state with generated LaTeX sections
     """
     print("################ GENERATION NODE BEGIN #################")
@@ -616,6 +502,10 @@ def generation_node(state: dict) -> dict:
         except Exception as save_error:
             print(f"Warning: Could not save output to file: {str(save_error)}")
             
+        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
+        save_state_for_testing(state, "generation_node")
+        print("################ GENERATION NODE END #################")
+
         return state
         
     except Exception as e:
@@ -627,6 +517,19 @@ def generation_node(state: dict) -> dict:
     finally:
         print("################ GENERATION NODE END #################")
 
+
+def formatting_node(state: State) -> State:
+    print(
+        f"{Fore.LIGHTYELLOW_EX}################ FORMATTING NODE BEGIN #################"
+    )
+    # write code here
+
+    print(f"################ FORMATTING NODE END #################{Style.RESET_ALL}")
+
+    # Save state in both human-readable and machine-readable formats
+    save_state_for_testing(state, "formatting_node")
+
+    return state
 
 
 
