@@ -519,9 +519,7 @@ def generation_node(state: dict) -> dict:
 
 
 def formatting_node(state: State) -> State:
-    print(
-        f"{Fore.LIGHTYELLOW_EX}################ FORMATTING NODE BEGIN #################"
-    )
+    print(f"{Fore.LIGHTYELLOW_EX}################ FORMATTING NODE BEGIN #################")
     try:
         base_output_path = OUTPUT_PDF_PATH
         base_output_path.mkdir(parents=True, exist_ok=True)
@@ -540,19 +538,21 @@ def formatting_node(state: State) -> State:
         # Retrieve required fields from state
         project_title = state.get("project_title", "Research Project")
         project_abstract = state.get("abstract_text", "No abstract provided.")
-        section_answers = state.get("section_answers", {})
+        generated_sections = state.get("generated_sections", {})
 
+        if not generated_sections:
+            raise ValueError("No generated sections found in state")
 
         # Debug: Print the abstract we have from the state
         print("DEBUG: Abstract text from state:", project_abstract)
 
-        # Construct the final LaTeX document
+        # Construct the LATEX document body using generated_sections
         latex_body = ""
-        for section_name, answers in section_answers.items():
-            latex_body += f"\\section{{{section_name}}}\n\n"
-            for ans in answers:
-                content = ans.get("content", "")
-                latex_body += f"{content}\n\n"
+        # Add generated sections directly from the draft
+        if generated_sections:
+            for section_header, section_content in generated_sections.items():
+                latex_body += section_header  # Add the section header
+                latex_body += section_content  # Add the section content
 
         latex_end = r"\end{document}"
 
@@ -602,12 +602,19 @@ def formatting_node(state: State) -> State:
         # Store final latex content in state
         state["draft"] = final_latex_document
 
+        # Define the output path
+        output_path = Path(OUTPUT_PDF_PATH / "output.tex")
+
+        # Write the final LaTeX document to the specified output path
+        output_path.write_text(final_latex_document, encoding='utf-8')
+        print(f"LaTeX file written to: {output_path}")
+
     except Exception as e:
-        print(f"Error in generation node: {e}")
+        print(f"Error in formatting node: {e}")
         state.update({
             "error": str(e),
             "pdf_status": "error",
-            "generation_message": f"Error during generation: {str(e)}"
+            "generation_message": f"Error during formatting: {str(e)}"
         })
 
 

@@ -31,6 +31,8 @@ def create_graph():
     builder.add_node("section_wise_answers_generator", section_wise_answers_generator)
     builder.add_node("generation_node", generation_node)
     builder.add_node("plan_node", plan_node)
+    builder.add_node("formatting_node", formatting_node)
+
 
     # ADD EDGES/CONDITIONAL EDGES FOR THE GRAPH
     builder.add_edge(START, "prompt_parser")
@@ -66,7 +68,8 @@ def create_graph():
     )   
     builder.add_edge("sag_toolnode", "section_wise_answers_generator")
     builder.add_edge("plan_node", "generation_node")
-    builder.add_edge("generation_node", END)
+    builder.add_edge("generation_node", "formatting_node")
+    builder.add_edge("formatting_node", END)
 
 
     return builder
