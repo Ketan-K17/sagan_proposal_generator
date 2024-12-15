@@ -534,6 +534,8 @@ def formatting_node(state: State) -> State:
                 if line.strip() == "\\begin{document}":
                     break
                 latex_preamble += line
+        
+        latex_preamble += "\\begin{document}"
 
         # Retrieve required fields from state
         project_title = state.get("project_title", "Research Project")
@@ -551,10 +553,16 @@ def formatting_node(state: State) -> State:
         # Add generated sections directly from the draft
         if generated_sections:
             for section_header, section_content in generated_sections.items():
-                latex_body += section_header  # Add the section header
-                latex_body += section_content  # Add the section content
+                # Strip 'latex\n' from the beginning and any trailing quotes or backticks
+                cleaned_content = section_content
+                if cleaned_content.startswith('```latex\n'):
+                    cleaned_content = cleaned_content[8:]  # Remove ```latex\n
+                if cleaned_content.endswith('```'):
+                    cleaned_content = cleaned_content[:-3]  # Remove trailing ```
+                
+                latex_body += cleaned_content  # Add the cleaned section content
 
-        latex_end = r"\end{document}"
+        latex_end = "\\end{document}"
 
         final_latex_document = latex_preamble + latex_body + latex_end
 

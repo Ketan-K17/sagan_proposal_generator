@@ -1,7 +1,7 @@
 {
   "metadata": {
     "node_name": "plan_node",
-    "timestamp": "2024-12-16 02:05:39.387800"
+    "timestamp": "2024-12-16 02:39:53.842524"
   },
   "state": {
     "messages": [
@@ -17,15 +17,15 @@
       },
       {
         "type": "ai",
-        "content": "{\n  \"project_title\": \"Autonomous AI Agents for Spacecraft Operations\",\n  \"project_description\": \"This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\"\n}",
+        "content": "{\n  \"project_title\": \"Autonomous AI Agents for Spacecraft Operations\",\n  \"project_description\": \"This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and robust system integration. Challenges to address include ensuring AI reliability and effective decision-making in uncertain environments. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\"\n}",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 175,
+            "completion_tokens": 171,
             "prompt_tokens": 361,
-            "total_tokens": 536,
+            "total_tokens": 532,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -45,20 +45,20 @@
       },
       {
         "type": "system",
-        "content": "\nGiven the project title and description, this node creates a list of questions that may help it understand the project better. The answers to these questions will then be used to create a project abstract.\n\nYou are an intelligent assistant tasked with understanding project details. Given the following project title and description, your goal is to generate a list of insightful questions that will help clarify the project's objectives, scope, and requirements. \n\nProject Title: Autonomous AI Agents for Spacecraft Operations\n\nProject Description: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\n\nPlease ensure that your questions are open-ended and encourage detailed responses. Focus on aspects such as the project's goals, target audience, potential challenges, and any specific features or functionalities that are important to consider. \n\nNote that you MUST provide atleast one question. The upper limit is 10 questions.\n\n",
+        "content": "\nGiven the project title and description, this node creates a list of questions that may help it understand the project better. The answers to these questions will then be used to create a project abstract.\n\nYou are an intelligent assistant tasked with understanding project details. Given the following project title and description, your goal is to generate a list of insightful questions that will help clarify the project's objectives, scope, and requirements. \n\nProject Title: Autonomous AI Agents for Spacecraft Operations\n\nProject Description: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and robust system integration. Challenges to address include ensuring AI reliability and effective decision-making in uncertain environments. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\n\nPlease ensure that your questions are open-ended and encourage detailed responses. Focus on aspects such as the project's goals, target audience, potential challenges, and any specific features or functionalities that are important to consider. \n\nNote that you MUST provide atleast one question. The upper limit is 10 questions.\n\n",
         "additional_kwargs": {}
       },
       {
         "type": "ai",
-        "content": "1. What specific functionalities will the autonomous AI agents need to perform in the context of GNC and AOCS operations?\n2. How will the AI agents be integrated with existing spacecraft systems to ensure seamless communication and control?\n3. What are the key technical innovations expected from this project, and how will they improve current spacecraft operations?\n4. In what ways will the AI agents reduce human involvement and minimize human error in mission-critical tasks?\n5. What methodologies will be employed to ensure the reliability of AI decision-making under uncertain conditions?\n6. How will the project address the challenge of system integration to ensure compatibility with various spacecraft systems?\n7. What are the potential risks associated with deploying autonomous AI agents in spacecraft operations, and how will they be mitigated?\n8. How will the success of the AI agents be measured in terms of mission efficiency and safety improvements?\n9. What are the anticipated impacts of this technology on the space exploration industry, particularly regarding operational costs and mission outcomes?\n10. How will the project ensure that the AI agents can adapt to different mission scenarios and environmental conditions in space?",
+        "content": "1. What specific spacecraft operations within GNC and AOCS are the autonomous AI agents expected to manage and control autonomously?\n2. How will the AI agents facilitate real-time communication with spacecraft systems, and what technologies will be employed to achieve this?\n3. What are the key technical innovations anticipated in the development of these AI agents, and how will they address decision-making under uncertainty?\n4. In what ways will the AI agents reduce human involvement in mission-critical tasks, and what are the expected benefits of this reduction?\n5. What measures will be taken to ensure the reliability of AI agents in managing spacecraft operations, especially in unpredictable environments?\n6. How will the integration of AI agents into existing spacecraft systems be managed, and what challenges are anticipated in this process?\n7. What specific safety enhancements are expected from the deployment of autonomous AI agents in spacecraft operations?\n8. How will the project address potential ethical and security concerns related to autonomous decision-making in space missions?\n9. What are the expected impacts of these AI agents on the overall cost and efficiency of space missions?\n10. How will the success of the AI agents be evaluated in terms of their performance and contribution to mission objectives?",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 220,
-            "prompt_tokens": 850,
-            "total_tokens": 1070,
+            "completion_tokens": 238,
+            "prompt_tokens": 842,
+            "total_tokens": 1080,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -78,20 +78,20 @@
       },
       {
         "type": "system",
-        "content": "\nYou are an intelligent assistant responsible for generating answers to specific questions, and creating a summary of the project based on the answers. Your task is to query the provided vector store, answer each of the provided questions, and create an abstract of the project based on the answers.\n\nQuestions to Answer:\n['What are the primary goals and objectives of the project involving autonomous AI agents in GNC and AOCS operations?', 'How will the project ensure the AI agents are capable of handling the complexities of GNC and AOCS tasks?', 'What existing technologies or systems will the AI agents need to interface with, and what challenges might arise from this integration?', 'What specific technical challenges does the project anticipate in developing AI agents for spacecraft operations?', 'How will the project measure the effectiveness of AI agents in reducing human error and increasing operational efficiency?', \"What strategies will be implemented to test and validate the AI agents' performance in real-world scenarios?\", 'How will the project address potential ethical and safety concerns related to autonomous decision-making in space operations?', 'What role will human operators play in overseeing or interacting with the AI agents during missions?', 'How will the project ensure the AI agents remain adaptable and resilient in the face of unexpected changes or failures?', 'What are the long-term implications of deploying autonomous AI agents in space missions for future exploration and industry standards?']\n\nFor each question, follow these steps:\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\ingest_data\\astroaidb\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"<question>\"\n2. provide a comprehensive answer to each question using the information obtained from the vector database.\n3. Finally, create an abstract of the project based on the answers to all the questions.\n\nMake sure to use the tool for EVERY question.\nAlso, Make sure the abstract is 250-300 words long.\n",
+        "content": "\nYou are an intelligent assistant responsible for generating answers to specific questions, and creating a summary of the project based on the answers. Your task is to query the provided vector store, answer each of the provided questions, and create an abstract of the project based on the answers.\n\nQuestions to Answer:\n['What are the primary goals and objectives of implementing autonomous AI agents in spacecraft operations?', 'How do the AI agents interact with existing spacecraft systems, and what protocols are in place to ensure seamless integration?', 'What are the potential risks associated with autonomous AI agents in space missions, and how are these risks mitigated?', 'How do the AI agents handle unexpected events or anomalies during spacecraft operations?', 'What role do human operators play in overseeing or intervening in the actions of AI agents during missions?', 'How is data from spacecraft systems utilized by AI agents to make informed decisions?', 'What are the long-term implications of using AI agents in space missions for future space exploration and technology development?', 'How do AI agents prioritize tasks and allocate resources during spacecraft operations?', 'What kind of testing and validation processes are in place to ensure the AI agents perform as expected in real mission scenarios?', 'How do AI agents contribute to the sustainability and longevity of spacecraft missions?']\n\nFor each question, follow these steps:\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\ingest_data\\astroaidb\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"<question>\"\n2. provide a comprehensive answer to each question using the information obtained from the vector database.\n3. Finally, create an abstract of the project based on the answers to all the questions.\n\nMake sure to use the tool for EVERY question.\nAlso, Make sure the abstract is 250-300 words long.\n",
         "additional_kwargs": {}
       },
       {
         "type": "ai",
-        "content": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space missions by integrating advanced AI technologies into Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS). The project focuses on developing AI agents capable of autonomous decision-making, mission planning, and multi-agent coordination without human intervention. These agents are tested in complex scenarios, such as the TANGO satellite mission, to validate their performance in sensor technologies and space rendezvous. The project addresses technical challenges, including the integration of AI with existing systems, ensuring reliability in harsh space conditions, and maintaining adaptability in dynamic environments. Ethical and safety concerns are prioritized, with a focus on explainability, transparency, and compliance with legal standards. Human operators will oversee AI agents through a \"human-on-the-loop\" model, ensuring strategic oversight while leveraging AI's precision and speed. The project anticipates long-term implications for space exploration, enhancing mission efficiency and expanding human capabilities in space. Through rigorous testing and validation, the project aims to establish industry standards for AI deployment in space, ensuring robust, fault-tolerant, and ethically sound operations.",
+        "content": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into various aspects of spacecraft operations, including satellite management, data analysis, robotics, and autonomous decision-making. The primary objectives are to enhance mission efficiency, accuracy, and autonomy, allowing spacecraft to perform complex tasks and make real-time decisions with minimal human intervention. AI systems are employed to monitor satellite health, predict anomalies, and optimize performance, thereby reducing operational costs and increasing mission longevity. The project emphasizes the importance of human-on-the-loop control to ensure transparency, fairness, and accountability in AI-driven decision-making, while also addressing ethical considerations and potential risks. Rigorous testing and validation processes are in place to ensure AI agents perform reliably in mission-critical scenarios. By reducing communication delays and enabling autonomous operations, AI technologies are crucial for interplanetary missions and the management of large satellite constellations. The integration of AI in space missions promises to unlock new scientific advancements, enhance operational efficiency, and drive ambitious exploration endeavors, ultimately expanding our understanding of the universe.",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 226,
-            "prompt_tokens": 3349,
-            "total_tokens": 3575,
+            "completion_tokens": 212,
+            "prompt_tokens": 3189,
+            "total_tokens": 3401,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -120,7 +120,7 @@
         "additional_kwargs": {
           "tool_calls": [
             {
-              "id": "call_YOmEdNuWSLNmzXJZ7hiQyPLj",
+              "id": "call_ZMlz6MgZT9wA4kUyXfaqFj11",
               "function": {
                 "arguments": "{\"chroma_db_path\":\"C:\\\\Users\\\\ketan\\\\Desktop\\\\SPAIDER-SPACE\\\\sagan_multimodal\\\\ingest_data\\\\fnr_template_db\",\"llm_name\":\"sentence-transformers/all-MiniLM-L6-v2\",\"user_query\":\"Give me a comprehensive list of sections/topics that are present in this template document.\"}",
                 "name": "query_chromadb"
@@ -133,8 +133,8 @@
         "response_metadata": {
           "token_usage": {
             "completion_tokens": 82,
-            "prompt_tokens": 2000,
-            "total_tokens": 2082,
+            "prompt_tokens": 1975,
+            "total_tokens": 2057,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -171,8 +171,8 @@
         "response_metadata": {
           "token_usage": {
             "completion_tokens": 86,
-            "prompt_tokens": 2906,
-            "total_tokens": 2992,
+            "prompt_tokens": 2881,
+            "total_tokens": 2967,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -197,15 +197,15 @@
       },
       {
         "type": "ai",
-        "content": "{\n  \"Introduction: Originality of the Research Project\": [\n    \"What is the central research question or problem that this project addresses?\",\n    \"How does this project differ from existing research in the field?\",\n    \"What novel approaches or methodologies will be employed in this research?\",\n    \"Why is this research important and what gap does it fill in the current body of knowledge?\",\n    \"What are the potential implications of this research for the field or industry?\"\n  ],\n  \"Hypothesis, Research Objectives and Envisaged Methodology\": [\n    \"What is the main hypothesis or hypotheses that this research aims to test?\",\n    \"What are the specific objectives that the research seeks to achieve?\",\n    \"What methodologies will be used to conduct the research and why were they chosen?\",\n    \"How will data be collected and analyzed to support the research objectives?\",\n    \"What are the anticipated challenges in implementing the methodology and how will they be addressed?\"\n  ],\n  \"Expected Outcomes / Impact\": [\n    \"What are the expected outcomes of the research project?\",\n    \"How will the results of this research impact the field or industry?\",\n    \"What are the potential benefits of the research for society or specific communities?\",\n    \"How will the research outcomes contribute to future studies or applications?\",\n    \"What measures will be taken to ensure the dissemination and utilization of the research findings?\"\n  ],\n  \"Explanations on the management of ethical issues and data protection\": [\n    \"What ethical considerations are relevant to this research project?\",\n    \"How will informed consent be obtained from participants, if applicable?\",\n    \"What measures will be implemented to ensure data privacy and protection?\",\n    \"How will the research comply with relevant ethical guidelines and regulations?\",\n    \"What steps will be taken to address any potential ethical dilemmas that may arise during the research?\"\n  ],\n  \"Comment on resubmission (if applicable)\": [\n    \"What changes or improvements have been made since the last submission?\",\n    \"How have previous feedback or reviews been addressed in this resubmission?\",\n    \"What new data or findings have been included in the resubmission?\",\n    \"How does the resubmission strengthen the overall research proposal?\",\n    \"What additional information or context is provided in this resubmission?\"\n  ],\n  \"Bibliography (max. 15 references, not included in character limits)\": [\n    \"What are the key sources that have informed the research project?\",\n    \"How do the selected references support the research hypothesis and objectives?\",\n    \"What criteria were used to select the references included in the bibliography?\",\n    \"How do the references reflect the current state of research in the field?\",\n    \"What gaps or limitations in the existing literature are highlighted by the bibliography?\"\n  ]\n}",
+        "content": "{\n  \"Introduction: Originality of the Research Project\": [\n    \"What is the central theme or idea that makes this research project original?\",\n    \"How does this project differ from existing research in the same field?\",\n    \"What are the unique contributions this project aims to make to the field?\",\n    \"Why is this research project important at this point in time?\",\n    \"What inspired the conception of this research project?\"\n  ],\n  \"Hypothesis, Research Objectives and Envisaged Methodology\": [\n    \"What is the primary hypothesis that this research project seeks to test?\",\n    \"What are the specific research objectives that guide this project?\",\n    \"What methodologies will be employed to achieve the research objectives?\",\n    \"How will the chosen methodologies ensure the reliability and validity of the research findings?\",\n    \"What are the anticipated challenges in implementing the research methodologies, and how will they be addressed?\"\n  ],\n  \"Expected Outcomes / Impact\": [\n    \"What are the expected outcomes of this research project?\",\n    \"How will the outcomes of this project impact the field of study?\",\n    \"What are the potential applications of the research findings?\",\n    \"How will the project contribute to societal or technological advancements?\",\n    \"What measures will be used to evaluate the success of the project outcomes?\"\n  ],\n  \"Explanations on the management of ethical issues and data protection\": [\n    \"What are the potential ethical issues associated with this research project?\",\n    \"How will ethical considerations be addressed throughout the research process?\",\n    \"What data protection measures will be implemented to ensure participant confidentiality?\",\n    \"How will informed consent be obtained and documented from research participants?\",\n    \"What steps will be taken to ensure compliance with relevant ethical guidelines and regulations?\"\n  ],\n  \"Comment on resubmission (if applicable)\": [\n    \"What changes have been made to the project since the last submission?\",\n    \"How have previous feedback and reviews been addressed in this resubmission?\",\n    \"What new insights or data have been incorporated into the project?\",\n    \"What are the reasons for resubmitting the project at this time?\",\n    \"How does this resubmission improve upon the original proposal?\"\n  ],\n  \"Bibliography (max. 15 references, not included in character limits)\": [\n    \"What are the key sources that have informed the research project?\",\n    \"How do the selected references support the research hypothesis and objectives?\",\n    \"What criteria were used to select the references included in the bibliography?\",\n    \"How do the references reflect the current state of research in the field?\",\n    \"What gaps in the existing literature does this project aim to address?\"\n  ]\n}",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 554,
-            "prompt_tokens": 3118,
-            "total_tokens": 3672,
+            "completion_tokens": 534,
+            "prompt_tokens": 3093,
+            "total_tokens": 3627,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -230,15 +230,15 @@
       },
       {
         "type": "ai",
-        "content": "**Outline for Research Project Essay: Autonomous AI Agents for Spacecraft Operations**\n\n**I. Introduction: Originality of the Research Project**\n   - **Overview of Spacecraft Design**: Discuss the interdisciplinary nature of spacecraft design, involving various fields of science and engineering.\n   - **Innovations in Mission Design**: Highlight the project's contribution to optimizing space missions through innovative approaches, moving beyond traditional conservative designs.\n   - **Exploration of Alternative Concepts**: Explain the thorough and efficient exploration of alternative mission concepts as a key innovation.\n\n**II. Hypothesis, Research Objectives, and Envisaged Methodology**\n   - **Hypothesis**: Present the hypothesis that integrating AI into spacecraft operations can enhance mission efficiency and autonomy.\n   - **Research Objectives**: Outline the objectives, including developing AI agents for autonomous decision-making, mission planning, and multi-agent coordination.\n   - **Methodology**: Describe the methodology, including literature review, experiments, and validation through case studies like the TANGO satellite mission.\n\n**III. Expected Outcomes / Impact**\n   - **Mission Efficiency and Human Capabilities**: Discuss how the project aims to enhance mission efficiency and expand human capabilities in space exploration.\n   - **Industry Standards for AI Deployment**: Explain the goal of establishing industry standards for AI deployment in space, ensuring robust and fault-tolerant operations.\n   - **Long-term Implications**: Consider the long-term implications for space exploration and the potential for AI to revolutionize the field.\n\n**IV. Explanations on the Management of Ethical Issues and Data Protection**\n   - **Ethical Concerns**: Address ethical concerns such as explainability, transparency, and compliance with legal standards.\n   - **Data Protection**: Discuss strategies for data protection, including access management, data standardization, and security measures.\n   - **Human-on-the-loop Model**: Explain the human-on-the-loop model for strategic oversight, ensuring human operators maintain control over AI decisions.\n\n**V. Comment on Resubmission (if applicable)**\n   - **Revisions and Updates**: Note any revisions made to the project based on feedback or new findings.\n   - **Current AI Technology in Space**: Provide an overview of the current state of AI technology in space, highlighting advancements and challenges.\n\n**VI. Bibliography (max. 15 references, not included in character limits)**\n   - **Reference List**: Compile a list of up to 15 references that support the research, including key studies, methodologies, and theoretical frameworks.\n\n**Notes for Each Section:**\n- Ensure each section is clearly defined and logically connected to the overall research objectives.\n- Use technical language appropriate for an expert audience, but ensure clarity and coherence.\n- Include relevant images or diagrams where applicable to enhance understanding.\n- Maintain a focus on the project's originality and potential impact on the field of space exploration.",
+        "content": "**Outline for Research Project Essay: Autonomous AI Agents for Spacecraft Operations**\n\n**I. Introduction: Originality of the Research Project**\n   - **Contextual Background**\n     - Discuss the current state of AI in space exploration and its limitations.\n     - Highlight the need for autonomous AI systems in spacecraft operations.\n   - **Research Significance**\n     - Explain the potential impact of integrating AI into spacecraft operations.\n     - Emphasize the novelty of the project in addressing existing challenges.\n   - **Key Innovations**\n     - Detail the innovative aspects of the project, such as autonomous decision-making and anomaly prediction.\n\n**II. Hypothesis, Research Objectives, and Envisaged Methodology**\n   - **Hypothesis**\n     - State the central hypothesis regarding the effectiveness of AI in enhancing spacecraft operations.\n   - **Research Objectives**\n     - Outline specific objectives, such as improving mission efficiency and reducing operational costs.\n   - **Methodology**\n     - Describe the methodological approach, including the use of simulations and real-time data analysis.\n     - Discuss the validation processes for AI systems in mission-critical scenarios.\n\n**III. Expected Outcomes / Impact**\n   - **Mission Efficiency and Longevity**\n     - Explain how AI integration is expected to enhance mission efficiency and extend spacecraft lifespan.\n   - **Scientific Advancements**\n     - Discuss the potential for new scientific discoveries enabled by autonomous operations.\n   - **Operational Cost Reduction**\n     - Highlight the anticipated reduction in operational costs through optimized performance and anomaly prediction.\n\n**IV. Explanations on the Management of Ethical Issues and Data Protection**\n   - **Ethical Considerations**\n     - Address ethical concerns related to AI decision-making, such as transparency and accountability.\n   - **Data Protection**\n     - Discuss strategies for ensuring data privacy and security in AI-driven operations.\n   - **Human-on-the-Loop Control**\n     - Emphasize the importance of maintaining human oversight to mitigate risks.\n\n**V. Comment on Resubmission (if applicable)**\n   - **Revisions and Improvements**\n     - Summarize any changes made in response to previous feedback.\n     - Highlight improvements in methodology or scope based on reviewer comments.\n\n**VI. Bibliography (max. 15 references, not included in character limits)**\n   - **Reference List**\n     - Provide a list of key references that support the research, including foundational works and recent studies.\n\n**Notes for Each Section:**\n- **Introduction:** Focus on establishing the context and significance of the research. Use examples of current limitations in space operations to justify the need for AI integration.\n- **Hypothesis and Methodology:** Clearly articulate the hypothesis and ensure the methodology aligns with the research objectives. Include details on testing and validation processes.\n- **Expected Outcomes:** Use specific examples to illustrate the potential impact of the research. Consider both short-term and long-term benefits.\n- **Ethical Issues:** Address potential ethical concerns comprehensively, ensuring that the discussion is relevant to the space exploration context.\n- **Resubmission Comments:** If applicable, provide a concise summary of revisions, focusing on how they enhance the research quality.\n- **Bibliography:** Ensure references are up-to-date and relevant to the research topic, avoiding overly speculative sources.",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 577,
-            "prompt_tokens": 20768,
-            "total_tokens": 21345,
+            "completion_tokens": 646,
+            "prompt_tokens": 20746,
+            "total_tokens": 21392,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -258,20 +258,20 @@
       }
     ],
     "project_title": "Autonomous AI Agents for Spacecraft Operations",
-    "project_description": "This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.",
+    "project_description": "This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and robust system integration. Challenges to address include ensuring AI reliability and effective decision-making in uncertain environments. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.",
     "abstract_questions": [
-      "What are the primary goals and objectives of the project involving autonomous AI agents in GNC and AOCS operations?",
-      "How will the project ensure the AI agents are capable of handling the complexities of GNC and AOCS tasks?",
-      "What existing technologies or systems will the AI agents need to interface with, and what challenges might arise from this integration?",
-      "What specific technical challenges does the project anticipate in developing AI agents for spacecraft operations?",
-      "How will the project measure the effectiveness of AI agents in reducing human error and increasing operational efficiency?",
-      "What strategies will be implemented to test and validate the AI agents' performance in real-world scenarios?",
-      "How will the project address potential ethical and safety concerns related to autonomous decision-making in space operations?",
-      "What role will human operators play in overseeing or interacting with the AI agents during missions?",
-      "How will the project ensure the AI agents remain adaptable and resilient in the face of unexpected changes or failures?",
-      "What are the long-term implications of deploying autonomous AI agents in space missions for future exploration and industry standards?"
+      "What are the primary goals and objectives of implementing autonomous AI agents in spacecraft operations?",
+      "How do the AI agents interact with existing spacecraft systems, and what protocols are in place to ensure seamless integration?",
+      "What are the potential risks associated with autonomous AI agents in space missions, and how are these risks mitigated?",
+      "How do the AI agents handle unexpected events or anomalies during spacecraft operations?",
+      "What role do human operators play in overseeing or intervening in the actions of AI agents during missions?",
+      "How is data from spacecraft systems utilized by AI agents to make informed decisions?",
+      "What are the long-term implications of using AI agents in space missions for future space exploration and technology development?",
+      "How do AI agents prioritize tasks and allocate resources during spacecraft operations?",
+      "What kind of testing and validation processes are in place to ensure the AI agents perform as expected in real mission scenarios?",
+      "How do AI agents contribute to the sustainability and longevity of spacecraft missions?"
     ],
-    "abstract_text": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space missions by integrating advanced AI technologies into Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS). The project focuses on developing AI agents capable of autonomous decision-making, mission planning, and multi-agent coordination without human intervention. These agents are tested in complex scenarios, such as the TANGO satellite mission, to validate their performance in sensor technologies and space rendezvous. The project addresses technical challenges, including the integration of AI with existing systems, ensuring reliability in harsh space conditions, and maintaining adaptability in dynamic environments. Ethical and safety concerns are prioritized, with a focus on explainability, transparency, and compliance with legal standards. Human operators will oversee AI agents through a \"human-on-the-loop\" model, ensuring strategic oversight while leveraging AI's precision and speed. The project anticipates long-term implications for space exploration, enhancing mission efficiency and expanding human capabilities in space. Through rigorous testing and validation, the project aims to establish industry standards for AI deployment in space, ensuring robust, fault-tolerant, and ethically sound operations.",
+    "abstract_text": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into various aspects of spacecraft operations, including satellite management, data analysis, robotics, and autonomous decision-making. The primary objectives are to enhance mission efficiency, accuracy, and autonomy, allowing spacecraft to perform complex tasks and make real-time decisions with minimal human intervention. AI systems are employed to monitor satellite health, predict anomalies, and optimize performance, thereby reducing operational costs and increasing mission longevity. The project emphasizes the importance of human-on-the-loop control to ensure transparency, fairness, and accountability in AI-driven decision-making, while also addressing ethical considerations and potential risks. Rigorous testing and validation processes are in place to ensure AI agents perform reliably in mission-critical scenarios. By reducing communication delays and enabling autonomous operations, AI technologies are crucial for interplanetary missions and the management of large satellite constellations. The integration of AI in space missions promises to unlock new scientific advancements, enhance operational efficiency, and drive ambitious exploration endeavors, ultimately expanding our understanding of the universe.",
     "section_topics": [
       "Introduction: Originality of the Research Project",
       "Hypothesis, Research Objectives and Envisaged Methodology",
@@ -282,72 +282,60 @@
     ],
     "section_questions": {
       "Introduction: Originality of the Research Project": [
-        "What is the central research question or problem that this project addresses?",
-        "How does this project differ from existing research in the field?",
-        "What novel approaches or methodologies will be employed in this research?",
-        "Why is this research important and what gap does it fill in the current body of knowledge?",
-        "What are the potential implications of this research for the field or industry?"
+        "What is the central theme or idea that makes this research project original?",
+        "How does this project differ from existing research in the same field?",
+        "What are the unique contributions this project aims to make to the field?",
+        "Why is this research project important at this point in time?",
+        "What inspired the conception of this research project?"
       ],
       "Hypothesis, Research Objectives and Envisaged Methodology": [
-        "What is the main hypothesis or hypotheses that this research aims to test?",
-        "What are the specific objectives that the research seeks to achieve?",
-        "What methodologies will be used to conduct the research and why were they chosen?",
-        "How will data be collected and analyzed to support the research objectives?",
-        "What are the anticipated challenges in implementing the methodology and how will they be addressed?"
+        "What is the primary hypothesis that this research project seeks to test?",
+        "What are the specific research objectives that guide this project?",
+        "What methodologies will be employed to achieve the research objectives?",
+        "How will the chosen methodologies ensure the reliability and validity of the research findings?",
+        "What are the anticipated challenges in implementing the research methodologies, and how will they be addressed?"
       ],
       "Expected Outcomes / Impact": [
-        "What are the expected outcomes of the research project?",
-        "How will the results of this research impact the field or industry?",
-        "What are the potential benefits of the research for society or specific communities?",
-        "How will the research outcomes contribute to future studies or applications?",
-        "What measures will be taken to ensure the dissemination and utilization of the research findings?"
+        "What are the expected outcomes of this research project?",
+        "How will the outcomes of this project impact the field of study?",
+        "What are the potential applications of the research findings?",
+        "How will the project contribute to societal or technological advancements?",
+        "What measures will be used to evaluate the success of the project outcomes?"
       ],
       "Explanations on the management of ethical issues and data protection": [
-        "What ethical considerations are relevant to this research project?",
-        "How will informed consent be obtained from participants, if applicable?",
-        "What measures will be implemented to ensure data privacy and protection?",
-        "How will the research comply with relevant ethical guidelines and regulations?",
-        "What steps will be taken to address any potential ethical dilemmas that may arise during the research?"
+        "What are the potential ethical issues associated with this research project?",
+        "How will ethical considerations be addressed throughout the research process?",
+        "What data protection measures will be implemented to ensure participant confidentiality?",
+        "How will informed consent be obtained and documented from research participants?",
+        "What steps will be taken to ensure compliance with relevant ethical guidelines and regulations?"
       ],
       "Comment on resubmission (if applicable)": [
-        "What changes or improvements have been made since the last submission?",
-        "How have previous feedback or reviews been addressed in this resubmission?",
-        "What new data or findings have been included in the resubmission?",
-        "How does the resubmission strengthen the overall research proposal?",
-        "What additional information or context is provided in this resubmission?"
+        "What changes have been made to the project since the last submission?",
+        "How have previous feedback and reviews been addressed in this resubmission?",
+        "What new insights or data have been incorporated into the project?",
+        "What are the reasons for resubmitting the project at this time?",
+        "How does this resubmission improve upon the original proposal?"
       ],
       "Bibliography (max. 15 references, not included in character limits)": [
         "What are the key sources that have informed the research project?",
         "How do the selected references support the research hypothesis and objectives?",
         "What criteria were used to select the references included in the bibliography?",
         "How do the references reflect the current state of research in the field?",
-        "What gaps or limitations in the existing literature are highlighted by the bibliography?"
+        "What gaps in the existing literature does this project aim to address?"
       ]
     },
     "section_answers": {
       "Introduction: Originality of the Research Project": [
         {
-          "content": "spacecraft design is a vast effort, branching out into many fields of science and \nengineering. The proposed research obtains several important results towards the \ndesign of space missions that provide higher utility to the stakeholders, by being \nmore optimized and not bound to the stagnancy of conservative mission design \napproaches. These improvements are obtained through innovations in three aspects \nof the mission design: \n• exploring the alternative concepts thoroughly and more efficiently",
-          "images": []
-        },
-        {
-          "content": "6\nDario Izzo, Marcus M¨artens, and Binfeng Pan\nGTOP database, although single-objective (i.e. Cassini2, GTOC1, MessengerFull),\nwere discovered by MIDACO.\n2.2 Multi-objective Problems\nThe researches mentioned in the previous section are mostly concerned with the\noptimisation of box constrained continuous variables towards a single objective,\nmost commonly fuel consumption or total travel time in the case of interplanetary\ntrajectories. However, the true nature of most design problems is multi-objective,",
+          "content": "Analysis\nOnce we concluded the study, we transcribed the audio from\nthe sessions and compiled the survey responses. To identify\nthemes, we grouped clusters of related observations into\nafﬁnity groups, focusing on topics that related to our research\nquestions.\nFindings\nIn this section, we describe preliminary themes that emerged\nfrom our analysis.\nThe user study participants in general\nsuccessfully used the tools and series of steps to complete\ntheir operations tasks. The operators’ participation, inquiries,",
           "images": []
         },
         {
           "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
-          "images": []
-        },
-        {
-          "content": "trajectories. However, the true nature of most design problems is multi-objective,\npotentially also including integer decisions variables or non-linear constraints. In\nthis multi-objective setting, the concept of the best design (i.e. the global optimum)\nis substituted with that of a Pareto front, a collection of non-dominated solutions\nexpressing the trade-offs between different conﬂicting objectives. Consequently, a\nset of best possible solutions (Pareto-optimal front) is required to guide engineering",
           "images": []
         },
         {
           "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
-          "images": []
-        },
-        {
-          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
           "images": []
         },
         {
@@ -359,7 +347,19 @@
           "images": []
         },
         {
+          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
+          "images": []
+        },
+        {
           "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
+          "images": []
+        },
+        {
+          "content": "to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow",
+          "images": []
+        },
+        {
+          "content": "spacecraft design is a vast effort, branching out into many fields of science and \nengineering. The proposed research obtains several important results towards the \ndesign of space missions that provide higher utility to the stakeholders, by being \nmore optimized and not bound to the stagnancy of conservative mission design \napproaches. These improvements are obtained through innovations in three aspects \nof the mission design: \n• exploring the alternative concepts thoroughly and more efficiently",
           "images": []
         },
         {
@@ -367,89 +367,33 @@
           "images": []
         },
         {
-          "content": "other similar details;  \n• Using probabilistic, rather than deterministic, transition rules. \nPopulation-based algorithms adopt a similar approach, regardless of \nthe applied paradigm and follow from the algorithm below.  \n1. Initialise the population;  \n2. Fitness is calculated for each individual in the population;  \n3. Produce a new population-based on some rules that strictly depend \non the fitness of each individual;  \n4. Repeat steps 2–4 until a condition is met. \n4.1.2. Machine learning techniques",
+          "content": "and support decision-making in high-stress situations on Earth, such as emergencies and\ndisasters, thanks to data or images coming from satellites. The applications are broad and\ninclude Sustainable Development Goals [19] that have to be carried out according to the\n2030 Agenda: improving life on the land, estimating and reducing the effect of climate\nchange, protecting the biodiversity on Earth, and assisting in clean water and atmosphere.",
           "images": []
         },
         {
-          "content": "Analysis\nOnce we concluded the study, we transcribed the audio from\nthe sessions and compiled the survey responses. To identify\nthemes, we grouped clusters of related observations into\nafﬁnity groups, focusing on topics that related to our research\nquestions.\nFindings\nIn this section, we describe preliminary themes that emerged\nfrom our analysis.\nThe user study participants in general\nsuccessfully used the tools and series of steps to complete\ntheir operations tasks. The operators’ participation, inquiries,",
+          "content": "overall public and pre-accession interest in space. We will \nnot passively wait for the best to respond to marketing, \nbut actively use merit and diversity-based criteria to seek \nthe talent we want. \n \nOur efforts to manage, develop, and retain this talent \nwill be central to the long-term viability and success of \nthe Service. Our small, flat organization allows for \ndeliberate individualized development focused on \nbuilding \nspace \nwarfighters \nwith \nthe \nnecessary",
           "images": []
         },
         {
-          "content": "4. Repeat steps 2–4 until a condition is met. \n4.1.2. Machine learning techniques \nML approaches are a subset of AI techniques that allows for the \ncreation of analytical models to be automated. It is a branch of AI based \non the idea that computers can learn through data, identify patterns and \nmake judgments with small or no human intervention. A ML process is \nshown in Fig. 20. A model that can be queried by an application is \ntrained based on a data or knowledge base. Regardless of suitable con­",
-          "images": []
-        },
-        {
-          "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
-          "images": []
-        },
-        {
-          "content": "Machines, Ensemble Learning. \nSeveral other methods consider prior knowledge during learning: in this case, \nthe effects of knowledge representation and learning are joined together. Current-\nbest-hypothesis search and Least-commitment search are examples of these \nalgorithms. Efforts are also being spent in developing methodologies to extract \ngeneral knowledge from specific examples. Several different types of learning have \nbeen developed, including Explanation-based learning, Relevance-based learning,",
-          "images": []
-        },
-        {
-          "content": "challenges and unlocking new opportunities. By \nleveraging AI techniques, scientists and engineers \ncan enhance data analysis, enable autonomous \nsystems, improve navigation, and achieve greater \nefficiency in space missions. \n \nMethodology: \nTo conduct this research initially, an extensive \nliterature search was performed using reputable \nscientific databases, including IEEE Xplore, ACM \nDigital Library, and Google Scholar. The search \nkeywords included \"artificial intelligence,\" \"AI,\"",
-          "images": []
-        },
-        {
-          "content": "Machines, Ensemble Learning. \nSeveral other methods consider prior knowledge during learning: in this case, \nthe effects of knowledge representation and learning are joined together. Current-\nbest-hypothesis search and Least-commitment search are examples of these \nalgorithms. Efforts are also being spent in developing methodologies to extract \ngeneral knowledge from specific examples. Several different types of learning have \nbeen developed, including Explanation-based learning, Relevance-based learning,",
-          "images": []
-        },
-        {
-          "content": "is more exciting because AI and space technologies offer a wide range of \nopportunities. Nevertheless, the need to understand the ultimate \noutcome of the technology remains unanswered. Not to mention that \neven the scientific research community are unable to agree on a prece­\ndent arising from the use of AI. Prominent scientists and industry leaders \nargued that AI could radically transform the way we live and work, \npotentially threating our civilisation and even human survival [343]. A",
+          "content": "presents warfighters with characteristics that reflect their \nunique domain. We are America’s space warfighters. We \nshare expertise and technical fluency with other space-\noriented organizations, but space professionals are charged \nwith mastering both space domain knowledge and unique \noperational art to achieve military purposes. The character \nof war in the space domain is fundamentally unique from \nwarfare in other domains. This necessitates unique",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\cso planning guidance.pdf_page8_img0.png"
+          ]
+        },
+        {
+          "content": "components of the Earth observation system and divides the addressed problems into\nfour categories: (1) classiﬁcation of land cover types, (2) modeling of land–atmosphere\nand ocean–atmosphere, (3) detection of anomalies and extreme events, and (4) causal\ndiscovery. AI and Earth observations (EO) can meet the sustainable development goals\n(SDGs) and speciﬁcally contribute to them. Indeed, in [19] the authors demonstrate how a",
+          "images": []
+        },
+        {
+          "content": "the ground (in this project we use the MEXEC planning and\nexecution system [4]) in nominal (or most likely) scenarios\nto check for constraint violations. With respect to impact, the\nsmall progress bars to the right of the campaign title shows\nthe impact of that goal in the overall mission compared to the\noriginal set of goals.\nIt is important to note that these tools are domain depen-\ndent, meaning that they are designed to support science goal\nspeciﬁcation for a multi-ﬂyby mission for a single spacecraft.",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img0.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img1.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img2.png"
           ]
         },
         {
           "content": "to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow",
-          "images": []
-        },
-        {
-          "content": "that the 35% of the new generation is formed by individuals picked from the old \ngeneration. The selected value ensures a balance between effectiveness of the \nsearch (lower elite population fractions) and survival of fit individuals (higher elite \npopulation fractions). \n8.5 Results \nThe investigation on methodologies to improve and automate the space mission and \nspacecraft design is a vast effort, branching out into many fields of science and",
-          "images": []
-        },
-        {
-          "content": "paramount importance are also the \noperation research and the Markov \ndecision \nprocesses. \nSome of the fundamental questions of \nthe \nfield, \nrelated \nto \nAI: \n- how should we make decisions to \nimprove \nthe \noutcomes? \n- how can we change these decisions \nwhen the outcomes are evaluated in the \nfar future, or when boundary conditions \nvary? \nNeuroscience \nNeuroscience is involved with \nstudying the brain, which is the main \nelement of the nervous systems in \nhuman beings. Despite the majority of",
-          "images": []
-        },
-        {
-          "content": "(vision, sonar and speech recognition) cannot deliver reliable information about the \nenvironment. For this reason, reasoning and planning systems must be able to \nhandle uncertainty. In addition, another consequence of the agent perspective is that \nAI has been drawn into much closer contact with other fields, such as control theory \nand economics, that also deal with agents. \nMore exotic research directions (that, on the other side, share similar intents with",
-          "images": []
-        },
-        {
-          "content": "address \nthe \nchallenges \nand \nopportunities in integrating AI in the field of space \nexploration. \nFurthermore, the selected papers were scrutinized to \nextract relevant data and insights that could \ncontribute to the research paper. This involved \nidentifying statistical information, experimental \nresults, case studies, and any other data that \nsupported the findings and conclusions of the \nrespective studies. The extracted data and insights \nwere then used to strengthen the research paper's",
-          "images": []
-        },
-        {
-          "content": "is more exciting because AI and space technologies offer a wide range of \nopportunities. Nevertheless, the need to understand the ultimate \noutcome of the technology remains unanswered. Not to mention that \neven the scientific research community are unable to agree on a prece­\ndent arising from the use of AI. Prominent scientists and industry leaders \nargued that AI could radically transform the way we live and work, \npotentially threating our civilisation and even human survival [343]. A",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
-          ]
-        },
-        {
-          "content": "information? \nEconomics \nThe field of economics is a \nrelatively recent one when compared \nwith philosophy and mathematics, yet \nit held very important results that \nfostered the development of the AI \ndiscipline: the mathematical theory of \npreferred outcomes (or utility); the \ndecision \ntheory, \nthat \ncombines \nprobability theory with utility theory \nand later on the game theory. Of \nparamount importance are also the \noperation research and the Markov \ndecision \nprocesses.",
-          "images": []
-        }
-      ],
-      "Hypothesis, Research Objectives and Envisaged Methodology": [
-        {
-          "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
-          "images": []
-        },
-        {
-          "content": "experiments, validated by this topic research and technological achievements. \nDownloaded by 2a02:678:6cd:5e00:9170:b61e:9c0f:11d8 on November 19, 2024 | http://arc.aiaa.org | DOI: 10.2514/6.2018-2443",
-          "images": []
-        },
-        {
-          "content": "paramount importance are also the \noperation research and the Markov \ndecision \nprocesses. \nSome of the fundamental questions of \nthe \nfield, \nrelated \nto \nAI: \n- how should we make decisions to \nimprove \nthe \noutcomes? \n- how can we change these decisions \nwhen the outcomes are evaluated in the \nfar future, or when boundary conditions \nvary? \nNeuroscience \nNeuroscience is involved with \nstudying the brain, which is the main \nelement of the nervous systems in \nhuman beings. Despite the majority of",
-          "images": []
-        },
-        {
-          "content": "rigorously controlled experiments on \nhuman beings (Helmholtz, Wundt, XX \ncentury). Another effort was led by the \nbehaviourism movement, that aimed to \nstudy only objective measures of the \nstimuli given to an animal and the \nresulting actions. The definition of the \nbrain as an information-processing \ndevice, and the involvement of the \nperception as a form of unconscious \nlogical inference can be traced back to \nthe end of XIX century. Further \ndevelopments were made towards the",
-          "images": []
-        },
-        {
-          "content": "spacecraft design is a vast effort, branching out into many fields of science and \nengineering. The proposed research obtains several important results towards the \ndesign of space missions that provide higher utility to the stakeholders, by being \nmore optimized and not bound to the stagnancy of conservative mission design \napproaches. These improvements are obtained through innovations in three aspects \nof the mission design: \n• exploring the alternative concepts thoroughly and more efficiently",
           "images": []
         },
         {
@@ -459,23 +403,43 @@
           ]
         },
         {
-          "content": "based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively",
+          "content": "is more exciting because AI and space technologies offer a wide range of \nopportunities. Nevertheless, the need to understand the ultimate \noutcome of the technology remains unanswered. Not to mention that \neven the scientific research community are unable to agree on a prece­\ndent arising from the use of AI. Prominent scientists and industry leaders \nargued that AI could radically transform the way we live and work, \npotentially threating our civilisation and even human survival [343]. A",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
+          ]
+        },
+        {
+          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
           "images": []
         },
         {
-          "content": "such observation as a goal in its corresponding campaign.\nThe tool also allows the direct speciﬁcation of goals in the\nform a set of desired activities (e.g. observation, detection)\nwithout necessarily using the search mechanism. Figure 5\nshows an example of the creation of two goals (one con-\nditional on execution of the other) to monitor a particular\nlocation on the surface of Triton, and perform a follow-on\nobservation if a plume is detected. The ﬁgure also shows",
+          "content": "faculties such as creativity, self-improvement and language use; and the research \non methodologies that focus on building machines that will function autonomously \nin complex, changing environments. \n1952-1969, the Inflation \nThe era of computers was at its beginnings, machines and programming tools were \nstill limited and the functions they could perform were basic, especially in the \nearlier years of this period. Nonetheless, AI researchers were constantly confronted",
           "images": []
         },
         {
-          "content": "opportunities, for example across different upcoming ﬂybys,\nby specifying observation requirements and constraints. For\nexample, scientists can search for observation opportunities\nthat meet geometrical and imaging parameters, and preview\npotential conﬂicts. They can click on targets of interest on\na 3D model of the planetary body and inspect the resulting\nfootprint. Once an opportunity is satisfying, users can add\nsuch observation as a goal in its corresponding campaign.",
+          "content": "to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow",
           "images": []
         },
         {
-          "content": "[89]. The COPINS mission consists of multiple CubeSats (up to two 3U platforms) \ncarried to the asteroid by AIM, which will deploy the nanosatellites at 10 km from \nthe secondary body surface, up to one month before the impact of DART. The \nobjectives of the CubeSat mission are to provide scientific support to the AIM \nprimary mission, either by repeating one or more of the main spacecraft's \nmeasurements, by performing additional science measurements, or by recording",
+          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
           "images": []
         },
         {
-          "content": "Analysis\nOnce we concluded the study, we transcribed the audio from\nthe sessions and compiled the survey responses. To identify\nthemes, we grouped clusters of related observations into\nafﬁnity groups, focusing on topics that related to our research\nquestions.\nFindings\nIn this section, we describe preliminary themes that emerged\nfrom our analysis.\nThe user study participants in general\nsuccessfully used the tools and series of steps to complete\ntheir operations tasks. The operators’ participation, inquiries,",
+          "content": "as the DENDRAL program, that was able to determine the molecular structure only \nby considering the outputs of a mass spectrometer. This program represented the \nfirst knowledge-intensive system: its behaviour was originated from a large \nquantity of special-purpose rules. Another notable project has been HPP, the \nHeuristic Programming Project that was exploring the feasibility of expert systems \nand their application in other fields of human expertise. In this sense, the research",
+          "images": []
+        },
+        {
+          "content": "first reasoning program capable of thinking non-numerically. Although the \nworkshop itself did not hold significant progresses in the field of AI, it served as a \nfruitful start of the collaborations that led the AI development scene in the following \ntwo decades. Starting from this event, two key and distinct characteristics of AI \ndevelopment were made evident: the aim of AI researchers of duplicating human \nfaculties such as creativity, self-improvement and language use; and the research",
+          "images": []
+        },
+        {
+          "content": "More exotic research directions (that, on the other side, share similar intents with \ninitial efforts in AI research) are considering the emulation of the human-level \nintelligence, or more in general the development of an Artificial General \nIntelligence, that would implement an universal algorithm for learning and acting \nin any environment. \nFinally, in recent years, an important paradigm shift has begun to appear: thanks to",
+          "images": []
+        }
+      ],
+      "Hypothesis, Research Objectives and Envisaged Methodology": [
+        {
+          "content": "experiments, validated by this topic research and technological achievements. \nDownloaded by 2a02:678:6cd:5e00:9170:b61e:9c0f:11d8 on November 19, 2024 | http://arc.aiaa.org | DOI: 10.2514/6.2018-2443",
           "images": []
         },
         {
@@ -483,19 +447,58 @@
           "images": []
         },
         {
-          "content": "decision-making[31]. Sinha R., (2018), Data Mining techniques can extract valuable insights from this data, such as identifying patterns, \nanomalies, or potential discoveries [32]. Sinha R., (2019), Data Warehousing can provide a centralized repository for storing and \nintegrating data from different sources, facilitating comprehensive analysis and knowledge discovery. By combining these technologies",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page9_img0.png"
-          ]
-        },
-        {
-          "content": "that the 35% of the new generation is formed by individuals picked from the old \ngeneration. The selected value ensures a balance between effectiveness of the \nsearch (lower elite population fractions) and survival of fit individuals (higher elite \npopulation fractions). \n8.5 Results \nThe investigation on methodologies to improve and automate the space mission and \nspacecraft design is a vast effort, branching out into many fields of science and",
+          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
           "images": []
         },
         {
-          "content": "across those meetings, though we also encouraged them to\nbreak into reﬂective discussions about the process and tools\nalong the way. We also collected feedback in the form of\nsurvey responses in a journal they used for each day. We\nhad implemented the tools as click-through prototypes only,\nand user study facilitator needed to “drive” the tools at the the\noperator’s request. This dynamic evoked dialogue about what\ninformation they needed to see and why.\n14",
+          "content": "Available: http://hdl.handle.net/1853/45226\n[26] M. Hsiao and M. Kaess, “Mh-isam2: Multi-hypothesis\nisam using bayes tree and hypo-tree,” in 2019 Interna-\ntional Conference on Robotics and Automation (ICRA).\nIEEE, 2019, pp. 1274–1280.\n[27] C. Blackwood, E. M. Murphy, M. Le, G. Pyrzak, S. Y.\nKim, S. L. Laubach, G. Tan-Wang, and S. Davidoff,\n“Ecosysetm prototyping at scale with design simula-\ntion,” in The ACM Conference on Designing Interactive\nSystems, in preparation.",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page14_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page18_img0.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page18_img1.png"
+          ]
+        },
+        {
+          "content": "reaching precise modelling of the biological neurons and their group architectures. \nThe latest direction of development of AI are towards an embrace of the scientific \nmethodology that is the standard in other research fields. AI research must now \nundergo rigorous empirical experiments, and the results must be analysed \nstatistically for their importance. Shared repositories of test data and code made it \npossible to replicate experiments with ease.",
+          "images": []
+        },
+        {
+          "content": "Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png"
+          ]
+        },
+        {
+          "content": "Appl. Sci. 2022, 12, 5106\n4 of 21\nTherefore, all efforts lead to two common goals: (i) to push toward space exploration\nand scientiﬁc discoveries; (ii) to improve life on Earth. Human beings play an essential\nrole in all this, such as specialists who work on the objectives of space missions, astronauts\nwho experience challenging conditions in space, and ordinary citizens involved in the\nachievement of these challenges, particularly those of improving life on Earth.",
+          "images": []
+        },
+        {
+          "content": "based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively",
+          "images": []
+        },
+        {
+          "content": "trajectories. However, the true nature of most design problems is multi-objective,\npotentially also including integer decisions variables or non-linear constraints. In\nthis multi-objective setting, the concept of the best design (i.e. the global optimum)\nis substituted with that of a Pareto front, a collection of non-dominated solutions\nexpressing the trade-offs between different conﬂicting objectives. Consequently, a\nset of best possible solutions (Pareto-optimal front) is required to guide engineering",
+          "images": []
+        },
+        {
+          "content": "actuals against predicts to understand the onboard behavior and new science. Instrument and science teams develop and prioritize science goals to achieve mission science\nrequirements. They maintain models of the environment and instrument behavior in support of ensuring mission success and instrument health and safety. Cross cutting\nroles include 1) the mission planner oversees the integrated plan and dispositions both issues to ﬁx and opportunities to improve it to the appropriate team, and 2) the",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page5_img0.png"
+          ]
+        },
+        {
+          "content": "based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively",
+          "images": []
+        },
+        {
+          "content": "Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png"
+          ]
+        },
+        {
+          "content": "actuals against predicts to understand the onboard behavior and new science. Instrument and science teams develop and prioritize science goals to achieve mission science\nrequirements. They maintain models of the environment and instrument behavior in support of ensuring mission success and instrument health and safety. Cross cutting\nroles include 1) the mission planner oversees the integrated plan and dispositions both issues to ﬁx and opportunities to improve it to the appropriate team, and 2) the",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page5_img0.png"
           ]
         },
         {
@@ -506,23 +509,27 @@
           ]
         },
         {
-          "content": "from spectrometers, cameras, and environmental sensors. Much of the raw data usually requires preprocessing for correction of noise, \ncalibration of measurements, and improvement in the quality of the signal. This is implemented by such techniques as filtering, \nnormalization, and interpolation in readiness for further analysis [12]. Advanced analysis techniques include statistical modeling and",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page5_img0.png"
-          ]
-        },
-        {
-          "content": "3.3 Data Processing and Analysis Techniques \nProcessing and analysis of these data are crucial, as millions of pieces of data from space missions remain meaningless without being \ncohesively interpreted. Techniques have been developed to convert raw data into some actionable kind of inference that paves the way \ntoward scientific discovery and mission decision making [12]. In space research, information processing basically starts with raw data",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page5_img0.png"
-          ]
-        },
-        {
-          "content": "data scientist to generate visualizations and other analysis of the data including histograms of features or summary\nstatistics, scatter plots comparing features, line plots of time series data, image visualization, metadata analysis, data\ndistribution statistics, cardinality, missing or inconsistent data, correlations between features, univariate analysis, and\nclustering. Some of these analyses can be automated for some types of datasets. For example, the Pandas Proﬁling tool\n∗https://dvc.org/",
+          "content": "independent missions, most of which have either scientific or technological \nobjectives. ESA has already started studies to deploy CubeSats in the vicinity of the \nDidymos binary asteroid as secondary payload of the Asteroid Impact Mission \n(AIM) spacecraft within the NASA/ESA Asteroid Impact & Deflection Assessment \n(AIDA) mission. The CubeSats, named COPINS (CubeSat Opportunity Payload \nIntersatellite Network Sensors), will pursue technological and scientific objectives",
           "images": []
         },
         {
-          "content": "version control that tracks the original source and any modiﬁcations to a dataset, ensuring traceability of the data lineage.\nThe ﬁrst step in most machine learning projects, once data is in hand, is exploratory data analysis (EDA). The goals\nof EDA are to understand the contents of the dataset, identify any trends that might be exploitable via AI/ML, and begin\nto shape the hypotheses and approaches to explore. The EDA step is often dataset-speciﬁc and requires a knowledgeable",
+          "content": "the mission’s objectives.\n• Initial conditions robustness: where all the parameters involved in\nthe random selection and their relative randomness level are defined or\ndesigned.\nThe adopted workflow based on these three aspects is schematized in Fig. 6.1.\nThis methodology is proposed as a sort of vademecum or guidelines to follow\nfor the implementation and testing of a robust DRL-based path or strategy\nplanning agent. Indeed, all three scenarios that will be analysed in the next",
+          "images": []
+        },
+        {
+          "content": "in the second research question, which focuses on the robustness and flexibility\nof the adopted approach. Both of them are typical machine learning charac-\nteristics, which are increasingly difficult to reach when the problem becomes\nmore complex and realistic.\n4",
+          "images": []
+        },
+        {
+          "content": "go in and outputs come out and there is little insight into how the model is making its determination. The seemingly\nnon-deterministic nature of AI/ML systems may cause some end users to be hesitant to trust AI/ML systems. AI/ML\nsystems will also need to meet more standard software metrics for reliability and security as they suﬀer many of the\nsame vulnerabilities that standard software systems do. There needs to be procedures in place to mitigate radiation",
+          "images": []
+        },
+        {
+          "content": "standing, should be investigated first. Classical and specialised methods, \non the other hand, are often naive, whereas heuristic and metaheuristic \nparadigms can be utilised to various conditions. One key advantage of \nheuristic and metaheuristic paradigms is their robustness. In this \ncontext, robustness refers to an algorithm’s ability to solve a wide range \nof problems and even multiple sorts of problems, with only slight \nchanges to account for each problem’s specific properties. A stochastic",
+          "images": []
+        },
+        {
+          "content": "the training data, hoping it would accurately work for the real ones.\nSome kind of assurance is needed, that your model has got most of\nthe patterns from the data correct, and its not picking up too much\non the noise, i.e. overﬁtting the training data. The process of deciding\nwhether the numerical results quantifying hypothesized relationships\nbetween variables are acceptable as descriptions of the data, is known\nas validation. Generally, an error estimation for the model is made af-",
           "images": []
         },
         {
@@ -530,7 +537,11 @@
           "images": []
         },
         {
-          "content": "new model can be uplinked to the satellite.\nIn addition to the onboard model pipeline, methods will need to be put in place to handle uplink and downlink of\nmodel updates. For most missions there will only be a limited window of opportunity to handle the transmission of data\nand the sustainment plan of a model needs to be built around these windows. The developers will need to consider\nstrategies such as making model updates small enough to ﬁt within a single attempt to transmit or having the ability to",
+          "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
+          "images": []
+        },
+        {
+          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
           "images": []
         },
         {
@@ -538,15 +549,9 @@
           "images": []
         },
         {
-          "content": "Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].",
+          "content": "“artificial general intelligence,” in which sophisticated AI approaches \nare developed to reason and solve problems in the same way that \nhumans can. Despite the introduction of new approaches to address \nthem, AI still faces a number of practical obstacles. The labelling of the \ntraining data required for supervised learning frequently necessitates a \nsignificant amount of human labour. Data sets that are large and thor­\nough enough to train a model are likewise challenging to come by. The",
           "images": [
             "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png"
-          ]
-        },
-        {
-          "content": "6.1.\nOverview of the Methodology\nthese four coupled models are trained with two different types of random initial\nconditions following the strategy outlined in the Fig. 6.1. In this way, it was\npossible to understand how the agent is robust and adaptable. In Section 4.4\nthe same kind of analysis has been followed to increase again the complexity\nof the model, in this case in terms of state and action space.\nFigure 6.1: Schematization of the proposed workflow methodology.\n141",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\phdthesis_brandonisio_v3.pdf_page163_img0.png"
           ]
         }
       ],
@@ -581,7 +586,14 @@
           ]
         },
         {
-          "content": "paramount importance are also the \noperation research and the Markov \ndecision \nprocesses. \nSome of the fundamental questions of \nthe \nfield, \nrelated \nto \nAI: \n- how should we make decisions to \nimprove \nthe \noutcomes? \n- how can we change these decisions \nwhen the outcomes are evaluated in the \nfar future, or when boundary conditions \nvary? \nNeuroscience \nNeuroscience is involved with \nstudying the brain, which is the main \nelement of the nervous systems in \nhuman beings. Despite the majority of",
+          "content": "the aggregated summary of all simulation runs for a given\ntask network\nMission impact tool—The mission impact UI view (shown in\nFigure 10) provides an overview of the simulations spanning\nthe whole mission (that is, looking into all ﬂybys) highlight-\ning, the impact of newly-added goals to the the progress and\nsuccess of the campaigns and to performance trends. This\nview also shows how the plans perform with respect to key\nperformance indicators, and the uncertainty associated with",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png"
+          ]
+        },
+        {
+          "content": "changes into the main plan.\nThen the team collectively\nreviews these preliminary “low ﬁdelity” outputs, implements\niterations as needed and approves advancing to the “high\nﬁdelity” evaluation of possible outcomes and autonomy out-\nput.\nSuch high ﬁdelity evaluation is called here outcome\nprediction phase.\nAt the outcome prediction phase, simulations produce a more\nrealistic and comprehensive view of the new plan’s impact\nto the projected mission progress and performance. Itera-",
           "images": []
         },
         {
@@ -589,25 +601,27 @@
           "images": []
         },
         {
-          "content": "is more exciting because AI and space technologies offer a wide range of \nopportunities. Nevertheless, the need to understand the ultimate \noutcome of the technology remains unanswered. Not to mention that \neven the scientific research community are unable to agree on a prece­\ndent arising from the use of AI. Prominent scientists and industry leaders \nargued that AI could radically transform the way we live and work, \npotentially threating our civilisation and even human survival [343]. A",
+          "content": "paramount importance are also the \noperation research and the Markov \ndecision \nprocesses. \nSome of the fundamental questions of \nthe \nfield, \nrelated \nto \nAI: \n- how should we make decisions to \nimprove \nthe \noutcomes? \n- how can we change these decisions \nwhen the outcomes are evaluated in the \nfar future, or when boundary conditions \nvary? \nNeuroscience \nNeuroscience is involved with \nstudying the brain, which is the main \nelement of the nervous systems in \nhuman beings. Despite the majority of",
+          "images": []
+        },
+        {
+          "content": "the ground (in this project we use the MEXEC planning and\nexecution system [4]) in nominal (or most likely) scenarios\nto check for constraint violations. With respect to impact, the\nsmall progress bars to the right of the campaign title shows\nthe impact of that goal in the overall mission compared to the\noriginal set of goals.\nIt is important to note that these tools are domain depen-\ndent, meaning that they are designed to support science goal\nspeciﬁcation for a multi-ﬂyby mission for a single spacecraft.",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img0.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img1.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img2.png"
           ]
         },
         {
-          "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
+          "content": "address \nthe \nchallenges \nand \nopportunities in integrating AI in the field of space \nexploration. \nFurthermore, the selected papers were scrutinized to \nextract relevant data and insights that could \ncontribute to the research paper. This involved \nidentifying statistical information, experimental \nresults, case studies, and any other data that \nsupported the findings and conclusions of the \nrespective studies. The extracted data and insights \nwere then used to strengthen the research paper's",
           "images": []
         },
         {
-          "content": "information? \nEconomics \nThe field of economics is a \nrelatively recent one when compared \nwith philosophy and mathematics, yet \nit held very important results that \nfostered the development of the AI \ndiscipline: the mathematical theory of \npreferred outcomes (or utility); the \ndecision \ntheory, \nthat \ncombines \nprobability theory with utility theory \nand later on the game theory. Of \nparamount importance are also the \noperation research and the Markov \ndecision \nprocesses.",
+          "content": "Dynamics, DARPA). Excellent examples of applications are also to be found in \ninterplanetary robotics systems, such as NASA Mars Science Laboratory [55]. \nRobotics – Research applications have differentiated into various fields, \nencompassing aerial, terrestrial and underwater robots: examples are found in the \nheavy industry, in paralyzed people aids, computer vision and so on. Other \napplications involved are the Touring Problems, VLSI layouts, Automatic \nAssembly Sequencing and so on.",
           "images": []
         },
         {
-          "content": "spacecraft design is a vast effort, branching out into many fields of science and \nengineering. The proposed research obtains several important results towards the \ndesign of space missions that provide higher utility to the stakeholders, by being \nmore optimized and not bound to the stagnancy of conservative mission design \napproaches. These improvements are obtained through innovations in three aspects \nof the mission design: \n• exploring the alternative concepts thoroughly and more efficiently",
-          "images": []
-        },
-        {
-          "content": "that the 35% of the new generation is formed by individuals picked from the old \ngeneration. The selected value ensures a balance between effectiveness of the \nsearch (lower elite population fractions) and survival of fit individuals (higher elite \npopulation fractions). \n8.5 Results \nThe investigation on methodologies to improve and automate the space mission and \nspacecraft design is a vast effort, branching out into many fields of science and",
+          "content": "showcasing \nits \napplications \nand \nbenefits. \nResearchers have explored the use of AI in satellite \noperations, enabling efficient monitoring, control, \nand maintenance of satellites in orbit. Moreover, AI \ntechniques have been employed for data analysis \nfrom space missions, enabling the extraction of \nvaluable \ninsights \nand \nfacilitating \nscientific \ndiscoveries. Robotics is another area where AI has \ndemonstrated its potential, with autonomous robots \nbeing deployed for tasks such as planetary",
           "images": []
         },
         {
@@ -615,57 +629,59 @@
           "images": []
         },
         {
-          "content": "address \nthe \nchallenges \nand \nopportunities in integrating AI in the field of space \nexploration. \nFurthermore, the selected papers were scrutinized to \nextract relevant data and insights that could \ncontribute to the research paper. This involved \nidentifying statistical information, experimental \nresults, case studies, and any other data that \nsupported the findings and conclusions of the \nrespective studies. The extracted data and insights \nwere then used to strengthen the research paper's",
-          "images": []
-        },
-        {
-          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
-          "images": []
-        },
-        {
-          "content": "Emphasize their role in such tasks as navigation, data analysis, and environmental interaction [3]. \n \nFuture Prospects: The topics in the future prospects of AI and robotics that can further revolutionize space exploration should \nbe explored, such as intelligent habitats and in-situ resource utilization. \n \nScientific Discovery and Operational Efficiency Impact Assessment: Consider how AI and robotics can really enhance the \nscientific output and operational effectiveness of space missions. \n",
+          "content": "data analysis tasks, AI allows scientists to focus on \ninterpreting the results and formulating hypotheses, \naccelerating the pace of scientific advancements in \nspace exploration. \nAI (including ML and DL) + Space Mission Data => \nMeaningful Insights \n \nROBOTICS \n \nAI-powered robotics has emerged as a valuable asset \nin space exploration missions. Autonomous robots \nequipped with AI capabilities can navigate complex \nterrains, perform scientific experiments, and execute",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page1_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\IJIRT161698_PAPER.pdf_page6_img0.png"
           ]
         },
         {
-          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
-          "images": []
-        },
-        {
-          "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
-          "images": []
-        },
-        {
-          "content": "tists, engineers and operators go through the process of intent\ncapture, starting by revisiting the goals for the next ﬂyby(s)\nbased on the downlink data and analysis.\nScientists and\nengineers then have the opportunity to make changes to the\ngoals/plan while getting instant feedback on the viability of\ntheir changes and on their impact on overall mission progress\nand performance. The viability and impact analysis here is\nbased on an initial, low ﬁdelity evaluation of possible onboard",
-          "images": []
-        },
-        {
-          "content": "Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].",
+          "content": "areas of sensing, navigation, control, and autonomy, with examples from past and future missions [20]. \nMehfuz, F. (2018, October): Historically, man's eternal quest to venture into the unknown has benefited humanity. Space exploration \nanswers some of the essential questions in connection with our belonging to the universe and furthers technology, leading to new \nindustries created thereby. Future missions will require advanced systems, robust, and economical, among which will be autonomous",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page8_img0.png"
           ]
         },
         {
-          "content": "be performed with enhanced flexibility and increased reliability, \nwithout relying on commands from ground. The post-impact operations \nwould start autonomously. \n• To prioritise downlinked data. Given the limited data rate available for \nthe downlink, the pre-selection of payload data would avoid sending \nmeaningless information to ground in favour of data related to the \ncompletion of scientific objectives.",
+          "content": "Appl. Sci. 2022, 12, 5106\n4 of 21\nTherefore, all efforts lead to two common goals: (i) to push toward space exploration\nand scientiﬁc discoveries; (ii) to improve life on Earth. Human beings play an essential\nrole in all this, such as specialists who work on the objectives of space missions, astronauts\nwho experience challenging conditions in space, and ordinary citizens involved in the\nachievement of these challenges, particularly those of improving life on Earth.",
           "images": []
         },
         {
-          "content": "post-processing, checking for violations such as data values\ngoing over limits (e.g. power levels are too high), invalid\nbehaviors or combinations of behaviors (e.g. activity A can-\nnot ever overlap activity B), and for other types of undesired\nsituations. Further, ground systems often include automated\nnotiﬁcations to alert operators of an issue, given there may be\na very short turn around time for mission engineers to respond\nto that issue and possibly prevent the loss of science data or",
+          "content": "constructed. It will have state-of-the-art data processing and analysis techniques and will watch the universe in infrared light \nto arrive at new information about star, galaxy, and planetary system formation. \nThese missions and projects also have somewhat different applications of AI and robotics in space exploration and, thus, clearly show \nthe ongoing development and potential of revolutionizing our understanding of the Universe. This continued development holds with it",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page7_img0.png"
+          ]
+        },
+        {
+          "content": "mission, several connected entities collaborate to carry out the mission, including robots in\nspace, smart architecture and construction in space, wearable devices, and apps [18].\nSuch systems work through data and, at the same time, produce data in large quantities.\nFor example, these data concern satellites’ critical and vital conditions, so it is necessary to\nwork on systems capable of generating reliable responses to these parameters. Furthermore,",
           "images": []
         },
         {
-          "content": "of the workﬂow. Additionally, high-quality datasets for these environments can be diﬃcult to come by and relying on\naugmentation or simulations potentially introduces unknown vulnerabilities. Questions, such as \"How will the model\nrespond to novel inputs?\" or \"Under what conditions do we expect the outputs of the model to be valid?\" need to be\naddressed. The performance of an AI/ML system will naturally degrade over time whether due to data drift, changes in",
+          "content": "is especially true in space where spacecraft operate at \nspeeds and distances orders of magnitude greater than \nterrestrial counterparts. The force that prepares for this \nrevolution and reaps its potential will have a significant \nadvantage over the force that does not. \n \nPROLIFERATING ACCESS TO SPACE \n \nThe rapid growth of the commercial space sector provides \nthe United States both new potential partners and \nopportunities to leverage commercial investment to",
           "images": []
+        },
+        {
+          "content": "changes into the main plan.\nThen the team collectively\nreviews these preliminary “low ﬁdelity” outputs, implements\niterations as needed and approves advancing to the “high\nﬁdelity” evaluation of possible outcomes and autonomy out-\nput.\nSuch high ﬁdelity evaluation is called here outcome\nprediction phase.\nAt the outcome prediction phase, simulations produce a more\nrealistic and comprehensive view of the new plan’s impact\nto the projected mission progress and performance. Itera-",
+          "images": []
+        },
+        {
+          "content": "as the metrics and variability speciﬁcations. Figure 9 shows\nthe predicted outcomes (for the target tasknet) on the left-\nhand side, ordered from most likely to least likely, aiding the\noperator in more easily deciphering the expected behavior of\nthe constructed plans. The green and red arrows inform the\nimpact of an added goal (in this case, observing Plume X)\non the outcome distribution. For example, the percentage of\ncases in which Observation A and B will be both performed",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png"
+          ]
         },
         {
           "content": "can be determined by performance of the model and/or a schedule.\nAfter development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted\nbefore the packaged automated model pipeline is released for delivery to the target environment.\nThe major steps in the Develop phase are largely the same across the three environments and the diﬀerences at\nworkﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during",
           "images": []
         },
         {
-          "content": "supporting the safety of orbiting spacecraft and debris mitigation [7].\nWith an exponentially growing number of space-related practical ser-\nvices and research interests, a new focus has been appropriately made\non the defense and protection of spacecraft to ensure the continued\nﬂow of information (Cukurtepe and Akgun [13], Jah [20], Brown, Cot-\nton, et al. [7], Contant-Jorgenson, Lála, Schrogl, et al. [11]). A few",
+          "content": "netosphere, or monitor for plume activity), metrics to evaluate\nprogress toward the goals (i.e. key performance indicators,\nor KPIs) and their valid range for assessment of execution\n(e.g. resource usage, frequency of a command cycling due to\ndelays), execution variability to capture uncertainty related to\nthe environment and the spacecraft actuation (e.g. exogenous\nevents, activities run long, short), and relationships between\ngoals (e.g.\npriorities).\nRelationships between goals are a",
+          "images": []
+        },
+        {
+          "content": "array of high-ﬁdelity simulations. The collected predicted\noutcomes can then be used by the uplink team to not only\nobserve the expected execution, but also attach conﬁdence\nvalues to the various goals and activities within the generated\nplans. As such, repeated simulation runs and collection of the\noutcomes ﬁt within the proposed iterative workﬂow of uplink\noperations, which ultimately serves the goal of increasing\nthe conﬁdence of the uplink team in the expected behavior",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\2018_4_Infantolino.pdf_page14_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img0.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img1.png"
           ]
         }
       ],
@@ -687,84 +703,57 @@
           ]
         },
         {
-          "content": "[326] D. Harkut, K. Kasat, Introductory Chapter: Artificial Intelligence - Challenges and \nApplications, 2019. \n[327] J.B. James Manyika, The Promise and Challenge of the Age of Artificial \nIntelligence, 2018. \n[328] A. Pavaloiu, U. K¨ose, Ethical artificial intelligence - an open question, Journal of \nMultidisciplinary Developments 2 (04/01 2017) 15–27. \n[329] M.U. Scherer, Regulating artificial intelligence systems: risks, challenges, \ncompetencies, and strategies, Harv. J. Law Technol. 29 (2015) 353.",
+          "content": "good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para­\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector",
           "images": []
         },
         {
-          "content": "machine;  \n2. The diminished awareness by the human operator(s) of operational \nand environmental conditions due to not being directly tasked to \naddress these;  \n3. The ethical buffer, in which the human operator delegated moral \nobligation and accountability to the system, which is viewed as a \nvalid authority. \n3.2.2. Adaptive and cognitive HMS \nThere is no universally accepted models and optimality criteria for \nhuman interaction with autonomous systems. The need for human su­",
+          "content": "Despite the numerous advantages offered by AI in \nspace exploration, there are challenges that need to \nbe addressed. One significant concern is the \nreliability and robustness of AI systems operating in \nthe harsh conditions of space. Ensuring the \nresilience of AI algorithms to radiation, extreme \ntemperatures, and other space-specific challenges is \ncrucial for the success of future missions. \nAdditionally, ethical considerations surrounding AI \ndecision-making in space, such as the potential for",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page13_img0.png",
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page13_img1.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\IJIRT161698_PAPER.pdf_page6_img0.png"
           ]
         },
         {
-          "content": "agent preferences (what to do with respect to probability) and which utility is \nreached once a preferred action is taken. The fundamental idea of decision theory \nis that “an agent is rational if and only if it chooses the action that yields the highest \nexpected utility, averaged over all the possible outcomes of the action” (Maximum \nExpected Utility, MEU). Bayesian Networks represent a very effective way to \nrepresent uncertain knowledge. They are a directed acyclic graph whose nodes",
-          "images": []
-        },
-        {
-          "content": "also the future development of the problem and, then, the overall sequence of\nrewards. These concepts outlined here represent the fundament of RL. and are\nmathematically encapsulated in the Markov Decision Process (MDP) problems\n[24], that can be fully or partially observable (as explained later). The final\nobjective of MDP is finding a policy capable of selecting the right action when\nthe agent is in a particular state. Policies may also be found with evolutionary",
-          "images": []
-        },
-        {
-          "content": "other similar details;  \n• Using probabilistic, rather than deterministic, transition rules. \nPopulation-based algorithms adopt a similar approach, regardless of \nthe applied paradigm and follow from the algorithm below.  \n1. Initialise the population;  \n2. Fitness is calculated for each individual in the population;  \n3. Produce a new population-based on some rules that strictly depend \non the fitness of each individual;  \n4. Repeat steps 2–4 until a condition is met. \n4.1.2. Machine learning techniques",
-          "images": []
-        },
-        {
-          "content": "determine which actions to take. In general, anyway, the methodology used to \ndesign an agent is tied to the information that needs to be learned. In the case of the \npassive reinforcement learning, the utilities can be computed by using Direct utility \nestimation, Adaptive dynamic programming, Temporal-difference.  \nCommunicating, perceiving, and acting \nWhen dealing with the problem of acquiring knowledge, the most powerful",
-          "images": []
-        },
-        {
-          "content": "eventually improve its decision-making capabilities. This type of feedback is \nidentified as a reward, or reinforcement, and can be given either at the end of a \nseries of actions or more frequently. Two main philosophies exist when considering \nreinforcement learning, passive and active reinforcement: in the first, the agent’s \nobjective is to compute each states’ utility, while in the latter the agent must \ndetermine which actions to take. In general, anyway, the methodology used to",
-          "images": []
-        },
-        {
-          "content": "Data Security\n• Access management\n• Sensitive info labeling\n• User/group access rules\nData Version Control\n• Original source\n• Commit history with \ncomments\nData Standardization\n• Labeling standards\n• Column naming standards\n• Data type and unit standards\nData Security\n• Access management\n• Sensitive info labeling\n• User/group access rules\nData \nSource\nDB\nDB\nQuery\nObject\nGraph\nFig. 1\nFunctional diagram of the Prepare step of the AI/ML workﬂow.",
-          "images": []
-        },
-        {
-          "content": "data and analytics infrastructure to ensure all our data is \ndiscoverable, accessible, understandable, linked, and \ntrusted across multiple security levels.  \nAutomation \nand \nautonomy \nwill \naccelerate \nand \nstreamline our operations and provide analytics to \noptimize mission and headquarters effectiveness. \nApplying machine learning and trusted levels of \nautonomy will allow our personnel to focus on data-\ndriven decision-making instead of manually sorting and",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\cso planning guidance.pdf_page13_img0.png"
-          ]
-        },
-        {
-          "content": "datasets via data governance. Central dataset repositories can be tied to enterprise authentication services such as Active\nDirectory to provide an easy-to-use and secure way for groups to manage access and modiﬁcation permissions for their\ndatasets. For unrestricted datasets, a centralized repositry makes it easier for developers to ﬁnd relevant datasets and\noﬀers a single source of truth for datasets. Standards can also be implemented at the enterprise level to ensure data is",
-          "images": []
-        },
-        {
-          "content": "standards. \n4 \nMany living beings could die or \ncould be restricted for life; the \nenvironment could be damaged \npermanently. Loss of \ninformation which endangers \nthe existence of the \norganization. Long-term \nunavailability of critical data or \nservices without which the \norganization cannot function. \nThe ML application is \ndeveloped and documented \nwith great care. Safety & \nSecurity is ensured with \nprocesses and techniques that \ngo beyond traditional best \npractices and industry",
+          "content": "potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub­\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,",
           "images": [
             "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
           ]
         },
         {
-          "content": "digital \ncapabilities \nincluding \nsoftware defined networks, data analytics, machine \nintelligence, cloud edge computing, and modular plug-n-\nplay systems.  Digital applies not only to our weapon \nsystems but to our business processes as well, and the \nSpace Force will apply similar techniques to enable a \nDigital Headquarters. Full implementation of our digital \nstrategy will involve investments in Digital Engineering \ndata and analytics infrastructure to ensure all our data is",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\cso planning guidance.pdf_page13_img0.png"
-          ]
-        },
-        {
-          "content": "priorities pre-speciﬁed by ground operators, ensuring that\nonce-in-a-mission observations are acquired while skipping\nlower-priority ones.\n• FDIR affects science plan during critical engineering\nevent. A non-critical camera observation is planned during\nan engine burn. During the burn, FDIR intervenes to counter\nan unexpected increase in power usage by interrupting the\nobservation. The interrupted science activity is re-planned\nfor a later time.\n• Instrument tweaks capture parameters autonomously.",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page3_img0.png"
-          ]
-        },
-        {
-          "content": "based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively",
+          "content": "Progress in Aerospace Sciences 144 (2024) 100960\n30\n1. Ethical purpose: AI development, deployment and use should respect \nfundamental rights and applicable regulations as well as core prin­\nciples and values to ensure “ethical purpose\";  \n2. Technical robustness: AI should be technically robust and reliable \nsince its use can cause unintentional harm, even in the presence of \ngood intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as",
           "images": []
         },
         {
-          "content": "Repeated observations\nScience goals prioritization\nGeometry constraints\nResource constraints\nMultiple campaigns with conﬂicting goals/resources\nRepresent parameters for FDIR and detection\nIntent not achievable (contraint violation)\nIntent close to safety thresholds (brittle cases)\nExecution Timing prediction\nData Volume prediction\nPower Usage prediction\nOff-nominal/degradation prediction\nState uncertainty prediction (e.g. pointing)\nSummarization of prediction\nPlay back particular plan execution",
+          "content": "good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para­\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector",
           "images": []
         },
         {
-          "content": "experienced autonomy. In particular, we chose to focus on\nhow scientists would react to probabilistic resource conﬂicts,\nwhether operators would trust and accept a non-deterministic\nuplink plan, and whether operators would feel conﬁdent in\ntheir retrospective reconstruction of onboard behavior and\nsafety upon downlink.\nTo study these particular facets of operations, we selected the\npreviously described “Mapping Triton and Plume Detection”\nscenario (see Section 2), and elaborated preliminary tools and",
+          "content": "[326] D. Harkut, K. Kasat, Introductory Chapter: Artificial Intelligence - Challenges and \nApplications, 2019. \n[327] J.B. James Manyika, The Promise and Challenge of the Age of Artificial \nIntelligence, 2018. \n[328] A. Pavaloiu, U. K¨ose, Ethical artificial intelligence - an open question, Journal of \nMultidisciplinary Developments 2 (04/01 2017) 15–27. \n[329] M.U. Scherer, Regulating artificial intelligence systems: risks, challenges, \ncompetencies, and strategies, Harv. J. Law Technol. 29 (2015) 353.",
+          "images": []
+        },
+        {
+          "content": "the smaller file sizes required for programming, which is becoming \ncompatible with the uplink bandwidth of small satellites [264]. \n8.2. Ethical and legal challenges \nThe use of AI in space systems raises a number of ethical and legal \nquestions. Some researchers have identified the need for AI ethicists to \nhelp navigate where advances in this technology could lead [328]. This \nis more exciting because AI and space technologies offer a wide range of",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page14_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
           ]
         },
         {
-          "content": "post-processing, checking for violations such as data values\ngoing over limits (e.g. power levels are too high), invalid\nbehaviors or combinations of behaviors (e.g. activity A can-\nnot ever overlap activity B), and for other types of undesired\nsituations. Further, ground systems often include automated\nnotiﬁcations to alert operators of an issue, given there may be\na very short turn around time for mission engineers to respond\nto that issue and possibly prevent the loss of science data or",
+          "content": "good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para­\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector",
+          "images": []
+        },
+        {
+          "content": "have to be included in the cybersecurity development cycle and applied \nearly in the life cycle of the iDSS system. Small commercial satellite \nowners and operators are frequently responsible for inter-vehicle \ncybersecurity, while the majority of the remaining infrastructure is \ncontracted to certain other suppliers and providers [275]. \n7.2. Satellite resilience \nThe aerospace industry of an increasingly multi-polar world will \nhave to negotiate a future that is getting more and more crowded with",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page26_img0.png"
+          ]
+        },
+        {
+          "content": "There are times when robots are used to collect and process sensitive information, starting from personal data used in healthcare to \nproprietary information used in industrial settings. All such information should be protected from unauthorized access and cyber attacks \n[15]. Ensure safe communication channels between the robots and the cloud in order to protect against breaches of data or tampering.",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page7_img0.png"
+          ]
+        },
+        {
+          "content": "ment should include both policy and the tools and processes used for\nSpace Situational Awareness (SSA). It is assumed the two cannot be\nseparated in the context of the goal of space trafﬁc safety. Several crit-\nical areas for research, such as (but not limited to) space environment\neffects and impacts on space objects and events, Big Data storage,\nmanagement and exploitation, Behavioral Science, are listed in [20].\nAlso, space trafﬁc management creates a direct analog to air trafﬁc",
           "images": []
         },
         {
@@ -774,23 +763,54 @@
           ]
         },
         {
-          "content": "the smaller file sizes required for programming, which is becoming \ncompatible with the uplink bandwidth of small satellites [264]. \n8.2. Ethical and legal challenges \nThe use of AI in space systems raises a number of ethical and legal \nquestions. Some researchers have identified the need for AI ethicists to \nhelp navigate where advances in this technology could lead [328]. This \nis more exciting because AI and space technologies offer a wide range of",
+          "content": "Analysis\nOnce we concluded the study, we transcribed the audio from\nthe sessions and compiled the survey responses. To identify\nthemes, we grouped clusters of related observations into\nafﬁnity groups, focusing on topics that related to our research\nquestions.\nFindings\nIn this section, we describe preliminary themes that emerged\nfrom our analysis.\nThe user study participants in general\nsuccessfully used the tools and series of steps to complete\ntheir operations tasks. The operators’ participation, inquiries,",
+          "images": []
+        },
+        {
+          "content": "across those meetings, though we also encouraged them to\nbreak into reﬂective discussions about the process and tools\nalong the way. We also collected feedback in the form of\nsurvey responses in a journal they used for each day. We\nhad implemented the tools as click-through prototypes only,\nand user study facilitator needed to “drive” the tools at the the\noperator’s request. This dynamic evoked dialogue about what\ninformation they needed to see and why.\n14",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page14_img0.png"
+          ]
+        },
+        {
+          "content": "text=Prof%20Stephen%20Hawking%2C%20one%20of,end%20of%20the%20h \numan%20race.%22, 2014. \n[344] E. Commission, Have your say: European expert group seeks feedback on draft \nethics guidelines for trustworthy artificial intelligence, Available at: https://ec. \neuropa.eu/digital-single-market/en/news/have-your-say-european-expert-gro \nup-seeks-feedback-draft-ethics-guidelines-trustworthy, 2018. \n[345] S.T. Todd, J. Burke, Emerging legal issues in an AI-driven world, Available at:",
+          "images": []
+        },
+        {
+          "content": "potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub­\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,",
           "images": [
             "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
           ]
         },
         {
-          "content": "Despite the numerous advantages offered by AI in \nspace exploration, there are challenges that need to \nbe addressed. One significant concern is the \nreliability and robustness of AI systems operating in \nthe harsh conditions of space. Ensuring the \nresilience of AI algorithms to radiation, extreme \ntemperatures, and other space-specific challenges is \ncrucial for the success of future missions. \nAdditionally, ethical considerations surrounding AI \ndecision-making in space, such as the potential for",
+          "content": "October 2020; published online 14 January 2021. Copyright © 2020 by The\nAuthors. PublishedbytheAmerican InstituteofAeronauticsandAstronautics,\nInc., with permission. All requests for copying and permission to reprint\nshould be submitted to CCC at www.copyright.com; employ the eISSN\n1533-6794 to initiate your request. See also AIAA Rights and Permissions\nwww.aiaa.org/randp.\n*Ph.D. Candidate, Department of Mechanical and Aerospace Engineering,\n1125 Colonel By Drive. Student Member AIAA.",
           "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\IJIRT161698_PAPER.pdf_page6_img0.png"
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JSR-2021.pdf_page1_img0.png",
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JSR-2021.pdf_page1_img1.png"
           ]
         },
         {
-          "content": "of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore",
+          "content": "potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub­\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png"
+          ]
+        },
+        {
+          "content": "also identified because the strategy is a tool for attaining them [322]. \nSeveral AI approaches should be examined, along with their possibilities \nfor practical adoption in the iDSS considering human supervision, with \nthe aim of achieving TASO. \n7.3. Safety considerations \nDependence on AI systems is critical for technological frameworks to \nbe widely applicable and accepted. Standards, norms, accreditations and \ncertificates are examples of legal regulations commonly used to",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png"
+          ]
+        },
+        {
+          "content": "as the development (and uptake) of new operational standards and \nregulations. The tort of negligence, which is a common legal principle \napplied to liability, is concerned with whether a party owed another a \nduty of care, whether that duty was breached and whether the breach \nresulted in damages. In the case of negligence, reasonable foreseeability \nis a crucial concept [345]. As AI systems become less reliant on tradi­\ntional algorithms, they will be able to exhibit behaviours that are not",
           "images": []
         },
         {
           "content": "Progress in Aerospace Sciences 144 (2024) 100960\n30\n1. Ethical purpose: AI development, deployment and use should respect \nfundamental rights and applicable regulations as well as core prin­\nciples and values to ensure “ethical purpose\";  \n2. Technical robustness: AI should be technically robust and reliable \nsince its use can cause unintentional harm, even in the presence of \ngood intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as",
+          "images": []
+        },
+        {
+          "content": "text=Prof%20Stephen%20Hawking%2C%20one%20of,end%20of%20the%20h \numan%20race.%22, 2014. \n[344] E. Commission, Have your say: European expert group seeks feedback on draft \nethics guidelines for trustworthy artificial intelligence, Available at: https://ec. \neuropa.eu/digital-single-market/en/news/have-your-say-european-expert-gro \nup-seeks-feedback-draft-ethics-guidelines-trustworthy, 2018. \n[345] S.T. Todd, J. Burke, Emerging legal issues in an AI-driven world, Available at:",
           "images": []
         }
       ],
@@ -804,6 +824,10 @@
           ]
         },
         {
+          "content": "addition, new worlds, new science, and new phenomena to observe are appearing \non the horizon. The new scientific goals and objectives often require multiple \ncoordinating spacecraft to make simultaneous observations, or to detect events \nwithout ground intervention. This increase in the demands for new spacecraft has \nled to intense research and development efforts for the software applications and \nprocesses that are used during a space mission, both on ground, in the Mission",
+          "images": []
+        },
+        {
           "content": "Date: 07/23 \nRevision: v4 \n \n \n \nAs Published in “Precision Medicine for Long and Safe Permanence of Humans in Space” \n1 \nCurrent AI Technology in Space \n \n \nCurrent AI Technology in Space \n \nJustin Goodwill, Christopher Wilson, James MacKinnon \nNASA Goddard Space Flight Center \n8800 Greenbelt Rd, Greenbelt, MD, 20771 \n{justin.goodwill, christopher.m.wilson, james.mackinnon}@nasa.gov \n \n1. Introduction \nAcross the science and defense space sectors, researchers and spacecraft designers are actively",
           "images": [
             "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page1_img0.png",
@@ -811,21 +835,14 @@
           ]
         },
         {
-          "content": "•Dataset augmentation \n•Super-resolution imaging \n•Data quality enhancement  \nTable 10 \nComparison of ground and space control segment. Adapted from Ref. [279].  \nGround Control \nOn-board Control \n•CPU power available, \n•Software flexibility, \n•The testing procedure not impacting the \nmission, \n•Interactions with operators and experts in \na short loop, \n•Lower cost of software development. \n•Reactive to the environment, \n•Processing data without \ncommunication delay, \n•Reduced communication to ground,",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page22_img0.png"
-          ]
-        },
-        {
-          "content": "Date: 07/23 \nRevision: v4 \n \n \n \nAs Published in “Precision Medicine for Long and Safe Permanence of Humans in Space” \n3 \nCurrent AI Technology in Space \n \n \nDomain \nApplications \nRemote Sensing \n• Rapid Disaster Response (e.g., Wildfire Detection) \n• Data Triage including Image and Video \nCompression \n• Onboard Product Generation \nGuidance, \nNavigation, and \nControl (GNC) \n• Autonomous Rover Controls \n• Autonomous Hazard Detection and Landing \n• Horizon/Star Tracking \n• Terrain Classification",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page3_img0.png",
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page3_img1.png"
-          ]
-        },
-        {
-          "content": "Secure\n• Threat vulnerability\n• Threat detectability\n• Threat responsiveness\n• Model Robustness\n• Prediction redundancy\n• Robust model development and testing\n• Secure model updates\n• Adversarial training\n• V&V\n• AI/ML-based cyber security\nReliable\n• Fault tolerance\n• Robustness\n• Downtime\n• Duty cycle\n• Model monitoring\n• Built-in test/fault mitigation\n• Multiple fallback options\n• Resource optimization\nExplainable\n• Model uncertainty\n• Model architecture/complexity\n• Explainability",
+          "content": "Progress in Aerospace Sciences 144 (2024) 100960\n14\naspects that will be addressed in evolving safety certification standards, \nsuch as the evolutions of SAE and MIL-STD-822F [77,78]. When a poorly \ndesigned autonomous system is used in an unpredictable, uncontrolled \nenvironment, there is a high risk of failure with unforeseen conse­\nquences. Nonetheless, recent technological advancements in complex \ncontrol software, such as AI techniques, improve the adaptiveness of the",
           "images": []
+        },
+        {
+          "content": "Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png"
+          ]
         },
         {
           "content": "across those meetings, though we also encouraged them to\nbreak into reﬂective discussions about the process and tools\nalong the way. We also collected feedback in the form of\nsurvey responses in a journal they used for each day. We\nhad implemented the tools as click-through prototypes only,\nand user study facilitator needed to “drive” the tools at the the\noperator’s request. This dynamic evoked dialogue about what\ninformation they needed to see and why.\n14",
@@ -845,11 +862,11 @@
           "images": []
         },
         {
-          "content": "to the projected mission progress and performance. Itera-\ntions continue, as the team decides to make minor tweaks\nor drop problematic goals entirely.\nThe team can inspect\nindividual cases or “clusters” of related cases to understand\noutcomes that might happen onboard and investigate prob-\nlematic plans that approach undesired limits. Explanation of\nthese problematic cases (either by manually inspecting logs,\nstate history, timelines and traces or by using an automated",
+          "content": "be redirected to a previous step or workﬂow. Generally development begins with data preparation, and continues to\nmodel selection, training, and evaluation. In the data preparation stage the model inputs should be kept in a feature store\nthat will also be accessible during the Deploy phase. A feature store is a centralized repository where you standardize\nthe deﬁnition, storage, and access of features for training and serving [34]. After evaluation the model should be",
           "images": []
         },
         {
-          "content": "Secure\n• Threat vulnerability\n• Threat detectability\n• Threat responsiveness\n• Model Robustness\n• Prediction redundancy\n• Robust model development and testing\n• Secure model updates\n• Adversarial training\n• V&V\n• AI/ML-based cyber security\nReliable\n• Fault tolerance\n• Robustness\n• Downtime\n• Duty cycle\n• Model monitoring\n• Built-in test/fault mitigation\n• Multiple fallback options\n• Resource optimization\nExplainable\n• Model uncertainty\n• Model architecture/complexity\n• Explainability",
+          "content": "to the projected mission progress and performance. Itera-\ntions continue, as the team decides to make minor tweaks\nor drop problematic goals entirely.\nThe team can inspect\nindividual cases or “clusters” of related cases to understand\noutcomes that might happen onboard and investigate prob-\nlematic plans that approach undesired limits. Explanation of\nthese problematic cases (either by manually inspecting logs,\nstate history, timelines and traces or by using an automated",
           "images": []
         },
         {
@@ -857,15 +874,14 @@
           "images": []
         },
         {
-          "content": "Figure 10. Mission Impact tool: shows an overview of the\nsimulations and the impact of updated or newly added goals\nto the mission progress\nactual telemetry from downlink and compare it to modeled\npredicted data (predicts) to support the analysis of onboard\nhealth and safety and anomaly detection[16]. The tool resem-\nbles conventional downlink analysis tools, plotting onboard\nstate over time overlaid with events, and a list of EVRs. The\npredicts are clustered, since the uplink process for autonomy",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png",
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png"
-          ]
+          "content": "• Engineering Data Products, each containing a range of\ntypes of information, depending on the need. There are a\nwide variety of data products used by projects, including\nsnapshots of state such as memory and data management\nstates.\nAll of these data types are packetized for downlink delivery,\nand typically, during a downlink communications session or\nsoon after, data packets are processed by ground telemetry\nprocessing tools. In some cases downlink operators monitor",
+          "images": []
         },
         {
-          "content": "be tasked with explaining what decisions were made by\nonboard autonomy algorithms, reconstructing what happened\non board, and identifying anomalies that may otherwise be\nhidden by autonomous decisions. New downlink workﬂows\nand tools have been designed that focus on two thrusts. The\nﬁrst thrust is spacecraft state estimation and propagation\nof the spacecraft state (including available energy, tempera-\ntures, health of spacecraft subsystems, and consumption of",
-          "images": []
+          "content": "constructed. It will have state-of-the-art data processing and analysis techniques and will watch the universe in infrared light \nto arrive at new information about star, galaxy, and planetary system formation. \nThese missions and projects also have somewhat different applications of AI and robotics in space exploration and, thus, clearly show \nthe ongoing development and potential of revolutionizing our understanding of the Universe. This continued development holds with it",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page7_img0.png"
+          ]
         },
         {
           "content": "occur in any stage of the mission.\nUpdates, for example,\ncan come from downlink data, both at the tactical level\n(e.g. a magnetosphere model might need adjustments), or\nat the strategic level with trend and history analysis (e.g.,\nthe duration of plumes at a certain location can be better\nestimated given historical data from previous ﬂybys).\nFigure 7. Variability Deﬁnition: allows scientists,\nengineers, autonomy engineers and operators to input\nuncertainty with respect to a multitude of aspects that might",
@@ -875,44 +891,7 @@
           ]
         },
         {
-          "content": "Figure 3. Uplink and Downlink Workﬂow: Describes the high level operations process. It starts with the development of incons and identifying new science observations.\nThen, the team uses low ﬁdelity models to understand the impact and viability of the new goals. When the team accepts the low ﬁdelity predictions, they move to high\nﬁdelity modeling, where they evaluate the impact on a larger scale and with more realism. They uplink the output. When the downlink arrives, operators compare the",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page5_img0.png"
-          ]
-        },
-        {
-          "content": "based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively",
-          "images": []
-        },
-        {
-          "content": "changes into the main plan.\nThen the team collectively\nreviews these preliminary “low ﬁdelity” outputs, implements\niterations as needed and approves advancing to the “high\nﬁdelity” evaluation of possible outcomes and autonomy out-\nput.\nSuch high ﬁdelity evaluation is called here outcome\nprediction phase.\nAt the outcome prediction phase, simulations produce a more\nrealistic and comprehensive view of the new plan’s impact\nto the projected mission progress and performance. Itera-",
-          "images": []
-        },
-        {
-          "content": "array of high-ﬁdelity simulations. The collected predicted\noutcomes can then be used by the uplink team to not only\nobserve the expected execution, but also attach conﬁdence\nvalues to the various goals and activities within the generated\nplans. As such, repeated simulation runs and collection of the\noutcomes ﬁt within the proposed iterative workﬂow of uplink\noperations, which ultimately serves the goal of increasing\nthe conﬁdence of the uplink team in the expected behavior",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img0.png",
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img1.png"
-          ]
-        },
-        {
-          "content": "for a later time.\n• Instrument tweaks capture parameters autonomously.\nWhile imaging a target, autonomy adjusts the narrow-angle’s\nobservation parameters (speciﬁcally, the exposure time and\nnumber of exposures to stack) based on the level of noise\nobserved in the images, while ensuring that the resulting\nobservations will ﬁt the downlink budget.\nTable 1 reports in detail the uplink and downlink operations\ncapabilities exercised by each scenario.\nCollectively, the",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page3_img0.png"
-          ]
-        },
-        {
-          "content": "have to negotiate a future that is getting more and more crowded with \nfamiliar, unfamiliar and unfriendly players all vying for technological \nand strategic superiority. Threats to the space realm and its sustaining \ninfrastructure have escalated as a result of this change [318]. Ground \nand aerospace system architectures must offer a high level of resilience \nin order to ensure mission success. Resilience is therefore a crucial \ndesign factor that should be traded off against cost and capabilities when",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page26_img0.png"
-          ]
-        },
-        {
-          "content": "• Self-aware: internal capabilities and state of the managed components \nor equipment are known to the system \n• Self-situated: the system has awareness of the external environment and \ncontext \n• Self-monitor and self-adjust: through monitoring sensors, actuators and \ncontrol loops \nTable 3 How the three levels are defined among different entities \nIntelligent \nMachine \nDesign \nFuture \nCommunication \nParadigms \nDARPA/ISO’s \nautonomic \ninformation \nassurance \nNASA’s \nscience \nmission \nSelf-\ndirecting",
-          "images": []
-        },
-        {
-          "content": "critical to providing initial conditions to uplink teams. The\nsecond thrust is explanation of the decisions taken by onboard\nautonomy, through user interfaces that capture what decisions\nwere made by autonomy, and relate why the decisions were\nmade to the intent provided by ground operators, the space-\ncraft state (including possible anomalies), and the perceived\nstate of the external environment (e.g., events of interest\ndetected by the on-board autonomy).",
+          "content": "be tasked with explaining what decisions were made by\nonboard autonomy algorithms, reconstructing what happened\non board, and identifying anomalies that may otherwise be\nhidden by autonomous decisions. New downlink workﬂows\nand tools have been designed that focus on two thrusts. The\nﬁrst thrust is spacecraft state estimation and propagation\nof the spacecraft state (including available energy, tempera-\ntures, health of spacecraft subsystems, and consumption of",
           "images": []
         },
         {
@@ -920,12 +899,42 @@
           "images": []
         },
         {
-          "content": "be tasked with explaining what decisions were made by\nonboard autonomy algorithms, reconstructing what happened\non board, and identifying anomalies that may otherwise be\nhidden by autonomous decisions. New downlink workﬂows\nand tools have been designed that focus on two thrusts. The\nﬁrst thrust is spacecraft state estimation and propagation\nof the spacecraft state (including available energy, tempera-\ntures, health of spacecraft subsystems, and consumption of",
+          "content": "point and identiﬁed departures required by autonomy. The\nrevised workﬂow and the supporting framework includes a\nset of key design principles and progression from uplink to\ndownlink.\nIn most missions (including for example Europa Clipper,\nPerseverance Rover), planning occurs on several different\ntime horizons, where the cycle time itself is dependent on the\nmission. Although the terms for these planning cycles are not\nconsistent across missions, we will refer to a longer cycle as",
           "images": []
         },
         {
-          "content": "tures, health of spacecraft subsystems, and consumption of\non-board resources). Enabling ground personnel to gain a\nreliable understanding of an autonomous spacecraft’s state\n(e.g.\nhealth, resources, etc.)\nis a challenging problem,\nas the onboard autonomy may alter the spacecraft state in\nresponse to information that is not immediately available on\nthe ground; in addition, propagating the spacecraft state is\ncritical to providing initial conditions to uplink teams. The",
+          "content": "to the projected mission progress and performance. Itera-\ntions continue, as the team decides to make minor tweaks\nor drop problematic goals entirely.\nThe team can inspect\nindividual cases or “clusters” of related cases to understand\noutcomes that might happen onboard and investigate prob-\nlematic plans that approach undesired limits. Explanation of\nthese problematic cases (either by manually inspecting logs,\nstate history, timelines and traces or by using an automated",
           "images": []
+        },
+        {
+          "content": "be redirected to a previous step or workﬂow. Generally development begins with data preparation, and continues to\nmodel selection, training, and evaluation. In the data preparation stage the model inputs should be kept in a feature store\nthat will also be accessible during the Deploy phase. A feature store is a centralized repository where you standardize\nthe deﬁnition, storage, and access of features for training and serving [34]. After evaluation the model should be",
+          "images": []
+        },
+        {
+          "content": "entiﬁc observations and engineering data) must be reviewed\nin a very short time span, in order for uplink teams to have\ntime to perform all planning functions ahead of the ﬁnal\navailable uplink of the day. Further, lander missions often\ndepend on orbital relays for delivery of data to Earth, given\nthe higher bandwidth capabilities of orbiter relays compared\nto direct-to-Earth communications from the landers; this\nfurther constrains the downlink operational process timing",
+          "images": []
+        },
+        {
+          "content": "Section 4.3, it concerns the randomness level of the initial conditions; while, in\nother cases, may be related to the selection of a simplified or realistic subset of\nthem. In the end, what matters is that in one case, the state space possibilities\nare reduced with respect to the other. In Fig. 6.1, the distinction between the\nmethodology steps (1 to 4) and the feedback steps is highlighted by the different\nlines’ colours: black and red. This wants to underline the adaptability of this",
+          "images": []
+        },
+        {
+          "content": "aspects, but, among all, is mainly described by the network architecture and\nthe state-action spaces; on the other side, the reward formulation embeds the\nmission objectives. Once these two, or more if needed, cases have been selected,\nthe workflow proposes to train and test them with different levels of initial\nconditions. This difference can be interpreted in distinct ways: for instance, in\nSection 4.3, it concerns the randomness level of the initial conditions; while, in",
+          "images": []
+        },
+        {
+          "content": "and Sec. VII concludes this paper.\nII.\nDeep Reinforcement Learning\nThe goal of deep reinforcement learning is to discover a policy, πθ,\nrepresented by a feedforward neural network and whose subscript\ndenotes it has trainable weights θ that maps states, x ∈X, to actions,\na ∈A that, when executed, maximize the expected rewards received\nover one episode. (In reinforcement learning, one simulation is called\none episode.) The action is obtained by feeding the state to the policy,\nas follows:\na \u0001 πθ\u0003x\u0004\n(1)",
+          "images": []
+        },
+        {
+          "content": "• A is the space of all possible actions a that can be taken in all the states\nof the environment;\n• R is the reward function, guiding the action selection to maximize it;\n• T (sk+1| sk, ak) is the transition function governing the probability of\nmoving from one state to the next, given the current state and action at\ntimestep k;\n• Ωis the space of possible observations;\n• O (ok+1| ak, sk+1) is the probability of making a particular observation,\ntaking an action that leads to a particular new state.",
+          "images": []
+        },
+        {
+          "content": "6.1.\nOverview of the Methodology\nthese four coupled models are trained with two different types of random initial\nconditions following the strategy outlined in the Fig. 6.1. In this way, it was\npossible to understand how the agent is robust and adaptable. In Section 4.4\nthe same kind of analysis has been followed to increase again the complexity\nof the model, in this case in terms of state and action space.\nFigure 6.1: Schematization of the proposed workflow methodology.\n141",
+          "images": [
+            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\phdthesis_brandonisio_v3.pdf_page163_img0.png"
+          ]
         }
       ],
       "Bibliography (max. 15 references, not included in character limits)": [
@@ -1019,35 +1028,27 @@
           "images": []
         },
         {
-          "content": "given variability distributions and pushing each input request\nonto a queue. Meanwhile, the worker takes an input request\nfrom the queue and runs a simulation based on the input,\nwhile storing data to a shared database. Figure 14 shows the\nworkﬂow of the prediction engine, from the sampling to the\nstoring of outcomes.\nFigure 14. Overview of the architecture of the Prediction\nEngine.\nInference Tool: Filling in the gaps\nA key challenge in downlink analysis is to reconstruct the",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page12_img0.png"
-          ]
+          "content": "inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large",
+          "images": []
         },
         {
-          "content": "the impact gap in green). Furthermore, the operators are also\npresented with a few recommendations on how improve the\nplan to avoid conﬂicts and aid in campaign success. These\nrecommendations are essential in ﬁtting in with the iterative\nworkﬂow of plan development.\nDownlink analysis\nSubsystem Downlink Analysis Tool—The subsystem downlink\nanalysis tool (shown in Figure 11) allows operators to review\nFigure 10. Mission Impact tool: shows an overview of the",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png",
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png"
-          ]
-        },
-        {
-          "content": "occur in any stage of the mission.\nUpdates, for example,\ncan come from downlink data, both at the tactical level\n(e.g. a magnetosphere model might need adjustments), or\nat the strategic level with trend and history analysis (e.g.,\nthe duration of plumes at a certain location can be better\nestimated given historical data from previous ﬂybys).\nFigure 7. Variability Deﬁnition: allows scientists,\nengineers, autonomy engineers and operators to input\nuncertainty with respect to a multitude of aspects that might",
-          "images": [
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img0.png",
-            "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img1.png"
-          ]
-        },
-        {
-          "content": "metric speciﬁcation, showing the number of plumes metric\nas an example. Progress and impact is also shown for each\ncampaign, based on the inputs given in the Mission Planning\ntool.\nMetrics are key inputs to evaluate both current and\npredicted spacecraft performance.\nNote that most of the\nmetrics (if not all of them) are usually captured and speciﬁed\nearly in the mission, or at the strategic planning level.\nFigure 6. Metric Deﬁnition: allows scientists, engineers,",
+          "content": "the ground (in this project we use the MEXEC planning and\nexecution system [4]) in nominal (or most likely) scenarios\nto check for constraint violations. With respect to impact, the\nsmall progress bars to the right of the campaign title shows\nthe impact of that goal in the overall mission compared to the\noriginal set of goals.\nIt is important to note that these tools are domain depen-\ndent, meaning that they are designed to support science goal\nspeciﬁcation for a multi-ﬂyby mission for a single spacecraft.",
           "images": [
             "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img0.png",
             "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img1.png",
             "C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img2.png"
           ]
+        },
+        {
+          "content": "address \nthe \nchallenges \nand \nopportunities in integrating AI in the field of space \nexploration. \nFurthermore, the selected papers were scrutinized to \nextract relevant data and insights that could \ncontribute to the research paper. This involved \nidentifying statistical information, experimental \nresults, case studies, and any other data that \nsupported the findings and conclusions of the \nrespective studies. The extracted data and insights \nwere then used to strengthen the research paper's",
+          "images": []
+        },
+        {
+          "content": "spacecraft design is a vast effort, branching out into many fields of science and \nengineering. The proposed research obtains several important results towards the \ndesign of space missions that provide higher utility to the stakeholders, by being \nmore optimized and not bound to the stagnancy of conservative mission design \napproaches. These improvements are obtained through innovations in three aspects \nof the mission design: \n• exploring the alternative concepts thoroughly and more efficiently",
+          "images": []
         }
       ]
     },
-    "plan": "**Outline for Research Project Essay: Autonomous AI Agents for Spacecraft Operations**\n\n**I. Introduction: Originality of the Research Project**\n   - **Overview of Spacecraft Design**: Discuss the interdisciplinary nature of spacecraft design, involving various fields of science and engineering.\n   - **Innovations in Mission Design**: Highlight the project's contribution to optimizing space missions through innovative approaches, moving beyond traditional conservative designs.\n   - **Exploration of Alternative Concepts**: Explain the thorough and efficient exploration of alternative mission concepts as a key innovation.\n\n**II. Hypothesis, Research Objectives, and Envisaged Methodology**\n   - **Hypothesis**: Present the hypothesis that integrating AI into spacecraft operations can enhance mission efficiency and autonomy.\n   - **Research Objectives**: Outline the objectives, including developing AI agents for autonomous decision-making, mission planning, and multi-agent coordination.\n   - **Methodology**: Describe the methodology, including literature review, experiments, and validation through case studies like the TANGO satellite mission.\n\n**III. Expected Outcomes / Impact**\n   - **Mission Efficiency and Human Capabilities**: Discuss how the project aims to enhance mission efficiency and expand human capabilities in space exploration.\n   - **Industry Standards for AI Deployment**: Explain the goal of establishing industry standards for AI deployment in space, ensuring robust and fault-tolerant operations.\n   - **Long-term Implications**: Consider the long-term implications for space exploration and the potential for AI to revolutionize the field.\n\n**IV. Explanations on the Management of Ethical Issues and Data Protection**\n   - **Ethical Concerns**: Address ethical concerns such as explainability, transparency, and compliance with legal standards.\n   - **Data Protection**: Discuss strategies for data protection, including access management, data standardization, and security measures.\n   - **Human-on-the-loop Model**: Explain the human-on-the-loop model for strategic oversight, ensuring human operators maintain control over AI decisions.\n\n**V. Comment on Resubmission (if applicable)**\n   - **Revisions and Updates**: Note any revisions made to the project based on feedback or new findings.\n   - **Current AI Technology in Space**: Provide an overview of the current state of AI technology in space, highlighting advancements and challenges.\n\n**VI. Bibliography (max. 15 references, not included in character limits)**\n   - **Reference List**: Compile a list of up to 15 references that support the research, including key studies, methodologies, and theoretical frameworks.\n\n**Notes for Each Section:**\n- Ensure each section is clearly defined and logically connected to the overall research objectives.\n- Use technical language appropriate for an expert audience, but ensure clarity and coherence.\n- Include relevant images or diagrams where applicable to enhance understanding.\n- Maintain a focus on the project's originality and potential impact on the field of space exploration."
+    "plan": "**Outline for Research Project Essay: Autonomous AI Agents for Spacecraft Operations**\n\n**I. Introduction: Originality of the Research Project**\n   - **Contextual Background**\n     - Discuss the current state of AI in space exploration and its limitations.\n     - Highlight the need for autonomous AI systems in spacecraft operations.\n   - **Research Significance**\n     - Explain the potential impact of integrating AI into spacecraft operations.\n     - Emphasize the novelty of the project in addressing existing challenges.\n   - **Key Innovations**\n     - Detail the innovative aspects of the project, such as autonomous decision-making and anomaly prediction.\n\n**II. Hypothesis, Research Objectives, and Envisaged Methodology**\n   - **Hypothesis**\n     - State the central hypothesis regarding the effectiveness of AI in enhancing spacecraft operations.\n   - **Research Objectives**\n     - Outline specific objectives, such as improving mission efficiency and reducing operational costs.\n   - **Methodology**\n     - Describe the methodological approach, including the use of simulations and real-time data analysis.\n     - Discuss the validation processes for AI systems in mission-critical scenarios.\n\n**III. Expected Outcomes / Impact**\n   - **Mission Efficiency and Longevity**\n     - Explain how AI integration is expected to enhance mission efficiency and extend spacecraft lifespan.\n   - **Scientific Advancements**\n     - Discuss the potential for new scientific discoveries enabled by autonomous operations.\n   - **Operational Cost Reduction**\n     - Highlight the anticipated reduction in operational costs through optimized performance and anomaly prediction.\n\n**IV. Explanations on the Management of Ethical Issues and Data Protection**\n   - **Ethical Considerations**\n     - Address ethical concerns related to AI decision-making, such as transparency and accountability.\n   - **Data Protection**\n     - Discuss strategies for ensuring data privacy and security in AI-driven operations.\n   - **Human-on-the-Loop Control**\n     - Emphasize the importance of maintaining human oversight to mitigate risks.\n\n**V. Comment on Resubmission (if applicable)**\n   - **Revisions and Improvements**\n     - Summarize any changes made in response to previous feedback.\n     - Highlight improvements in methodology or scope based on reviewer comments.\n\n**VI. Bibliography (max. 15 references, not included in character limits)**\n   - **Reference List**\n     - Provide a list of key references that support the research, including foundational works and recent studies.\n\n**Notes for Each Section:**\n- **Introduction:** Focus on establishing the context and significance of the research. Use examples of current limitations in space operations to justify the need for AI integration.\n- **Hypothesis and Methodology:** Clearly articulate the hypothesis and ensure the methodology aligns with the research objectives. Include details on testing and validation processes.\n- **Expected Outcomes:** Use specific examples to illustrate the potential impact of the research. Consider both short-term and long-term benefits.\n- **Ethical Issues:** Address potential ethical concerns comprehensively, ensuring that the discussion is relevant to the space exploration context.\n- **Resubmission Comments:** If applicable, provide a concise summary of revisions, focusing on how they enhance the research quality.\n- **Bibliography:** Ensure references are up-to-date and relevant to the research topic, avoiding overly speculative sources."
   }
 }
