@@ -396,23 +396,76 @@ def section_wise_answers_generator(state: State) -> State:
 
 def plan_node(state: State):
     print(f"{Fore.LIGHTYELLOW_EX}################ PLAN NODE BEGIN #################")
-    messages = [
-        SystemMessage(content=PLAN_PROMPT), 
-        HumanMessage(content=f"Project abstract: {state['abstract_text']}\n\nSection-wise texts: {state['section_answers']}")
-    ]
-    response = llm.invoke(messages)
 
-    # Updating state before end-of-node logging
-    state["messages"].append(response)
-    state["plan"] = response.content
+    try:
+        # Format the prompt with state data
+        prompt = PLAN_PROMPT.format(
+            abstract=state['abstract_text'],
+            section_answers=json.dumps(state['section_answers'], indent=2)
+        )
 
-    # saving state in human readable format and machine readable format under outputpdf/nodewise_output
-    save_state_for_testing(state, "plan_node")
+        messages = [SystemMessage(content=prompt)]
+        response = llm.invoke(messages)
+        print("DEBUG - Raw LLM response received")
 
-    print(f"################ PLAN NODE END #################{Style.RESET_ALL}")
+        # Try to parse the response as JSON
+        try:
+            content = response.content.strip()
+            start_idx = content.find('{')
+            end_idx = content.rfind('}') + 1
+            if start_idx >= 0 and end_idx > start_idx:
+                content = content[start_idx:end_idx]
 
+            plan_dict = json.loads(content)
+            if not isinstance(plan_dict, dict):
+                raise ValueError("Parsed plan is not a dictionary")
 
-    return state
+            print(f"DEBUG - Successfully parsed plan with {len(plan_dict)} sections")
+
+        except (json.JSONDecodeError, ValueError) as e:
+            print(f"Error parsing plan: {e}")
+            # Use section_topics to create a basic plan if parsing fails
+            plan_dict = {
+                section: ["Introduction and Background", 
+                         "Main Concepts and Methods", 
+                         "Analysis and Discussion", 
+                         "Conclusions and Future Work"] 
+                for section in state.get("section_topics", [])
+            }
+            print("Created fallback plan structure")
+
+        # Update state
+        state["messages"].append(response)
+        state["plan"] = plan_dict
+
+        # Save debug output
+        output_path = NODEWISE_OUTPUT_PATH / "plan_node_logging.txt"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        with output_path.open("w", encoding="utf-8") as file:
+            file.write("PLAN NODE OUTPUT:\n")
+            json.dump(plan_dict, file, indent=4)
+            file.write("\n\nFinal plan structure:\n")
+            for section, steps in plan_dict.items():
+                file.write(f"\n{section}:\n")
+                for step in steps:
+                    file.write(f"  - {step}\n")
+
+        # Save state in both human-readable and machine-readable formats
+        save_state_for_testing(state, "plan_node")
+
+        print(f"################ PLAN NODE END #################{Style.RESET_ALL}")
+        return state
+
+    except Exception as e:
+        print(f"Error in plan_node: {str(e)}")
+        # Create basic plan structure using section_topics
+        state["plan"] = {
+            section: ["Introduction", "Main Content", "Conclusion"] 
+            for section in state.get("section_topics", [])
+        }
+        return state
+
 
 class GenerationError(Exception):
     """Custom exception for generation-related errors."""
@@ -422,100 +475,77 @@ class GenerationError(Exception):
 
 def generation_node(state: dict) -> dict:
     """
-    Generates LaTeX sections iteratively for each section in the document.
-    Args:
-        state (dict): The current state containing all necessary information
-    Returns:    
-        dict: Updated state with generated LaTeX sections
+    Generates LaTeX sections iteratively for each section using the plan structure.
+    Returns updated state with generated sections.
     """
     print("################ GENERATION NODE BEGIN #################")
-    
-    try:
-        # Extract required fields from state with validation
-        project_metadata = {
-            'project_title': state.get('project_title', ''),
-            'project_description': state.get('project_description', ''),
-            'abstract': state.get('abstract_text', '')
-        }
-        
-        section_answers = state.get('section_answers', {})
-        if not section_answers:
-            raise ValueError("No section_answers found in state")
-            
-        # Initialize the generated sections dictionary
-        generated_sections = {}
-        
-        # Process each section
-        for section_title, section_data in section_answers.items():
-            print(f"\nProcessing section: {section_title}")
-            
-            try:
-                # Prepare section data
-                if not section_data:
-                    print(f"Warning: Empty data for section '{section_title}'. Skipping.")
-                    continue
-                    
-                # Format section data for prompt
-                section_data_formatted = json.dumps(section_data, indent=4)
-                
-                # Create prompt with all required information
-                prompt = WRITER_PROMPT.format(
-                    project_title=project_metadata['project_title'],
-                    project_description=project_metadata['project_description'],
-                    abstract=project_metadata['abstract'],
-                    section_title=section_title,
-                    section_data_formatted=section_data_formatted
-                )
-                
-                # Generate LaTeX content for the section
-                messages = [SystemMessage(content=prompt)]
-                response = llm.invoke(messages)
-                
-                # Validate response
-                section_latex = response.content.strip()
-                if not section_latex:
-                    raise ValueError(f"Empty response received for section {section_title}")
-                
-                # Store the generated content
-                generated_sections[section_title] = section_latex
-                
-                # Update state messages
-                state['messages'].extend([messages[0], response])
-                
-                print(f"Successfully generated content for section: {section_title}")
-                
-            except Exception as section_error:
-                error_msg = f"Error processing section '{section_title}': {str(section_error)}"
-                print(error_msg)
-                continue
-        
-        # Update state with generated sections
-        state['generated_sections'] = generated_sections
-        
-        # Save output to file with proper error handling
-        output_path = OUTPUT_PDF_PATH / "generated_sections.txt"
-        try:
-            os.makedirs(output_path.parent, exist_ok=True)
-            with open(output_path, 'w', encoding='utf-8') as file:
-                json.dump(generated_sections, file, indent=4, ensure_ascii=False)
-            print(f"\nGenerated sections saved to: {output_path}")
-        except Exception as save_error:
-            print(f"Warning: Could not save output to file: {str(save_error)}")
-            
-        # saving state in human readable format and machine readable format under outputpdf/nodewise_output
-        save_state_for_testing(state, "generation_node")
-        print("################ GENERATION NODE END #################")
 
-        return state
+    try:
+        # Debug print to check state
+        print("DEBUG - State keys:", state.keys())
+        print("DEBUG - Plan in state:", state.get("plan"))
         
+        plan = state.get("plan")
+        if not plan:
+            raise ValueError("No plan found in state")
+        
+        if not isinstance(plan, dict) or len(plan) == 0:
+            raise ValueError("Plan is empty or not a dictionary. Cannot proceed with generation.")
+
+        generated_sections = {}
+
+        # Import the WRITER_PROMPT
+        from prompts.prompts import WRITER_PROMPT
+
+        for section_title, steps in plan.items():
+            print(f"Generating content for section: {section_title}")
+
+            # Convert list of steps into a bullet-point string
+            section_plan_formatted = "\n".join(f"- {step}" for step in steps)
+
+            # Get section data
+            section_data = state.get("section_answers", {}).get(section_title, [])
+            section_data_formatted = json.dumps(section_data, indent=4)
+
+            prompt = WRITER_PROMPT.format(
+                project_title=state.get("project_title", ""),
+                project_description=state.get("project_description", ""),
+                abstract=state.get("abstract_text", ""),
+                section_title=section_title,
+                section_plan=section_plan_formatted,
+                section_data_formatted=section_data_formatted
+            )
+
+            messages = [SystemMessage(content=prompt)]
+            response = llm.invoke(messages)
+            section_latex = response.content.strip()
+
+            if not section_latex:
+                print(f"Warning: Empty response for section '{section_title}'. Skipping.")
+                continue
+
+            generated_sections[section_title] = section_latex
+            state["messages"].extend([messages[0], response])
+
+        # Update state with generated sections
+        state["generated_sections"] = generated_sections
+
+        # Save the generated sections to a file
+        output_path = OUTPUT_PDF_PATH / "generated_sections.txt"
+        os.makedirs(output_path.parent, exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as file:
+            json.dump(generated_sections, file, indent=4, ensure_ascii=False)
+
+        # Save state in both human-readable and machine-readable formats
+        save_state_for_testing(state, "generation_node")    
+
+        print("################ GENERATION NODE END #################")
+        return state
+
     except Exception as e:
         print(f"Critical error in generation_node: {str(e)}")
-        state['generated_sections'] = {}
-        state['messages'].append(SystemMessage(content=f"Error in generation_node: {str(e)}"))
+        state["messages"].append(SystemMessage(content=f"Error in generation_node: {str(e)}"))
         return state
-    
-    finally:
-        print("################ GENERATION NODE END #################")
 
 
 def formatting_node(state: State) -> State:

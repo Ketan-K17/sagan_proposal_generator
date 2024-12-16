@@ -113,12 +113,27 @@ Ensure that each answer is structured as per the example above.
 
 
 
-PLAN_PROMPT = """You are an expert writer tasked with writing a high level outline of a research project essay, given the project abstract and section-wise texts that are meant to provide further context. Give an outline of the research project along with any relevant notes or instructions for the sections.
+PLAN_PROMPT = """You are an expert writer tasked with creating a structured plan for a research project essay based on the provided abstract and section-wise texts.
 
-The project abstract and section-wise texts have been provided in the following message."""
+Your task is to generate a detailed plan for each section. The output must be a valid JSON dictionary where:
+- Keys are the section titles
+- Values are lists of steps/points to cover in that section
+
+Project Information:
+Abstract: {abstract}
+Section Content: {section_answers}
+
+Return ONLY a JSON dictionary in this exact format:
+{{
+    "Section Title 1": ["Step 1", "Step 2", "Step 3", ...],
+    "Section Title 2": ["Step 1", "Step 2", "Step 3", ...],
+    ...
+}}
+
+Ensure each section has at least 3-5 detailed steps that logically organize the content. Focus on creating a clear, structured flow for each section."""
 
 
-WRITER_PROMPT = '''You are an expert LaTeX writer tasked with generating a self-contained section of a technical document. 
+WRITER_PROMPT = """You are an expert LaTeX writer tasked with generating a self-contained section of a technical document. 
 Your goal is to use the provided project information and section-specific data to produce clear, structured, and valid LaTeX content.
 
 Project Information:
@@ -199,5 +214,89 @@ Guidelines:
    - Include appropriate whitespace between environments
    - Ensure all environments are properly closed
 
-Return only the LaTeX content without any additional text or explanations. The content should be self-contained and ready to be compiled as part of a larger document.'''
+Return only the LaTeX content without any additional text or explanations. The content should be self-contained and ready to be compiled as part of a larger document.'''WRITER_PROMPT = '''You are an expert LaTeX writer tasked with generating a self-contained section of a technical document. 
+Your goal is to use the provided project information and section-specific data to produce clear, structured, and valid LaTeX content.
+
+Project Information:
+- Title: {project_title}
+- Description: {project_description}
+- Abstract: {abstract}
+
+Section to Write:
+- Title: {section_title}
+- Plan: {section_plan}
+
+Data for Section:
+{section_data_formatted}
+
+Guidelines:
+1. Structure and Organization:
+   - Begin with a \\section{{}} command using the provided section title
+   - Include an introduction paragraph providing context
+   - Use \\subsection{{}} and \\subsubsection{{}} for logical organization
+   - Ensure smooth transitions between topics
+   - Follow the section plan provided above for content organization
+
+2. Content Integration:
+   - Incorporate the provided section data appropriately
+   - Support claims with data or references when available
+   - Maintain academic tone and technical accuracy
+   - Maintain a length of 1000 to 1500 words for the final content
+
+3. LaTeX Formatting Guidelines:
+   a) For Lists:
+      - Unordered lists: \\begin{{itemize}} ... \\end{{itemize}}
+      - Ordered lists: \\begin{{enumerate}} ... \\end{{enumerate}}
+      - Description lists: \\begin{{description}} ... \\end{{description}}
+
+   b) For Tables:
+      - Use \\begin{{table}}[htbp] environment
+      - Include \\centering
+      - Add \\caption{{}} before the table
+      - Use \\label{{tab:descriptive-label}} for referencing
+      - Format with \\begin{{tabular}} ... \\end{{tabular}}
+      - Add \\hline for horizontal lines
+      Example:
+      \\begin{{table}}[htbp]
+          \\centering
+          \\caption{{Your Caption Here}}
+          \\label{{tab:your-label}}
+          \\begin{{tabular}}{{|c|c|}}
+              \\hline
+              Header 1 & Header 2 \\\\
+              \\hline
+              Data 1 & Data 2 \\\\
+              \\hline
+          \\end{{tabular}}
+      \\end{{table}}
+
+   c) For Images/Figures:
+      - Use \\begin{{figure}}[htbp] environment
+      - Include \\centering
+      - Use \\includegraphics[width=\\textwidth]{{path/to/image}}
+      - Add \\caption{{}} and \\label{{fig:descriptive-label}}
+      Example:
+      \\begin{{figure}}[htbp]
+          \\centering
+          \\includegraphics[width=0.8\\textwidth]{{path/to/image}}
+          \\caption{{Your Caption Here}}
+          \\label{{fig:your-label}}
+      \\end{{figure}}
+
+   d) For Mathematical Content:
+      - Inline math: $...$ or \\(...\\)
+      - Display math: $$...$$ or \\[...\\]
+      - Equation environment: \\begin{{equation}} ... \\end{{equation}}
+
+4. Cross-References:
+   - Use \\ref{{}} for referencing figures, tables, equations
+   - Use \\cite{{}} for citations
+
+5. Style Requirements:
+   - Maintain consistent formatting throughout
+   - Use proper indentation and spacing
+   - Include appropriate whitespace between environments
+   - Ensure all environments are properly closed
+
+Return only the LaTeX content without any additional text or explanations. The content should be self-contained and ready to be compiled as part of a larger document."""
 
