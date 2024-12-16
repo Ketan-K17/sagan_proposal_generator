@@ -621,15 +621,7 @@ def formatting_node(state: State) -> State:
         # Add generated sections directly from the draft
         if generated_sections:
             for section_header, section_content in generated_sections.items():
-
-                # Strip 'latex\n' from the beginning and any trailing quotes or backticks
-                cleaned_content = section_content
-                if cleaned_content.startswith("'''latex\n"):
-                    cleaned_content = cleaned_content[10:]  # Remove latex\n
-                if cleaned_content.endswith("'''"):
-                    cleaned_content = cleaned_content[:-3]  # Remove trailing 
-                    
-                document_content.append(cleaned_content)  # Add the section content
+                document_content.append(section_content)  # Add the section content
         
         document_content.append(doc_end)
         
@@ -647,7 +639,7 @@ def formatting_node(state: State) -> State:
         original_dir = os.getcwd()
         os.chdir(str(base_output_path))
         try:
-            success = latex_to_pdf("output.tex", str(base_output_path))
+            success = latex_to_pdf(str(tex_path), str(base_output_path))
             if not success:
                 print("pdflatex failed, trying pandoc...")
                 success = latex_to_pdf_pandoc("output.tex", str(base_output_path))
