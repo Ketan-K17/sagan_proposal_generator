@@ -495,7 +495,7 @@ def generation_node(state: dict) -> dict:
         generated_sections = {}
 
         # Import the WRITER_PROMPT
-        from prompts.prompts import WRITER_PROMPT
+        # from prompts.prompts import WRITER_PROMPT
 
         for section_title, steps in plan.items():
             print(f"Generating content for section: {section_title}")
@@ -624,9 +624,9 @@ def formatting_node(state: State) -> State:
 
                 # Strip 'latex\n' from the beginning and any trailing quotes or backticks
                 cleaned_content = section_content
-                if cleaned_content.startswith('latex\n'):
-                    cleaned_content = cleaned_content[8:]  # Remove latex\n
-                if cleaned_content.endswith(''):
+                if cleaned_content.startswith("'''latex\n"):
+                    cleaned_content = cleaned_content[10:]  # Remove latex\n
+                if cleaned_content.endswith("'''"):
                     cleaned_content = cleaned_content[:-3]  # Remove trailing 
                     
                 document_content.append(cleaned_content)  # Add the section content

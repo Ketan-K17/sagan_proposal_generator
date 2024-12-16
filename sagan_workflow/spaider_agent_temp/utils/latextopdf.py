@@ -4,6 +4,9 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+# local imports
+from config import OUTPUT_PDF_PATH
+
 def latex_to_pdf(latex_file_path: str, output_directory: Optional[str] = None) -> bool:
     """
     Converts a LaTeX file to PDF format using pdflatex.
@@ -35,7 +38,7 @@ def latex_to_pdf(latex_file_path: str, output_directory: Optional[str] = None) -
         
         # Set up output directory
         if output_directory is None:
-            output_directory = 'C:/UniLu/Spaider/sagan/ketan_sagan/SAW_code_plus_db/output'
+            output_directory = OUTPUT_PDF_PATH
         
         output_path = Path(output_directory)
         
