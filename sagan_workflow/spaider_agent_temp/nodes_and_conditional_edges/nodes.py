@@ -522,52 +522,91 @@ def formatting_node(state: State) -> State:
     print(f"{Fore.LIGHTYELLOW_EX}################ FORMATTING NODE BEGIN #################")
     try:
         base_output_path = OUTPUT_PDF_PATH
-        base_output_path.mkdir(parents=True, exist_ok=True)
+        figures_path = Path(OUTPUT_PDF_PATH / "figures")
+        figures_path.mkdir(parents=True, exist_ok=True)
 
         # Copy figures from consolidated_template to output path
-        copy_figures(CONSOLIDATED_TEMPLATE_PATH, base_output_path)
-        
-        # Read the LaTeX preamble from the consolidated template
-        with open(CONSOLIDATED_TEMPLATE_PATH / "consolidated.tex", "r", encoding='utf-8') as f:
-            latex_preamble = ""
-            for line in f:
-                if line.strip() == "\\begin{document}":
-                    break
-                latex_preamble += line
-        
-        latex_preamble += "\\begin{document}"
+        copy_figures(CONSOLIDATED_TEMPLATE_PATH, figures_path)
 
+        template_path = CONSOLIDATED_TEMPLATE_PATH / "consolidated.tex"
+
+        ############################################################################
+
+        # Read the template content
+        with open(template_path, 'r', encoding='utf-8') as f:
+            template_content = f.read()
+            
+        # Split template into parts
+        doc_start = template_content.split('\\begin{document}')[0]
+        
+        # Add margin settings to the preamble
+        margin_settings = """
+% Margin settings
+\\usepackage[left=3.5cm,right=3.5cm,top=3cm,bottom=3cm]{geometry}
+
+% Additional spacing settings for better readability
+\\setlength{\\parskip}{6pt}  % Space between paragraphs
+\\setlength{\\parindent}{0pt}  % Remove paragraph indentation
+"""
+        # Insert margin settings before \begin{document}
+        if '\\begin{document}' in doc_start:
+            doc_parts = doc_start.split('\\begin{document}')
+            doc_start = doc_parts[0] + margin_settings
+        else:
+            doc_start = doc_start + margin_settings
+
+        doc_end = '\\end{document}' #template_content.split()[1]
+        
+        # Extract the initial fixed content (title and table)
+        title_section = """
+\\vspace{10cm}
+\\maketitle
+
+\\begin{center}
+\\begin{tabular}{|p{4.5cm}|p{0.6\\textwidth}|}
+\\hline
+\\bf Project Acronym  &  \\\\ \\hline
+\\bf Principal Investigator (PI)  &  Dr. Alexandre Bartel \\\\ \\hline
+\\bf Host Institution  & \\\\ \\hline
+\\end{tabular}
+\\end{center}
+
+\\newpage"""
+
+        # # Get content from state
+        # draft = state["draft"]
+        # plan = state.get("plan", "")
+        
         # Retrieve required fields from state
         project_title = state.get("project_title", "Research Project")
         project_abstract = state.get("abstract_text", "No abstract provided.")
         generated_sections = state.get("generated_sections", {})
 
-        if not generated_sections:
-            raise ValueError("No generated sections found in state")
+        # Build document content
+        document_content = []
+        document_content.append(doc_start)
+        document_content.append('\\begin{document}')
+        document_content.append(title_section)
 
-        # Debug: Print the abstract we have from the state
-        print("DEBUG: Abstract text from state:", project_abstract)
-
-        # Construct the LATEX document body using generated_sections
-        latex_body = ""
         # Add generated sections directly from the draft
         if generated_sections:
             for section_header, section_content in generated_sections.items():
+
                 # Strip 'latex\n' from the beginning and any trailing quotes or backticks
                 cleaned_content = section_content
-                if cleaned_content.startswith('```latex\n'):
-                    cleaned_content = cleaned_content[8:]  # Remove ```latex\n
-                if cleaned_content.endswith('```'):
-                    cleaned_content = cleaned_content[:-3]  # Remove trailing ```
-                
-                latex_body += cleaned_content  # Add the cleaned section content
+                if cleaned_content.startswith('latex\n'):
+                    cleaned_content = cleaned_content[8:]  # Remove latex\n
+                if cleaned_content.endswith(''):
+                    cleaned_content = cleaned_content[:-3]  # Remove trailing 
+                    
+                document_content.append(cleaned_content)  # Add the section content
+        
+        document_content.append(doc_end)
+        
+        # Combine all parts into final content
+        final_latex_document = '\n'.join(document_content)
 
-        latex_end = "\\end{document}"
-
-        final_latex_document = latex_preamble + latex_body + latex_end
-
-        # Debug: Print the first 300 chars of the final document to confirm abstract insertion
-        print("DEBUG: Beginning of final LaTeX document:\n", final_latex_document[:300])
+        ########################################################################################
 
         # Write out the LaTeX file
         tex_path = base_output_path / "output.tex"
@@ -632,7 +671,6 @@ def formatting_node(state: State) -> State:
     save_state_for_testing(state, "formatting_node")
 
     return state
-
 
 
 

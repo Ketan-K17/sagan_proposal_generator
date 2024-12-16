@@ -5,10 +5,10 @@ STATE FIELDS:
 ----------------------------------------
 PROJECT_TITLE: Autonomous AI Agents for Spacecraft Operations
 PROJECT_DESCRIPTION: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and robust system integration. Challenges to address include ensuring AI reliability and effective decision-making in uncertain environments. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.
-ABSTRACT_QUESTIONS: ['What are the primary goals and objectives of implementing autonomous AI agents in spacecraft operations?', 'How do the AI agents interact with existing spacecraft systems, and what protocols are in place to ensure seamless integration?', 'What are the potential risks associated with autonomous AI agents in space missions, and how are these risks mitigated?', 'How do the AI agents handle unexpected events or anomalies during spacecraft operations?', 'What role do human operators play in overseeing or intervening in the actions of AI agents during missions?', 'How is data from spacecraft systems utilized by AI agents to make informed decisions?', 'What are the long-term implications of using AI agents in space missions for future space exploration and technology development?', 'How do AI agents prioritize tasks and allocate resources during spacecraft operations?', 'What kind of testing and validation processes are in place to ensure the AI agents perform as expected in real mission scenarios?', 'How do AI agents contribute to the sustainability and longevity of spacecraft missions?']
-ABSTRACT_TEXT: The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into various aspects of spacecraft operations, including satellite management, data analysis, robotics, and autonomous decision-making. The primary objectives are to enhance mission efficiency, accuracy, and autonomy, allowing spacecraft to perform complex tasks and make real-time decisions with minimal human intervention. AI systems are employed to monitor satellite health, predict anomalies, and optimize performance, thereby reducing operational costs and increasing mission longevity. The project emphasizes the importance of human-on-the-loop control to ensure transparency, fairness, and accountability in AI-driven decision-making, while also addressing ethical considerations and potential risks. Rigorous testing and validation processes are in place to ensure AI agents perform reliably in mission-critical scenarios. By reducing communication delays and enabling autonomous operations, AI technologies are crucial for interplanetary missions and the management of large satellite constellations. The integration of AI in space missions promises to unlock new scientific advancements, enhance operational efficiency, and drive ambitious exploration endeavors, ultimately expanding our understanding of the universe.
+ABSTRACT_QUESTIONS: ['What are the primary goals and objectives of the project involving autonomous AI agents in spacecraft operations?', 'How do the AI agents interact with the Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS) in spacecraft?', 'What technologies and methodologies are being considered to enable real-time communication between AI agents and spacecraft systems?', 'What challenges are associated with decision-making under uncertainty for AI agents in space operations, and how are these being addressed?', 'In what ways can AI agents enhance the efficiency and safety of spacecraft operations compared to traditional methods?', 'What strategies are in place to ensure the robustness and reliability of AI agents in the face of unpredictable space environments?', 'How will the integration of AI agents into existing spacecraft systems be approached, and what are the potential obstacles?', 'What ethical and security considerations are being taken into account when deploying autonomous AI in space missions?', 'What metrics or benchmarks will be used to assess the performance and success of AI agents in space missions?', 'How could the advancements in AI agents influence the future landscape of space exploration, including cost implications and mission design?']
+ABSTRACT_TEXT: The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into spacecraft systems, enhancing autonomy, efficiency, and mission capabilities. AI technologies have transformed satellite operations, data analysis, robotics, and autonomous spacecraft, reducing reliance on human intervention and enabling ambitious exploration missions. AI agents facilitate real-time decision-making, optimize mission objectives, and adapt to unforeseen circumstances, crucial for interplanetary probes facing communication delays with Earth. The project explores AI's role in Guidance, Navigation, and Control (GNC) systems, demonstrating robust performance despite uncertainties. Challenges include ensuring AI reliability in harsh space environments, addressing ethical considerations, and developing algorithms for complex data handling. Strategies focus on enhancing AI robustness, transparency, and accountability, with a structured systems engineering approach for integration. The project underscores AI's potential to advance scientific understanding and exploration, while addressing technical, ethical, and operational challenges to ensure safe and effective AI-driven space missions.
 SECTION_TOPICS: ['Introduction: Originality of the Research Project', 'Hypothesis, Research Objectives and Envisaged Methodology', 'Expected Outcomes / Impact', 'Explanations on the management of ethical issues and data protection', 'Comment on resubmission (if applicable)', 'Bibliography (max. 15 references, not included in character limits)']
-SECTION_QUESTIONS: {'Introduction: Originality of the Research Project': ['What is the central theme or idea that makes this research project original?', 'How does this project differ from existing research in the same field?', 'What are the unique contributions this project aims to make to the field?', 'Why is this research project important at this point in time?', 'What inspired the conception of this research project?'], 'Hypothesis, Research Objectives and Envisaged Methodology': ['What is the primary hypothesis that this research project seeks to test?', 'What are the specific research objectives that guide this project?', 'What methodologies will be employed to achieve the research objectives?', 'How will the chosen methodologies ensure the reliability and validity of the research findings?', 'What are the anticipated challenges in implementing the research methodologies, and how will they be addressed?'], 'Expected Outcomes / Impact': ['What are the expected outcomes of this research project?', 'How will the outcomes of this project impact the field of study?', 'What are the potential applications of the research findings?', 'How will the project contribute to societal or technological advancements?', 'What measures will be used to evaluate the success of the project outcomes?'], 'Explanations on the management of ethical issues and data protection': ['What are the potential ethical issues associated with this research project?', 'How will ethical considerations be addressed throughout the research process?', 'What data protection measures will be implemented to ensure participant confidentiality?', 'How will informed consent be obtained and documented from research participants?', 'What steps will be taken to ensure compliance with relevant ethical guidelines and regulations?'], 'Comment on resubmission (if applicable)': ['What changes have been made to the project since the last submission?', 'How have previous feedback and reviews been addressed in this resubmission?', 'What new insights or data have been incorporated into the project?', 'What are the reasons for resubmitting the project at this time?', 'How does this resubmission improve upon the original proposal?'], 'Bibliography (max. 15 references, not included in character limits)': ['What are the key sources that have informed the research project?', 'How do the selected references support the research hypothesis and objectives?', 'What criteria were used to select the references included in the bibliography?', 'How do the references reflect the current state of research in the field?', 'What gaps in the existing literature does this project aim to address?']}
+SECTION_QUESTIONS: {'Introduction: Originality of the Research Project': ['What is the central theme or idea that makes this research project original?', 'How does this project differ from existing research in the same field?', 'What are the unique contributions this project aims to make to the field?', 'Why is this research project important at this point in time?', 'What inspired the conception of this research project?'], 'Hypothesis, Research Objectives and Envisaged Methodology': ['What is the primary hypothesis that this research project seeks to test?', 'What are the specific objectives that the project aims to achieve?', 'What methodologies will be employed to conduct the research?', 'How will the chosen methodologies help in achieving the research objectives?', 'What are the anticipated challenges in implementing the methodologies, and how will they be addressed?'], 'Expected Outcomes / Impact': ['What are the expected outcomes of this research project?', 'How will the results of this project impact the field of study?', 'What are the potential applications of the research findings?', 'How will the project contribute to societal or technological advancements?', 'What are the long-term implications of the research outcomes?'], 'Explanations on the management of ethical issues and data protection': ['What ethical considerations are associated with this research project?', 'How will ethical issues be managed throughout the research process?', 'What measures will be taken to ensure data protection and privacy?', 'How will informed consent be obtained from participants, if applicable?', 'What protocols are in place to handle any ethical dilemmas that may arise?'], 'Comment on resubmission (if applicable)': ['What changes have been made to the project since the last submission?', 'How have previous feedback and reviews been addressed in this resubmission?', 'What new insights or data have been incorporated into the project?', 'Why is the project being resubmitted, and what improvements have been made?', 'What are the key differences between the original submission and the current one?'], 'Bibliography (max. 15 references, not included in character limits)': ['What are the key sources that have informed this research project?', 'How do the selected references support the research hypothesis and objectives?', 'What criteria were used to select the references included in the bibliography?', 'Are there any seminal works or authors that have significantly influenced the project?', 'How does the bibliography reflect the current state of research in the field?']}
 
 MESSAGE HISTORY:
 ----------------------------------------
@@ -57,23 +57,23 @@ Note that you MUST provide atleast one question. The upper limit is 10 questions
 
 
 --------------------
-AI: 1. What specific spacecraft operations within GNC and AOCS are the autonomous AI agents expected to manage and control autonomously?
+AI: 1. What specific spacecraft operations within GNC and AOCS are the autonomous AI agents expected to manage and control?
 2. How will the AI agents facilitate real-time communication with spacecraft systems, and what technologies will be employed to achieve this?
 3. What are the key technical innovations anticipated in the development of these AI agents, and how will they address decision-making under uncertainty?
 4. In what ways will the AI agents reduce human involvement in mission-critical tasks, and what are the expected benefits of this reduction?
 5. What measures will be taken to ensure the reliability of AI agents in managing spacecraft operations, especially in unpredictable environments?
 6. How will the integration of AI agents into existing spacecraft systems be managed, and what challenges are anticipated in this process?
-7. What specific safety enhancements are expected from the deployment of autonomous AI agents in spacecraft operations?
-8. How will the project address potential ethical and security concerns related to autonomous decision-making in space missions?
-9. What are the expected impacts of these AI agents on the overall cost and efficiency of space missions?
-10. How will the success of the AI agents be evaluated in terms of their performance and contribution to mission objectives?
+7. What specific safety enhancements are expected from the implementation of autonomous AI agents in spacecraft operations?
+8. How will the project address potential ethical and security concerns related to the deployment of autonomous AI in space exploration?
+9. What are the criteria for evaluating the success of the AI agents in terms of mission efficiency and error reduction?
+10. How might the development of these AI agents impact the future of the space exploration industry, particularly in terms of operational costs and mission planning?
 Additional kwargs: {'refusal': None}
 --------------------
 SYSTEM: 
 You are an intelligent assistant responsible for generating answers to specific questions, and creating a summary of the project based on the answers. Your task is to query the provided vector store, answer each of the provided questions, and create an abstract of the project based on the answers.
 
 Questions to Answer:
-['What are the primary goals and objectives of implementing autonomous AI agents in spacecraft operations?', 'How do the AI agents interact with existing spacecraft systems, and what protocols are in place to ensure seamless integration?', 'What are the potential risks associated with autonomous AI agents in space missions, and how are these risks mitigated?', 'How do the AI agents handle unexpected events or anomalies during spacecraft operations?', 'What role do human operators play in overseeing or intervening in the actions of AI agents during missions?', 'How is data from spacecraft systems utilized by AI agents to make informed decisions?', 'What are the long-term implications of using AI agents in space missions for future space exploration and technology development?', 'How do AI agents prioritize tasks and allocate resources during spacecraft operations?', 'What kind of testing and validation processes are in place to ensure the AI agents perform as expected in real mission scenarios?', 'How do AI agents contribute to the sustainability and longevity of spacecraft missions?']
+['What are the primary goals and objectives of the project involving autonomous AI agents in spacecraft operations?', 'How do the AI agents interact with the Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS) in spacecraft?', 'What technologies and methodologies are being considered to enable real-time communication between AI agents and spacecraft systems?', 'What challenges are associated with decision-making under uncertainty for AI agents in space operations, and how are these being addressed?', 'In what ways can AI agents enhance the efficiency and safety of spacecraft operations compared to traditional methods?', 'What strategies are in place to ensure the robustness and reliability of AI agents in the face of unpredictable space environments?', 'How will the integration of AI agents into existing spacecraft systems be approached, and what are the potential obstacles?', 'What ethical and security considerations are being taken into account when deploying autonomous AI in space missions?', 'What metrics or benchmarks will be used to assess the performance and success of AI agents in space missions?', 'How could the advancements in AI agents influence the future landscape of space exploration, including cost implications and mission design?']
 
 For each question, follow these steps:
 1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.
@@ -87,7 +87,7 @@ Make sure to use the tool for EVERY question.
 Also, Make sure the abstract is 250-300 words long.
 
 --------------------
-AI: The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into various aspects of spacecraft operations, including satellite management, data analysis, robotics, and autonomous decision-making. The primary objectives are to enhance mission efficiency, accuracy, and autonomy, allowing spacecraft to perform complex tasks and make real-time decisions with minimal human intervention. AI systems are employed to monitor satellite health, predict anomalies, and optimize performance, thereby reducing operational costs and increasing mission longevity. The project emphasizes the importance of human-on-the-loop control to ensure transparency, fairness, and accountability in AI-driven decision-making, while also addressing ethical considerations and potential risks. Rigorous testing and validation processes are in place to ensure AI agents perform reliably in mission-critical scenarios. By reducing communication delays and enabling autonomous operations, AI technologies are crucial for interplanetary missions and the management of large satellite constellations. The integration of AI in space missions promises to unlock new scientific advancements, enhance operational efficiency, and drive ambitious exploration endeavors, ultimately expanding our understanding of the universe.
+AI: The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into spacecraft systems, enhancing autonomy, efficiency, and mission capabilities. AI technologies have transformed satellite operations, data analysis, robotics, and autonomous spacecraft, reducing reliance on human intervention and enabling ambitious exploration missions. AI agents facilitate real-time decision-making, optimize mission objectives, and adapt to unforeseen circumstances, crucial for interplanetary probes facing communication delays with Earth. The project explores AI's role in Guidance, Navigation, and Control (GNC) systems, demonstrating robust performance despite uncertainties. Challenges include ensuring AI reliability in harsh space environments, addressing ethical considerations, and developing algorithms for complex data handling. Strategies focus on enhancing AI robustness, transparency, and accountability, with a structured systems engineering approach for integration. The project underscores AI's potential to advance scientific understanding and exploration, while addressing technical, ethical, and operational challenges to ensure safe and effective AI-driven space missions.
 Additional kwargs: {'refusal': None}
 --------------------
 SYSTEM: 
@@ -106,7 +106,7 @@ Ensure that the extracted sections/topics are relevant to the query and accurate
 
 --------------------
 AI: 
-Additional kwargs: {'tool_calls': [{'id': 'call_ZMlz6MgZT9wA4kUyXfaqFj11', 'function': {'arguments': '{"chroma_db_path":"C:\\\\Users\\\\ketan\\\\Desktop\\\\SPAIDER-SPACE\\\\sagan_multimodal\\\\ingest_data\\\\fnr_template_db","llm_name":"sentence-transformers/all-MiniLM-L6-v2","user_query":"Give me a comprehensive list of sections/topics that are present in this template document."}', 'name': 'query_chromadb'}, 'type': 'function'}], 'refusal': None}
+Additional kwargs: {'tool_calls': [{'id': 'call_UjyiOXEJIHmNTa0qnuW9nxqW', 'function': {'arguments': '{"chroma_db_path":"C:\\\\Users\\\\ketan\\\\Desktop\\\\SPAIDER-SPACE\\\\sagan_multimodal\\\\ingest_data\\\\fnr_template_db","llm_name":"sentence-transformers/all-MiniLM-L6-v2","user_query":"Give me a comprehensive list of sections/topics that are present in this template document."}', 'name': 'query_chromadb'}, 'type': 'function'}], 'refusal': None}
 --------------------
 TOOL: ["Please note that pictures, footnotes and captions are part of the character count.", "AFR Individual Grants\n\nProject Idea\n\nTEMPLATE MUST BE USED\n\nCharacter limits : a maximum of 11.000 (including the template – 150 words).\n\nIn case of resubmission, an additional 1.500 characters may be added.\n\n\n\nThe description must contain the following information:\n\nIntroduction: Originality of the Research Project\n\nHypothesis, Research Objectives and Envisaged Methodology\n\nExpected Outcomes / Impact\n\nExplanations on the management of ethical issues and data protection", "Expected Outcomes / Impact\n\nExplanations on the management of ethical issues and data protection\n\nComment on resubmission (if applicable)\n\n+    Bibliography (max. 15 references, not included in character limits) \n\n\t\tThe Bibliography is a separate attachment and should be uploaded in section 1.2 in the online grant management system (https://grants.fnr.lu) \n\n\n\nThe description must contain the following information:\n\nIntroduction: Originality of the Research Project", "Introduction: Originality of the Research Project\n\nHypothesis, Research Objectives and Envisaged Methodology\n\nExpected Outcomes / Impact\n\nExplanations on the management of ethical issues and data protection\n\nComment on resubmission (if applicable)\n\n+    Bibliography (max. 15 references, not included in character limits) \n\n\t\tThe Bibliography is a separate attachment and should be uploaded in section 1.2 in the online grant management system (https://grants.fnr.lu)", "For AFR Bilateral, an additional 3.000 characters may be added.\n\n\n\n\n\nIntroduction: Originality of the Research Project\n\n\n\nHypothesis, Research Objectives and Envisaged Methodology\n\n\n\n3. Expected Outcomes / Impact\n\n\n\nExplanations on the management of ethical issues and data protection\n\n\n\nComment on resubmission (if applicable)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1\n\n\n\n0", "1\n\n\n\n0\n\n\n\n\n\n FNR uses the tool Count Anything to check the number of characters. The characters are counted including spaces (indicated in Count Anything as Chars). \n\nPlease note that pictures, footnotes and captions are part of the character count.\n\n FNR uses the tool Count Anything to check the number of characters. The characters are counted including spaces (indicated in Count Anything as Chars)."]
 --------------------
@@ -149,48 +149,48 @@ List of sections: ['Introduction: Originality of the Research Project', 'Hypothe
 
 --------------------
 AI: {
-  "Introduction: Originality of the Research Project": [
-    "What is the central theme or idea that makes this research project original?",
-    "How does this project differ from existing research in the same field?",
-    "What are the unique contributions this project aims to make to the field?",
-    "Why is this research project important at this point in time?",
-    "What inspired the conception of this research project?"
-  ],
-  "Hypothesis, Research Objectives and Envisaged Methodology": [
-    "What is the primary hypothesis that this research project seeks to test?",
-    "What are the specific research objectives that guide this project?",
-    "What methodologies will be employed to achieve the research objectives?",
-    "How will the chosen methodologies ensure the reliability and validity of the research findings?",
-    "What are the anticipated challenges in implementing the research methodologies, and how will they be addressed?"
-  ],
-  "Expected Outcomes / Impact": [
-    "What are the expected outcomes of this research project?",
-    "How will the outcomes of this project impact the field of study?",
-    "What are the potential applications of the research findings?",
-    "How will the project contribute to societal or technological advancements?",
-    "What measures will be used to evaluate the success of the project outcomes?"
-  ],
-  "Explanations on the management of ethical issues and data protection": [
-    "What are the potential ethical issues associated with this research project?",
-    "How will ethical considerations be addressed throughout the research process?",
-    "What data protection measures will be implemented to ensure participant confidentiality?",
-    "How will informed consent be obtained and documented from research participants?",
-    "What steps will be taken to ensure compliance with relevant ethical guidelines and regulations?"
-  ],
-  "Comment on resubmission (if applicable)": [
-    "What changes have been made to the project since the last submission?",
-    "How have previous feedback and reviews been addressed in this resubmission?",
-    "What new insights or data have been incorporated into the project?",
-    "What are the reasons for resubmitting the project at this time?",
-    "How does this resubmission improve upon the original proposal?"
-  ],
-  "Bibliography (max. 15 references, not included in character limits)": [
-    "What are the key sources that have informed the research project?",
-    "How do the selected references support the research hypothesis and objectives?",
-    "What criteria were used to select the references included in the bibliography?",
-    "How do the references reflect the current state of research in the field?",
-    "What gaps in the existing literature does this project aim to address?"
-  ]
+    "Introduction: Originality of the Research Project": [
+        "What is the central theme or idea that makes this research project original?",
+        "How does this project differ from existing research in the same field?",
+        "What are the unique contributions this project aims to make to the field?",
+        "Why is this research project important at this point in time?",
+        "What inspired the conception of this research project?"
+    ],
+    "Hypothesis, Research Objectives and Envisaged Methodology": [
+        "What is the primary hypothesis that this research project seeks to test?",
+        "What are the specific objectives that the project aims to achieve?",
+        "What methodologies will be employed to conduct the research?",
+        "How will the chosen methodologies help in achieving the research objectives?",
+        "What are the anticipated challenges in implementing the methodologies, and how will they be addressed?"
+    ],
+    "Expected Outcomes / Impact": [
+        "What are the expected outcomes of this research project?",
+        "How will the results of this project impact the field of study?",
+        "What are the potential applications of the research findings?",
+        "How will the project contribute to societal or technological advancements?",
+        "What are the long-term implications of the research outcomes?"
+    ],
+    "Explanations on the management of ethical issues and data protection": [
+        "What ethical considerations are associated with this research project?",
+        "How will ethical issues be managed throughout the research process?",
+        "What measures will be taken to ensure data protection and privacy?",
+        "How will informed consent be obtained from participants, if applicable?",
+        "What protocols are in place to handle any ethical dilemmas that may arise?"
+    ],
+    "Comment on resubmission (if applicable)": [
+        "What changes have been made to the project since the last submission?",
+        "How have previous feedback and reviews been addressed in this resubmission?",
+        "What new insights or data have been incorporated into the project?",
+        "Why is the project being resubmitted, and what improvements have been made?",
+        "What are the key differences between the original submission and the current one?"
+    ],
+    "Bibliography (max. 15 references, not included in character limits)": [
+        "What are the key sources that have informed this research project?",
+        "How do the selected references support the research hypothesis and objectives?",
+        "What criteria were used to select the references included in the bibliography?",
+        "Are there any seminal works or authors that have significantly influenced the project?",
+        "How does the bibliography reflect the current state of research in the field?"
+    ]
 }
 Additional kwargs: {'refusal': None}
 --------------------

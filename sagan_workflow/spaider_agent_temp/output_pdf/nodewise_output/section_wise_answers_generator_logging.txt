@@ -90,60 +90,60 @@ Added answer entry with content length: 455
 Number of images: 0
 
 Querying for question: 
-What are the specific research objectives that guide this project?
-Query results: {'Results': [{'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png']}, {'content': 'Appl. Sci. 2022, 12, 5106\n4 of 21\nTherefore, all efforts lead to two common goals: (i) to push toward space exploration\nand scientiﬁc discoveries; (ii) to improve life on Earth. Human beings play an essential\nrole in all this, such as specialists who work on the objectives of space missions, astronauts\nwho experience challenging conditions in space, and ordinary citizens involved in the\nachievement of these challenges, particularly those of improving life on Earth.', 'images': []}, {'content': 'based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively', 'images': []}, {'content': 'trajectories. However, the true nature of most design problems is multi-objective,\npotentially also including integer decisions variables or non-linear constraints. In\nthis multi-objective setting, the concept of the best design (i.e. the global optimum)\nis substituted with that of a Pareto front, a collection of non-dominated solutions\nexpressing the trade-offs between different conﬂicting objectives. Consequently, a\nset of best possible solutions (Pareto-optimal front) is required to guide engineering', 'images': []}, {'content': 'actuals against predicts to understand the onboard behavior and new science. Instrument and science teams develop and prioritize science goals to achieve mission science\nrequirements. They maintain models of the environment and instrument behavior in support of ensuring mission success and instrument health and safety. Cross cutting\nroles include 1) the mission planner oversees the integrated plan and dispositions both issues to ﬁx and opportunities to improve it to the appropriate team, and 2) the', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page5_img0.png']}]}
+What are the specific objectives that the project aims to achieve?
+Query results: {'Results': [{'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png']}, {'content': 'Appl. Sci. 2022, 12, 5106\n4 of 21\nTherefore, all efforts lead to two common goals: (i) to push toward space exploration\nand scientiﬁc discoveries; (ii) to improve life on Earth. Human beings play an essential\nrole in all this, such as specialists who work on the objectives of space missions, astronauts\nwho experience challenging conditions in space, and ordinary citizens involved in the\nachievement of these challenges, particularly those of improving life on Earth.', 'images': []}, {'content': 'the ground (in this project we use the MEXEC planning and\nexecution system [4]) in nominal (or most likely) scenarios\nto check for constraint violations. With respect to impact, the\nsmall progress bars to the right of the campaign title shows\nthe impact of that goal in the overall mission compared to the\noriginal set of goals.\nIt is important to note that these tools are domain depen-\ndent, meaning that they are designed to support science goal\nspeciﬁcation for a multi-ﬂyby mission for a single spacecraft.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img1.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img2.png']}, {'content': 'such observation as a goal in its corresponding campaign.\nThe tool also allows the direct speciﬁcation of goals in the\nform a set of desired activities (e.g. observation, detection)\nwithout necessarily using the search mechanism. Figure 5\nshows an example of the creation of two goals (one con-\nditional on execution of the other) to monitor a particular\nlocation on the surface of Triton, and perform a follow-on\nobservation if a plume is detected. The ﬁgure also shows', 'images': []}, {'content': 'based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively', 'images': []}]}
 Added answer entry with content length: 489
 Number of images: 1
 Added answer entry with content length: 469
 Number of images: 0
+Added answer entry with content length: 511
+Number of images: 3
+Added answer entry with content length: 470
+Number of images: 0
 Added answer entry with content length: 510
-Number of images: 0
-Added answer entry with content length: 508
-Number of images: 0
-Added answer entry with content length: 503
-Number of images: 1
-
-Querying for question: 
-What methodologies will be employed to achieve the research objectives?
-Query results: {'Results': [{'content': 'based on an initial, low ﬁdelity evaluation of possible onboard\nautonomy output, e.g., based on the most likely, nominal\nscience and engineering scenario.\nScientists can overload the plan with new observations/goals\nat this stage, and instead of culling the plan to stay within\nresource constraints, science negotiations rank science goals\nby priority, with low priority goals unlikely to be executed\nonboard. The autonomy engineer oversees the merging of\nchanges into the main plan.\nThen the team collectively', 'images': []}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png']}, {'content': 'actuals against predicts to understand the onboard behavior and new science. Instrument and science teams develop and prioritize science goals to achieve mission science\nrequirements. They maintain models of the environment and instrument behavior in support of ensuring mission success and instrument health and safety. Cross cutting\nroles include 1) the mission planner oversees the integrated plan and dispositions both issues to ﬁx and opportunities to improve it to the appropriate team, and 2) the', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page5_img0.png']}, {'content': 'Each box plot is the result of 300 network initializations. Red line represents \nthe median, box lines represent first and third quartiles. When no box is \ndrawn, all data except the outliers are collapsed in the median value. Outliers \nrepresent samples that lie further than 1.5 times the interquartile range. \n6.3.2 Obtaining additional information from the detection \nWhen developing an event detection application, objectives must be defined to', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\141488550.pdf_page124_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\141488550.pdf_page124_img1.png']}, {'content': 'independent missions, most of which have either scientific or technological \nobjectives. ESA has already started studies to deploy CubeSats in the vicinity of the \nDidymos binary asteroid as secondary payload of the Asteroid Impact Mission \n(AIM) spacecraft within the NASA/ESA Asteroid Impact & Deflection Assessment \n(AIDA) mission. The CubeSats, named COPINS (CubeSat Opportunity Payload \nIntersatellite Network Sensors), will pursue technological and scientific objectives', 'images': []}]}
-Added answer entry with content length: 510
-Number of images: 0
-Added answer entry with content length: 489
-Number of images: 1
-Added answer entry with content length: 503
-Number of images: 1
-Added answer entry with content length: 449
-Number of images: 2
-Added answer entry with content length: 476
 Number of images: 0
 
 Querying for question: 
-How will the chosen methodologies ensure the reliability and validity of the research findings?
-Query results: {'Results': [{'content': 'the mission’s objectives.\n• Initial conditions robustness: where all the parameters involved in\nthe random selection and their relative randomness level are defined or\ndesigned.\nThe adopted workflow based on these three aspects is schematized in Fig. 6.1.\nThis methodology is proposed as a sort of vademecum or guidelines to follow\nfor the implementation and testing of a robust DRL-based path or strategy\nplanning agent. Indeed, all three scenarios that will be analysed in the next', 'images': []}, {'content': 'in the second research question, which focuses on the robustness and flexibility\nof the adopted approach. Both of them are typical machine learning charac-\nteristics, which are increasingly difficult to reach when the problem becomes\nmore complex and realistic.\n4', 'images': []}, {'content': 'go in and outputs come out and there is little insight into how the model is making its determination. The seemingly\nnon-deterministic nature of AI/ML systems may cause some end users to be hesitant to trust AI/ML systems. AI/ML\nsystems will also need to meet more standard software metrics for reliability and security as they suﬀer many of the\nsame vulnerabilities that standard software systems do. There needs to be procedures in place to mitigate radiation', 'images': []}, {'content': 'standing, should be investigated first. Classical and specialised methods, \non the other hand, are often naive, whereas heuristic and metaheuristic \nparadigms can be utilised to various conditions. One key advantage of \nheuristic and metaheuristic paradigms is their robustness. In this \ncontext, robustness refers to an algorithm’s ability to solve a wide range \nof problems and even multiple sorts of problems, with only slight \nchanges to account for each problem’s specific properties. A stochastic', 'images': []}, {'content': 'the training data, hoping it would accurately work for the real ones.\nSome kind of assurance is needed, that your model has got most of\nthe patterns from the data correct, and its not picking up too much\non the noise, i.e. overﬁtting the training data. The process of deciding\nwhether the numerical results quantifying hypothesized relationships\nbetween variables are acceptable as descriptions of the data, is known\nas validation. Generally, an error estimation for the model is made af-', 'images': []}]}
-Added answer entry with content length: 483
+What methodologies will be employed to conduct the research?
+Query results: {'Results': [{'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': 'Analysis\nOnce we concluded the study, we transcribed the audio from\nthe sessions and compiled the survey responses. To identify\nthemes, we grouped clusters of related observations into\nafﬁnity groups, focusing on topics that related to our research\nquestions.\nFindings\nIn this section, we describe preliminary themes that emerged\nfrom our analysis.\nThe user study participants in general\nsuccessfully used the tools and series of steps to complete\ntheir operations tasks. The operators’ participation, inquiries,', 'images': []}, {'content': 'can be determined by performance of the model and/or a schedule.\nAfter development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted\nbefore the packaged automated model pipeline is released for delivery to the target environment.\nThe major steps in the Develop phase are largely the same across the three environments and the diﬀerences at\nworkﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during', 'images': []}, {'content': 'decision-making[31]. Sinha R., (2018), Data Mining techniques can extract valuable insights from this data, such as identifying patterns, \nanomalies, or potential discoveries [32]. Sinha R., (2019), Data Warehousing can provide a centralized repository for storing and \nintegrating data from different sources, facilitating comprehensive analysis and knowledge discovery. By combining these technologies', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page9_img0.png']}, {'content': 'challenges and unlocking new opportunities. By \nleveraging AI techniques, scientists and engineers \ncan enhance data analysis, enable autonomous \nsystems, improve navigation, and achieve greater \nefficiency in space missions. \n \nMethodology: \nTo conduct this research initially, an extensive \nliterature search was performed using reputable \nscientific databases, including IEEE Xplore, ACM \nDigital Library, and Google Scholar. The search \nkeywords included "artificial intelligence," "AI,"', 'images': []}]}
+Added answer entry with content length: 463
 Number of images: 0
-Added answer entry with content length: 263
+Added answer entry with content length: 512
 Number of images: 0
-Added answer entry with content length: 461
+Added answer entry with content length: 510
+Number of images: 0
+Added answer entry with content length: 403
+Number of images: 1
+Added answer entry with content length: 491
+Number of images: 0
+
+Querying for question: 
+How will the chosen methodologies help in achieving the research objectives?
+Query results: {'Results': [{'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': 'challenges and unlocking new opportunities. By \nleveraging AI techniques, scientists and engineers \ncan enhance data analysis, enable autonomous \nsystems, improve navigation, and achieve greater \nefficiency in space missions. \n \nMethodology: \nTo conduct this research initially, an extensive \nliterature search was performed using reputable \nscientific databases, including IEEE Xplore, ACM \nDigital Library, and Google Scholar. The search \nkeywords included "artificial intelligence," "AI,"', 'images': []}, {'content': 'inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large', 'images': []}, {'content': 'paramount importance are also the \noperation research and the Markov \ndecision \nprocesses. \nSome of the fundamental questions of \nthe \nfield, \nrelated \nto \nAI: \n- how should we make decisions to \nimprove \nthe \noutcomes? \n- how can we change these decisions \nwhen the outcomes are evaluated in the \nfar future, or when boundary conditions \nvary? \nNeuroscience \nNeuroscience is involved with \nstudying the brain, which is the main \nelement of the nervous systems in \nhuman beings. Despite the majority of', 'images': []}, {'content': 'that the 35% of the new generation is formed by individuals picked from the old \ngeneration. The selected value ensures a balance between effectiveness of the \nsearch (lower elite population fractions) and survival of fit individuals (higher elite \npopulation fractions). \n8.5 Results \nThe investigation on methodologies to improve and automate the space mission and \nspacecraft design is a vast effort, branching out into many fields of science and', 'images': []}]}
+Added answer entry with content length: 463
+Number of images: 0
+Added answer entry with content length: 491
+Number of images: 0
+Added answer entry with content length: 503
 Number of images: 0
 Added answer entry with content length: 502
 Number of images: 0
-Added answer entry with content length: 488
+Added answer entry with content length: 449
 Number of images: 0
 
 Querying for question: 
-What are the anticipated challenges in implementing the research methodologies, and how will they be addressed?
-Query results: {'Results': [{'content': 'of the workﬂow. Additionally, high-quality datasets for these environments can be diﬃcult to come by and relying on\naugmentation or simulations potentially introduces unknown vulnerabilities. Questions, such as "How will the model\nrespond to novel inputs?" or "Under what conditions do we expect the outputs of the model to be valid?" need to be\naddressed. The performance of an AI/ML system will naturally degrade over time whether due to data drift, changes in', 'images': []}, {'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': 'inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large', 'images': []}, {'content': 'can be determined by performance of the model and/or a schedule.\nAfter development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted\nbefore the packaged automated model pipeline is released for delivery to the target environment.\nThe major steps in the Develop phase are largely the same across the three environments and the diﬀerences at\nworkﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during', 'images': []}, {'content': '“artificial general intelligence,” in which sophisticated AI approaches \nare developed to reason and solve problems in the same way that \nhumans can. Despite the introduction of new approaches to address \nthem, AI still faces a number of practical obstacles. The labelling of the \ntraining data required for supervised learning frequently necessitates a \nsignificant amount of human labour. Data sets that are large and thor\xad\nough enough to train a model are likewise challenging to come by. The', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png']}]}
+What are the anticipated challenges in implementing the methodologies, and how will they be addressed?
+Query results: {'Results': [{'content': 'of the workﬂow. Additionally, high-quality datasets for these environments can be diﬃcult to come by and relying on\naugmentation or simulations potentially introduces unknown vulnerabilities. Questions, such as "How will the model\nrespond to novel inputs?" or "Under what conditions do we expect the outputs of the model to be valid?" need to be\naddressed. The performance of an AI/ML system will naturally degrade over time whether due to data drift, changes in', 'images': []}, {'content': 'intent, and updates that align evolving requirements.  We \nvalue clear verbal and written communication oriented to \ninform decisions and implement actions. \nWe also value design approaches to critical thinking, and \ndata-driven problem solving. Over the next year, the \nDirector of Staff will publish guidance that establishes a \nstandard \nfor \nhow \nspace \nprofessionals \napproach \nstructured data-driven decision-making. Like MTOs, a \nstandardized process is not intended to constrain thinking', 'images': []}, {'content': 'can be determined by performance of the model and/or a schedule.\nAfter development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted\nbefore the packaged automated model pipeline is released for delivery to the target environment.\nThe major steps in the Develop phase are largely the same across the three environments and the diﬀerences at\nworkﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during', 'images': []}, {'content': 'approach and finding out which are the most important points to investigate\nmore in-depth. As shown in Fig. 6.1, the proposed workflow differentiates\nbetween two kinds of scenario definitions, characterized by two different levels\nof complexity. These levels can be shaped both by the definition of the model\nand by that of the reward function. The model depends on many factors and\naspects, but, among all, is mainly described by the network architecture and', 'images': []}, {'content': 'tools described in the rest of this paper.\nThe simulation\nenvironment uses SPICE [17] for astrodynamics and plane-\ntary ephemerides, and ROS [18] for inter-process communi-\ncations. Figure 13 shows the architecture of the simulation\nenvironment.\nFigure 13. Software architecture of the proposed simulation\nenvironment. Modules circled in green are implemented; the\nremaining modules are slated for implementation in future\nwork.\nPrediction Engine\nThe high-level approach to predict outcomes consists of 3', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page11_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page11_img1.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page11_img2.png']}]}
 Added answer entry with content length: 462
 Number of images: 0
-Added answer entry with content length: 463
-Number of images: 0
-Added answer entry with content length: 503
+Added answer entry with content length: 495
 Number of images: 0
 Added answer entry with content length: 510
 Number of images: 0
-Added answer entry with content length: 495
-Number of images: 1
+Added answer entry with content length: 459
+Number of images: 0
+Added answer entry with content length: 504
+Number of images: 3
 Completed answers for section: Hypothesis, Research Objectives and Envisaged Methodology
 Number of answers: 25
 
@@ -164,18 +164,18 @@ Added answer entry with content length: 460
 Number of images: 2
 
 Querying for question: 
-How will the outcomes of this project impact the field of study?
-Query results: {'Results': [{'content': 'the aggregated summary of all simulation runs for a given\ntask network\nMission impact tool—The mission impact UI view (shown in\nFigure 10) provides an overview of the simulations spanning\nthe whole mission (that is, looking into all ﬂybys) highlight-\ning, the impact of newly-added goals to the the progress and\nsuccess of the campaigns and to performance trends. This\nview also shows how the plans perform with respect to key\nperformance indicators, and the uncertainty associated with', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png']}, {'content': 'changes into the main plan.\nThen the team collectively\nreviews these preliminary “low ﬁdelity” outputs, implements\niterations as needed and approves advancing to the “high\nﬁdelity” evaluation of possible outcomes and autonomy out-\nput.\nSuch high ﬁdelity evaluation is called here outcome\nprediction phase.\nAt the outcome prediction phase, simulations produce a more\nrealistic and comprehensive view of the new plan’s impact\nto the projected mission progress and performance. Itera-', 'images': []}, {'content': 'inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large', 'images': []}, {'content': 'paramount importance are also the \noperation research and the Markov \ndecision \nprocesses. \nSome of the fundamental questions of \nthe \nfield, \nrelated \nto \nAI: \n- how should we make decisions to \nimprove \nthe \noutcomes? \n- how can we change these decisions \nwhen the outcomes are evaluated in the \nfar future, or when boundary conditions \nvary? \nNeuroscience \nNeuroscience is involved with \nstudying the brain, which is the main \nelement of the nervous systems in \nhuman beings. Despite the majority of', 'images': []}, {'content': 'the ground (in this project we use the MEXEC planning and\nexecution system [4]) in nominal (or most likely) scenarios\nto check for constraint violations. With respect to impact, the\nsmall progress bars to the right of the campaign title shows\nthe impact of that goal in the overall mission compared to the\noriginal set of goals.\nIt is important to note that these tools are domain depen-\ndent, meaning that they are designed to support science goal\nspeciﬁcation for a multi-ﬂyby mission for a single spacecraft.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img1.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img2.png']}]}
+How will the results of this project impact the field of study?
+Query results: {'Results': [{'content': 'inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large', 'images': []}, {'content': 'the aggregated summary of all simulation runs for a given\ntask network\nMission impact tool—The mission impact UI view (shown in\nFigure 10) provides an overview of the simulations spanning\nthe whole mission (that is, looking into all ﬂybys) highlight-\ning, the impact of newly-added goals to the the progress and\nsuccess of the campaigns and to performance trends. This\nview also shows how the plans perform with respect to key\nperformance indicators, and the uncertainty associated with', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png']}, {'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': 'paramount importance are also the \noperation research and the Markov \ndecision \nprocesses. \nSome of the fundamental questions of \nthe \nfield, \nrelated \nto \nAI: \n- how should we make decisions to \nimprove \nthe \noutcomes? \n- how can we change these decisions \nwhen the outcomes are evaluated in the \nfar future, or when boundary conditions \nvary? \nNeuroscience \nNeuroscience is involved with \nstudying the brain, which is the main \nelement of the nervous systems in \nhuman beings. Despite the majority of', 'images': []}, {'content': 'Analysis\nOnce we concluded the study, we transcribed the audio from\nthe sessions and compiled the survey responses. To identify\nthemes, we grouped clusters of related observations into\nafﬁnity groups, focusing on topics that related to our research\nquestions.\nFindings\nIn this section, we describe preliminary themes that emerged\nfrom our analysis.\nThe user study participants in general\nsuccessfully used the tools and series of steps to complete\ntheir operations tasks. The operators’ participation, inquiries,', 'images': []}]}
+Added answer entry with content length: 503
+Number of images: 0
 Added answer entry with content length: 486
 Number of images: 2
-Added answer entry with content length: 481
-Number of images: 0
-Added answer entry with content length: 503
+Added answer entry with content length: 463
 Number of images: 0
 Added answer entry with content length: 502
 Number of images: 0
-Added answer entry with content length: 511
-Number of images: 3
+Added answer entry with content length: 512
+Number of images: 0
 
 Querying for question: 
 What are the potential applications of the research findings?
@@ -206,17 +206,17 @@ Added answer entry with content length: 467
 Number of images: 0
 
 Querying for question: 
-What measures will be used to evaluate the success of the project outcomes?
-Query results: {'Results': [{'content': 'changes into the main plan.\nThen the team collectively\nreviews these preliminary “low ﬁdelity” outputs, implements\niterations as needed and approves advancing to the “high\nﬁdelity” evaluation of possible outcomes and autonomy out-\nput.\nSuch high ﬁdelity evaluation is called here outcome\nprediction phase.\nAt the outcome prediction phase, simulations produce a more\nrealistic and comprehensive view of the new plan’s impact\nto the projected mission progress and performance. Itera-', 'images': []}, {'content': 'as the metrics and variability speciﬁcations. Figure 9 shows\nthe predicted outcomes (for the target tasknet) on the left-\nhand side, ordered from most likely to least likely, aiding the\noperator in more easily deciphering the expected behavior of\nthe constructed plans. The green and red arrows inform the\nimpact of an added goal (in this case, observing Plume X)\non the outcome distribution. For example, the percentage of\ncases in which Observation A and B will be both performed', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png']}, {'content': 'can be determined by performance of the model and/or a schedule.\nAfter development, the artifacts are tested to ensure proper function and performance. Next a ﬁnal review is conducted\nbefore the packaged automated model pipeline is released for delivery to the target environment.\nThe major steps in the Develop phase are largely the same across the three environments and the diﬀerences at\nworkﬂow level have been discussed in the previous sections. The main diﬀerences are the types of artifacts built during', 'images': []}, {'content': 'netosphere, or monitor for plume activity), metrics to evaluate\nprogress toward the goals (i.e. key performance indicators,\nor KPIs) and their valid range for assessment of execution\n(e.g. resource usage, frequency of a command cycling due to\ndelays), execution variability to capture uncertainty related to\nthe environment and the spacecraft actuation (e.g. exogenous\nevents, activities run long, short), and relationships between\ngoals (e.g.\npriorities).\nRelationships between goals are a', 'images': []}, {'content': 'array of high-ﬁdelity simulations. The collected predicted\noutcomes can then be used by the uplink team to not only\nobserve the expected execution, but also attach conﬁdence\nvalues to the various goals and activities within the generated\nplans. As such, repeated simulation runs and collection of the\noutcomes ﬁt within the proposed iterative workﬂow of uplink\noperations, which ultimately serves the goal of increasing\nthe conﬁdence of the uplink team in the expected behavior', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img1.png']}]}
-Added answer entry with content length: 481
+What are the long-term implications of the research outcomes?
+Query results: {'Results': [{'content': 'execution of the operations itself: in certain cases, the look-ahead period can reach \nseveral months to one year. Historically, long term operations definition is \nperformed to constrain the choice of medium-term to immediate operation \ndefinition in given periods of the mission (Sun-Earth-Spacecraft geometry is an \nimportant factor [23]). On the medium term, events such as the South Atlantic \nAnomaly entry/exit or similar events are accounted for. On the short term, final', 'images': []}, {'content': 'changes into the main plan.\nThen the team collectively\nreviews these preliminary “low ﬁdelity” outputs, implements\niterations as needed and approves advancing to the “high\nﬁdelity” evaluation of possible outcomes and autonomy out-\nput.\nSuch high ﬁdelity evaluation is called here outcome\nprediction phase.\nAt the outcome prediction phase, simulations produce a more\nrealistic and comprehensive view of the new plan’s impact\nto the projected mission progress and performance. Itera-', 'images': []}, {'content': 'jects. While a desirable result from a scientiﬁc and engineering point\nof view, the consequence is on the other hand an increase in the\nprobability of a collision, or communication failure, or some other\ncatastrophic event. The phenomena was already brought to the at-\ntention of the scientiﬁc community since the 1970s, discussed as an\nagenda item of the UN Committee for the Peaceful Uses of Outer\nSpace (COPUOS). Instead, the term space trafﬁc or space trafﬁc manage-', 'images': []}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n27\ndeveloped by The Aerospace Corporation (Fig. 30) looks at a system’s \ncapacity to fulfil mission objectives throughout the course of its full \nlifecycle. Once the mission’s requirements and specific functions have \nbeen determined, the possible threats that can affect the mission should \nbe identified, along with potential strategies. The threat’s goals must be \nalso identified because the strategy is a tool for attaining them [322].', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png']}, {'content': 'the aggregated summary of all simulation runs for a given\ntask network\nMission impact tool—The mission impact UI view (shown in\nFigure 10) provides an overview of the simulations spanning\nthe whole mission (that is, looking into all ﬂybys) highlight-\ning, the impact of newly-added goals to the the progress and\nsuccess of the campaigns and to performance trends. This\nview also shows how the plans perform with respect to key\nperformance indicators, and the uncertainty associated with', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page10_img1.png']}]}
+Added answer entry with content length: 478
 Number of images: 0
 Added answer entry with content length: 481
-Number of images: 2
-Added answer entry with content length: 510
 Number of images: 0
-Added answer entry with content length: 490
+Added answer entry with content length: 470
 Number of images: 0
-Added answer entry with content length: 477
+Added answer entry with content length: 489
+Number of images: 1
+Added answer entry with content length: 486
 Number of images: 2
 Completed answers for section: Expected Outcomes / Impact
 Number of answers: 25
@@ -224,8 +224,8 @@ Number of answers: 25
 Processing section: Explanations on the management of ethical issues and data protection
 
 Querying for question: 
-What are the potential ethical issues associated with this research project?
-Query results: {'Results': [{'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n30\n1. Ethical purpose: AI development, deployment and use should respect \nfundamental rights and applicable regulations as well as core prin\xad\nciples and values to ensure “ethical purpose";  \n2. Technical robustness: AI should be technically robust and reliable \nsince its use can cause unintentional harm, even in the presence of \ngood intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as', 'images': []}, {'content': 'the smaller file sizes required for programming, which is becoming \ncompatible with the uplink bandwidth of small satellites [264]. \n8.2. Ethical and legal challenges \nThe use of AI in space systems raises a number of ethical and legal \nquestions. Some researchers have identified the need for AI ethicists to \nhelp navigate where advances in this technology could lead [328]. This \nis more exciting because AI and space technologies offer a wide range of', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para\xad\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector', 'images': []}, {'content': 'Despite the numerous advantages offered by AI in \nspace exploration, there are challenges that need to \nbe addressed. One significant concern is the \nreliability and robustness of AI systems operating in \nthe harsh conditions of space. Ensuring the \nresilience of AI algorithms to radiation, extreme \ntemperatures, and other space-specific challenges is \ncrucial for the success of future missions. \nAdditionally, ethical considerations surrounding AI \ndecision-making in space, such as the potential for', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\IJIRT161698_PAPER.pdf_page6_img0.png']}]}
+What ethical considerations are associated with this research project?
+Query results: {'Results': [{'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n30\n1. Ethical purpose: AI development, deployment and use should respect \nfundamental rights and applicable regulations as well as core prin\xad\nciples and values to ensure “ethical purpose";  \n2. Technical robustness: AI should be technically robust and reliable \nsince its use can cause unintentional harm, even in the presence of \ngood intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as', 'images': []}, {'content': 'the smaller file sizes required for programming, which is becoming \ncompatible with the uplink bandwidth of small satellites [264]. \n8.2. Ethical and legal challenges \nThe use of AI in space systems raises a number of ethical and legal \nquestions. Some researchers have identified the need for AI ethicists to \nhelp navigate where advances in this technology could lead [328]. This \nis more exciting because AI and space technologies offer a wide range of', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para\xad\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector', 'images': []}, {'content': 'machine;  \n2. The diminished awareness by the human operator(s) of operational \nand environmental conditions due to not being directly tasked to \naddress these;  \n3. The ethical buffer, in which the human operator delegated moral \nobligation and accountability to the system, which is viewed as a \nvalid authority. \n3.2.2. Adaptive and cognitive HMS \nThere is no universally accepted models and optimality criteria for \nhuman interaction with autonomous systems. The need for human su\xad', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page13_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page13_img1.png']}]}
 Added answer entry with content length: 487
 Number of images: 1
 Added answer entry with content length: 472
@@ -234,63 +234,63 @@ Added answer entry with content length: 455
 Number of images: 1
 Added answer entry with content length: 507
 Number of images: 0
-Added answer entry with content length: 504
-Number of images: 1
-
-Querying for question: 
-How will ethical considerations be addressed throughout the research process?
-Query results: {'Results': [{'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n30\n1. Ethical purpose: AI development, deployment and use should respect \nfundamental rights and applicable regulations as well as core prin\xad\nciples and values to ensure “ethical purpose";  \n2. Technical robustness: AI should be technically robust and reliable \nsince its use can cause unintentional harm, even in the presence of \ngood intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as', 'images': []}, {'content': 'good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para\xad\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector', 'images': []}, {'content': '[326] D. Harkut, K. Kasat, Introductory Chapter: Artificial Intelligence - Challenges and \nApplications, 2019. \n[327] J.B. James Manyika, The Promise and Challenge of the Age of Artificial \nIntelligence, 2018. \n[328] A. Pavaloiu, U. K¨ose, Ethical artificial intelligence - an open question, Journal of \nMultidisciplinary Developments 2 (04/01 2017) 15–27. \n[329] M.U. Scherer, Regulating artificial intelligence systems: risks, challenges, \ncompetencies, and strategies, Harv. J. Law Technol. 29 (2015) 353.', 'images': []}, {'content': 'the smaller file sizes required for programming, which is becoming \ncompatible with the uplink bandwidth of small satellites [264]. \n8.2. Ethical and legal challenges \nThe use of AI in space systems raises a number of ethical and legal \nquestions. Some researchers have identified the need for AI ethicists to \nhelp navigate where advances in this technology could lead [328]. This \nis more exciting because AI and space technologies offer a wide range of', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}]}
-Added answer entry with content length: 487
-Number of images: 1
-Added answer entry with content length: 472
-Number of images: 0
-Added answer entry with content length: 507
-Number of images: 0
-Added answer entry with content length: 508
-Number of images: 0
-Added answer entry with content length: 455
-Number of images: 1
-
-Querying for question: 
-What data protection measures will be implemented to ensure participant confidentiality?
-Query results: {'Results': [{'content': 'good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para\xad\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector', 'images': []}, {'content': 'have to be included in the cybersecurity development cycle and applied \nearly in the life cycle of the iDSS system. Small commercial satellite \nowners and operators are frequently responsible for inter-vehicle \ncybersecurity, while the majority of the remaining infrastructure is \ncontracted to certain other suppliers and providers [275]. \n7.2. Satellite resilience \nThe aerospace industry of an increasingly multi-polar world will \nhave to negotiate a future that is getting more and more crowded with', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page26_img0.png']}, {'content': 'There are times when robots are used to collect and process sensitive information, starting from personal data used in healthcare to \nproprietary information used in industrial settings. All such information should be protected from unauthorized access and cyber attacks \n[15]. Ensure safe communication channels between the robots and the cloud in order to protect against breaches of data or tampering.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page7_img0.png']}, {'content': 'ment should include both policy and the tools and processes used for\nSpace Situational Awareness (SSA). It is assumed the two cannot be\nseparated in the context of the goal of space trafﬁc safety. Several crit-\nical areas for research, such as (but not limited to) space environment\neffects and impacts on space objects and events, Big Data storage,\nmanagement and exploitation, Behavioral Science, are listed in [20].\nAlso, space trafﬁc management creates a direct analog to air trafﬁc', 'images': []}, {'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}]}
-Added answer entry with content length: 507
-Number of images: 0
-Added answer entry with content length: 503
-Number of images: 1
-Added answer entry with content length: 404
-Number of images: 1
-Added answer entry with content length: 486
-Number of images: 0
-Added answer entry with content length: 487
-Number of images: 1
-
-Querying for question: 
-How will informed consent be obtained and documented from research participants?
-Query results: {'Results': [{'content': 'Analysis\nOnce we concluded the study, we transcribed the audio from\nthe sessions and compiled the survey responses. To identify\nthemes, we grouped clusters of related observations into\nafﬁnity groups, focusing on topics that related to our research\nquestions.\nFindings\nIn this section, we describe preliminary themes that emerged\nfrom our analysis.\nThe user study participants in general\nsuccessfully used the tools and series of steps to complete\ntheir operations tasks. The operators’ participation, inquiries,', 'images': []}, {'content': 'across those meetings, though we also encouraged them to\nbreak into reﬂective discussions about the process and tools\nalong the way. We also collected feedback in the form of\nsurvey responses in a journal they used for each day. We\nhad implemented the tools as click-through prototypes only,\nand user study facilitator needed to “drive” the tools at the the\noperator’s request. This dynamic evoked dialogue about what\ninformation they needed to see and why.\n14', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page14_img0.png']}, {'content': 'text=Prof%20Stephen%20Hawking%2C%20one%20of,end%20of%20the%20h \numan%20race.%22, 2014. \n[344] E. Commission, Have your say: European expert group seeks feedback on draft \nethics guidelines for trustworthy artificial intelligence, Available at: https://ec. \neuropa.eu/digital-single-market/en/news/have-your-say-european-expert-gro \nup-seeks-feedback-draft-ethics-guidelines-trustworthy, 2018. \n[345] S.T. Todd, J. Burke, Emerging legal issues in an AI-driven world, Available at:', 'images': []}, {'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'October 2020; published online 14 January 2021. Copyright © 2020 by The\nAuthors. PublishedbytheAmerican InstituteofAeronauticsandAstronautics,\nInc., with permission. All requests for copying and permission to reprint\nshould be submitted to CCC at www.copyright.com; employ the eISSN\n1533-6794 to initiate your request. See also AIAA Rights and Permissions\nwww.aiaa.org/randp.\n*Ph.D. Candidate, Department of Mechanical and Aerospace Engineering,\n1125 Colonel By Drive. Student Member AIAA.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JSR-2021.pdf_page1_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JSR-2021.pdf_page1_img1.png']}]}
-Added answer entry with content length: 512
-Number of images: 0
-Added answer entry with content length: 460
-Number of images: 1
-Added answer entry with content length: 479
-Number of images: 0
-Added answer entry with content length: 487
-Number of images: 1
-Added answer entry with content length: 489
+Added answer entry with content length: 485
 Number of images: 2
 
 Querying for question: 
-What steps will be taken to ensure compliance with relevant ethical guidelines and regulations?
-Query results: {'Results': [{'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'also identified because the strategy is a tool for attaining them [322]. \nSeveral AI approaches should be examined, along with their possibilities \nfor practical adoption in the iDSS considering human supervision, with \nthe aim of achieving TASO. \n7.3. Safety considerations \nDependence on AI systems is critical for technological frameworks to \nbe widely applicable and accepted. Standards, norms, accreditations and \ncertificates are examples of legal regulations commonly used to', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page27_img0.png']}, {'content': 'as the development (and uptake) of new operational standards and \nregulations. The tort of negligence, which is a common legal principle \napplied to liability, is concerned with whether a party owed another a \nduty of care, whether that duty was breached and whether the breach \nresulted in damages. In the case of negligence, reasonable foreseeability \nis a crucial concept [345]. As AI systems become less reliant on tradi\xad\ntional algorithms, they will be able to exhibit behaviours that are not', 'images': []}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n30\n1. Ethical purpose: AI development, deployment and use should respect \nfundamental rights and applicable regulations as well as core prin\xad\nciples and values to ensure “ethical purpose";  \n2. Technical robustness: AI should be technically robust and reliable \nsince its use can cause unintentional harm, even in the presence of \ngood intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as', 'images': []}, {'content': 'text=Prof%20Stephen%20Hawking%2C%20one%20of,end%20of%20the%20h \numan%20race.%22, 2014. \n[344] E. Commission, Have your say: European expert group seeks feedback on draft \nethics guidelines for trustworthy artificial intelligence, Available at: https://ec. \neuropa.eu/digital-single-market/en/news/have-your-say-european-expert-gro \nup-seeks-feedback-draft-ethics-guidelines-trustworthy, 2018. \n[345] S.T. Todd, J. Burke, Emerging legal issues in an AI-driven world, Available at:', 'images': []}]}
+How will ethical issues be managed throughout the research process?
+Query results: {'Results': [{'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n30\n1. Ethical purpose: AI development, deployment and use should respect \nfundamental rights and applicable regulations as well as core prin\xad\nciples and values to ensure “ethical purpose";  \n2. Technical robustness: AI should be technically robust and reliable \nsince its use can cause unintentional harm, even in the presence of \ngood intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as', 'images': []}, {'content': 'good intentions [344]. \nAI systems use large amounts of data, causing increasing concerns as \nmore data is collected and used. Such high volumes and the level of \ndependence on such data will keep privacy at the forefront as one of the \nmost significant legal issues to be addressed in the future. For instance, \nsetting ethical parameters within which AI systems operate is para\xad\nmount in tackling bias, considering the application of AI to data \ngenerated in space and prospective on-board AI space sector', 'images': []}, {'content': 'priorities pre-speciﬁed by ground operators, ensuring that\nonce-in-a-mission observations are acquired while skipping\nlower-priority ones.\n• FDIR affects science plan during critical engineering\nevent. A non-critical camera observation is planned during\nan engine burn. During the burn, FDIR intervenes to counter\nan unexpected increase in power usage by interrupting the\nobservation. The interrupted science activity is re-planned\nfor a later time.\n• Instrument tweaks capture parameters autonomously.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page3_img0.png']}, {'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}]}
 Added answer entry with content length: 487
 Number of images: 1
-Added answer entry with content length: 482
-Number of images: 1
-Added answer entry with content length: 497
-Number of images: 0
 Added answer entry with content length: 472
 Number of images: 0
-Added answer entry with content length: 479
+Added answer entry with content length: 507
+Number of images: 0
+Added answer entry with content length: 502
+Number of images: 1
+Added answer entry with content length: 463
+Number of images: 0
+
+Querying for question: 
+What measures will be taken to ensure data protection and privacy?
+Query results: {'Results': [{'content': 'Data Security\n• Access management\n• Sensitive info labeling\n• User/group access rules\nData Version Control\n• Original source\n• Commit history with \ncomments\nData Standardization\n• Labeling standards\n• Column naming standards\n• Data type and unit standards\nData Security\n• Access management\n• Sensitive info labeling\n• User/group access rules\nData \nSource\nDB\nDB\nQuery\nObject\nGraph\nFig. 1\nFunctional diagram of the Prepare step of the AI/ML workﬂow.', 'images': []}, {'content': 'There are times when robots are used to collect and process sensitive information, starting from personal data used in healthcare to \nproprietary information used in industrial settings. All such information should be protected from unauthorized access and cyber attacks \n[15]. Ensure safe communication channels between the robots and the cloud in order to protect against breaches of data or tampering.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JETIR1912274.pdf_page7_img0.png']}, {'content': 'data and analytics infrastructure to ensure all our data is \ndiscoverable, accessible, understandable, linked, and \ntrusted across multiple security levels.  \nAutomation \nand \nautonomy \nwill \naccelerate \nand \nstreamline our operations and provide analytics to \noptimize mission and headquarters effectiveness. \nApplying machine learning and trusted levels of \nautonomy will allow our personnel to focus on data-\ndriven decision-making instead of manually sorting and', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\cso planning guidance.pdf_page13_img0.png']}, {'content': 'have to be included in the cybersecurity development cycle and applied \nearly in the life cycle of the iDSS system. Small commercial satellite \nowners and operators are frequently responsible for inter-vehicle \ncybersecurity, while the majority of the remaining infrastructure is \ncontracted to certain other suppliers and providers [275]. \n7.2. Satellite resilience \nThe aerospace industry of an increasingly multi-polar world will \nhave to negotiate a future that is getting more and more crowded with', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page26_img0.png']}, {'content': 'standards. \n4 \nMany living beings could die or \ncould be restricted for life; the \nenvironment could be damaged \npermanently. Loss of \ninformation which endangers \nthe existence of the \norganization. Long-term \nunavailability of critical data or \nservices without which the \norganization cannot function. \nThe ML application is \ndeveloped and documented \nwith great care. Safety & \nSecurity is ensured with \nprocesses and techniques that \ngo beyond traditional best \npractices and industry', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}]}
+Added answer entry with content length: 447
+Number of images: 0
+Added answer entry with content length: 404
+Number of images: 1
+Added answer entry with content length: 466
+Number of images: 1
+Added answer entry with content length: 503
+Number of images: 1
+Added answer entry with content length: 489
+Number of images: 1
+
+Querying for question: 
+How will informed consent be obtained from participants, if applicable?
+Query results: {'Results': [{'content': 'agent preferences (what to do with respect to probability) and which utility is \nreached once a preferred action is taken. The fundamental idea of decision theory \nis that “an agent is rational if and only if it chooses the action that yields the highest \nexpected utility, averaged over all the possible outcomes of the action” (Maximum \nExpected Utility, MEU). Bayesian Networks represent a very effective way to \nrepresent uncertain knowledge. They are a directed acyclic graph whose nodes', 'images': []}, {'content': 'also the future development of the problem and, then, the overall sequence of\nrewards. These concepts outlined here represent the fundament of RL. and are\nmathematically encapsulated in the Markov Decision Process (MDP) problems\n[24], that can be fully or partially observable (as explained later). The final\nobjective of MDP is finding a policy capable of selecting the right action when\nthe agent is in a particular state. Policies may also be found with evolutionary', 'images': []}, {'content': 'other similar details;  \n• Using probabilistic, rather than deterministic, transition rules. \nPopulation-based algorithms adopt a similar approach, regardless of \nthe applied paradigm and follow from the algorithm below.  \n1. Initialise the population;  \n2. Fitness is calculated for each individual in the population;  \n3. Produce a new population-based on some rules that strictly depend \non the fitness of each individual;  \n4. Repeat steps 2–4 until a condition is met. \n4.1.2. Machine learning techniques', 'images': []}, {'content': 'determine which actions to take. In general, anyway, the methodology used to \ndesign an agent is tied to the information that needs to be learned. In the case of the \npassive reinforcement learning, the utilities can be computed by using Direct utility \nestimation, Adaptive dynamic programming, Temporal-difference.  \nCommunicating, perceiving, and acting \nWhen dealing with the problem of acquiring knowledge, the most powerful', 'images': []}, {'content': 'eventually improve its decision-making capabilities. This type of feedback is \nidentified as a reward, or reinforcement, and can be given either at the end of a \nseries of actions or more frequently. Two main philosophies exist when considering \nreinforcement learning, passive and active reinforcement: in the first, the agent’s \nobjective is to compute each states’ utility, while in the latter the agent must \ndetermine which actions to take. In general, anyway, the methodology used to', 'images': []}]}
+Added answer entry with content length: 492
+Number of images: 0
+Added answer entry with content length: 469
+Number of images: 0
+Added answer entry with content length: 509
+Number of images: 0
+Added answer entry with content length: 429
+Number of images: 0
+Added answer entry with content length: 489
+Number of images: 0
+
+Querying for question: 
+What protocols are in place to handle any ethical dilemmas that may arise?
+Query results: {'Results': [{'content': 'potentially threating our civilisation and even human survival [343]. A \nreport on robotics and AI published by the British House of Commons \nhighlighted specific ethical and legal issues, including transparent \ndecision-making, minimising bias, accountability and privacy [325]. \nThe first draft of the “Ethics Guidelines for Trustworthy AI” was pub\xad\nlished by the European Commission’s High-Level Expert Group on \nArtificial Intelligence (‘AI HLEG’) [344]. According to the guidelines,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'machine;  \n2. The diminished awareness by the human operator(s) of operational \nand environmental conditions due to not being directly tasked to \naddress these;  \n3. The ethical buffer, in which the human operator delegated moral \nobligation and accountability to the system, which is viewed as a \nvalid authority. \n3.2.2. Adaptive and cognitive HMS \nThere is no universally accepted models and optimality criteria for \nhuman interaction with autonomous systems. The need for human su\xad', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page13_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page13_img1.png']}, {'content': 'the smaller file sizes required for programming, which is becoming \ncompatible with the uplink bandwidth of small satellites [264]. \n8.2. Ethical and legal challenges \nThe use of AI in space systems raises a number of ethical and legal \nquestions. Some researchers have identified the need for AI ethicists to \nhelp navigate where advances in this technology could lead [328]. This \nis more exciting because AI and space technologies offer a wide range of', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page29_img0.png']}, {'content': 'post-processing, checking for violations such as data values\ngoing over limits (e.g. power levels are too high), invalid\nbehaviors or combinations of behaviors (e.g. activity A can-\nnot ever overlap activity B), and for other types of undesired\nsituations. Further, ground systems often include automated\nnotiﬁcations to alert operators of an issue, given there may be\na very short turn around time for mission engineers to respond\nto that issue and possibly prevent the loss of science data or', 'images': []}, {'content': 'behaviors \nin \nresponse to the obstacle.  If the craft is not able to reach its goal \n(or not able to reach it within time requirements) it is able to \ndetermine what commands from the plan can and should still be \nrun; however, ground operators must decide what the craft \nshould do next.  This can, for example, include providing a \nmore specific route (via adding more waypoints), telling the \ncraft to take greater risks to reach its goal, or manually \noperating the craft remotely. [44, 46]', 'images': []}]}
+Added answer entry with content length: 487
+Number of images: 1
+Added answer entry with content length: 485
+Number of images: 2
+Added answer entry with content length: 455
+Number of images: 1
+Added answer entry with content length: 494
+Number of images: 0
+Added answer entry with content length: 495
 Number of images: 0
 Completed answers for section: Explanations on the management of ethical issues and data protection
 Number of answers: 25
@@ -340,31 +340,31 @@ Added answer entry with content length: 463
 Number of images: 0
 
 Querying for question: 
-What are the reasons for resubmitting the project at this time?
-Query results: {'Results': [{'content': 'data). While subsequent planning depends on the develop-\nment of these initial conditions from downlink, we have not\nyet addressed this part of the process in detail. Herein we\nwill focus on the workﬂow for tactical planning, where intent\nis revisited and goals might be updated and/or added for the\nnext ﬂyby (or next set of ﬂybys).\nAt the beginning of the uplink tactical planning cycle, scien-\ntists, engineers and operators go through the process of intent', 'images': []}, {'content': 'point and identiﬁed departures required by autonomy. The\nrevised workﬂow and the supporting framework includes a\nset of key design principles and progression from uplink to\ndownlink.\nIn most missions (including for example Europa Clipper,\nPerseverance Rover), planning occurs on several different\ntime horizons, where the cycle time itself is dependent on the\nmission. Although the terms for these planning cycles are not\nconsistent across missions, we will refer to a longer cycle as', 'images': []}, {'content': 'to the projected mission progress and performance. Itera-\ntions continue, as the team decides to make minor tweaks\nor drop problematic goals entirely.\nThe team can inspect\nindividual cases or “clusters” of related cases to understand\noutcomes that might happen onboard and investigate prob-\nlematic plans that approach undesired limits. Explanation of\nthese problematic cases (either by manually inspecting logs,\nstate history, timelines and traces or by using an automated', 'images': []}, {'content': 'be redirected to a previous step or workﬂow. Generally development begins with data preparation, and continues to\nmodel selection, training, and evaluation. In the data preparation stage the model inputs should be kept in a feature store\nthat will also be accessible during the Deploy phase. A feature store is a centralized repository where you standardize\nthe deﬁnition, storage, and access of features for training and serving [34]. After evaluation the model should be', 'images': []}, {'content': 'entiﬁc observations and engineering data) must be reviewed\nin a very short time span, in order for uplink teams to have\ntime to perform all planning functions ahead of the ﬁnal\navailable uplink of the day. Further, lander missions often\ndepend on orbital relays for delivery of data to Earth, given\nthe higher bandwidth capabilities of orbiter relays compared\nto direct-to-Earth communications from the landers; this\nfurther constrains the downlink operational process timing', 'images': []}]}
-Added answer entry with content length: 460
-Number of images: 0
-Added answer entry with content length: 484
-Number of images: 0
+Why is the project being resubmitted, and what improvements have been made?
+Query results: {'Results': [{'content': 'to the projected mission progress and performance. Itera-\ntions continue, as the team decides to make minor tweaks\nor drop problematic goals entirely.\nThe team can inspect\nindividual cases or “clusters” of related cases to understand\noutcomes that might happen onboard and investigate prob-\nlematic plans that approach undesired limits. Explanation of\nthese problematic cases (either by manually inspecting logs,\nstate history, timelines and traces or by using an automated', 'images': []}, {'content': 'occur in any stage of the mission.\nUpdates, for example,\ncan come from downlink data, both at the tactical level\n(e.g. a magnetosphere model might need adjustments), or\nat the strategic level with trend and history analysis (e.g.,\nthe duration of plumes at a certain location can be better\nestimated given historical data from previous ﬂybys).\nFigure 7. Variability Deﬁnition: allows scientists,\nengineers, autonomy engineers and operators to input\nuncertainty with respect to a multitude of aspects that might', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img1.png']}, {'content': 'Progress in Aerospace Sciences 144 (2024) 100960\n20\ninvolvement and is potentially much timelier and more effective in \naddressing anomalies [167]. After immediate automated mitigation and \nrecovery measures, human operators can still implement offline inves\xad\ntigation and forensics to obtain further information on newly discovered \nissues and resolve them. Since only non-nominal situations necessitate \noperator intervention, the “human-on-the-loop” concept is promoted.', 'images': []}, {'content': 'tists, engineers and operators go through the process of intent\ncapture, starting by revisiting the goals for the next ﬂyby(s)\nbased on the downlink data and analysis.\nScientists and\nengineers then have the opportunity to make changes to the\ngoals/plan while getting instant feedback on the viability of\ntheir changes and on their impact on overall mission progress\nand performance. The viability and impact analysis here is\nbased on an initial, low ﬁdelity evaluation of possible onboard', 'images': []}, {'content': '6. Ease of Update\nThe process for updating an active model can vary between the various platforms. For CPUs and GPUs, the process\nusually embraces conventional and robust methods of swapping over runtime control to a new model. This usually\nresults in minimal down time and allows for automatic fallback in the event of a failed update. FPGAs on the other hand\nrequire the logic fabric to be re-ﬂashed which requires the hardware to go oﬄine during the update process. The fabric', 'images': []}]}
 Added answer entry with content length: 473
 Number of images: 0
-Added answer entry with content length: 472
+Added answer entry with content length: 510
+Number of images: 2
+Added answer entry with content length: 473
 Number of images: 0
-Added answer entry with content length: 475
+Added answer entry with content length: 488
+Number of images: 0
+Added answer entry with content length: 479
 Number of images: 0
 
 Querying for question: 
-How does this resubmission improve upon the original proposal?
-Query results: {'Results': [{'content': 'Section 4.3, it concerns the randomness level of the initial conditions; while, in\nother cases, may be related to the selection of a simplified or realistic subset of\nthem. In the end, what matters is that in one case, the state space possibilities\nare reduced with respect to the other. In Fig. 6.1, the distinction between the\nmethodology steps (1 to 4) and the feedback steps is highlighted by the different\nlines’ colours: black and red. This wants to underline the adaptability of this', 'images': []}, {'content': 'aspects, but, among all, is mainly described by the network architecture and\nthe state-action spaces; on the other side, the reward formulation embeds the\nmission objectives. Once these two, or more if needed, cases have been selected,\nthe workflow proposes to train and test them with different levels of initial\nconditions. This difference can be interpreted in distinct ways: for instance, in\nSection 4.3, it concerns the randomness level of the initial conditions; while, in', 'images': []}, {'content': 'and Sec. VII concludes this paper.\nII.\nDeep Reinforcement Learning\nThe goal of deep reinforcement learning is to discover a policy, πθ,\nrepresented by a feedforward neural network and whose subscript\ndenotes it has trainable weights θ that maps states, x ∈X, to actions,\na ∈A that, when executed, maximize the expected rewards received\nover one episode. (In reinforcement learning, one simulation is called\none episode.) The action is obtained by feeding the state to the policy,\nas follows:\na \x01 πθ\x03x\x04\n(1)', 'images': []}, {'content': '• A is the space of all possible actions a that can be taken in all the states\nof the environment;\n• R is the reward function, guiding the action selection to maximize it;\n• T (sk+1| sk, ak) is the transition function governing the probability of\nmoving from one state to the next, given the current state and action at\ntimestep k;\n• Ωis the space of possible observations;\n• O (ok+1| ak, sk+1) is the probability of making a particular observation,\ntaking an action that leads to a particular new state.', 'images': []}, {'content': '6.1.\nOverview of the Methodology\nthese four coupled models are trained with two different types of random initial\nconditions following the strategy outlined in the Fig. 6.1. In this way, it was\npossible to understand how the agent is robust and adaptable. In Section 4.4\nthe same kind of analysis has been followed to increase again the complexity\nof the model, in this case in terms of state and action space.\nFigure 6.1: Schematization of the proposed workflow methodology.\n141', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\phdthesis_brandonisio_v3.pdf_page163_img0.png']}]}
-Added answer entry with content length: 490
+What are the key differences between the original submission and the current one?
+Query results: {'Results': [{'content': 'Available: https://www.gaisler.com/doc/gr712rc-datasheet.pdf \n[19] “GR740 Quad-Processor LEON4FT System-on-Chip Overview.” CAES Gaisler. \n[Online]. Available: https://www.gaisler.com/doc/gr740/GR740-OVERVIEW.pdf \n[20] “RAD5545™ SpaceVPX Single-Board Computer.” BAE Systems. [Online]. Available: \nhttps://www.baesystems.com/en-\nmedia/uploadFile/20210404061759/1434594567983.pdf \n[21] Lovelly, Tyler M., and Alan D. George. "Comparative analysis of present and future', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page11_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page11_img1.png']}, {'content': 'that the 35% of the new generation is formed by individuals picked from the old \ngeneration. The selected value ensures a balance between effectiveness of the \nsearch (lower elite population fractions) and survival of fit individuals (higher elite \npopulation fractions). \n8.5 Results \nThe investigation on methodologies to improve and automate the space mission and \nspacecraft design is a vast effort, branching out into many fields of science and', 'images': []}, {'content': 'across those meetings, though we also encouraged them to\nbreak into reﬂective discussions about the process and tools\nalong the way. We also collected feedback in the form of\nsurvey responses in a journal they used for each day. We\nhad implemented the tools as click-through prototypes only,\nand user study facilitator needed to “drive” the tools at the the\noperator’s request. This dynamic evoked dialogue about what\ninformation they needed to see and why.\n14', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page14_img0.png']}, {'content': 'Date: 07/23 \nRevision: v4 \n \n \n \nAs Published in “Precision Medicine for Long and Safe Permanence of Humans in Space” \n7 \nCurrent AI Technology in Space \n \n \n \nFigure 2: Comparison of Computational Density Per Watt of State-of-the-art Rad-Hard Processors (BAE RAD750, \nCAES Gaisler GR740, and BAE RAD5545) and Commercial Embedded Processors (Xilinx Zynq 7020 and Intel \nCore i7-4610Y) [21] \nLikewise, the power efficiency of rad-hard processors, which can be estimated from the', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page7_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page7_img1.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page7_img2.png']}, {'content': '•Dataset augmentation \n•Super-resolution imaging \n•Data quality enhancement  \nTable 10 \nComparison of ground and space control segment. Adapted from Ref. [279].  \nGround Control \nOn-board Control \n•CPU power available, \n•Software flexibility, \n•The testing procedure not impacting the \nmission, \n•Interactions with operators and experts in \na short loop, \n•Lower cost of software development. \n•Reactive to the environment, \n•Processing data without \ncommunication delay, \n•Reduced communication to ground,', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\1-s2.0-S0376042123000763-main.pdf_page22_img0.png']}]}
+Added answer entry with content length: 465
+Number of images: 2
+Added answer entry with content length: 449
 Number of images: 0
-Added answer entry with content length: 478
-Number of images: 0
-Added answer entry with content length: 505
-Number of images: 0
-Added answer entry with content length: 504
-Number of images: 0
-Added answer entry with content length: 479
+Added answer entry with content length: 460
+Number of images: 1
+Added answer entry with content length: 477
+Number of images: 3
+Added answer entry with content length: 506
 Number of images: 1
 Completed answers for section: Comment on resubmission (if applicable)
 Number of answers: 25
@@ -372,17 +372,17 @@ Number of answers: 25
 Processing section: Bibliography (max. 15 references, not included in character limits)
 
 Querying for question: 
-What are the key sources that have informed the research project?
-Query results: {'Results': [{'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': 'supporting the safety of orbiting spacecraft and debris mitigation [7].\nWith an exponentially growing number of space-related practical ser-\nvices and research interests, a new focus has been appropriately made\non the defense and protection of spacecraft to ensure the continued\nﬂow of information (Cukurtepe and Akgun [13], Jah [20], Brown, Cot-\nton, et al. [7], Contant-Jorgenson, Lála, Schrogl, et al. [11]). A few', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\2018_4_Infantolino.pdf_page14_img0.png']}, {'content': 'to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow', 'images': []}, {'content': "address \nthe \nchallenges \nand \nopportunities in integrating AI in the field of space \nexploration. \nFurthermore, the selected papers were scrutinized to \nextract relevant data and insights that could \ncontribute to the research paper. This involved \nidentifying statistical information, experimental \nresults, case studies, and any other data that \nsupported the findings and conclusions of the \nrespective studies. The extracted data and insights \nwere then used to strengthen the research paper's", 'images': []}, {'content': 'shubham-rasal.medium.com/howisro-uses-machine-learning-25be23430713, (accessed 28.08.22). \n[7] T. S. Lee (N.D.). In-situ Resource Utilization (ISRU) Construction Technology for Moon and Mars. International \nMoonBase Summit. Retrieved from: https://moonbasesummit.com/wpcontent/uploads/Tai_Sik.pdf.\nSpaceOps-2023, ID # 116   \nPage 5 of 5', 'images': []}]}
+What are the key sources that have informed this research project?
+Query results: {'Results': [{'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': 'to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow', 'images': []}, {'content': "address \nthe \nchallenges \nand \nopportunities in integrating AI in the field of space \nexploration. \nFurthermore, the selected papers were scrutinized to \nextract relevant data and insights that could \ncontribute to the research paper. This involved \nidentifying statistical information, experimental \nresults, case studies, and any other data that \nsupported the findings and conclusions of the \nrespective studies. The extracted data and insights \nwere then used to strengthen the research paper's", 'images': []}, {'content': 'supporting the safety of orbiting spacecraft and debris mitigation [7].\nWith an exponentially growing number of space-related practical ser-\nvices and research interests, a new focus has been appropriately made\non the defense and protection of spacecraft to ensure the continued\nﬂow of information (Cukurtepe and Akgun [13], Jah [20], Brown, Cot-\nton, et al. [7], Contant-Jorgenson, Lála, Schrogl, et al. [11]). A few', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\2018_4_Infantolino.pdf_page14_img0.png']}, {'content': 'spacecraft design is a vast effort, branching out into many fields of science and \nengineering. The proposed research obtains several important results towards the \ndesign of space missions that provide higher utility to the stakeholders, by being \nmore optimized and not bound to the stagnancy of conservative mission design \napproaches. These improvements are obtained through innovations in three aspects \nof the mission design: \n• exploring the alternative concepts thoroughly and more efficiently', 'images': []}]}
 Added answer entry with content length: 463
 Number of images: 0
-Added answer entry with content length: 417
-Number of images: 1
 Added answer entry with content length: 505
 Number of images: 0
 Added answer entry with content length: 498
 Number of images: 0
-Added answer entry with content length: 336
+Added answer entry with content length: 417
+Number of images: 1
+Added answer entry with content length: 501
 Number of images: 0
 
 Querying for question: 
@@ -414,32 +414,32 @@ Added answer entry with content length: 485
 Number of images: 0
 
 Querying for question: 
-How do the references reflect the current state of research in the field?
-Query results: {'Results': [{'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': 'capabilities of rad-hard processors and a bias in the scientific community that \ninsisted on having all the scientific data downlinked to ground. There is still a strong \nopinion that science data might not be processed as thoroughly on board as it is on \nground, and that science data users often process the same data multiple times using \ndifferent algorithms, calibrations and so on, even years later after the data were \ndownlinked.', 'images': []}, {'content': 'of the workﬂow. Additionally, high-quality datasets for these environments can be diﬃcult to come by and relying on\naugmentation or simulations potentially introduces unknown vulnerabilities. Questions, such as "How will the model\nrespond to novel inputs?" or "Under what conditions do we expect the outputs of the model to be valid?" need to be\naddressed. The performance of an AI/ML system will naturally degrade over time whether due to data drift, changes in', 'images': []}, {'content': 'occur in any stage of the mission.\nUpdates, for example,\ncan come from downlink data, both at the tactical level\n(e.g. a magnetosphere model might need adjustments), or\nat the strategic level with trend and history analysis (e.g.,\nthe duration of plumes at a certain location can be better\nestimated given historical data from previous ﬂybys).\nFigure 7. Variability Deﬁnition: allows scientists,\nengineers, autonomy engineers and operators to input\nuncertainty with respect to a multitude of aspects that might', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page9_img1.png']}, {'content': 'Reference to a \n \n conference/congress\n \n  p  aper\n \n :  \n[3] M. Sayata, R. Sammavuthichaib, H. S. Wijeratnec, S. Jitklongsubd, P. Ghatolee, B. I. Lof Quantum technology,\nartificial intelligence, machine learning, and additive manufacturing in the AsiaPacific for Mars exploration, 73 rd \nInternational Astronautical Congress (IAC), Paris, France, 18-22 September 2022. Page 1 of 8.\n[4] R. D. Braun and R. M. Manning (2006). "Mars exploration entry, descent and landing challenges." In 2006 IEEE', 'images': []}]}
-Added answer entry with content length: 463
-Number of images: 0
-Added answer entry with content length: 437
-Number of images: 0
-Added answer entry with content length: 462
-Number of images: 0
-Added answer entry with content length: 510
-Number of images: 2
-Added answer entry with content length: 495
-Number of images: 0
-
-Querying for question: 
-What gaps in the existing literature does this project aim to address?
-Query results: {'Results': [{'content': 'to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow', 'images': []}, {'content': 'inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large', 'images': []}, {'content': 'the ground (in this project we use the MEXEC planning and\nexecution system [4]) in nominal (or most likely) scenarios\nto check for constraint violations. With respect to impact, the\nsmall progress bars to the right of the campaign title shows\nthe impact of that goal in the overall mission compared to the\noriginal set of goals.\nIt is important to note that these tools are domain depen-\ndent, meaning that they are designed to support science goal\nspeciﬁcation for a multi-ﬂyby mission for a single spacecraft.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img1.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\castano-etal-AERO2022.pdf_page8_img2.png']}, {'content': "address \nthe \nchallenges \nand \nopportunities in integrating AI in the field of space \nexploration. \nFurthermore, the selected papers were scrutinized to \nextract relevant data and insights that could \ncontribute to the research paper. This involved \nidentifying statistical information, experimental \nresults, case studies, and any other data that \nsupported the findings and conclusions of the \nrespective studies. The extracted data and insights \nwere then used to strengthen the research paper's", 'images': []}, {'content': 'spacecraft design is a vast effort, branching out into many fields of science and \nengineering. The proposed research obtains several important results towards the \ndesign of space missions that provide higher utility to the stakeholders, by being \nmore optimized and not bound to the stagnancy of conservative mission design \napproaches. These improvements are obtained through innovations in three aspects \nof the mission design: \n• exploring the alternative concepts thoroughly and more efficiently', 'images': []}]}
+Are there any seminal works or authors that have significantly influenced the project?
+Query results: {'Results': [{'content': 'to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow', 'images': []}, {'content': 'Whitehead’s formal analysis of propositional logic and Turing’s theory of \ncomputation. Further works by McCulloch and Pitts on the field of network learning \nintroduced a simple rule to update the connections between neurons, the Hebbian \nlearning, which has been a pioneering model for years. The exemplar work in the \nearly developments of AI were made by Alan Turing, that introduced the Turing \nTest, machine learning, genetic algorithms, and reinforcement learning concepts.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\141488550.pdf_page77_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\141488550.pdf_page77_img1.png']}, {'content': 'Despite this tormented start, AI is now unmistakeably recognized as one of the most \nprominent fields in CS: it is therefore useful to recall all the key steps in the \nevolution of the field. \n1943-1955, the Preludium \nThe two professional figures widely recognized as the fathers of AI were the \nneuroscientist Warrant McCulloch and the mathematician Walter Pitts, with a work \nthat is now indicated as the ancestor of AI: the proposal of a model of artificial', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\141488550.pdf_page77_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\141488550.pdf_page77_img1.png']}, {'content': 'able to solve more extended and vast problems as well, the difference being only in \nthe hardware that was running the algorithm. Scaling up to larger problems was \nbelieved to be only an issue of more performing hardware and memories. \nFurthermore, intrinsic limitations on the basic structures of earliest AI development \nlimited the performances of those algorithms. \n1969-1979, a New Hope \nThe research carried on in the previous years was focused on what have been called', 'images': []}, {'content': 'inspired by an already established or newly proposed mission concept. This narrow\nscope allows our survey to be concise while remaining relevant for the interested\npractitioner.\nMany times, results obtained by one AI technology for a speciﬁc task appear\nstunning, but perform rather poorly when transferred to a different task, which often\nhappens when its strength and weaknesses are not thoroughly understood. However,\ndue to the pioneering works of many researchers combined with the results of large', 'images': []}]}
 Added answer entry with content length: 505
+Number of images: 0
+Added answer entry with content length: 480
+Number of images: 2
+Added answer entry with content length: 461
+Number of images: 2
+Added answer entry with content length: 476
 Number of images: 0
 Added answer entry with content length: 503
 Number of images: 0
-Added answer entry with content length: 511
-Number of images: 3
-Added answer entry with content length: 498
+
+Querying for question: 
+How does the bibliography reflect the current state of research in the field?
+Query results: {'Results': [{'content': 'of the main research topic, corroborating its procedures and techniques. All\nthree cases confirmed the good quality of the proposed methodology, achieving\nsatisfying performance levels in each of the applications’ frameworks.\nWorking for a Ph.D. is not an easy road, it is a path full of stops, sudden turns,\nbacks out and comebacks, and surely does not exhaustively explore a research\nfield. But certainly, it helps pushing towards the accomplishment of evermore', 'images': []}, {'content': '1.3.\nBibliographic Disclaimer\n1.3\nBibliographic Disclaimer\nThe work presented in this thesis is the result of three years of Ph.D., during\nwhich different research activities were carried out. When the opportunity\nmade it possible, the products of these activities have been published either in\nconference or journal papers. As such, some parts of this thesis have already\nbeen presented in previous articles, reported in the following list.\n• Andrea Brandonisio, Lorenzo Capra and Michèle Lavagna.\nDeep', 'images': []}, {'content': 'to the reader. We decided to give importance to work published in the last few years,\navoiding the historical perspective of older and well-established fundamental works.\nAdditionally, we decided to avoid publications which are strongly speculative in\nnature: while visionary ideas are interesting to follow, an important requirement for\nthis survey was a well-motivated applicability for a space-related challenge, ideally\ninspired by an already established or newly proposed mission concept. This narrow', 'images': []}, {'content': 'Available: https://www.gaisler.com/doc/gr712rc-datasheet.pdf \n[19] “GR740 Quad-Processor LEON4FT System-on-Chip Overview.” CAES Gaisler. \n[Online]. Available: https://www.gaisler.com/doc/gr740/GR740-OVERVIEW.pdf \n[20] “RAD5545™ SpaceVPX Single-Board Computer.” BAE Systems. [Online]. Available: \nhttps://www.baesystems.com/en-\nmedia/uploadFile/20210404061759/1434594567983.pdf \n[21] Lovelly, Tyler M., and Alan D. George. "Comparative analysis of present and future', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page11_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\Current Technology in Space v4 Briefing.pdf_page11_img1.png']}, {'content': 'October 2020; published online 14 January 2021. Copyright © 2020 by The\nAuthors. PublishedbytheAmerican InstituteofAeronauticsandAstronautics,\nInc., with permission. All requests for copying and permission to reprint\nshould be submitted to CCC at www.copyright.com; employ the eISSN\n1533-6794 to initiate your request. See also AIAA Rights and Permissions\nwww.aiaa.org/randp.\n*Ph.D. Candidate, Department of Mechanical and Aerospace Engineering,\n1125 Colonel By Drive. Student Member AIAA.', 'images': ['C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JSR-2021.pdf_page1_img0.png', 'C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\sagan_workflow\\spaider_agent_temp\\retrieved_images\\JSR-2021.pdf_page1_img1.png']}]}
+Added answer entry with content length: 463
 Number of images: 0
-Added answer entry with content length: 501
+Added answer entry with content length: 503
 Number of images: 0
+Added answer entry with content length: 505
+Number of images: 0
+Added answer entry with content length: 465
+Number of images: 2
+Added answer entry with content length: 489
+Number of images: 2
 Completed answers for section: Bibliography (max. 15 references, not included in character limits)
 Number of answers: 25
 
@@ -514,42 +514,42 @@ Answer 6 - Content length: 489
 Number of images: 1
 Answer 7 - Content length: 469
 Number of images: 0
-Answer 8 - Content length: 510
+Answer 8 - Content length: 511
+Number of images: 3
+Answer 9 - Content length: 470
 Number of images: 0
-Answer 9 - Content length: 508
+Answer 10 - Content length: 510
 Number of images: 0
-Answer 10 - Content length: 503
+Answer 11 - Content length: 463
+Number of images: 0
+Answer 12 - Content length: 512
+Number of images: 0
+Answer 13 - Content length: 510
+Number of images: 0
+Answer 14 - Content length: 403
 Number of images: 1
-Answer 11 - Content length: 510
+Answer 15 - Content length: 491
 Number of images: 0
-Answer 12 - Content length: 489
-Number of images: 1
-Answer 13 - Content length: 503
-Number of images: 1
-Answer 14 - Content length: 449
-Number of images: 2
-Answer 15 - Content length: 476
+Answer 16 - Content length: 463
 Number of images: 0
-Answer 16 - Content length: 483
+Answer 17 - Content length: 491
 Number of images: 0
-Answer 17 - Content length: 263
-Number of images: 0
-Answer 18 - Content length: 461
+Answer 18 - Content length: 503
 Number of images: 0
 Answer 19 - Content length: 502
 Number of images: 0
-Answer 20 - Content length: 488
+Answer 20 - Content length: 449
 Number of images: 0
 Answer 21 - Content length: 462
 Number of images: 0
-Answer 22 - Content length: 463
+Answer 22 - Content length: 495
 Number of images: 0
-Answer 23 - Content length: 503
+Answer 23 - Content length: 510
 Number of images: 0
-Answer 24 - Content length: 510
+Answer 24 - Content length: 459
 Number of images: 0
-Answer 25 - Content length: 495
-Number of images: 1
+Answer 25 - Content length: 504
+Number of images: 3
 
 Section: Expected Outcomes / Impact
 Number of answers: 25
@@ -563,16 +563,16 @@ Answer 4 - Content length: 490
 Number of images: 2
 Answer 5 - Content length: 460
 Number of images: 2
-Answer 6 - Content length: 486
-Number of images: 2
-Answer 7 - Content length: 481
+Answer 6 - Content length: 503
 Number of images: 0
-Answer 8 - Content length: 503
+Answer 7 - Content length: 486
+Number of images: 2
+Answer 8 - Content length: 463
 Number of images: 0
 Answer 9 - Content length: 502
 Number of images: 0
-Answer 10 - Content length: 511
-Number of images: 3
+Answer 10 - Content length: 512
+Number of images: 0
 Answer 11 - Content length: 498
 Number of images: 0
 Answer 12 - Content length: 492
@@ -593,15 +593,15 @@ Answer 19 - Content length: 455
 Number of images: 0
 Answer 20 - Content length: 467
 Number of images: 0
-Answer 21 - Content length: 481
+Answer 21 - Content length: 478
 Number of images: 0
 Answer 22 - Content length: 481
-Number of images: 2
-Answer 23 - Content length: 510
 Number of images: 0
-Answer 24 - Content length: 490
+Answer 23 - Content length: 470
 Number of images: 0
-Answer 25 - Content length: 477
+Answer 24 - Content length: 489
+Number of images: 1
+Answer 25 - Content length: 486
 Number of images: 2
 
 Section: Explanations on the management of ethical issues and data protection
@@ -614,47 +614,47 @@ Answer 3 - Content length: 455
 Number of images: 1
 Answer 4 - Content length: 507
 Number of images: 0
-Answer 5 - Content length: 504
-Number of images: 1
+Answer 5 - Content length: 485
+Number of images: 2
 Answer 6 - Content length: 487
 Number of images: 1
 Answer 7 - Content length: 472
 Number of images: 0
 Answer 8 - Content length: 507
 Number of images: 0
-Answer 9 - Content length: 508
+Answer 9 - Content length: 502
+Number of images: 1
+Answer 10 - Content length: 463
 Number of images: 0
-Answer 10 - Content length: 455
-Number of images: 1
-Answer 11 - Content length: 507
+Answer 11 - Content length: 447
 Number of images: 0
-Answer 12 - Content length: 503
+Answer 12 - Content length: 404
 Number of images: 1
-Answer 13 - Content length: 404
+Answer 13 - Content length: 466
 Number of images: 1
-Answer 14 - Content length: 486
+Answer 14 - Content length: 503
+Number of images: 1
+Answer 15 - Content length: 489
+Number of images: 1
+Answer 16 - Content length: 492
 Number of images: 0
-Answer 15 - Content length: 487
-Number of images: 1
-Answer 16 - Content length: 512
+Answer 17 - Content length: 469
 Number of images: 0
-Answer 17 - Content length: 460
-Number of images: 1
-Answer 18 - Content length: 479
+Answer 18 - Content length: 509
 Number of images: 0
-Answer 19 - Content length: 487
-Number of images: 1
+Answer 19 - Content length: 429
+Number of images: 0
 Answer 20 - Content length: 489
-Number of images: 2
+Number of images: 0
 Answer 21 - Content length: 487
 Number of images: 1
-Answer 22 - Content length: 482
+Answer 22 - Content length: 485
+Number of images: 2
+Answer 23 - Content length: 455
 Number of images: 1
-Answer 23 - Content length: 497
+Answer 24 - Content length: 494
 Number of images: 0
-Answer 24 - Content length: 472
-Number of images: 0
-Answer 25 - Content length: 479
+Answer 25 - Content length: 495
 Number of images: 0
 
 Section: Comment on resubmission (if applicable)
@@ -689,38 +689,38 @@ Answer 14 - Content length: 510
 Number of images: 2
 Answer 15 - Content length: 463
 Number of images: 0
-Answer 16 - Content length: 460
+Answer 16 - Content length: 473
 Number of images: 0
-Answer 17 - Content length: 484
-Number of images: 0
+Answer 17 - Content length: 510
+Number of images: 2
 Answer 18 - Content length: 473
 Number of images: 0
-Answer 19 - Content length: 472
+Answer 19 - Content length: 488
 Number of images: 0
-Answer 20 - Content length: 475
+Answer 20 - Content length: 479
 Number of images: 0
-Answer 21 - Content length: 490
+Answer 21 - Content length: 465
+Number of images: 2
+Answer 22 - Content length: 449
 Number of images: 0
-Answer 22 - Content length: 478
-Number of images: 0
-Answer 23 - Content length: 505
-Number of images: 0
-Answer 24 - Content length: 504
-Number of images: 0
-Answer 25 - Content length: 479
+Answer 23 - Content length: 460
+Number of images: 1
+Answer 24 - Content length: 477
+Number of images: 3
+Answer 25 - Content length: 506
 Number of images: 1
 
 Section: Bibliography (max. 15 references, not included in character limits)
 Number of answers: 25
 Answer 1 - Content length: 463
 Number of images: 0
-Answer 2 - Content length: 417
+Answer 2 - Content length: 505
+Number of images: 0
+Answer 3 - Content length: 498
+Number of images: 0
+Answer 4 - Content length: 417
 Number of images: 1
-Answer 3 - Content length: 505
-Number of images: 0
-Answer 4 - Content length: 498
-Number of images: 0
-Answer 5 - Content length: 336
+Answer 5 - Content length: 501
 Number of images: 0
 Answer 6 - Content length: 483
 Number of images: 0
@@ -742,23 +742,23 @@ Answer 14 - Content length: 438
 Number of images: 0
 Answer 15 - Content length: 485
 Number of images: 0
-Answer 16 - Content length: 463
+Answer 16 - Content length: 505
 Number of images: 0
-Answer 17 - Content length: 437
-Number of images: 0
-Answer 18 - Content length: 462
-Number of images: 0
-Answer 19 - Content length: 510
+Answer 17 - Content length: 480
 Number of images: 2
-Answer 20 - Content length: 495
+Answer 18 - Content length: 461
+Number of images: 2
+Answer 19 - Content length: 476
 Number of images: 0
-Answer 21 - Content length: 505
+Answer 20 - Content length: 503
+Number of images: 0
+Answer 21 - Content length: 463
 Number of images: 0
 Answer 22 - Content length: 503
 Number of images: 0
-Answer 23 - Content length: 511
-Number of images: 3
-Answer 24 - Content length: 498
+Answer 23 - Content length: 505
 Number of images: 0
-Answer 25 - Content length: 501
-Number of images: 0
+Answer 24 - Content length: 465
+Number of images: 2
+Answer 25 - Content length: 489
+Number of images: 2

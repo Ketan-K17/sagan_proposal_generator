@@ -1,7 +1,7 @@
 {
   "metadata": {
     "node_name": "prompt_parser",
-    "timestamp": "2024-12-16 02:37:41.013870"
+    "timestamp": "2024-12-16 18:33:18.894781"
   },
   "state": {
     "messages": [
@@ -38,7 +38,7 @@
             }
           },
           "model_name": "gpt-4o-2024-08-06",
-          "system_fingerprint": "fp_a79d8dac1f",
+          "system_fingerprint": "fp_9faba9f038",
           "finish_reason": "stop",
           "logprobs": null
         }
