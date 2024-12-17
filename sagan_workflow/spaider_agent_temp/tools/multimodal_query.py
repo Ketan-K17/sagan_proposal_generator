@@ -1,4 +1,5 @@
 import os
+import sys
 import torch
 import json
 import fitz  # PyMuPDF
@@ -8,7 +9,18 @@ from langchain.embeddings.base import Embeddings
 from typing import List, Dict, Union
 from PIL import Image
 import io
-from spaider_agent_temp.config import RETRIEVED_IMAGES_PATH, VECTOR_DB_PATHS, INPUT_PDF_FOLDER
+from pathlib import Path
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SPAIDER_AGENT_TEMP = CURRENT_FILE.parent.parent
+CONFIG_PATH = SPAIDER_AGENT_TEMP / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 
 class NomicVisionQuerier(Embeddings):
@@ -21,7 +33,7 @@ class NomicVisionQuerier(Embeddings):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         print(f"Using device: {self.device}")
         # Update to use the config path
-        self.images_dir = str(RETRIEVED_IMAGES_PATH)
+        self.images_dir = str(config.RETRIEVED_IMAGES_PATH)
         os.makedirs(self.images_dir, exist_ok=True)
 
     def search_similar(self, persist_dir: str, query: str, k: int = 5) -> Dict[str, List[Dict[str, Union[str, List[str]]]]]:
@@ -38,7 +50,7 @@ class NomicVisionQuerier(Embeddings):
                 source = metadata.get("source", "Unknown source")
                 if source != "Unknown source":
                     pdf_filename = os.path.basename(source)
-                    source = str(INPUT_PDF_FOLDER / pdf_filename)
+                    source = str(config.INPUT_PDF_FOLDER / pdf_filename)
                 page_num = metadata.get("page", 0)
                 images = self.extract_images_from_pdf(source, page_num)
                 formatted_results.append({"content": content, "images": images, "score": score})
@@ -66,7 +78,7 @@ class NomicVisionQuerier(Embeddings):
                     image_filename = f"{os.path.basename(pdf_path)}_page{page_num}_img{img_idx}.png"
                     
                     # Save to the actual path from config
-                    image_path = RETRIEVED_IMAGES_PATH / image_filename
+                    image_path = config.RETRIEVED_IMAGES_PATH / image_filename
 
                     # Save image
                     with open(image_path, "wb") as img_file:
@@ -124,7 +136,7 @@ class NomicVisionQuerier(Embeddings):
             source = metadata.get("source", "Unknown source")
             if source != "Unknown source":
                 pdf_filename = os.path.basename(source)
-                source = str(INPUT_PDF_FOLDER / pdf_filename)
+                source = str(config.INPUT_PDF_FOLDER / pdf_filename)
             page_num = metadata.get("page", 0)
 
             # Extract images
@@ -146,7 +158,7 @@ if __name__ == "__main__":
 
     # Query the vector database
     results = querier.multimodal_vectordb_query(
-        persist_dir=str(VECTOR_DB_PATHS['astro_ai2']),
+        persist_dir=str(config.VECTOR_DB_PATHS['astro_ai2']),
         query="Show me comparison of Computational Density Per Watt of State-of-the-art Rad-Hard Processors",
         k=10,
     )

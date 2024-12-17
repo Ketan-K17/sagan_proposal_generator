@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "spaider-agent-temp"
+name = "sagan_multimodal"
 version = "0.1.0"
 description = ""
 authors = ["Ketan Kunkalikar <ketankunkalikar33@gmail.com>"]
@@ -38,6 +38,7 @@ pylatex = "^1.4.2"
 certifi = "^2024.8.30"
 requests = {extras = ["security"], version = "^2.32.3"}
 pyopenssl = "^24.3.0"
+importlib = "^1.0.4"
 
 
 [tool.poetry.group.dev.dependencies]

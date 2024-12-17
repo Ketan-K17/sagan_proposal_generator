@@ -551,6 +551,7 @@ def generation_node(state: dict) -> dict:
 def formatting_node(state: State) -> State:
     print(f"{Fore.LIGHTYELLOW_EX}################ FORMATTING NODE BEGIN #################")
     try:
+        base_output_path = OUTPUT_PDF_PATH
         figures_path = Path(OUTPUT_PDF_PATH / "figures")
         figures_path.mkdir(parents=True, exist_ok=True)
 
@@ -568,21 +569,13 @@ def formatting_node(state: State) -> State:
         # Split template into parts
         doc_start = template_content.split('\\begin{document}')[0]
         
-        # Add margin settings to the preamble
-        margin_settings = """
-% Margin settings
-\\usepackage[left=3.5cm,right=3.5cm,top=3cm,bottom=3cm]{geometry}
-
-% Additional spacing settings for better readability
-\\setlength{\\parskip}{6pt}  % Space between paragraphs
-\\setlength{\\parindent}{0pt}  % Remove paragraph indentation
-"""
+       
         # Insert margin settings before \begin{document}
         if '\\begin{document}' in doc_start:
             doc_parts = doc_start.split('\\begin{document}')
-            doc_start = doc_parts[0] + margin_settings
+            doc_start = doc_parts[0] 
         else:
-            doc_start = doc_start + margin_settings
+            doc_start = doc_start 
 
         doc_end = '\\end{document}' #template_content.split()[1]
         
@@ -620,7 +613,15 @@ def formatting_node(state: State) -> State:
         # Add generated sections directly from the draft
         if generated_sections:
             for section_header, section_content in generated_sections.items():
-                document_content.append(section_content)  # Add the section content
+
+                # Strip 'latex\n' from the beginning and any trailing quotes or backticks
+                cleaned_content = section_content
+                if cleaned_content.startswith('```latex\n'):
+                    cleaned_content = cleaned_content[8:]  # Remove ```latex\n
+                if cleaned_content.endswith('```'):
+                    cleaned_content = cleaned_content[:-3]  # Remove trailing ```
+                    
+                document_content.append(cleaned_content)  # Add the section content
         
         document_content.append(doc_end)
         
@@ -628,31 +629,45 @@ def formatting_node(state: State) -> State:
         final_latex_document = '\n'.join(document_content)
 
         ########################################################################################
-
-        # Write out the LaTeX file
-        tex_path = OUTPUT_PDF_PATH / "output.tex"
-        tex_path.write_text(final_latex_document, encoding='utf-8')
-        print(f"LaTeX file written to: {tex_path}")
+        
 
         # Store final latex content in state
         state["draft"] = final_latex_document
 
-        # Attempt to compile PDF
-        success = latex_to_pdf(str(tex_path), str(OUTPUT_PDF_PATH))
-        if not success:
-            print("pdflatex failed, trying pandoc...")
-            success = latex_to_pdf_pandoc(str(tex_path), str(OUTPUT_PDF_PATH))
+        # Define the output path
+        output_path = Path(OUTPUT_PDF_PATH / "output.tex")
+
+        # Write the final LaTeX document to the specified output path
+        output_path.write_text(final_latex_document, encoding='utf-8')
+        print(f"LaTeX file written to: {output_path}")
+
+        os.environ["TOKENIZERS_PARALLELISM"] = "false"
         
-        if success:
-            pdf_path = OUTPUT_PDF_PATH / "output.pdf"
-            if pdf_path.exists():
-                print(f"Successfully generated PDF at: {pdf_path}")
+        # Attempt to compile PDF using pdflatex
+        original_dir = os.getcwd()
+        os.chdir(str(OUTPUT_PDF_PATH))
+        try:
+            # Use pdflatex command to generate the PDF
+            result = os.system("pdflatex output.tex")
+            
+            if result == 0:
+                success = True
+
             else:
-                print("PDF generation failed - file not found")
                 success = False
-        else:
-            print("PDF generation failed")
-       
+
+            if success:
+                pdf_path = OUTPUT_PDF_PATH / "output.pdf"
+                if pdf_path.exists():
+                    print(f"Successfully generated PDF found at: {pdf_path}")
+                else:
+                    print("Generated PDF file not found")
+                    success = False
+            else:
+                print("PDF generation failed")
+        finally:
+            os.chdir(original_dir)
+
 
     except Exception as e:
         print(f"Error in formatting node: {e}")

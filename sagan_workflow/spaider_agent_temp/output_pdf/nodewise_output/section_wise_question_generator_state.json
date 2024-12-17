@@ -1,7 +1,7 @@
 {
   "metadata": {
     "node_name": "section_wise_question_generator",
-    "timestamp": "2024-12-17 16:54:52.706742"
+    "timestamp": "2024-12-17 22:30:46.398179"
   },
   "state": {
     "messages": [
@@ -17,15 +17,15 @@
       },
       {
         "type": "ai",
-        "content": "{\n  \"project_title\": \"Autonomous AI Agents for Spacecraft Operations\",\n  \"project_description\": \"This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\"\n}",
+        "content": "{\n  \"project_title\": \"Autonomous AI Agents for Spacecraft Operations\",\n  \"project_description\": \"This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and reliable system integration. Challenges to address include ensuring AI reliability and effective decision-making. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\"\n}",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 175,
+            "completion_tokens": 168,
             "prompt_tokens": 361,
-            "total_tokens": 536,
+            "total_tokens": 529,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -45,20 +45,20 @@
       },
       {
         "type": "system",
-        "content": "\nGiven the project title and description, this node creates a list of questions that may help it understand the project better. The answers to these questions will then be used to create a project abstract.\n\nYou are an intelligent assistant tasked with understanding project details. Given the following project title and description, your goal is to generate a list of insightful questions that will help clarify the project's objectives, scope, and requirements. \n\nProject Title: Autonomous AI Agents for Spacecraft Operations\n\nProject Description: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\n\nPlease ensure that your questions are open-ended and encourage detailed responses. Focus on aspects such as the project's goals, target audience, potential challenges, and any specific features or functionalities that are important to consider. \n\nNote that you MUST provide atleast one question. The upper limit is 10 questions.\n\n",
+        "content": "\nGiven the project title and description, this node creates a list of questions that may help it understand the project better. The answers to these questions will then be used to create a project abstract.\n\nYou are an intelligent assistant tasked with understanding project details. Given the following project title and description, your goal is to generate a list of insightful questions that will help clarify the project's objectives, scope, and requirements. \n\nProject Title: Autonomous AI Agents for Spacecraft Operations\n\nProject Description: This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and reliable system integration. Challenges to address include ensuring AI reliability and effective decision-making. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\n\nPlease ensure that your questions are open-ended and encourage detailed responses. Focus on aspects such as the project's goals, target audience, potential challenges, and any specific features or functionalities that are important to consider. \n\nNote that you MUST provide atleast one question. The upper limit is 10 questions.\n\n",
         "additional_kwargs": {}
       },
       {
         "type": "ai",
-        "content": "1. What specific spacecraft operations within GNC and AOCS are the AI agents expected to autonomously manage and control?\n2. How will the AI agents facilitate real-time communication with spacecraft systems, and what technologies will be employed to achieve this?\n3. What are the key technical innovations anticipated in the development of these AI agents, and how will they improve current spacecraft operations?\n4. In what ways will the AI agents reduce human involvement in mission-critical tasks, and what are the expected benefits of this reduction?\n5. How will the project address the challenge of AI reliability, particularly in the context of space missions where failure is not an option?\n6. What strategies will be implemented to ensure effective decision-making by AI agents under conditions of uncertainty?\n7. How will the integration of AI agents with existing spacecraft systems be managed to ensure seamless operation?\n8. What are the potential risks associated with deploying autonomous AI agents in spacecraft operations, and how will these risks be mitigated?\n9. How will the success of the AI agents be measured in terms of enhancing mission efficiency and safety?\n10. What long-term impacts do you foresee this project having on the space exploration industry, particularly in terms of operational costs and mission outcomes?",
+        "content": "1. What specific spacecraft operations within GNC and AOCS are the autonomous AI agents expected to manage and control?\n2. How will the AI agents facilitate real-time communication with spacecraft systems, and what technologies will be employed to achieve this?\n3. What are the key technical innovations anticipated in the development of these AI agents, and how will they address decision-making under uncertainty?\n4. In what ways will the AI agents reduce human involvement in mission-critical tasks, and what measures will be taken to ensure minimal human error?\n5. What are the primary challenges in ensuring AI reliability, and how does the proposal plan to address these challenges?\n6. How will the integration of AI agents into existing spacecraft systems be managed, and what are the potential integration challenges?\n7. What specific safety enhancements are expected from the implementation of autonomous AI agents in spacecraft operations?\n8. How will the success of the AI agents in enhancing mission efficiency and reducing operational costs be measured and evaluated?\n9. What potential risks are associated with the deployment of autonomous AI agents in space exploration, and how will these risks be mitigated?\n10. How will the development of these AI agents impact the future of the space exploration industry, and what are the long-term goals of this research proposal?",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 245,
-            "prompt_tokens": 850,
-            "total_tokens": 1095,
+            "completion_tokens": 252,
+            "prompt_tokens": 836,
+            "total_tokens": 1088,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -78,20 +78,20 @@
       },
       {
         "type": "system",
-        "content": "\nYou are an intelligent assistant responsible for generating answers to specific questions, and creating a summary of the project based on the answers. Your task is to query the provided vector store, answer each of the provided questions, and create an abstract of the project based on the answers.\n\nQuestions to Answer:\n['What are the primary goals of integrating AI agents into spacecraft operations?', 'How do current spacecraft operations handle GNC and AOCS, and what limitations exist?', 'What are the potential challenges in achieving real-time communication between AI agents and spacecraft systems?', 'How do AI agents differ from traditional control systems in spacecraft operations?', 'What measures are in place to ensure the safety and reliability of AI agents in space missions?', 'How will AI agents be tested and validated before deployment in actual space missions?', 'What role will human operators play once AI agents are integrated into spacecraft operations?', 'How will the project ensure that AI agents can adapt to unexpected situations in space?', 'What are the ethical considerations of using AI in autonomous spacecraft operations?', 'How will the project contribute to the broader field of AI and autonomous systems beyond space exploration?']\n\nFor each question, follow these steps:\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\ingest_data\\astroaidb\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"<question>\"\n2. provide a comprehensive answer to each question using the information obtained from the vector database.\n3. Finally, create an abstract of the project based on the answers to all the questions.\n\nMake sure to use the tool for EVERY question.\nAlso, Make sure the abstract is 250-300 words long.\n",
+        "content": "\nYou are an intelligent assistant responsible for generating answers to specific questions, and creating a summary of the project based on the answers. Your task is to query the provided vector store, answer each of the provided questions, and create an abstract of the project based on the answers.\n\nQuestions to Answer:\n['What specific spacecraft operations within GNC and AOCS are the autonomous AI agents expected to manage and control?', 'How will the AI agents facilitate real-time communication with spacecraft systems, and what technologies will be employed to achieve this?', 'What are the key technical innovations anticipated in the development of these AI agents, and how will they address decision-making under uncertainty?', 'In what ways will the AI agents reduce human involvement in mission-critical tasks, and what measures will be taken to ensure minimal human error?', 'What are the primary challenges in ensuring AI reliability, and how does the proposal plan to address these challenges?', 'How will the integration of AI agents into existing spacecraft systems be managed, and what are the potential integration challenges?', 'What specific safety enhancements are expected from the implementation of autonomous AI agents in spacecraft operations?', 'How will the success of the AI agents in enhancing mission efficiency and reducing operational costs be measured and evaluated?', 'What potential risks are associated with the deployment of autonomous AI agents in space exploration, and how will these risks be mitigated?', 'How will the development of these AI agents impact the future of the space exploration industry, and what are the long-term goals of this research proposal?']\n\nFor each question, follow these steps:\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\UniLu\\Spaider\\sagan\\sagan_multimodal_sumit\\sagan_multimodal\\ingest_data\\astroaidb\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"<question>\"\n2. provide a comprehensive answer to each question using the information obtained from the vector database.\n3. Finally, create an abstract of the project based on the answers to all the questions.\n\nMake sure to use the tool for EVERY question.\nAlso, Make sure the abstract is 250-300 words long.\n",
         "additional_kwargs": {}
       },
       {
         "type": "ai",
-        "content": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into spacecraft systems, enhancing autonomy, efficiency, and scientific output. AI agents are designed to reduce reliance on human intervention, enabling spacecraft to adapt to changing conditions, make real-time decisions, and perform complex maneuvers with precision. This autonomy is crucial for interplanetary missions, where communication delays hinder real-time control. The project addresses challenges in Guidance, Navigation, and Control (GNC) systems, ensuring AI agents can handle unforeseen situations and optimize mission trajectories. Safety and reliability are prioritized through robust, fault-tolerant AI systems, with a focus on ethical considerations such as transparency and accountability. Ground testing and validation frameworks are essential to ensure AI systems' reliability before deployment. Human operators will maintain supervisory control, ensuring trusted autonomy and effective human-machine interaction. The project not only advances space exploration but also contributes to the broader field of AI and autonomous systems, offering insights into mission design, planning, and Earth observation.",
+        "content": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize spacecraft operations by integrating advanced AI technologies into guidance, navigation, and control (GNC) systems, as well as attitude and orbit control systems (AOCS). These AI agents are designed to enhance mission autonomy, enabling real-time decision-making and adaptation to unforeseen circumstances with minimal human intervention. Key innovations include high-integrity algorithms for autonomous mission planning, intelligent docking, and fault-tolerant systems to ensure stability and collision avoidance. The project addresses challenges in AI reliability, emphasizing explainability, safety, and legal compliance to mitigate risks associated with autonomous operations. By reducing human involvement in mission-critical tasks, AI agents aim to increase mission efficiency, reduce operational costs, and enable more ambitious exploration missions. The integration of AI into existing spacecraft systems will be managed through iterative algorithms and robust communication technologies, ensuring seamless human-machine interactions. The project envisions a future where AI-driven spacecraft operations enhance scientific returns, support human missions, and facilitate the exploration of new frontiers in space.",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 206,
-            "prompt_tokens": 3331,
-            "total_tokens": 3537,
+            "completion_tokens": 207,
+            "prompt_tokens": 3033,
+            "total_tokens": 3240,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -111,7 +111,7 @@
       },
       {
         "type": "system",
-        "content": "\nYou are an intelligent assistant designed to extract section/topic names from a template response document. Your task is to query the provided vector store to identify and list the sections or topics that need to be filled in the template.\n\nDo the following steps: \n\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\ingest_data\\fnr_template_db\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"Give me a comprehensive list of sections/topics that are present in this template document.\"\n\n2. Extract the section/topic names from the response provided by the 'query_chromadb' tool.\n\nEnsure that the extracted sections/topics are relevant to the query and accurately reflect the content of the template document.\n",
+        "content": "\nYou are an intelligent assistant designed to extract section/topic names from a template response document. Your task is to query the provided vector store to identify and list the sections or topics that need to be filled in the template.\n\nDo the following steps: \n\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\UniLu\\Spaider\\sagan\\sagan_multimodal_sumit\\sagan_multimodal\\ingest_data\\fnr_template_db\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"Give me a comprehensive list of sections/topics that are present in this template document.\"\n\n2. Extract the section/topic names from the response provided by the 'query_chromadb' tool.\n\nEnsure that the extracted sections/topics are relevant to the query and accurately reflect the content of the template document.\n",
         "additional_kwargs": {}
       },
       {
@@ -120,9 +120,9 @@
         "additional_kwargs": {
           "tool_calls": [
             {
-              "id": "call_I1I9nehdh8Zxv32hYDK81LXM",
+              "id": "call_2OkrfO1sbltqyVhjguGV44rI",
               "function": {
-                "arguments": "{\"chroma_db_path\":\"C:\\\\Users\\\\ketan\\\\Desktop\\\\SPAIDER-SPACE\\\\sagan_multimodal\\\\ingest_data\\\\fnr_template_db\",\"llm_name\":\"sentence-transformers/all-MiniLM-L6-v2\",\"user_query\":\"Give me a comprehensive list of sections/topics that are present in this template document.\"}",
+                "arguments": "{\"chroma_db_path\":\"C:\\\\UniLu\\\\Spaider\\\\sagan\\\\sagan_multimodal_sumit\\\\sagan_multimodal\\\\ingest_data\\\\fnr_template_db\",\"llm_name\":\"sentence-transformers/all-MiniLM-L6-v2\",\"user_query\":\"Give me a comprehensive list of sections/topics that are present in this template document.\"}",
                 "name": "query_chromadb"
               },
               "type": "function"
@@ -132,9 +132,9 @@
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 82,
-            "prompt_tokens": 1960,
-            "total_tokens": 2042,
+            "completion_tokens": 87,
+            "prompt_tokens": 2036,
+            "total_tokens": 2123,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -147,7 +147,7 @@
             }
           },
           "model_name": "gpt-4o-2024-08-06",
-          "system_fingerprint": "fp_a79d8dac1f",
+          "system_fingerprint": "fp_9faba9f038",
           "finish_reason": "tool_calls",
           "logprobs": null
         }
@@ -159,7 +159,7 @@
       },
       {
         "type": "system",
-        "content": "\nYou are an intelligent assistant designed to extract section/topic names from a template response document. Your task is to query the provided vector store to identify and list the sections or topics that need to be filled in the template.\n\nDo the following steps: \n\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\Users\\ketan\\Desktop\\SPAIDER-SPACE\\sagan_multimodal\\ingest_data\\fnr_template_db\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"Give me a comprehensive list of sections/topics that are present in this template document.\"\n\n2. Extract the section/topic names from the response provided by the 'query_chromadb' tool.\n\nEnsure that the extracted sections/topics are relevant to the query and accurately reflect the content of the template document.\n",
+        "content": "\nYou are an intelligent assistant designed to extract section/topic names from a template response document. Your task is to query the provided vector store to identify and list the sections or topics that need to be filled in the template.\n\nDo the following steps: \n\n1. Use the 'query_chromadb' tool to query the vector store, ALWAYS using the following arguments.\n    - chroma_db_path: C:\\UniLu\\Spaider\\sagan\\sagan_multimodal_sumit\\sagan_multimodal\\ingest_data\\fnr_template_db\n    - llm_name: sentence-transformers/all-MiniLM-L6-v2\n    - user_query: \"Give me a comprehensive list of sections/topics that are present in this template document.\"\n\n2. Extract the section/topic names from the response provided by the 'query_chromadb' tool.\n\nEnsure that the extracted sections/topics are relevant to the query and accurately reflect the content of the template document.\n",
         "additional_kwargs": {}
       },
       {
@@ -171,8 +171,8 @@
         "response_metadata": {
           "token_usage": {
             "completion_tokens": 86,
-            "prompt_tokens": 2866,
-            "total_tokens": 2952,
+            "prompt_tokens": 2950,
+            "total_tokens": 3036,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -181,11 +181,11 @@
             },
             "prompt_tokens_details": {
               "audio_tokens": 0,
-              "cached_tokens": 1920
+              "cached_tokens": 2048
             }
           },
           "model_name": "gpt-4o-2024-08-06",
-          "system_fingerprint": "fp_a79d8dac1f",
+          "system_fingerprint": "fp_9faba9f038",
           "finish_reason": "stop",
           "logprobs": null
         }
@@ -197,15 +197,15 @@
       },
       {
         "type": "ai",
-        "content": "{\n    \"Introduction: Originality of the Research Project\": [\n        \"What is the central theme or idea of the research project?\",\n        \"How does this project differ from existing research in the field?\",\n        \"What unique contributions does this project aim to make to the field?\",\n        \"Why is this research project important at this time?\",\n        \"What inspired the development of this research project?\"\n    ],\n    \"Hypothesis, Research Objectives and Envisaged Methodology\": [\n        \"What is the primary hypothesis or hypotheses of the research?\",\n        \"What are the specific objectives that the research aims to achieve?\",\n        \"What methodologies will be employed to conduct the research?\",\n        \"How will the chosen methodologies help in achieving the research objectives?\",\n        \"What are the anticipated challenges in implementing the methodologies, and how will they be addressed?\"\n    ],\n    \"Expected Outcomes / Impact\": [\n        \"What are the expected outcomes of the research project?\",\n        \"How will the outcomes of this research impact the field or industry?\",\n        \"What are the potential long-term benefits of the research findings?\",\n        \"How will the research outcomes contribute to societal or technological advancements?\",\n        \"What metrics will be used to measure the success of the research outcomes?\"\n    ],\n    \"Explanations on the management of ethical issues and data protection\": [\n        \"What ethical considerations are associated with the research project?\",\n        \"How will ethical issues be managed throughout the research process?\",\n        \"What measures will be taken to ensure data protection and privacy?\",\n        \"How will informed consent be obtained from participants, if applicable?\",\n        \"What protocols are in place to handle any ethical breaches or data protection issues?\"\n    ],\n    \"Comment on resubmission (if applicable)\": [\n        \"What changes have been made to the project since the last submission?\",\n        \"How have previous feedback and reviews been addressed in this resubmission?\",\n        \"What new data or findings have been included in the resubmission?\",\n        \"What lessons were learned from the initial submission that have informed this resubmission?\",\n        \"How does this resubmission improve upon the original proposal?\"\n    ],\n    \"Bibliography (max. 15 references, not included in character limits)\": [\n        \"What are the key sources that have informed the research project?\",\n        \"How do the selected references support the research hypothesis and objectives?\",\n        \"What criteria were used to select the references included in the bibliography?\",\n        \"Are there any seminal works or authors that are particularly influential in this research?\",\n        \"How does the bibliography reflect the current state of research in the field?\"\n    ]\n}",
+        "content": "{\n    \"Introduction: Originality of the Research Project\": [\n        \"What is the central research question or problem that your project addresses?\",\n        \"How does your research project differ from existing studies in the field?\",\n        \"What is the significance of your research in advancing knowledge or technology?\",\n        \"What innovative approaches or methodologies will you employ in your research?\",\n        \"How does your project contribute to the broader field or society at large?\"\n    ],\n    \"Hypothesis, Research Objectives and Envisaged Methodology\": [\n        \"What are the main hypotheses or assumptions underlying your research?\",\n        \"What specific objectives do you aim to achieve through this research project?\",\n        \"What methodologies or techniques will you use to conduct your research?\",\n        \"How will you ensure the reliability and validity of your research findings?\",\n        \"What are the key milestones and timelines for your research activities?\"\n    ],\n    \"Expected Outcomes / Impact\": [\n        \"What are the anticipated outcomes of your research project?\",\n        \"How will your research findings impact the scientific community or industry?\",\n        \"What potential applications or benefits could arise from your research?\",\n        \"How do you plan to disseminate your research findings to relevant stakeholders?\",\n        \"What measures will you take to maximize the impact of your research outcomes?\"\n    ],\n    \"Explanations on the management of ethical issues and data protection\": [\n        \"What ethical considerations are relevant to your research project?\",\n        \"How will you ensure the ethical treatment of participants or subjects in your research?\",\n        \"What data protection measures will you implement to safeguard sensitive information?\",\n        \"How will you address potential ethical dilemmas that may arise during your research?\",\n        \"What protocols will you follow to ensure compliance with ethical standards and regulations?\"\n    ],\n    \"Comment on resubmission (if applicable)\": [\n        \"What changes or improvements have been made since the last submission?\",\n        \"How have you addressed the feedback or concerns raised in the previous review?\",\n        \"What new evidence or data supports the revised submission?\",\n        \"What lessons have you learned from the previous submission process?\",\n        \"How does the resubmission strengthen the overall research proposal?\"\n    ],\n    \"Bibliography (max. 15 references, not included in character limits)\": [\n        \"What are the key sources or references that underpin your research project?\",\n        \"How do these references support the theoretical framework of your study?\",\n        \"What criteria did you use to select the references included in your bibliography?\",\n        \"How do the selected references relate to the originality of your research?\",\n        \"What gaps or limitations in the existing literature does your research address?\"\n    ]\n}",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 529,
-            "prompt_tokens": 3078,
-            "total_tokens": 3607,
+            "completion_tokens": 532,
+            "prompt_tokens": 3162,
+            "total_tokens": 3694,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -225,20 +225,20 @@
       }
     ],
     "project_title": "Autonomous AI Agents for Spacecraft Operations",
-    "project_description": "This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.",
+    "project_description": "This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and reliable system integration. Challenges to address include ensuring AI reliability and effective decision-making. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.",
     "abstract_questions": [
-      "What are the primary goals of integrating AI agents into spacecraft operations?",
-      "How do current spacecraft operations handle GNC and AOCS, and what limitations exist?",
-      "What are the potential challenges in achieving real-time communication between AI agents and spacecraft systems?",
-      "How do AI agents differ from traditional control systems in spacecraft operations?",
-      "What measures are in place to ensure the safety and reliability of AI agents in space missions?",
-      "How will AI agents be tested and validated before deployment in actual space missions?",
-      "What role will human operators play once AI agents are integrated into spacecraft operations?",
-      "How will the project ensure that AI agents can adapt to unexpected situations in space?",
-      "What are the ethical considerations of using AI in autonomous spacecraft operations?",
-      "How will the project contribute to the broader field of AI and autonomous systems beyond space exploration?"
+      "What specific spacecraft operations within GNC and AOCS are the autonomous AI agents expected to manage and control?",
+      "How will the AI agents facilitate real-time communication with spacecraft systems, and what technologies will be employed to achieve this?",
+      "What are the key technical innovations anticipated in the development of these AI agents, and how will they address decision-making under uncertainty?",
+      "In what ways will the AI agents reduce human involvement in mission-critical tasks, and what measures will be taken to ensure minimal human error?",
+      "What are the primary challenges in ensuring AI reliability, and how does the proposal plan to address these challenges?",
+      "How will the integration of AI agents into existing spacecraft systems be managed, and what are the potential integration challenges?",
+      "What specific safety enhancements are expected from the implementation of autonomous AI agents in spacecraft operations?",
+      "How will the success of the AI agents in enhancing mission efficiency and reducing operational costs be measured and evaluated?",
+      "What potential risks are associated with the deployment of autonomous AI agents in space exploration, and how will these risks be mitigated?",
+      "How will the development of these AI agents impact the future of the space exploration industry, and what are the long-term goals of this research proposal?"
     ],
-    "abstract_text": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize space exploration by integrating artificial intelligence (AI) into spacecraft systems, enhancing autonomy, efficiency, and scientific output. AI agents are designed to reduce reliance on human intervention, enabling spacecraft to adapt to changing conditions, make real-time decisions, and perform complex maneuvers with precision. This autonomy is crucial for interplanetary missions, where communication delays hinder real-time control. The project addresses challenges in Guidance, Navigation, and Control (GNC) systems, ensuring AI agents can handle unforeseen situations and optimize mission trajectories. Safety and reliability are prioritized through robust, fault-tolerant AI systems, with a focus on ethical considerations such as transparency and accountability. Ground testing and validation frameworks are essential to ensure AI systems' reliability before deployment. Human operators will maintain supervisory control, ensuring trusted autonomy and effective human-machine interaction. The project not only advances space exploration but also contributes to the broader field of AI and autonomous systems, offering insights into mission design, planning, and Earth observation.",
+    "abstract_text": "The Autonomous AI Agents for Spacecraft Operations project aims to revolutionize spacecraft operations by integrating advanced AI technologies into guidance, navigation, and control (GNC) systems, as well as attitude and orbit control systems (AOCS). These AI agents are designed to enhance mission autonomy, enabling real-time decision-making and adaptation to unforeseen circumstances with minimal human intervention. Key innovations include high-integrity algorithms for autonomous mission planning, intelligent docking, and fault-tolerant systems to ensure stability and collision avoidance. The project addresses challenges in AI reliability, emphasizing explainability, safety, and legal compliance to mitigate risks associated with autonomous operations. By reducing human involvement in mission-critical tasks, AI agents aim to increase mission efficiency, reduce operational costs, and enable more ambitious exploration missions. The integration of AI into existing spacecraft systems will be managed through iterative algorithms and robust communication technologies, ensuring seamless human-machine interactions. The project envisions a future where AI-driven spacecraft operations enhance scientific returns, support human missions, and facilitate the exploration of new frontiers in space.",
     "section_topics": [
       "Introduction: Originality of the Research Project",
       "Hypothesis, Research Objectives and Envisaged Methodology",
@@ -249,46 +249,46 @@
     ],
     "section_questions": {
       "Introduction: Originality of the Research Project": [
-        "What is the central theme or idea of the research project?",
-        "How does this project differ from existing research in the field?",
-        "What unique contributions does this project aim to make to the field?",
-        "Why is this research project important at this time?",
-        "What inspired the development of this research project?"
+        "What is the central research question or problem that your project addresses?",
+        "How does your research project differ from existing studies in the field?",
+        "What is the significance of your research in advancing knowledge or technology?",
+        "What innovative approaches or methodologies will you employ in your research?",
+        "How does your project contribute to the broader field or society at large?"
       ],
       "Hypothesis, Research Objectives and Envisaged Methodology": [
-        "What is the primary hypothesis or hypotheses of the research?",
-        "What are the specific objectives that the research aims to achieve?",
-        "What methodologies will be employed to conduct the research?",
-        "How will the chosen methodologies help in achieving the research objectives?",
-        "What are the anticipated challenges in implementing the methodologies, and how will they be addressed?"
+        "What are the main hypotheses or assumptions underlying your research?",
+        "What specific objectives do you aim to achieve through this research project?",
+        "What methodologies or techniques will you use to conduct your research?",
+        "How will you ensure the reliability and validity of your research findings?",
+        "What are the key milestones and timelines for your research activities?"
       ],
       "Expected Outcomes / Impact": [
-        "What are the expected outcomes of the research project?",
-        "How will the outcomes of this research impact the field or industry?",
-        "What are the potential long-term benefits of the research findings?",
-        "How will the research outcomes contribute to societal or technological advancements?",
-        "What metrics will be used to measure the success of the research outcomes?"
+        "What are the anticipated outcomes of your research project?",
+        "How will your research findings impact the scientific community or industry?",
+        "What potential applications or benefits could arise from your research?",
+        "How do you plan to disseminate your research findings to relevant stakeholders?",
+        "What measures will you take to maximize the impact of your research outcomes?"
       ],
       "Explanations on the management of ethical issues and data protection": [
-        "What ethical considerations are associated with the research project?",
-        "How will ethical issues be managed throughout the research process?",
-        "What measures will be taken to ensure data protection and privacy?",
-        "How will informed consent be obtained from participants, if applicable?",
-        "What protocols are in place to handle any ethical breaches or data protection issues?"
+        "What ethical considerations are relevant to your research project?",
+        "How will you ensure the ethical treatment of participants or subjects in your research?",
+        "What data protection measures will you implement to safeguard sensitive information?",
+        "How will you address potential ethical dilemmas that may arise during your research?",
+        "What protocols will you follow to ensure compliance with ethical standards and regulations?"
       ],
       "Comment on resubmission (if applicable)": [
-        "What changes have been made to the project since the last submission?",
-        "How have previous feedback and reviews been addressed in this resubmission?",
-        "What new data or findings have been included in the resubmission?",
-        "What lessons were learned from the initial submission that have informed this resubmission?",
-        "How does this resubmission improve upon the original proposal?"
+        "What changes or improvements have been made since the last submission?",
+        "How have you addressed the feedback or concerns raised in the previous review?",
+        "What new evidence or data supports the revised submission?",
+        "What lessons have you learned from the previous submission process?",
+        "How does the resubmission strengthen the overall research proposal?"
       ],
       "Bibliography (max. 15 references, not included in character limits)": [
-        "What are the key sources that have informed the research project?",
-        "How do the selected references support the research hypothesis and objectives?",
-        "What criteria were used to select the references included in the bibliography?",
-        "Are there any seminal works or authors that are particularly influential in this research?",
-        "How does the bibliography reflect the current state of research in the field?"
+        "What are the key sources or references that underpin your research project?",
+        "How do these references support the theoretical framework of your study?",
+        "What criteria did you use to select the references included in your bibliography?",
+        "How do the selected references relate to the originality of your research?",
+        "What gaps or limitations in the existing literature does your research address?"
       ]
     }
   }
