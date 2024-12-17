@@ -551,7 +551,6 @@ def generation_node(state: dict) -> dict:
 def formatting_node(state: State) -> State:
     print(f"{Fore.LIGHTYELLOW_EX}################ FORMATTING NODE BEGIN #################")
     try:
-        base_output_path = OUTPUT_PDF_PATH
         figures_path = Path(OUTPUT_PDF_PATH / "figures")
         figures_path.mkdir(parents=True, exist_ok=True)
 
@@ -631,52 +630,29 @@ def formatting_node(state: State) -> State:
         ########################################################################################
 
         # Write out the LaTeX file
-        tex_path = base_output_path / "output.tex"
+        tex_path = OUTPUT_PDF_PATH / "output.tex"
         tex_path.write_text(final_latex_document, encoding='utf-8')
         print(f"LaTeX file written to: {tex_path}")
-
-        # Attempt to compile PDF
-        original_dir = os.getcwd()
-        os.chdir(str(base_output_path))
-        try:
-            success = latex_to_pdf(str(tex_path), str(base_output_path))
-            if not success:
-                print("pdflatex failed, trying pandoc...")
-                success = latex_to_pdf_pandoc("output.tex", str(base_output_path))
-            if success:
-                pdf_path = base_output_path / "output.pdf"
-                if pdf_path.exists():
-                    print("Successfully generated PDF with abstract included")
-                    state.update({
-                        "pdf_status": "success",
-                        "pdf_path": str(pdf_path),
-                        "generation_message": "Document generated successfully"
-                    })
-                else:
-                    print("PDF generation failed - file not found")
-                    success = False
-                    state.update({
-                        "pdf_status": "failed",
-                        "error": "PDF not found after compilation"
-                    })
-            else:
-                print("PDF generation failed")
-                state.update({
-                    "pdf_status": "failed",
-                    "error": "PDF generation failed"
-                })
-        finally:
-            os.chdir(original_dir)
 
         # Store final latex content in state
         state["draft"] = final_latex_document
 
-        # Define the output path
-        output_path = Path(OUTPUT_PDF_PATH / "output.tex")
-
-        # Write the final LaTeX document to the specified output path
-        output_path.write_text(final_latex_document, encoding='utf-8')
-        print(f"LaTeX file written to: {output_path}")
+        # Attempt to compile PDF
+        success = latex_to_pdf(str(tex_path), str(OUTPUT_PDF_PATH))
+        if not success:
+            print("pdflatex failed, trying pandoc...")
+            success = latex_to_pdf_pandoc(str(tex_path), str(OUTPUT_PDF_PATH))
+        
+        if success:
+            pdf_path = OUTPUT_PDF_PATH / "output.pdf"
+            if pdf_path.exists():
+                print(f"Successfully generated PDF at: {pdf_path}")
+            else:
+                print("PDF generation failed - file not found")
+                success = False
+        else:
+            print("PDF generation failed")
+       
 
     except Exception as e:
         print(f"Error in formatting node: {e}")

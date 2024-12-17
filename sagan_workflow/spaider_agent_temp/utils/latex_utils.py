@@ -28,10 +28,12 @@ def extract_latex_and_message(full_content: str) -> Tuple[str, str]:
                 ai_message = parts[1].split("<END_OF_AI_MESSAGE>")[0].strip()
         
         latex_content = latex_content.strip()
-        if latex_content.startswith("```latex"):
-            latex_content = latex_content[7:]
-        if latex_content.endswith("```"):
-            latex_content = latex_content[:-3]
+        beginning_of_latex = "```latex\n"
+        end_of_latex = "\n```"
+        if latex_content.startswith(beginning_of_latex):
+            latex_content = latex_content[len(beginning_of_latex):]
+        if latex_content.endswith(end_of_latex):
+            latex_content = latex_content[:-len(end_of_latex)]
         
     except Exception as e:
         logging.error(f"Error processing content: {e}")
