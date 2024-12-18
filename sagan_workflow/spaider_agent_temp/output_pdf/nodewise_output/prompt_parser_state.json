@@ -1,7 +1,7 @@
 {
   "metadata": {
     "node_name": "prompt_parser",
-    "timestamp": "2024-12-17 22:28:58.634601"
+    "timestamp": "2024-12-18 22:28:05.861269"
   },
   "state": {
     "messages": [
@@ -17,15 +17,15 @@
       },
       {
         "type": "ai",
-        "content": "{\n  \"project_title\": \"Autonomous AI Agents for Spacecraft Operations\",\n  \"project_description\": \"This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and reliable system integration. Challenges to address include ensuring AI reliability and effective decision-making. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\"\n}",
+        "content": "{\n  \"project_title\": \"Autonomous AI Agents for Spacecraft Operations\",\n  \"project_description\": \"This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs.\"\n}",
         "additional_kwargs": {
           "refusal": null
         },
         "response_metadata": {
           "token_usage": {
-            "completion_tokens": 168,
+            "completion_tokens": 175,
             "prompt_tokens": 361,
-            "total_tokens": 529,
+            "total_tokens": 536,
             "completion_tokens_details": {
               "accepted_prediction_tokens": 0,
               "audio_tokens": 0,
@@ -45,6 +45,6 @@
       }
     ],
     "project_title": "Autonomous AI Agents for Spacecraft Operations",
-    "project_description": "This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing overall mission efficiency and safety. The proposal outlines expected technical innovations, such as advanced AI algorithms for decision-making under uncertainty and reliable system integration. Challenges to address include ensuring AI reliability and effective decision-making. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs."
+    "project_description": "This research proposal focuses on developing autonomous AI agents for spacecraft operations, specifically in Guidance, Navigation, and Control (GNC) and Attitude and Orbit Control Systems (AOCS), as well as remote sensing. The vision is to create AI-driven agents capable of real-time communication with spacecraft systems and autonomously managing and controlling spacecraft functions. The objectives include reducing human involvement in mission-critical tasks, minimizing human error, and enhancing mission efficiency and safety. The proposal outlines expected technical innovations, such as improved AI reliability, decision-making under uncertainty, and seamless system integration. Challenges to address include ensuring AI reliability, effective decision-making under uncertainty, and successful system integration. The potential impacts on the space exploration industry include increased mission efficiency, safety, and reduced operational costs."
   }
 }

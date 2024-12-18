@@ -1,89 +1,89 @@
 PLAN NODE OUTPUT:
 {
     "Introduction: Originality of the Research Project": [
-        "Discuss the multi-objective nature of spacecraft design problems and the concept of the Pareto front.",
-        "Explain the need for design engineering assistants to support decision-making in complex engineering problems.",
-        "Highlight the vast effort required in spacecraft design, involving multiple fields of science and engineering.",
-        "Describe the innovations in mission design that provide higher utility to stakeholders.",
-        "Emphasize the importance of exploring alternative concepts thoroughly and efficiently."
+        "Discuss the current state of AI in spacecraft operations and its limitations.",
+        "Introduce the concept of autonomous AI agents and their potential to revolutionize space exploration.",
+        "Highlight the unique aspects of the research project, such as real-time decision-making and fault tolerance.",
+        "Explain the significance of integrating AI and ML in spacecraft to enhance autonomy and efficiency.",
+        "Outline the project's focus on reducing communication delays and increasing mission precision."
     ],
     "Hypothesis, Research Objectives and Envisaged Methodology": [
-        "Outline the hypotheses related to AI integration in spacecraft operations.",
-        "Define the research objectives, focusing on autonomous mission planning and intelligent docking.",
-        "Describe the methodology, including the use of models for spacecraft and environment inference.",
-        "Discuss the types of uncertainties and inference engines used in the research.",
-        "Highlight the importance of machine learning techniques and prior knowledge in the research."
+        "State the hypothesis that AI agents can significantly improve spacecraft operations.",
+        "Define the primary research objectives, including enhancing decision-making capabilities and fault tolerance.",
+        "Describe the methodology for integrating AI and ML into spacecraft systems.",
+        "Explain the process of training and validating AI models for space environments.",
+        "Discuss the role of collaborations with partners in advancing AI technologies for space missions."
     ],
     "Expected Outcomes / Impact": [
-        "Predict the impact of AI integration on mission efficiency and operational costs.",
-        "Discuss the potential for AI to enable more ambitious exploration missions.",
-        "Explain how AI-driven operations can enhance scientific returns and support human missions.",
-        "Highlight the role of simulations in providing a comprehensive view of mission progress.",
-        "Address the challenges and opportunities AI presents in space exploration."
+        "Predict the potential outcomes of implementing AI agents in spacecraft operations.",
+        "Discuss the expected improvements in mission precision and autonomy.",
+        "Highlight the impact on reducing human intervention and communication delays.",
+        "Explain how the project could facilitate scientific advancements and exploration initiatives.",
+        "Discuss the broader implications for space exploration and technology development."
     ],
     "Explanations on the management of ethical issues and data protection": [
-        "Discuss the ethical and legal challenges associated with AI in space systems.",
-        "Highlight the importance of transparent decision-making and minimizing bias in AI systems.",
-        "Explain the guidelines for trustworthy AI, including ethical purpose and technical robustness.",
-        "Address the concerns related to data privacy and the use of large datasets in AI systems.",
-        "Discuss the need for cybersecurity measures to protect sensitive information in space operations."
+        "Identify the ethical considerations related to AI decision-making in space.",
+        "Discuss the importance of data privacy and cybersecurity in AI systems.",
+        "Explain the measures taken to ensure AI systems are aligned with ethical guidelines.",
+        "Describe the processes for continuous validation and certification of AI models.",
+        "Highlight the importance of transparency and accountability in AI deployment."
     ],
     "Comment on resubmission (if applicable)": [
-        "Provide a summary of the revisions made in the current version of the research project.",
-        "Highlight any new data or insights that have been incorporated since the last submission.",
-        "Discuss any changes in the methodology or research objectives based on feedback.",
-        "Explain how the revisions address previous concerns or criticisms.",
-        "Outline the expected improvements in the research outcomes due to the revisions."
+        "Provide a summary of the changes made in the resubmission.",
+        "Highlight any new data or findings included in the revised submission.",
+        "Discuss feedback received from previous reviews and how it was addressed.",
+        "Explain any methodological adjustments or improvements made.",
+        "Outline the expected impact of the revisions on the overall research project."
     ],
     "Bibliography (max. 15 references, not included in character limits)": [
-        "List the key references that support the research project, focusing on recent publications.",
-        "Include references that provide foundational knowledge in AI and spacecraft operations.",
-        "Highlight studies that have successfully applied AI techniques in space exploration.",
-        "Include references that discuss the ethical and legal considerations of AI in space.",
-        "Ensure the bibliography is concise and relevant to the research objectives."
+        "List key references that support the research project's objectives and methodology.",
+        "Include seminal works on AI and ML in space exploration.",
+        "Reference recent studies that highlight advancements in autonomous spacecraft operations.",
+        "Cite sources that discuss ethical considerations and data protection in AI systems.",
+        "Ensure the bibliography is concise and relevant to the research project's focus."
     ]
 }
 
 Final plan structure:
 
 Introduction: Originality of the Research Project:
-  - Discuss the multi-objective nature of spacecraft design problems and the concept of the Pareto front.
-  - Explain the need for design engineering assistants to support decision-making in complex engineering problems.
-  - Highlight the vast effort required in spacecraft design, involving multiple fields of science and engineering.
-  - Describe the innovations in mission design that provide higher utility to stakeholders.
-  - Emphasize the importance of exploring alternative concepts thoroughly and efficiently.
+  - Discuss the current state of AI in spacecraft operations and its limitations.
+  - Introduce the concept of autonomous AI agents and their potential to revolutionize space exploration.
+  - Highlight the unique aspects of the research project, such as real-time decision-making and fault tolerance.
+  - Explain the significance of integrating AI and ML in spacecraft to enhance autonomy and efficiency.
+  - Outline the project's focus on reducing communication delays and increasing mission precision.
 
 Hypothesis, Research Objectives and Envisaged Methodology:
-  - Outline the hypotheses related to AI integration in spacecraft operations.
-  - Define the research objectives, focusing on autonomous mission planning and intelligent docking.
-  - Describe the methodology, including the use of models for spacecraft and environment inference.
-  - Discuss the types of uncertainties and inference engines used in the research.
-  - Highlight the importance of machine learning techniques and prior knowledge in the research.
+  - State the hypothesis that AI agents can significantly improve spacecraft operations.
+  - Define the primary research objectives, including enhancing decision-making capabilities and fault tolerance.
+  - Describe the methodology for integrating AI and ML into spacecraft systems.
+  - Explain the process of training and validating AI models for space environments.
+  - Discuss the role of collaborations with partners in advancing AI technologies for space missions.
 
 Expected Outcomes / Impact:
-  - Predict the impact of AI integration on mission efficiency and operational costs.
-  - Discuss the potential for AI to enable more ambitious exploration missions.
-  - Explain how AI-driven operations can enhance scientific returns and support human missions.
-  - Highlight the role of simulations in providing a comprehensive view of mission progress.
-  - Address the challenges and opportunities AI presents in space exploration.
+  - Predict the potential outcomes of implementing AI agents in spacecraft operations.
+  - Discuss the expected improvements in mission precision and autonomy.
+  - Highlight the impact on reducing human intervention and communication delays.
+  - Explain how the project could facilitate scientific advancements and exploration initiatives.
+  - Discuss the broader implications for space exploration and technology development.
 
 Explanations on the management of ethical issues and data protection:
-  - Discuss the ethical and legal challenges associated with AI in space systems.
-  - Highlight the importance of transparent decision-making and minimizing bias in AI systems.
-  - Explain the guidelines for trustworthy AI, including ethical purpose and technical robustness.
-  - Address the concerns related to data privacy and the use of large datasets in AI systems.
-  - Discuss the need for cybersecurity measures to protect sensitive information in space operations.
+  - Identify the ethical considerations related to AI decision-making in space.
+  - Discuss the importance of data privacy and cybersecurity in AI systems.
+  - Explain the measures taken to ensure AI systems are aligned with ethical guidelines.
+  - Describe the processes for continuous validation and certification of AI models.
+  - Highlight the importance of transparency and accountability in AI deployment.
 
 Comment on resubmission (if applicable):
-  - Provide a summary of the revisions made in the current version of the research project.
-  - Highlight any new data or insights that have been incorporated since the last submission.
-  - Discuss any changes in the methodology or research objectives based on feedback.
-  - Explain how the revisions address previous concerns or criticisms.
-  - Outline the expected improvements in the research outcomes due to the revisions.
+  - Provide a summary of the changes made in the resubmission.
+  - Highlight any new data or findings included in the revised submission.
+  - Discuss feedback received from previous reviews and how it was addressed.
+  - Explain any methodological adjustments or improvements made.
+  - Outline the expected impact of the revisions on the overall research project.
 
 Bibliography (max. 15 references, not included in character limits):
-  - List the key references that support the research project, focusing on recent publications.
-  - Include references that provide foundational knowledge in AI and spacecraft operations.
-  - Highlight studies that have successfully applied AI techniques in space exploration.
-  - Include references that discuss the ethical and legal considerations of AI in space.
-  - Ensure the bibliography is concise and relevant to the research objectives.
+  - List key references that support the research project's objectives and methodology.
+  - Include seminal works on AI and ML in space exploration.
+  - Reference recent studies that highlight advancements in autonomous spacecraft operations.
+  - Cite sources that discuss ethical considerations and data protection in AI systems.
+  - Ensure the bibliography is concise and relevant to the research project's focus.

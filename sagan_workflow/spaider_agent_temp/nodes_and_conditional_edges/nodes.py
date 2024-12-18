@@ -600,8 +600,6 @@ def formatting_node(state: State) -> State:
         # plan = state.get("plan", "")
         
         # Retrieve required fields from state
-        project_title = state.get("project_title", "Research Project")
-        project_abstract = state.get("abstract_text", "No abstract provided.")
         generated_sections = state.get("generated_sections", {})
 
         # Build document content
@@ -625,29 +623,24 @@ def formatting_node(state: State) -> State:
         
         document_content.append(doc_end)
         
-        # Combine all parts into final content
         final_latex_document = '\n'.join(document_content)
-
-        ########################################################################################
-        
-
-        # Store final latex content in state
         state["draft"] = final_latex_document
-
-        # Define the output path
-        output_path = Path(OUTPUT_PDF_PATH / "output.tex")
-
-        # Write the final LaTeX document to the specified output path
+        
+        
+        output_path = Path(OUTPUT_PDF_PATH / "output.tex") # writing latex doc to output.tex
         output_path.write_text(final_latex_document, encoding='utf-8')
         print(f"LaTeX file written to: {output_path}")
 
         os.environ["TOKENIZERS_PARALLELISM"] = "false"
         
-        # Attempt to compile PDF using pdflatex
         original_dir = os.getcwd()
         os.chdir(str(OUTPUT_PDF_PATH))
+        
+        # creating output.md from output.tex
+        os.system("pandoc -s output.tex -o output.md")
+
+        # creating output.pdf from output.tex (by first using pdflatex, and if that fails, pandoc)
         try:
-            # Use pdflatex command to generate the PDF
             result = os.system("pdflatex output.tex")
             
             if result == 0:
