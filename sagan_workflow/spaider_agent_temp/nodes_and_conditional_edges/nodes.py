@@ -13,6 +13,7 @@ from prompts.prompts import *
 from models.chatgroq import BuildChatGroq, BuildChatOpenAI
 from config import *
 from .node_utils import save_state_for_testing, copy_figures
+from utils.latex_to_markdown import create_markdown_pipeline
 
 '''IMPORT ALL TOOLS HERE AND CREATE LIST OF TOOLS TO BE PASSED TO THE AGENT.'''
 from tools.script_executor import run_script
@@ -640,6 +641,19 @@ def formatting_node(state: State) -> State:
         # Write the final LaTeX document to the specified output path
         output_path.write_text(final_latex_document, encoding='utf-8')
         print(f"LaTeX file written to: {output_path}")
+
+        # Create and use the LaTeX to Markdown converter
+        latex_to_md = create_markdown_pipeline()
+        conversion_result = latex_to_md.convert_latex_to_markdown(
+            str(output_path),
+            output_dir=str(OUTPUT_PDF_PATH)
+        )
+
+        if conversion_result["success"]:
+            print(f"Successfully created Markdown file at: {conversion_result['markdown_path']}")
+            state["markdown_path"] = conversion_result["markdown_path"]
+        else:
+            print(f"Failed to convert to Markdown: {conversion_result.get('error', 'Unknown error')}")
 
         os.environ["TOKENIZERS_PARALLELISM"] = "false"
         
