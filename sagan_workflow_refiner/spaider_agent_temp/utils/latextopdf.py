@@ -601,14 +601,14 @@ class LaTeXPipeline:
             output_dir = os.path.abspath(output_dir)
             
             # Ensure the .tex file exists
-            if not os.path.exists(tex_file_path):
-                state["error_message"] = f"LaTeX file not found: {tex_file_path}"
-                return state
+            # if not os.path.exists(tex_file_path):
+            #     state["error_message"] = f"LaTeX file not found: {tex_file_path}"
+            #     return state
             
-            # Create output directory
-            if not self._create_directories(output_dir):
-                state["error_message"] = f"Failed to create output directory: {output_dir}"
-                return state
+            # # Create output directory
+            # if not self._create_directories(output_dir):
+            #     state["error_message"] = f"Failed to create output directory: {output_dir}"
+            #     return state
             
             # Compile the document
             base_name = os.path.splitext(os.path.basename(tex_file_path))[0]
@@ -616,7 +616,8 @@ class LaTeXPipeline:
             
             try:
                 # First attempt with pdflatex
-                self.logger.info("Attempting compilation with pdflatex...")
+                print("Attempting compilation with pdflatex...")
+                # self.logger.info("Attempting compilation with pdflatex...")
                 subprocess.run(
                     [
                         "pdflatex",
@@ -634,17 +635,21 @@ class LaTeXPipeline:
                 if os.path.exists(pdf_path):
                     state["success"] = True
                     state["pdf_path"] = pdf_path
-                    self.logger.info(f"PDF generated successfully: {pdf_path}")
+                    print(f"PDF generated successfully: {pdf_path}")
+                    # self.logger.info(f"PDF generated successfully: {pdf_path}")
                     return state
                     
             except subprocess.CalledProcessError as e:
-                self.logger.warning(f"pdflatex compilation failed: {e.stderr}")
+                print(f"pdflatex compilation failed: {e.stderr}")
+                # self.logger.warning(f"pdflatex compilation failed: {e.stderr}")
             except Exception as e:
-                self.logger.warning(f"Error during pdflatex compilation: {str(e)}")
+                print(f"Error during pdflatex compilation: {str(e)}")
+                # self.logger.warning(f"Error during pdflatex compilation: {str(e)}")
             
             # If pdflatex failed, try latexmk
             try:
-                self.logger.info("Attempting compilation with latexmk...")
+                print("Attempting compilation with latexmk...")
+                # self.logger.info("Attempting compilation with latexmk...")
                 subprocess.run(
                     [
                         "latexmk",
@@ -662,21 +667,25 @@ class LaTeXPipeline:
                 if os.path.exists(pdf_path):
                     state["success"] = True
                     state["pdf_path"] = pdf_path
-                    self.logger.info(f"PDF generated successfully: {pdf_path}")
+                    print(f"PDF generated successfully: {pdf_path}")
+                    # self.logger.info(f"PDF generated successfully: {pdf_path}")
                     return state
                     
             except subprocess.CalledProcessError as e:
                 error_msg = f"LaTeX compilation failed: {e.stderr}"
                 state["error_message"] = error_msg
-                self.logger.error(error_msg)
+                print(error_msg)
+                # self.logger.error(error_msg)
             except Exception as e:
                 error_msg = f"Unexpected error during compilation: {str(e)}"
                 state["error_message"] = error_msg
-                self.logger.error(error_msg)
+                print(error_msg)
+                # self.logger.error(error_msg)
             
         except Exception as e:
             state["error_message"] = f"Process error: {str(e)}"
-            self.logger.error(f"Process failed: {str(e)}")
+            print(f"Process failed: {str(e)}")
+            # self.logger.error(f"Process failed: {str(e)}")
         
         return state
 

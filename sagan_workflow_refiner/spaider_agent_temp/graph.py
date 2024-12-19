@@ -26,8 +26,9 @@ def create_graph():
     builder.add_node("formatter", formatter)
     builder.add_node("research_tools_node", research_tools_node)  
     # builder.add_node("human_input_node", lambda state: human_input_node(state, session_id))
-    builder.add_node("human_input_node", human_input_node)
-    builder.add_node("save_changes", save_changes)
+    # added below comment for publish api to work
+    # builder.add_node("human_input_node", human_input_node)
+    # builder.add_node("save_changes", save_changes)
 
     # ADD EDGES TO THE GRAPH
     builder.add_edge(START, "research_query_generator")
@@ -41,17 +42,19 @@ def create_graph():
         }
     )
     builder.add_edge("research_tools_node", "research_query_answerer")
-    builder.add_edge("formatter", "human_input_node")
-    builder.add_edge("save_changes", END)
+    builder.add_edge("formatter", END)
+    # added below comment for publish api to work
+    # builder.add_edge("formatter", "human_input_node")
+    # builder.add_edge("save_changes", END)
     # builder.add_edge("human_input_node", END)
-    builder.add_conditional_edges(
-    "human_input_node",  # The node to evaluate
-    routing_function,    # The routing function
-    {                 # Mapping of outputs to next nodes
-        "yes": "save_changes",
-        "no": "formatter"
-    }
-)
+#     builder.add_conditional_edges(
+#     "human_input_node",  # The node to evaluate
+#     routing_function,    # The routing function
+#     {                 # Mapping of outputs to next nodes
+#         "yes": "save_changes",
+#         "no": "formatter"
+#     }
+# )
     return builder
 
 def compile_graph(builder):
