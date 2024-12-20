@@ -27,7 +27,7 @@ NODEWISE_OUTPUT_PATH = OUTPUT_PDF_PATH / "nodewise_output"
 CONSOLIDATED_TEMPLATE_PATH = OUTPUT_BASE / "utils" / "consolidated_template"
 
 # Environment file
-ENV_PATH = PROJECT_ROOT / ".env"
+ENV_PATH = SAGAN_ROOT / ".env"
 
 MODEL_SETTINGS = {
     'NOMIC_EMBED': "nomic-ai/nomic-embed-text-v1",
