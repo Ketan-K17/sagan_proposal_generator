@@ -632,18 +632,18 @@ def formatting_node(state: State) -> State:
         output_path.write_text(final_latex_document, encoding='utf-8')
         print(f"LaTeX file written to: {output_path}")
 
-        # Create and use the LaTeX to Markdown converter
-        latex_to_md = create_markdown_pipeline()
-        conversion_result = latex_to_md.convert_latex_to_markdown(
-            str(output_path),
-            output_dir=str(OUTPUT_PDF_PATH)
-        )
+        # # Create and use the LaTeX to Markdown converter
+        # latex_to_md = create_markdown_pipeline()
+        # conversion_result = latex_to_md.convert_latex_to_markdown(
+        #     str(output_path),
+        #     output_dir=str(OUTPUT_PDF_PATH)
+        # )
 
-        if conversion_result["success"]:
-            print(f"Successfully created Markdown file at: {conversion_result['markdown_path']}")
-            state["markdown_path"] = conversion_result["markdown_path"]
-        else:
-            print(f"Failed to convert to Markdown: {conversion_result.get('error', 'Unknown error')}")
+        # if conversion_result["success"]:
+        #     print(f"Successfully created Markdown file at: {conversion_result['markdown_path']}")
+        #     state["markdown_path"] = conversion_result["markdown_path"]
+        # else:
+        #     print(f"Failed to convert to Markdown: {conversion_result.get('error', 'Unknown error')}")
 
         os.environ["TOKENIZERS_PARALLELISM"] = "false"
         
