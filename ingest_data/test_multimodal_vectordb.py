@@ -4,8 +4,21 @@ from rich.panel import Panel
 import json
 import os
 import shutil
-from sagan_workflow.spaider_agent_temp.config import VECTOR_DB_PATHS
 from datetime import datetime
+
+from pathlib import Path
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
+
 
 def test_multimodal_query():
     console = Console()
@@ -24,7 +37,7 @@ def test_multimodal_query():
     os.makedirs(results_dir, exist_ok=True)
     
     # Database path
-    db_path = VECTOR_DB_PATHS['astro_ai2']
+    db_path = config.VECTOR_DB_PATHS['astro_ai2']
     
     while True:
         # Get query from user

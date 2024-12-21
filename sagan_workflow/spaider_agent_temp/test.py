@@ -1,6 +1,17 @@
 from tools.multimodal_query import NomicVisionQuerier
-from config import RETRIEVED_IMAGES_PATH, INPUT_PDF_FOLDER
 import os
+from pathlib import Path
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 def test_image_extraction():
     print("\n=== Testing Image Extraction ===\n")
@@ -10,19 +21,19 @@ def test_image_extraction():
     querier = NomicVisionQuerier()
     
     # Debugging: Check if the image directory path exists
-    print(f"Checking if image directory path exists: {RETRIEVED_IMAGES_PATH}")
-    print(f"Image directory exists: {RETRIEVED_IMAGES_PATH.exists()}")
+    print(f"Checking if image directory path exists: {config.RETRIEVED_IMAGES_PATH}")
+    print(f"Image directory exists: {config.RETRIEVED_IMAGES_PATH.exists()}")
     
     # Print image directory information
-    if RETRIEVED_IMAGES_PATH.exists():
+    if config.RETRIEVED_IMAGES_PATH.exists():
         print(f"\nImage Directory:")
-        print(f"Path: {RETRIEVED_IMAGES_PATH}")
-        print(f"Exists: {RETRIEVED_IMAGES_PATH.exists()}")
+        print(f"Path: {config.RETRIEVED_IMAGES_PATH}")
+        print(f"Exists: {config.RETRIEVED_IMAGES_PATH.exists()}")
     else:
         print("Image directory does not exist")
     
     # Test with a sample PDF
-    test_pdf = INPUT_PDF_FOLDER / "IIM_2024-15.pdf"  # Replace with an actual PDF path
+    test_pdf = config.INPUT_PDF_FOLDER / "IIM_2024-15.pdf"  # Replace with an actual PDF path
     print(f"\nTesting PDF extraction:")
     print(f"PDF Path: {test_pdf}")
     
@@ -42,8 +53,8 @@ def test_image_extraction():
     
     # Print contents of image directory
     print("\nContents of image directory:")
-    if RETRIEVED_IMAGES_PATH.exists():
-        files = list(RETRIEVED_IMAGES_PATH.glob('*.png'))
+    if config.RETRIEVED_IMAGES_PATH.exists():
+        files = list(config.RETRIEVED_IMAGES_PATH.glob('*.png'))
         print(f"Found {len(files)} image files:")
         for file in files:
             print(f"  - {file.name}")

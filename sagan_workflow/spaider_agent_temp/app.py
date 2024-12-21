@@ -5,21 +5,32 @@ import ssl
 import openai
 from openai import OpenAI
 from langchain_openai import ChatOpenAI
-from config import ENV_PATH, SSL_CERT_PATH, verify_paths
 import shutil
+from pathlib import Path
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 # Verify paths at startup
-if not verify_paths():
+if not config.verify_paths():
     print("Warning: Some required paths are missing. Please check config.py")
 
 # Load environment variables from .env
-load_dotenv(dotenv_path=ENV_PATH)
+load_dotenv(dotenv_path=config.ENV_PATH)
 
 # Set up SSL certificate
 try:
     # Use certifi's default certificate
     default_cert = certifi.where()
-    ssl_cert_path = str(SSL_CERT_PATH)
+    ssl_cert_path = str(config.SSL_CERT_PATH)
     
     # Create directory if it doesn't exist
     os.makedirs(os.path.dirname(ssl_cert_path), exist_ok=True)

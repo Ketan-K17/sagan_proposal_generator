@@ -1,6 +1,7 @@
 from pathlib import Path
 from config import (
-    PROJECT_ROOT,
+    FIRST_WORKFLOW_ROOT,
+    SECOND_WORKFLOW_ROOT,
     SAGAN_ROOT,
     VECTOR_DB_PATHS,
     OUTPUT_BASE,
@@ -37,7 +38,8 @@ def test_paths():
     print("Testing all paths from config...\n")
     
     print("=== Base Paths ===")
-    print_path_info("PROJECT_ROOT", PROJECT_ROOT)
+    print_path_info("FIRST_WORKFLOW_ROOT", FIRST_WORKFLOW_ROOT)
+    print_path_info("SECOND_WORKFLOW_ROOT", SECOND_WORKFLOW_ROOT)
     print_path_info("SAGAN_ROOT", SAGAN_ROOT)
     
     print("\n=== Database Paths ===")

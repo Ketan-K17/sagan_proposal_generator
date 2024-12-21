@@ -2,8 +2,11 @@ from pathlib import Path
 import os
 
 # Base paths
-PROJECT_ROOT = Path(__file__).parent
-SAGAN_ROOT = PROJECT_ROOT.parent.parent
+# PROJECT_ROOT = Path(__file__).parent # i.e. spaider_agent_temp
+# SAGAN_ROOT = PROJECT_ROOT.parent.parent # i.e. sagan_multimodal
+SAGAN_ROOT = Path(__file__).parent # i.e. sagan_multimodal
+FIRST_WORKFLOW_ROOT = SAGAN_ROOT / "sagan_workflow" / "spaider_agent_temp"
+SECOND_WORKFLOW_ROOT = SAGAN_ROOT / "sagan_workflow_refiner" / "spaider_agent_temp"
 
 # Database paths
 VECTOR_DB_PATHS = {
@@ -16,8 +19,8 @@ VECTOR_DB_PATHS = {
 # Input paths
 INPUT_PDF_FOLDER = SAGAN_ROOT / "data"
 
-# Output paths - PROJECT_ROOT is already 'spaider_agent_temp'
-OUTPUT_BASE = PROJECT_ROOT
+# Output paths 
+OUTPUT_BASE = FIRST_WORKFLOW_ROOT # i.e. sagan_workflow/spaider_agent_temp
 OUTPUT_PDF_PATH = OUTPUT_BASE / "output_pdf"
 RETRIEVED_IMAGES_PATH = OUTPUT_BASE / "retrieved_images"
 TEX_OUTPUT_PATH = OUTPUT_PDF_PATH / "output.tex"

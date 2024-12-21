@@ -1,11 +1,21 @@
 import subprocess
 import os
 import logging
-from pathlib import Path
 from typing import Optional
 
 # local imports
-from config import OUTPUT_PDF_PATH
+from pathlib import Path
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 def latex_to_pdf(latex_file_path: str, output_directory: Optional[str] = None) -> bool:
     """
@@ -38,7 +48,7 @@ def latex_to_pdf(latex_file_path: str, output_directory: Optional[str] = None) -
         
         # Set up output directory
         if output_directory is None:
-            output_directory = OUTPUT_PDF_PATH
+            output_directory = config.OUTPUT_PDF_PATH
         
         output_path = Path(output_directory)
         

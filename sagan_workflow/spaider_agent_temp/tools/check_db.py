@@ -1,9 +1,20 @@
 import chromadb
 import os
-from config import VECTOR_DB_PATHS
+from pathlib import Path
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 def check_db():
-    db_path = VECTOR_DB_PATHS['astro_ai2']
+    db_path = config.VECTOR_DB_PATHS['astro_ai2']
     
     print(f"Checking database at: {db_path}")
     print(f"Path exists: {os.path.exists(db_path)}")

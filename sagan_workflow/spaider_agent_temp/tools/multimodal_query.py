@@ -14,8 +14,8 @@ import importlib.util
 
 # Dynamically resolve the path to config.py
 CURRENT_FILE = Path(__file__).resolve()
-SPAIDER_AGENT_TEMP = CURRENT_FILE.parent.parent
-CONFIG_PATH = SPAIDER_AGENT_TEMP / "config.py"
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
 
 # Load config.py dynamically
 spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)

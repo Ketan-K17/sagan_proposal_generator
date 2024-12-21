@@ -2,7 +2,18 @@ import json
 import os
 from pathlib import Path
 from utils.latex_utils import latex_to_pdf, latex_to_pdf_pandoc, extract_latex_and_message
-from config import *
+
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 def test_latex_generation():
     """
@@ -10,7 +21,7 @@ def test_latex_generation():
     """
     try:
         # Load the JSON data
-        input_file = OUTPUT_PDF_PATH / "generated_sections.txt"
+        input_file = config.OUTPUT_PDF_PATH / "generated_sections.txt"
         if not input_file.exists():
             print(f"Input file {input_file} not found!")
             return
@@ -56,20 +67,20 @@ def test_latex_generation():
 
 
         # Write out the LaTeX file
-        tex_path = OUTPUT_PDF_PATH / "generated_section_test.tex"
+        tex_path = config.OUTPUT_PDF_PATH / "generated_section_test.tex"
         tex_path.write_text(final_latex_document, encoding='utf-8')
         print(f"LaTeX file written to: {tex_path}")
 
         # Attempt to compile PDF
         # original_dir = os.getcwd()
         # os.chdir(str(OUTPUT_PDF_PATH))
-        success = latex_to_pdf(str(tex_path), str(OUTPUT_PDF_PATH))
+        success = latex_to_pdf(str(tex_path), str(config.OUTPUT_PDF_PATH))
         if not success:
             print("pdflatex failed, trying pandoc...")
-            success = latex_to_pdf_pandoc(str(tex_path), str(OUTPUT_PDF_PATH))
+            success = latex_to_pdf_pandoc(str(tex_path), str(config.OUTPUT_PDF_PATH))
         
         if success:
-            pdf_path = OUTPUT_PDF_PATH / "generated_section_test.pdf"
+            pdf_path = config.OUTPUT_PDF_PATH / "generated_section_test.pdf"
             if pdf_path.exists():
                 print(f"Successfully generated PDF at: {pdf_path}")
             else:

@@ -71,10 +71,6 @@ config = RunnableConfig(
     configurable={"thread_id": "1"}
 )
 
-
-
-
-
 def extract_section(draft_path: str, section_number: int) -> tuple[str, str]:
     """
     Extract section title and text from a LaTeX file based on section number.

@@ -6,6 +6,7 @@ import json
 import os
 import sys
 import shutil
+import importlib.util
 
 # Get the path to the spaider_agent_temp directory
 CURRENT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
@@ -13,8 +14,17 @@ SPAIDER_AGENT_TEMP_DIR = CURRENT_DIR.parent
 
 # Import using relative imports
 sys.path.append(str(SPAIDER_AGENT_TEMP_DIR))
-from config import NODEWISE_OUTPUT_PATH
 from schemas import State
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 
 # print the state in the node_test scripts in a readable format.
@@ -72,7 +82,7 @@ def serialize_state(state: State, node_name: str) -> Dict[str, Any]:
     return serialized
 
 # saves the state in outputpdf/nodewise_output in .txt format (to be read by human) and .json format (to be read by machine to reconstruct state)
-def save_state_for_testing(state: State, node_name: str, output_dir: Path = NODEWISE_OUTPUT_PATH):
+def save_state_for_testing(state: State, node_name: str, output_dir: Path = config.NODEWISE_OUTPUT_PATH):
     """
     Save the state in a format suitable for testing.
     Creates both a human-readable and a machine-readable version.
@@ -109,7 +119,7 @@ def save_state_for_testing(state: State, node_name: str, output_dir: Path = NODE
 
 
 # reconstructs the state for a given node, given its .json file in outputpdf/nodewise_output
-def load_state_for_testing(node_name: str, output_dir: Path = NODEWISE_OUTPUT_PATH) -> State:
+def load_state_for_testing(node_name: str, output_dir: Path = config.   NODEWISE_OUTPUT_PATH) -> State:
     """
     Load a previously saved state for testing purposes.
     Reconstructs the full State object with proper message types and metadata.

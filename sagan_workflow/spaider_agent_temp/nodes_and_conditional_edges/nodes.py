@@ -11,7 +11,6 @@ from colorama import init, Fore, Style
 from schemas import State
 from prompts.prompts import *
 from models.chatgroq import BuildChatGroq, BuildChatOpenAI
-from config import *
 from .node_utils import save_state_for_testing, copy_figures
 from utils.latex_to_markdown import create_markdown_pipeline
 
@@ -22,14 +21,12 @@ from tools.query_chromadb import query_chromadb
 from tools.multimodal_query import NomicVisionQuerier
 #from utils.latextopdf import latex_to_pdf
 
-from pathlib import Path
 import logging
 from langchain_core.messages import SystemMessage, HumanMessage
 from colorama import Fore, Style
 #from utils.latextopdf import latex_to_pdf
 
 import logging
-from pathlib import Path
 from typing import Dict, Any
 from colorama import Fore, Style
 from langchain_core.messages import SystemMessage, HumanMessage
@@ -37,10 +34,20 @@ import os
 from schemas import State
 from utils.latex_utils import extract_latex_and_message, build_content_summary, latex_to_pdf, latex_to_pdf_pandoc, verify_image_paths, verify_miktex_installation
 
-# Initialize multimodal_vectordb_query from NomicVisionQuerier
-# multimodal_vectordb_query = NomicVisionQuerier().search_similar
+from pathlib import Path
+import importlib.util
 
-load_dotenv()
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
+
+load_dotenv(dotenv_path=config.ENV_PATH)
 init()
 
 logger = logging.getLogger(__name__)
@@ -169,8 +176,8 @@ def abstract_answers_generator(state: State) -> State:
     abstract_questions = state["abstract_questions"]
     system_prompt = SystemMessage(ABSTRACT_ANSWERS_GENERATOR_PROMPT.format(
         questions_list=abstract_questions, 
-        vector_store_path=str(VECTOR_DB_PATHS['astro_db']),  # Use path from config
-        llm_name=MODEL_SETTINGS['SENTENCE_TRANSFORMER']  # Use model setting from config
+        vector_store_path=str(config.VECTOR_DB_PATHS['astro_db']),  # Use path from config
+        llm_name=config.MODEL_SETTINGS['SENTENCE_TRANSFORMER']  # Use model setting from config
     ))
     state["messages"].append(system_prompt)
 
@@ -179,8 +186,8 @@ def abstract_answers_generator(state: State) -> State:
         qa_pairs = {}
         for question in abstract_questions:
             result = query_chromadb(
-                str(VECTOR_DB_PATHS['astro_db']),  # Use path from config
-                MODEL_SETTINGS['SENTENCE_TRANSFORMER'],  # Use model setting from config
+                str(config.VECTOR_DB_PATHS['astro_db']),  # Use path from config
+                config.MODEL_SETTINGS['SENTENCE_TRANSFORMER'],  # Use model setting from config
                 question
             )
             answer = llm.invoke((f"Frame the following texts into one cohesive answer: {result}"))
@@ -226,8 +233,8 @@ def section_topic_extractor(state: State) -> State:
     """
     print(f"{Fore.CYAN}################ SECTION TOPIC EXTRACTOR BEGIN #################")
     system_prompt = SystemMessage(SECTION_TOPIC_EXTRACTOR_PROMPT.format(
-        vector_store_path=str(VECTOR_DB_PATHS['fnr_template_db']),  # Use path from config
-        llm_name=MODEL_SETTINGS['SENTENCE_TRANSFORMER']  # Use model setting from config
+        vector_store_path=str(config.VECTOR_DB_PATHS['fnr_template_db']),  # Use path from config
+        llm_name=config.MODEL_SETTINGS['SENTENCE_TRANSFORMER']  # Use model setting from config
     ))
     state["messages"].append(system_prompt)
 
@@ -317,7 +324,7 @@ def section_wise_answers_generator(state: State) -> State:
         section_answers = {}
 
         # Define the output file path
-        output_path = NODEWISE_OUTPUT_PATH / "section_wise_answers_generator_logging.txt"
+        output_path = config.NODEWISE_OUTPUT_PATH / "section_wise_answers_generator_logging.txt"
         output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
 
         with output_path.open("w", encoding="utf-8") as file:
@@ -332,7 +339,7 @@ def section_wise_answers_generator(state: State) -> State:
                     try:
                         # Use the multimodal_vectordb_query tool with correct parameters
                         results = multimodal_tool.multimodal_vectordb_query(
-                            persist_dir=str(VECTOR_DB_PATHS['astro_ai2']),
+                            persist_dir=str(config.VECTOR_DB_PATHS['astro_ai2']),
                             query=question,
                             k=5
                         )
@@ -440,7 +447,7 @@ def plan_node(state: State):
         state["plan"] = plan_dict
 
         # Save debug output
-        output_path = NODEWISE_OUTPUT_PATH / "plan_node_logging.txt"
+        output_path = config.NODEWISE_OUTPUT_PATH / "plan_node_logging.txt"
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
         with output_path.open("w", encoding="utf-8") as file:
@@ -532,7 +539,7 @@ def generation_node(state: dict) -> dict:
         state["generated_sections"] = generated_sections
 
         # Save the generated sections to a file
-        output_path = OUTPUT_PDF_PATH / "generated_sections.txt"
+        output_path = config.OUTPUT_PDF_PATH / "generated_sections.txt"
         os.makedirs(output_path.parent, exist_ok=True)
         with open(output_path, "w", encoding="utf-8") as file:
             json.dump(generated_sections, file, indent=4, ensure_ascii=False)
@@ -552,14 +559,14 @@ def generation_node(state: dict) -> dict:
 def formatting_node(state: State) -> State:
     print(f"{Fore.LIGHTYELLOW_EX}################ FORMATTING NODE BEGIN #################")
     try:
-        base_output_path = OUTPUT_PDF_PATH
-        figures_path = Path(OUTPUT_PDF_PATH / "figures")
+        base_output_path = config.OUTPUT_PDF_PATH
+        figures_path = Path(config.OUTPUT_PDF_PATH / "figures")
         figures_path.mkdir(parents=True, exist_ok=True)
 
         # Copy figures from consolidated_template to output path
-        copy_figures(CONSOLIDATED_TEMPLATE_PATH, figures_path)
+        copy_figures(config.CONSOLIDATED_TEMPLATE_PATH, figures_path)
 
-        template_path = CONSOLIDATED_TEMPLATE_PATH / "consolidated.tex"
+        template_path = config.CONSOLIDATED_TEMPLATE_PATH / "consolidated.tex"
 
         ############################################################################
 
@@ -628,7 +635,7 @@ def formatting_node(state: State) -> State:
         state["draft"] = final_latex_document
         
         
-        output_path = Path(OUTPUT_PDF_PATH / "output.tex") # writing latex doc to output.tex
+        output_path = Path(config.OUTPUT_PDF_PATH / "output.tex") # writing latex doc to output.tex
         output_path.write_text(final_latex_document, encoding='utf-8')
         print(f"LaTeX file written to: {output_path}")
 
@@ -648,7 +655,7 @@ def formatting_node(state: State) -> State:
         os.environ["TOKENIZERS_PARALLELISM"] = "false"
         
         original_dir = os.getcwd()
-        os.chdir(str(OUTPUT_PDF_PATH))
+        os.chdir(str(config.OUTPUT_PDF_PATH))
         
         # creating output.md from output.tex
         os.system("pandoc -s output.tex -o output.md")
@@ -664,7 +671,7 @@ def formatting_node(state: State) -> State:
                 success = False
 
             if success:
-                pdf_path = OUTPUT_PDF_PATH / "output.pdf"
+                pdf_path = config.OUTPUT_PDF_PATH / "output.pdf"
                 if pdf_path.exists():
                     print(f"Successfully generated PDF found at: {pdf_path}")
                 else:
