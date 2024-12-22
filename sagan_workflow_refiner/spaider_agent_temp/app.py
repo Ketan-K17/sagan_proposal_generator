@@ -1,10 +1,23 @@
 from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_core.runnables.config import RunnableConfig
+from pathlib import Path
+import importlib.util
 
 # LOCAL IMPORTS.
 from graph import create_graph, compile_graph, print_stream
 from schemas import State
 from prompts.prompts import RESEARCH_QUERY_GENERATOR_PROMPT
+
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 
 # def extract_section(draft_path: str, section_number: int) -> tuple[str, str]:
@@ -123,11 +136,11 @@ def extract_section(draft_path: str, section_number: int) -> tuple[str, str]:
     except Exception as e:
         raise ValueError(f"Error processing LaTeX file: {str(e)}")
 
-config = RunnableConfig(
+runnable_config = RunnableConfig(
     recursion_limit=50,
     configurable={"thread_id": "1"}
 )
-print(config)
+print(runnable_config)
 
 
 
@@ -138,7 +151,7 @@ if __name__ == "__main__":
     graph = compile_graph(builder)
 
 
-    draft_path = "/Users/aditya/Desktop/SAW_code_plus_db-main/sagan_workflow/spaider_agent_temp/output_pdf/output.tex"
+    draft_path = config.TEX_OUTPUT_PATH
     section_number = 3
         
     s_title, s_text = extract_section(draft_path, section_number)
@@ -160,12 +173,12 @@ if __name__ == "__main__":
         "rough_draft_path": draft_path
     }
 
-    print_stream(graph.stream(initial_input, stream_mode="values", config=config))
+    print_stream(graph.stream(initial_input, stream_mode="values", config=runnable_config))
 
     user_approval = input("Save changes to the section text? (yes/no): ")
     if user_approval.lower() == "yes":
         # If approved, continue the graph execution
-        for event in graph.stream(None, config=config, stream_mode="values"):
+        for event in graph.stream(None, config=runnable_config, stream_mode="values"):
             event['messages'][-1].pretty_print()
             
     else:

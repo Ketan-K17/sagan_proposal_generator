@@ -1,3 +1,5 @@
+from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.runnables.config import RunnableConfig
 from fastapi import FastAPI, HTTPException, WebSocket,WebSocketDisconnect,File ,Form,UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse
@@ -11,17 +13,27 @@ import os
 import asyncio
 import json
 import uuid
+import importlib.util
+
 # Import LaTeX and Markdown conversion utilities
 from utils.latex_to_markdown import create_markdown_pipeline
 from utils.latextopdf import LaTeXPipeline
 from nodes_and_conditional_edges.nodes import ws_manager,research_query_generator
-from langchain_core.messages import SystemMessage, HumanMessage
-from langchain_core.runnables.config import RunnableConfig
 from models.chatgroq import BuildChatGroq, BuildChatOpenAI
 # LOCAL IMPORTS
 from graph import create_graph, compile_graph, print_stream
 from schemas import State
 from prompts.prompts import RESEARCH_QUERY_GENERATOR_PROMPT
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 # Update UserInput model to include human input fields
 class UserInput(BaseModel):
@@ -66,7 +78,7 @@ builder = create_graph()
 graph = compile_graph(builder)
 
 # Configure runnable
-config = RunnableConfig(
+runnable_config = RunnableConfig(
     recursion_limit=50,
     configurable={"thread_id": "1"}
 )
@@ -170,7 +182,7 @@ async def process_input(user_input: UserInput):
         # })
 
         # Step 2: Default paths and configurations
-        output_dir = Path("D://sagan_multimodal//sagan_workflow//spaider_agent_temp//output_pdf")
+        output_dir = Path(config.OUTPUT_PDF_PATH)
         tex_file = output_dir / "output.tex"
         pdf_file = output_dir / "output.pdf"
         md_file = output_dir / "output.md"
@@ -205,7 +217,7 @@ async def process_input(user_input: UserInput):
             async for output in graph.astream(
                 initial_input,
                 stream_mode="values",
-                config=config
+                config=runnable_config
             ):
                 state = output  # Capture the last state
 
@@ -362,7 +374,7 @@ async def publish(update_request:  PublishInput):
             )
 
         # File paths
-        output_dir = Path("D://sagan_multimodal//sagan_workflow//spaider_agent_temp//output_pdf")
+        output_dir = Path(config.OUTPUT_PDF_PATH)
         tex_file = output_dir / "output.tex"
         pdf_file = output_dir / "output.pdf"
         md_file = output_dir / "output.md"
@@ -506,7 +518,7 @@ async def update_latex(update_request: UpdateLatexInput):
             )
 
         # File paths
-        output_dir = Path("D://sagan_multimodal//sagan_workflow//spaider_agent_temp//output_pdf")
+        output_dir = Path(config.OUTPUT_PDF_PATH)
         
         tex_file = output_dir / "output.tex"
         pdf_file = output_dir / "output.pdf"
@@ -606,7 +618,7 @@ async def uploadImageToLatex(image: UploadFile = File(...), latex: str = Form(..
   try:
     print('code started',image)
    
-    file_path = os.path.join('../../sagan_workflow/spaider_agent_temp/output_pdf', image.filename)
+    file_path = os.path.join(config.OUTPUT_PDF_PATH, image.filename)
     # file_path = os.path.join('C://Users//Asus//Desktop//sagan-demo-be//sagan_workflow//spaider_agent_temp//output_pdf', image.filename)
     with open(file_path, "wb") as buffer: 
       buffer.write(await image.read())
@@ -665,7 +677,7 @@ async def interact(user_input: UserInput):
         # Stream the responses from the graph
         async def event_generator():
             initial_input = {"messages": [("user", user_input.message)]}
-            for response in graph.stream(initial_input, stream_mode="values", config=config):
+            for response in graph.stream(initial_input, stream_mode="values", config=runnable_config):
                 yield f"data: {response}\n\n"
 
         return StreamingResponse(event_generator(), media_type="text/event-stream")

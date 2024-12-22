@@ -1,5 +1,17 @@
 from typing import Tuple, Dict
 import logging
+from pathlib import Path
+import importlib.util
+
+# Dynamically resolve the path to config.py
+CURRENT_FILE = Path(__file__).resolve()
+SAGAN_MULTIMODAL = CURRENT_FILE.parent.parent.parent.parent
+CONFIG_PATH = SAGAN_MULTIMODAL / "config.py"
+
+# Load config.py dynamically
+spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
+config = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(config)
 
 def extract_latex_and_message(full_content: str) -> Tuple[str, str]:
     """
@@ -61,7 +73,7 @@ def build_content_summary(section_texts: dict) -> str:
         str: Formatted string containing the content summary with absolute image paths
     """
     logger = logging.getLogger(__name__)
-    root_path = 'C:/UniLu/Spaider/sagan/SAW_code_21_11_2024/SAW_code_plus_db-main/sagan_workflow/spaider_agent_temp/'
+    root_path = config.FIRST_WORKFLOW_ROOT
     summary_parts = []
     
     logger.info(f"Processing content summary with root path: {root_path}")
