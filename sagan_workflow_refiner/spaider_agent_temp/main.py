@@ -166,6 +166,7 @@ async def websocket_endpoint(websocket: WebSocket, session_id: str):
         print('try block')
         while True:
             message = await ws_manager.receive_message(session_id)
+            
             # if message:
             #     await ws_manager.send_message(session_id, f"Echo: {message}")
     except WebSocketDisconnect:

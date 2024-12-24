@@ -65,6 +65,16 @@ class WebSocketManager:
     async def connect(self, websocket: WebSocket, session_id: str):
         """Accept and track a WebSocket connection."""
         # async with self.lock:
+        if session_id in self.active_connections:
+            
+            # await self.disconnect(session_id)
+            print("connect to seesion id already exist")
+            await websocket.accept()
+            self.active_connections[session_id] = websocket
+            self.lock = asyncio.Lock()
+
+            message_queues[session_id] = asyncio.Queue()
+            return
         await websocket.accept()
         self.active_connections[session_id] = websocket
         message_queues[session_id] = asyncio.Queue()
@@ -108,6 +118,7 @@ class WebSocketManager:
         """Receive a message from a specific client."""
         async with self.lock:
             websocket = self.active_connections.get(session_id)
+            print(websocket,"websocket 117")
             if websocket:
                 try:
                     message = await websocket.receive_text()
@@ -119,20 +130,21 @@ class WebSocketManager:
                     print(f"Received from {session_id}: {message_data}")
                     return message_data
                 except WebSocketDisconnect:
-                  print(f"Error receiving from {session_id}: WebSocket disconnected")
-                  await self.disconnect(session_id)  # Clean up
-                  return None
+                    print(f"Error receiving from {session_id}: WebSocket disconnected")
+                    await self.disconnect(session_id)  # Clean up
+                    return None
                 except Exception as e:
                     print(f"Error receiving from {session_id}: {e}")
                     return None
             else:
-              print(f"Session {session_id} not connected.")
-              await ws_manager.active_connections.clear()
-              await websocket.active_connections.clear()
-              return None
+                print(f"Session {session_id} not connected.")
+                await ws_manager.active_connections.clear()
+                await websocket.active_connections.clear()
+                return None
             
     async def get_message(self, session_id: str, key: str, timeout: int = 500):
         queue = message_queues.get(session_id)
+        print(queue,"queue 141")
         if not queue:
             raise HTTPException(status_code=404, detail="Session not found.")
         
@@ -140,6 +152,7 @@ class WebSocketManager:
             # Wait for a message with a timeout
             while True:
                 key_value = await asyncio.wait_for(queue.get(), timeout=timeout)
+                print(key_value,"key_value 150")
                 if key_value[0] == key:
                     return key_value[1]
                 # Put back unmatched keys
